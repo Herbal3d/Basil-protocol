@@ -46,7 +46,7 @@ service Pesto {
     oneway void Notify (
         1: required BasilType.topicName topic,
         2: required BasilType.propertyList props
-    ),
+    )
 
 }
 

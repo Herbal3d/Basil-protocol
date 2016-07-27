@@ -92,11 +92,16 @@ struct assetInformation {
     2: objectDisplayInfo displayInfo;
 }
 
+// Description of a path that the object is moving on. Future
+struct pathDescription {
+    1: required string pathType;
+}
+
 // A specification of object motion/position
 struct instancePositionInfo {
     1: required objectIdentifier id;
     2: required Vector3 pos;
-    3: required Quaterion rot;
+    3: required Quaternion rot;
     4: optional Vector3 vel;
     5: optional pathDescription path
 }
