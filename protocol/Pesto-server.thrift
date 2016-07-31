@@ -29,11 +29,13 @@ service Pesto {
     // Subscribe to notifications for some topic
     void Subscribe (
         1: required BasilType.topicName topic,
-        2: BasilType.propertyList topicParameters    // qualifications on the subscription
+        2: required BasilType.simpleID subscriptionID,         // user gen'ed ID passed to notificiations
+        3: BasilType.propertyList topicParameters    // qualifications on the subscription
     ) throws (99: BasilType.BasilException e),
 
     void UnSubscribe (
-        1: required BasilType.topicName topic
+        1: required BasilType.topicName topic,
+        2: required BasilType.simpleID subscriptionID
     ) throws (99: BasilType.BasilException e),
 
     // Fetch a list of topics this client is subscribed to.

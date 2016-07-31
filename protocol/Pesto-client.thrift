@@ -16,7 +16,8 @@ service PestoClient {
     // Something happened on a subscribed topic
     oneway void Notify (
         1: required BasilType.topicName topic,
-        2: required BasilType.propertyList props
+        2: required BasilType.simpleID subscriptionID,  // the subscription that gen'ed the notify
+        3: required BasilType.propertyList props
     )
 }
 

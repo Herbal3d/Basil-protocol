@@ -53,6 +53,9 @@ typedef i64 timeCode
 // Messages have sequence numbers which count up from 0 at the beginning of a session
 typedef i32 messageSequenceNumber
 
+// Some items (subscriptions, ...) have IDs to track them.
+typedef i32 simpleID
+
 // Objects can have properties that can be read and updated independently
 typedef string propertyName
 typedef string propertyValue
