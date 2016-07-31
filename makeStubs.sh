@@ -13,31 +13,31 @@ function doGen() {
 }
 
 # Basil-server
-doGen Basil-server cpp          gen-Basil-server-cpp
+doGen BasilServer cpp           gen-Basil-server-cpp
 doGen BasilType cpp             gen-Basil-server-cpp
-doGen Basil-server js:jquery    gen-Basil-server-js
+doGen BasilServer js:jquery     gen-Basil-server-js
 doGen BasilType js:jquery       gen-Basil-server-js
 
 # Basil-client
-doGen Basil-client cpp          gen-Basil-client-cpp
+doGen BasilClient cpp           gen-Basil-client-cpp
 doGen BasilType cpp             gen-Basil-client-cpp
-doGen Basil-client csharp       gen-Basil-client-cs
+doGen BasilClient csharp        gen-Basil-client-cs
 doGen BasilType csharp          gen-Basil-client-cs
 
 # Pesto-server
-doGen Pesto-server js:node      gen-Pesto-server-node
+doGen PestoServer js:node       gen-Pesto-server-node
 doGen BasilType js:node         gen-Pesto-server-node
 
 # Pesto-client
-doGen Pesto-client py           gen-Pesto-client-py
+doGen PestoClient py            gen-Pesto-client-py
 doGen BasilType py              gen-Pesto-client-py
-doGen Pesto-client cpp          gen-Pesto-client-cpp
+doGen PestoClient cpp           gen-Pesto-client-cpp
 doGen BasilType cpp             gen-Pesto-client-cpp
-doGen Pesto-client js:jquery    gen-Pesto-client-js
+doGen PestoClient js:jquery     gen-Pesto-client-js
 doGen BasilType js:jquery       gen-Pesto-client-js
-doGen Pesto-client csharp       gen-Pesto-client-cs
+doGen PestoClient csharp        gen-Pesto-client-cs
 doGen BasilType csharp          gen-Pesto-client-cs
-# doGen Pesto-client go           gen-Pesto-client-go
+# doGen PestoClient go            gen-Pesto-client-go
 # doGen BasilType go              gen-Pesto-client-go
-doGen Pesto-client java         gen-Pesto-client-java
+doGen PestoClient java          gen-Pesto-client-java
 doGen BasilType java            gen-Pesto-client-java
