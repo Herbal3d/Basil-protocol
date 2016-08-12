@@ -109,6 +109,14 @@ struct instancePositionInfo {
     5: optional pathDescription path
 }
 
+// Requests include authorization for the request.
+// It is expected that a client could have multiple authorizations from different
+//    sources and with different scopes so this access authorization blob
+//    can contain multiple properties which consist of the authorization
+//    source and a string representing that authorization. The coding
+//    of the authorization follows the 'Authorization:' header line specified
+//    in RFC2617 (https://tools.ietf.org/html/rfc2617)
+//    which is a scheme token followed by an encoding of the authentication.
 struct accessAuthorization {
     1: required propertyList accessProperties
 }

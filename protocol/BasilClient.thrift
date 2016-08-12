@@ -18,21 +18,24 @@ service BasilClient {
 
     // The renderer is initiating the end of the session
     void CloseSession (
-        1: BasilType.timeCode time,
-        2: BasilType.messageSequenceNumber sequenceNumber,
-        3: string reason
+        1: required BasilType.accessAuthorization auth,
+        2: BasilType.timeCode time,
+        3: BasilType.messageSequenceNumber sequenceNumber,
+        4: string reason
     ) throws (99: BasilType.BasilException e),
 
     // Send this to the other side to get an asynchronous AliveResponse
     oneway void AliveCheck (
-        1: required BasilType.timeCode time,
-        2: required BasilType.messageSequenceNumber sequenceNumber
+        1: required BasilType.accessAuthorization auth,
+        2: required BasilType.timeCode time,
+        3: required BasilType.messageSequenceNumber sequenceNumber
     ),
 
     oneway void AliveResponse (
-        1: required BasilType.timeCode time,
-        2: required BasilType.messageSequenceNumber sequenceNumber
-        3: required BasilType.timeCode timeReceived,    // When the AliveCheck was received
-        4: required BasilType.messageSequenceNumber sequenceNumberReceived  // The sequence number sent in the AliveCheck
+        1: required BasilType.accessAuthorization auth,
+        2: required BasilType.timeCode time,
+        3: required BasilType.messageSequenceNumber sequenceNumber
+        4: required BasilType.timeCode timeReceived,    // When the AliveCheck was received
+        5: required BasilType.messageSequenceNumber sequenceNumberReceived  // The sequence number sent in the AliveCheck
     ),
 }
