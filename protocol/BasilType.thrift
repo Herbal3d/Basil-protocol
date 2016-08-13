@@ -69,6 +69,33 @@ exception BasilException {
     2: optional propertyList hints;   // additional information for recovery. Error dependent.
 }
 
+enum coordSystem {
+    WGS86 = 1,  // WGS84 earth coordinates
+    CAMERA,     // Coordinates relative to camera position (-1..1 range, zero center)
+    CAMERAABS,  // Absolute coordinates relative to the camera position (zero center)
+    VIRTUAL,    // Zero based un-rooted coordinates
+    MOON,       // Earth-moon coordinates
+    MARS,       // Mars coordinates
+    REL1,       // Mutually agreed base coordinates
+    REL2,
+    REL3
+}
+typedef i8 coordRef
+
+enum rotationSystem {
+    WORLD = 1,  // rotation is relative to work coordinates
+    FOR,        // rotation is relative to current frame of reference
+    CAMERA      // rotation is relative to the camera direction
+}
+typedef i8 rotationRef
+
+struct coordPosition {
+    1: required Vector3 pos;
+    2: required Quaternion rot;
+    3: required coordRef posRef;    // value of type coordSystem
+    4: required rotationRef rotRef; // value of type rotationRef
+}
+
 // OBJECT INFORMATION ==================================
 
 // The globally unique identifier of an object is a string (text GUID or URI)
@@ -77,6 +104,7 @@ typedef string objectIdentifier
 // An object is realized in the world as an 'instance' which has position and
 //    other individual properties. There can be multiple instances of an object.
 //    Instances are referenced by an ID given to them when created.
+// ID lifetime is the life of the particular Basil server being used.
 typedef i32 instanceIdentifier
 
 // An axis aligned area that contains an object
@@ -103,10 +131,9 @@ struct pathDescription {
 // A specification of object motion/position
 struct instancePositionInfo {
     1: required objectIdentifier id;
-    2: required Vector3 pos;
-    3: required Quaternion rot;
-    4: optional Vector3 vel;
-    5: optional pathDescription path
+    2: required coordPosition pos;
+    3: optional Vector3 vel;
+    4: optional pathDescription path
 }
 
 // Requests include authorization for the request.
