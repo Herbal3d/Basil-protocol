@@ -1,5 +1,9 @@
 #! /bin/bash
 
+BASE=/home/basil/Basil-protocol-git
+
+cd $BASE
+
 THRIFT="thrift"
 THRIFTINCLUDE="-I protocol"
 THRIFTPARAM="--allow-64bit-consts"
