@@ -8,7 +8,7 @@
 
 namespace cpp org.basilviewer.basil.server.protocol
 namespace csharp org.basilviewer.basil.server.protocol
-namespace js org.basilviewer.basil.server.protocol
+// namespace js org_basilviewer_basil_server_protocol
 namespace java org.basilviewer.basil.server.protocol
 
 include "BasilType.thrift"
@@ -21,9 +21,10 @@ service BasilServer {
     //   later displayed or operated on.
     void IdentifyDisplayableObject (
         1: required BasilType.accessAuthorization auth,
-        2: required BasilType.objectIdentifier id,
-        3: required BasilType.assetInformation assetInfo,
-        4: BasilType.aaBoundingBox aabb
+        2: BasilType.traceInfo trace,
+        3: required BasilType.objectIdentifier id,
+        4: required BasilType.assetInformation assetInfo,
+        5: BasilType.aaBoundingBox aabb
     ) throws (99: BasilType.BasilException e),
 
     // An object may occur multiple times. This defines one instance
@@ -31,44 +32,50 @@ service BasilServer {
     // Returns an instanceIdentifer that can be used to refer to the instance.
     BasilType.instanceIdentifier CreateObjectInstance (
         1: required BasilType.accessAuthorization auth,
-        2: required BasilType.objectIdentifier id,
-        3: required BasilType.instancePositionInfo pos,
-        4: required BasilType.propertyList propertiesToSet
+        2: BasilType.traceInfo trace,
+        3: required BasilType.objectIdentifier id,
+        4: required BasilType.instancePositionInfo pos,
+        5: required BasilType.propertyList propertiesToSet
     ) throws (99: BasilType.BasilException e),
 
     // Update a property of an object. This could effect all instances.
     void UpdateObjectProperty (
         1: required BasilType.accessAuthorization auth,
-        2: required BasilType.objectIdentifier objectId,
-        3: required BasilType.propertyList props
+        2: BasilType.traceInfo trace,
+        3: required BasilType.objectIdentifier objectId,
+        4: required BasilType.propertyList props
     ) throws (99: BasilType.BasilException e),
 
     // Update a property of an instance
     void UpdateInstanceProperty (
         1: required BasilType.accessAuthorization auth,
-        2: required BasilType.instanceIdentifier instanceId,
-        3: required BasilType.propertyList props
+        2: BasilType.traceInfo trace,
+        3: required BasilType.instanceIdentifier instanceId,
+        4: required BasilType.propertyList props
     ) throws (99: BasilType.BasilException e),
 
     // A short form that updates the position properties of an instance
     void UpdateInstancePosition (
         1: required BasilType.accessAuthorization auth,
-        2: required BasilType.instanceIdentifier instanceId,
-        3: required BasilType.instancePositionInfo pos
+        2: BasilType.traceInfo trace,
+        3: required BasilType.instanceIdentifier instanceId,
+        4: required BasilType.instancePositionInfo pos
     ) throws (99: BasilType.BasilException e),
 
     BasilType.propertyList RequestObjectProperties (
         1: required BasilType.accessAuthorization auth,
-        2: required BasilType.messageSequenceNumber sequenceNumber,
-        3: required BasilType.objectIdentifier objectId,
-        4: string propertyMatch   // wildcard used to match returned properties
+        2: BasilType.traceInfo trace,
+        3: required BasilType.messageSequenceNumber sequenceNumber,
+        4: required BasilType.objectIdentifier objectId,
+        5: string propertyMatch   // wildcard used to match returned properties
     ) throws (99: BasilType.BasilException e),
 
     BasilType.propertyList RequestInstanceProperties (
         1: required BasilType.accessAuthorization auth,
-        2: required BasilType.messageSequenceNumber sequenceNumber,
-        3: required BasilType.instanceIdentifier instanceId,
-        4: string propertyMatch   // wildcard used to match returned properties
+        2: BasilType.traceInfo trace,
+        3: required BasilType.messageSequenceNumber sequenceNumber,
+        4: required BasilType.instanceIdentifier instanceId,
+        5: string propertyMatch   // wildcard used to match returned properties
     ) throws (99: BasilType.BasilException e),
 
     // RESOURCE MANAGEMENT ===============================================
@@ -79,31 +86,35 @@ service BasilServer {
     // Returned property list is a collection of Basil renderer capabilities.
     BasilType.propertyList OpenSession (
         1: required BasilType.accessAuthorization auth,
-        2: required BasilType.timeCode time,
-        3: required BasilType.messageSequenceNumber sequenceNumber,
-        4: BasilType.propertyList features
+        2: BasilType.traceInfo trace,
+        3: required BasilType.timeCode time,
+        4: required BasilType.messageSequenceNumber sequenceNumber,
+        5: BasilType.propertyList features
     ) throws (99: BasilType.BasilException e) ,
 
     // Client is initiating an end to the session
     void CloseSession (
         1: required BasilType.accessAuthorization auth,
-        2: required BasilType.timeCode time,
-        3: required BasilType.messageSequenceNumber sequenceNumber,
-        4: string reason
+        2: BasilType.traceInfo trace,
+        3: required BasilType.timeCode time,
+        4: required BasilType.messageSequenceNumber sequenceNumber,
+        5: string reason
     ) throws (99: BasilType.BasilException e),
 
     // Send this to the other side to get an asynchronous AliveResponse
     oneway void AliveCheck (
         1: required BasilType.accessAuthorization auth,   // not just anyone can see I'm alive
-        2: required BasilType.timeCode time,
-        3: required BasilType.messageSequenceNumber sequenceNumber
+        2: BasilType.traceInfo trace,
+        3: required BasilType.timeCode time,
+        4: required BasilType.messageSequenceNumber sequenceNumber
     ),
 
     oneway void AliveResponse (
         1: required BasilType.accessAuthorization auth,
-        2: required BasilType.timeCode time,
-        3: required BasilType.messageSequenceNumber sequenceNumber,
-        4: required BasilType.timeCode timeReceived,    // When the AliveCheck was received
-        5: required BasilType.messageSequenceNumber sequenceNumberReceived  // The sequence number sent in the AliveCheck
+        2: BasilType.traceInfo trace,
+        3: required BasilType.timeCode time,
+        4: required BasilType.messageSequenceNumber sequenceNumber,
+        5: required BasilType.timeCode timeReceived,    // When the AliveCheck was received
+        6: required BasilType.messageSequenceNumber sequenceNumberReceived  // The sequence number sent in the AliveCheck
     ),
 }

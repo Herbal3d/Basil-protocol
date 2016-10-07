@@ -148,3 +148,8 @@ struct accessAuthorization {
     1: required propertyList accessProperties
 }
 
+// Requests can include trace information (like using Zipkin)
+//   to trace calls. It's usually a JSON string.
+
+typedef string traceInfo
+
