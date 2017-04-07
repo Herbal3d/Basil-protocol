@@ -1,0 +1,120 @@
+/*
+ * Interface to Basil. The interface a client talks to a Basil renderer.
+ * These fall into several classes:
+ *    Connection creation and management.
+ *    Object/instance definition and management.
+ *    Resource queries and management.
+ */
+
+include "BasilTypes.fbs";
+include "BTransportHdr.fbs";
+
+namespace org.herbal3d.protocol.basil.server;
+
+// OBJECT/INSTANCE MANAGEMENT =======================================
+
+// Describe an object to Basil for later display or manipulation
+// This associates an ID with a block of asset information that can be 
+//   later displayed or operated on.
+table DefineDisplayableObject {
+    auth: accessAuthorization;
+    objectId: string;
+    assetInfo: assetInformation;
+    aabb: aaBoundingBox;
+}
+
+// An object may occur multiple times. This defines one instance
+//   that is at a particular location in the world.
+// Returns an instanceIdentifer that can be used to refer to the instance.
+table CreateObjectInstance {
+    auth: accessAuthorization;
+    instanceId: int;
+    pos: instancePositionInfo;
+    propertiesToSet: [ propertyValue ];
+}
+
+// Update a property of an object. This could effect all instances.
+table UpdateObjectProperty {
+    auth: accessAuthorization;
+    objectId: string;
+    props: [ propertyValue ] ;
+}
+
+// Update a property of an instance
+table UpdateInstanceProperty {
+    auth: accessAuthorization;
+    instanceId: int;
+    props: [ propertyValue ] ;
+}
+
+// A short form that updates the position properties of an instance
+table UpdateInstancePosition {
+    auth: accessAuthorization;
+    instanceId: int;
+    pos: instancePositionInfo;
+}
+
+// Fetch the properties for an object in the Basil server
+table ObjectPropertiesRequest {
+    auth: accessAuthorization;
+    objectId: string;
+    propertyMatch: string;
+}
+
+// Fetch the properties for an instance in the Basil server
+table InstancePropertiesRequest {
+    auth: accessAuthorization;
+    instanceId: int;
+    propertyMatch: string;
+}
+
+// RESOURCE MANAGEMENT ==============================================
+
+// SESSION MANAGEMENT ===============================================
+
+// A client initiates a connection.
+// Returned property list is a collection of Basil renderer capabilities.
+table OpenSession {
+    auth: accessAuthorization;
+    params: [ propertyValue ];
+}
+
+// The renderer is initiating the end of the session
+table CloseSession {
+    reason: string;
+}
+
+// Send this to the other side to get an asynchronous AliveResponse
+table AliveCheck {
+    time: long;
+    sequenceNumber: int;
+}
+
+// Response to an AliveCheck
+table AliveResponse {
+    time: long;                    // Time when response sent
+    sequenceNumber: int;           // response sequence number
+    timeReceived: long;            // Time code in the AliveCheck that caused this response
+    sequenceNumberReceived: int;   // Sequence number in AliveCheck that caused this response
+}
+
+// ===============================================
+
+union BasilServerMsgMsg {
+    DefineDisplayableObject,
+    CreateObjectInstance,
+    UpdateObjectProperty,
+    UpdateInstanceProperty,
+    UpdateInstancePosition,
+    ObjectPropertiesRequest,
+    InstancePropertiesRequest,
+    OpenSession,
+    CloseSession,
+    AliveCheck,
+    AliveResponse
+}
+
+table BasilServerMsg {
+    BTransportHdr: BTransportHdrStruct;
+    Msg: BasilServerMsgMsg;
+}

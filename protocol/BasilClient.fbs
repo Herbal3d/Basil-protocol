@@ -1,0 +1,66 @@
+/*
+ * Interface to a Basil client. Basil talks to it's clients with  this interface.
+ */
+
+// include "BasilTypes.fbs";
+include "BTransportHdr.fbs";
+
+namespace org.herbal3d.protocol.basil.client;
+
+// OBJECT/INSTANCE MANAGEMENT =======================================
+
+// Response of 'ObjectPropertiesRequest'
+table ObjectPropertiesResponse {
+    objectId: string;
+    props: [ propertyValue ] ;
+}
+
+// Response of 'InstancePropertiesRequest'
+table InstancePropertiesResponse {
+    instanceId: int;
+    props: [ propertyValue ] ;
+}
+
+// RESOURCE MANAGEMENT ==============================================
+
+// SESSION MANAGEMENT ===============================================
+
+// Response of doing an OpenSession
+table OpenSessionResponse {
+    features: [ propertyValue ];
+}
+
+// The renderer is initiating the end of the session
+table CloseSession {
+    reason: string;
+}
+
+// Send this to the other side to get an asynchronous AliveResponse
+table AliveCheck {
+    time: long;
+    sequenceNumber: int;
+}
+
+// Response to an AliveCheck
+table AliveResponse {
+    time: long;                    // Time when response sent
+    sequenceNumber: int;           // response sequence number
+    timeReceived: long;            // Time code in the AliveCheck that caused this response
+    sequenceNumberReceived: int;   // Sequence number in AliveCheck that caused this response
+}
+
+// ===============================================
+
+union BasilClientMsgMsg {
+    ObjectPropertiesResponse,
+    InstancePropertiesResponse,
+    OpenSessionResponse,
+    CloseSession,
+    AliveCheck,
+    AliveResponse
+}
+
+table BasilClientMsg {
+    BTransportHdr: BTransportHdrStruct;
+    Msg: BasilClientMsgMsg;
+}
