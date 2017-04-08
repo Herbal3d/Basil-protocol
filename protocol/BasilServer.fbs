@@ -2,7 +2,7 @@
  * Interface to Basil. The interface a client talks to a Basil renderer.
  * These fall into several classes:
  *    Connection creation and management.
- *    Object/instance definition and management.
+ *    Entity/instance definition and management.
  *    Resource queries and management.
  */
 
@@ -16,7 +16,7 @@ namespace org.herbal3d.protocol.basil.server;
 // Describe an object to Basil for later display or manipulation
 // This associates an ID with a block of asset information that can be 
 //   later displayed or operated on.
-table DefineDisplayableObject {
+table DefineEntity {
     auth: accessAuthorization;
     objectId: string;
     assetInfo: assetInformation;
@@ -26,7 +26,7 @@ table DefineDisplayableObject {
 // An object may occur multiple times. This defines one instance
 //   that is at a particular location in the world.
 // Returns an instanceIdentifer that can be used to refer to the instance.
-table CreateObjectInstance {
+table DefineInstance {
     auth: accessAuthorization;
     instanceId: int;
     pos: instancePositionInfo;
@@ -34,7 +34,7 @@ table CreateObjectInstance {
 }
 
 // Update a property of an object. This could effect all instances.
-table UpdateObjectProperty {
+table UpdateEntityProperty {
     auth: accessAuthorization;
     objectId: string;
     props: [ propertyValue ] ;
@@ -55,14 +55,14 @@ table UpdateInstancePosition {
 }
 
 // Fetch the properties for an object in the Basil server
-table ObjectPropertiesRequest {
+table EntityPropertyRequest {
     auth: accessAuthorization;
     objectId: string;
     propertyMatch: string;
 }
 
 // Fetch the properties for an instance in the Basil server
-table InstancePropertiesRequest {
+table InstancePropertyRequest {
     auth: accessAuthorization;
     instanceId: int;
     propertyMatch: string;
@@ -101,13 +101,13 @@ table AliveResponse {
 // ===============================================
 
 union BasilServerMsgMsg {
-    DefineDisplayableObject,
-    CreateObjectInstance,
-    UpdateObjectProperty,
+    DefineEntity,
+    DefineInstance,
+    UpdateEntityProperty,
     UpdateInstanceProperty,
     UpdateInstancePosition,
-    ObjectPropertiesRequest,
-    InstancePropertiesRequest,
+    EntityPropertyRequest,
+    InstancePropertyRequest,
     OpenSession,
     CloseSession,
     AliveCheck,

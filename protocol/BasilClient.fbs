@@ -9,14 +9,14 @@ namespace org.herbal3d.protocol.basil.client;
 
 // OBJECT/INSTANCE MANAGEMENT =======================================
 
-// Response of 'ObjectPropertiesRequest'
-table ObjectPropertiesResponse {
+// Response of 'EntityPropertyRequest'
+table EntityPropertyResponse {
     objectId: string;
     props: [ propertyValue ] ;
 }
 
-// Response of 'InstancePropertiesRequest'
-table InstancePropertiesResponse {
+// Response of 'InstancePropertyRequest'
+table InstancePropertyResponse {
     instanceId: int;
     props: [ propertyValue ] ;
 }
@@ -52,8 +52,8 @@ table AliveResponse {
 // ===============================================
 
 union BasilClientMsgMsg {
-    ObjectPropertiesResponse,
-    InstancePropertiesResponse,
+    EntityPropertyResponse,
+    InstancePropertyResponse,
     OpenSessionResponse,
     CloseSession,
     AliveCheck,

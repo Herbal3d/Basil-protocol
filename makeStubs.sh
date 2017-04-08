@@ -1,8 +1,8 @@
 #! /bin/bash
 
-BASE=/home/basil/Basil-protocol-git
-
-cd $BASE
+# cd into the directory containing this build script
+cd "$( cd "$(dirname "${BASH_SOURCE[0]}" )" && pwd )"
+BASE=$(pwd)
 
 FLATBUFFER=/home/basil/flatbuffers
 
@@ -20,22 +20,25 @@ function doGen() {
     fi
 }
 
-# Basil-server
-doGen BasilServer cpp           gen-Basil-server-cpp
-doGen BasilServer js            gen-Basil-server-js
+# Basil Server -- for talking to the Basil server
+doGen BasilServer cpp           gen-BasilServer-cpp
+doGen BasilServer js            gen-BasilServer-js
+doGen BasilServer csharp        gen-BasilServer-cs
+doGen BasilServer java          gen-BasilServer-java
 
-# Basil-client
-doGen BasilClient cpp           gen-Basil-client-cpp
-doGen BasilClient csharp        gen-Basil-client-cs
+# Basil Client -- for talking to a Basil client
+doGen BasilClient cpp           gen-BasilClient-cpp
+doGen BasilClient js            gen-BasilClient-js
+doGen BasilClient csharp        gen-BasilClient-cs
 
-# Pesto-server
-doGen PestoServer js            gen-Pesto-server-node
+# Pesto Server
+doGen PestoServer js            gen-PestoServer-node
 
-# Pesto-client
-doGen PestoClient python        gen-Pesto-client-py
-doGen PestoClient cpp           gen-Pesto-client-cpp
-doGen PestoClient js            gen-Pesto-client-js
-doGen PestoClient csharp        gen-Pesto-client-cs
-# doGen PestoClient go            gen-Pesto-client-go
-doGen PestoClient java          gen-Pesto-client-java
+# Pesto Client
+doGen PestoClient python        gen-PestoClient-py
+doGen PestoClient cpp           gen-PestoClient-cpp
+doGen PestoClient js            gen-PestoClient-js
+doGen PestoClient csharp        gen-PestoClient-cs
+doGen PestoClient java          gen-PestoClient-java
+# doGen PestoClient go            gen-PestoClient-go
 

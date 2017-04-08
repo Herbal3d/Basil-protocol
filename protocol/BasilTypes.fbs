@@ -56,7 +56,7 @@ table TransformF {
 // Some items (subscriptions, ...) have IDs to track them.
 // #typedef simpleID uint
 
-// Objects can have properties that can be read and updated independently
+// Entities and instances can have properties that can be read and updated independently
 table propertyValue { property: string; value: string; }
 // #typedef propertyList [propertyValue]
 
