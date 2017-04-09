@@ -13,24 +13,40 @@ namespace org.herbal3d.protocol.basil.server;
 
 // OBJECT/INSTANCE MANAGEMENT =======================================
 
-// Describe an object to Basil for later display or manipulation
+// Describe an entity to Basil for later display or manipulation.
 // This associates an ID with a block of asset information that can be 
 //   later displayed or operated on.
-table DefineEntity {
+table AddEntity {
     auth: accessAuthorization;
     objectId: string;
     assetInfo: assetInformation;
     aabb: aaBoundingBox;
 }
 
-// An object may occur multiple times. This defines one instance
+// Remove an entity from Basil. Removes all instances of the entity.
+table RemoveEntity {
+    auth: accessAuthorization;
+    objectId: string;
+}
+
+// An entity may occur multiple times. This defines one instance
 //   that is at a particular location in the world.
-// Returns an instanceIdentifer that can be used to refer to the instance.
-table DefineInstance {
+// Pass in an instanceIdentifer that can be used to refer to the instance.
+table AddInstance {
     auth: accessAuthorization;
     instanceId: int;
     pos: instancePositionInfo;
     propertiesToSet: [ propertyValue ];
+}
+
+// Remove an entity instance from the scene.
+table RemoveInstance {
+    auth: accessAuthorization;
+    instanceId: int;
+}
+
+// Get a new instance identifier that is guaranteed unique across Basil clients.
+table GetUniqueInstanceId {
 }
 
 // Update a property of an object. This could effect all instances.
@@ -101,8 +117,11 @@ table AliveResponse {
 // ===============================================
 
 union BasilServerMsgMsg {
-    DefineEntity,
-    DefineInstance,
+    AddEntity,
+    RemoveEntity,
+    AddInstance,
+    RemoveInstance,
+    GetUniqueInstanceId,
     UpdateEntityProperty,
     UpdateInstanceProperty,
     UpdateInstancePosition,

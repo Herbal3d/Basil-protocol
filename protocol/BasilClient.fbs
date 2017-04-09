@@ -9,6 +9,11 @@ namespace org.herbal3d.protocol.basil.client;
 
 // OBJECT/INSTANCE MANAGEMENT =======================================
 
+// Response of 'GetUniqueInstanceId'
+table GetUniqueInstanceIdResponse {
+    instanceId: int;
+}
+
 // Response of 'EntityPropertyRequest'
 table EntityPropertyResponse {
     objectId: string;
@@ -52,6 +57,7 @@ table AliveResponse {
 // ===============================================
 
 union BasilClientMsgMsg {
+    GetUniqueInstanceIdResponse,
     EntityPropertyResponse,
     InstancePropertyResponse,
     OpenSessionResponse,
