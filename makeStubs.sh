@@ -20,25 +20,30 @@ function doGen() {
     fi
 }
 
+# Base structs and tables
+doGen BasilTypes js             gen-BasilTypes-js
+doGen BasilTypes cpp            gen-BasilTypes-cpp
+doGen BasilTypes csharp         gen-BasilTypes-cs
+doGen BasilTypes java           gen-BasilTypes-java
+doGen BTransportHdr js          gen-BTransportHdr-js
+doGen BTransportHdr cpp         gen-BTransportHdr-cpp
+doGen BTransportHdr csharp      gen-BTransportHdr-cs
+doGen BTransportHdr java        gen-BTransportHdr-java
+
 # Basil Server -- for talking to the Basil server
-doGen BasilServer cpp           gen-BasilServer-cpp
 doGen BasilServer js            gen-BasilServer-js
+doGen BasilServer cpp           gen-BasilServer-cpp
 doGen BasilServer csharp        gen-BasilServer-cs
 doGen BasilServer java          gen-BasilServer-java
 
-# Basil Client -- for talking to a Basil client
-doGen BasilClient cpp           gen-BasilClient-cpp
-doGen BasilClient js            gen-BasilClient-js
-doGen BasilClient csharp        gen-BasilClient-cs
-
 # Pesto Server
-doGen PestoServer js            gen-PestoServer-node
+doGen PestoServer js            gen-PestoServer-js
 
 # Pesto Client
-doGen PestoClient python        gen-PestoClient-py
-doGen PestoClient cpp           gen-PestoClient-cpp
 doGen PestoClient js            gen-PestoClient-js
+doGen PestoClient cpp           gen-PestoClient-cpp
 doGen PestoClient csharp        gen-PestoClient-cs
 doGen PestoClient java          gen-PestoClient-java
-# doGen PestoClient go            gen-PestoClient-go
+doGen PestoClient python        gen-PestoClient-py
+# doGen PestoClient go            gen-PestoClient
 
