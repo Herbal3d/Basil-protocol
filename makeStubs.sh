@@ -25,10 +25,10 @@ doGen BasilTypes js             gen-BasilTypes-js
 doGen BasilTypes cpp            gen-BasilTypes-cpp
 doGen BasilTypes csharp         gen-BasilTypes-cs
 doGen BasilTypes java           gen-BasilTypes-java
-doGen BTransportHdr js          gen-BTransportHdr-js
-doGen BTransportHdr cpp         gen-BTransportHdr-cpp
-doGen BTransportHdr csharp      gen-BTransportHdr-cs
-doGen BTransportHdr java        gen-BTransportHdr-java
+doGen BFlow js                  gen-BFlow-js
+doGen BFlow cpp                 gen-BFlow-cpp
+doGen BFlow csharp              gen-BFlow-cs
+doGen BFlow java                gen-BFlow-java
 
 # Basil Server -- for talking to the Basil server
 doGen BasilServer js            gen-BasilServer-js

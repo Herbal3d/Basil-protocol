@@ -10,7 +10,6 @@
  */
 
 include "BasilTypes.fbs";
-include "BTransportHdr.fbs";
 
 namespace org.herbal3d.protocol.basil.server;
 
@@ -41,8 +40,8 @@ table RemoveEntity {
 table AddInstance {
     auth: accessAuthorization;
     instanceId: int;
-    pos: instancePositionInfo;
-    propertiesToSet: [ propertyValue ];
+    pos: coordPosition;
+    propertiesToSet: propertyList;
 }
 
 // Remove an entity instance from the scene.
@@ -68,7 +67,7 @@ table GetUniqueInstanceIdResponse {
 table UpdateEntityProperty {
     auth: accessAuthorization;
     objectId: string;
-    props: [ propertyValue ] ;
+    props: propertyList ;
 }
 
 // Update a property of an instance
@@ -76,10 +75,11 @@ table UpdateEntityProperty {
 table UpdateInstanceProperty {
     auth: accessAuthorization;
     instanceId: int;
-    props: [ propertyValue ] ;
+    props: propertyList ;
 }
 
 // A short form that updates the position properties of an instance
+// TODO: auth should be per position update rather than per this request.
 // client->Basil
 table UpdateInstancePosition {
     auth: accessAuthorization;
@@ -99,7 +99,7 @@ table EntityPropertyRequest {
 // Basil->client
 table EntityPropertyResponse {
     objectId: string;
-    props: [ propertyValue ] ;
+    props: propertyList ;
 }
 
 // Fetch the properties for an instance in the Basil server
@@ -114,7 +114,7 @@ table InstancePropertyRequest {
 // Basil->client
 table InstancePropertyResponse {
     instanceId: int;
-    props: [ propertyValue ] ;
+    props: propertyList ;
 }
 
 // RESOURCE MANAGEMENT ==============================================
@@ -126,13 +126,13 @@ table InstancePropertyResponse {
 // client->Basil
 table OpenSession {
     auth: accessAuthorization;
-    params: [ propertyValue ];
+    params: propertyList;
 }
 
 // Response of doing an OpenSession
 // Basil->client
 table OpenSessionResponse {
-    features: [ propertyValue ];
+    features: propertyList;
 }
 
 // The renderer is initiating the end of the session
@@ -157,30 +157,3 @@ table AliveResponse {
     sequenceNumberReceived: int;   // Sequence number in AliveCheck that caused this response
 }
 
-// ===============================================
-
-union BasilServerMsgMsg {
-    AddEntity,
-    RemoveEntity,
-    AddInstance,
-    RemoveInstance,
-    GetUniqueInstanceId,
-    GetUniqueInstanceIdResponse,
-    UpdateEntityProperty,
-    UpdateInstanceProperty,
-    UpdateInstancePosition,
-    EntityPropertyRequest,
-    EntityPropertyResponse,
-    InstancePropertyRequest,
-    InstancePropertyResponse,
-    OpenSession,
-    OpenSessionResponse,
-    CloseSession,
-    AliveCheck,
-    AliveResponse
-}
-
-table BasilServerMsg {
-    BTransportHdr: BTransportHdrStruct;
-    Msg: BasilServerMsgMsg;
-}

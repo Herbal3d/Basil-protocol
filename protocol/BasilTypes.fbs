@@ -11,13 +11,11 @@ struct Vector3 {
     Z: double;
 }
 
-/*
 struct Vector3F {
     X: float;
     Y: float;
     Z: float;
 }
-*/
 
 struct Quaternion {
     X: double;
@@ -26,14 +24,12 @@ struct Quaternion {
     W: double;
 }
 
-/*
 struct QuaternionF {
     X: float;
     Y: float;
     Z: float;
     W: float;
 }
-*/
 
 table Transform {
     matrix: [double];
@@ -58,6 +54,9 @@ table TransformF {
 
 // Entities and instances can have properties that can be read and updated independently
 table propertyValue { property: string; value: string; }
+table propertyList { 
+    props: [ propertyValue ] ;
+}
 // #typedef propertyList [propertyValue]
 
 // notifications are based on a topic
@@ -67,7 +66,7 @@ table propertyValue { property: string; value: string; }
 // #typedef exceptionCode uint
 table BasilException {
     reason: uint;
-    hints: [propertyValue];   // additional information for recovery. Error dependent.
+    hints: propertyList;   // additional information for recovery. Error dependent.
 }
 
 enum coordSystem : ubyte {
@@ -92,9 +91,9 @@ enum rotationSystem : ubyte {
 
 table coordPosition {
     pos: Vector3;
-    rot: Quaternion;
-    posRef: ubyte;  // coordRef;       // value of type coordSystem
-    rotRef: ubyte;  // rotationalRef;  // value of type rotationRef
+    rot: QuaternionF;
+    posRef: coordSystem = WGS86;  // coordRef;
+    rotRef: rotationSystem = WORLD;  // rotationalRef;
 }
 
 // OBJECT INFORMATION ==================================
@@ -114,14 +113,31 @@ struct aaBoundingBox {
     lowerBackRight: Vector3;
 }
 
+// Initial information about what is displayed for an object
 table objectDisplayInfo {
     aabb: aaBoundingBox;
 }
 
+// Different types of assets. The actual format is discovered later.
+enum assetType : ubyte {
+    unknown = 0,// what it is is not known
+    text,       // text file
+    mesh,       // mesh
+    sound,      // sound
+    animation,  // animation
+    location,   // some world location
+    image,      // a 2d image
+    directory   // directory of assets
+}
+
 // Description of the asset information for a displayable object
 table assetInformation {
-    id: uint;   //objectIdentifier;
-    displayInfo: objectDisplayInfo;
+    displayInfo: objectDisplayInfo; // general display information
+    hash: string;                   // URI hash of asset for caching
+    fetchURL: string;               // if fetch is simple fetch
+    assetServer: string;            // server to fetch asset from
+    assetId: string;                // identifier of asset on assetServer
+    type: assetType = unknown;      // type of the asset
 }
 
 // Description of a path that the object is moving on. Future
@@ -146,7 +162,7 @@ table instancePositionInfo {
 //    in RFC2617 (https://tools.ietf.org/html/rfc2617)
 //    which is a scheme token followed by an encoding of the authentication.
 table accessAuthorization {
-    accessProperties: [propertyValue];  //propertyList;
+    accessProperties: propertyList;  //propertyList;
 }
 
 // Requests can include trace information (like using Zipkin)
