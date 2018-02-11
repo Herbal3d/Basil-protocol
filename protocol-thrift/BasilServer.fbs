@@ -1,0 +1,186 @@
+/*
+ * Interface to Basil.
+ * This includes both messages from the 'client' (the one asking for things
+ *    to be displayed) and 'Basil' (the one displaying).
+ *
+ * These fall into several classes:
+ *    Connection creation and management.
+ *    Entity/instance definition and management.
+ *    Resource queries and management.
+ */
+
+include "BasilTypes.fbs";
+include "BTransportHdr.fbs";
+
+namespace org.herbal3d.protocol.basil.server;
+
+// OBJECT/INSTANCE MANAGEMENT =======================================
+
+// Describe an entity to Basil for later display or manipulation.
+// This associates an ID with a block of asset information that can be 
+//   later displayed or operated on.
+// client->Basil
+table AddEntity {
+    auth: accessAuthorization;
+    objectId: string;
+    assetInfo: assetInformation;
+    aabb: aaBoundingBox;
+}
+
+// Remove an entity from Basil. Removes all instances of the entity.
+// client->Basil
+table RemoveEntity {
+    auth: accessAuthorization;
+    objectId: string;
+}
+
+// An entity may occur multiple times. This defines one instance
+//   that is at a particular location in the world.
+// Pass in an instanceIdentifer that can be used to refer to the instance.
+// client->Basil
+table AddInstance {
+    auth: accessAuthorization;
+    instanceId: int;
+    pos: instancePositionInfo;
+    propertiesToSet: [ propertyValue ];
+}
+
+// Remove an entity instance from the scene.
+// client->Basil
+table RemoveInstance {
+    auth: accessAuthorization;
+    instanceId: int;
+}
+
+// Get a new instance identifier that is guaranteed unique across Basil clients.
+// client->Basil
+table GetUniqueInstanceId {
+}
+
+// Response of 'GetUniqueInstanceId'
+// Basil->client
+table GetUniqueInstanceIdResponse {
+    instanceId: int;
+}
+
+// Update a property of an object. This could effect all instances.
+// client->Basil
+table UpdateEntityProperty {
+    auth: accessAuthorization;
+    objectId: string;
+    props: [ propertyValue ] ;
+}
+
+// Update a property of an instance
+// client->Basil
+table UpdateInstanceProperty {
+    auth: accessAuthorization;
+    instanceId: int;
+    props: [ propertyValue ] ;
+}
+
+// A short form that updates the position properties of an instance
+// client->Basil
+table UpdateInstancePosition {
+    auth: accessAuthorization;
+    instanceId: int;
+    pos: instancePositionInfo;
+}
+
+// Fetch the properties for an object in the Basil server
+// client->Basil
+table EntityPropertyRequest {
+    auth: accessAuthorization;
+    objectId: string;
+    propertyMatch: string;
+}
+
+// Response of 'EntityPropertyRequest'
+// Basil->client
+table EntityPropertyResponse {
+    objectId: string;
+    props: [ propertyValue ] ;
+}
+
+// Fetch the properties for an instance in the Basil server
+// client->Basil
+table InstancePropertyRequest {
+    auth: accessAuthorization;
+    instanceId: int;
+    propertyMatch: string;
+}
+
+// Response of 'InstancePropertyRequest'
+// Basil->client
+table InstancePropertyResponse {
+    instanceId: int;
+    props: [ propertyValue ] ;
+}
+
+// RESOURCE MANAGEMENT ==============================================
+
+// SESSION MANAGEMENT ===============================================
+
+// A client initiates a connection.
+// Returned property list is a collection of Basil renderer capabilities.
+// client->Basil
+table OpenSession {
+    auth: accessAuthorization;
+    params: [ propertyValue ];
+}
+
+// Response of doing an OpenSession
+// Basil->client
+table OpenSessionResponse {
+    features: [ propertyValue ];
+}
+
+// The renderer is initiating the end of the session
+// client->Basil
+table CloseSession {
+    reason: string;
+}
+
+// Send this to the other side to get an asynchronous AliveResponse
+// client->Basil  or  Basil->client
+table AliveCheck {
+    time: long;
+    sequenceNumber: int;
+}
+
+// Response to an AliveCheck
+// client->Basil  or  Basil->client
+table AliveResponse {
+    time: long;                    // Time when response sent
+    sequenceNumber: int;           // response sequence number
+    timeReceived: long;            // Time code in the AliveCheck that caused this response
+    sequenceNumberReceived: int;   // Sequence number in AliveCheck that caused this response
+}
+
+// ===============================================
+
+union BasilServerMsgMsg {
+    AddEntity,
+    RemoveEntity,
+    AddInstance,
+    RemoveInstance,
+    GetUniqueInstanceId,
+    GetUniqueInstanceIdResponse,
+    UpdateEntityProperty,
+    UpdateInstanceProperty,
+    UpdateInstancePosition,
+    EntityPropertyRequest,
+    EntityPropertyResponse,
+    InstancePropertyRequest,
+    InstancePropertyResponse,
+    OpenSession,
+    OpenSessionResponse,
+    CloseSession,
+    AliveCheck,
+    AliveResponse
+}
+
+table BasilServerMsg {
+    BTransportHdr: BTransportHdrStruct;
+    Msg: BasilServerMsgMsg;
+}

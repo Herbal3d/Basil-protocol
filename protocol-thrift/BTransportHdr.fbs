@@ -1,0 +1,38 @@
+/*
+ * Table that is included in messages that need tracing, flow control,
+ *    and/or debugging.
+ */
+
+include "BasilTypes.fbs";
+
+namespace org.herbal3d.protocol.basil;
+
+// Track and message with timing and sequence numbers
+table BTransportSeqStruct {
+    sequenceNum: int;          // sequence number for this message
+    stream: int;               // stream message is in (if handling multiple streams)
+    queueTime: long;           // when the message was queued for sending
+    sendTime: long;            // when the message was actually given to the network driver
+}
+
+// Tie a request with a response
+table BTransportRequestStruct {
+    session: int;              // unique number to link response to request
+}
+
+// Information for tracing and debugging message streams and apps
+table BTransportTraceStruct {
+    // See "https://github.com/openzipkin/b3-propagation" for Zipkin trace description
+    traceID: long;
+    parentSpanID: long;
+    spanID: long;
+    sampled: bool;
+}
+
+// The whole header that goes with a message
+table BTransportHdrStruct {
+    seq: BTransportSeqStruct;
+    responseRequested: BTransportRequestStruct;
+    auth: accessAuthorization;
+    trace: BTransportTraceStruct;
+}
