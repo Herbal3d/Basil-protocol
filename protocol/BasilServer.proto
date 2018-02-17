@@ -1,0 +1,183 @@
+/*
+ * Interface to Basil. The interface a client talks to a Basil renderer.
+ * These fall into several classes:
+ *    Connection creation and management.
+ *    Object/instance definition and management.
+ *    Resource queries and management.
+ * Since there is a browser version of Basil and (as of 20180201) there are not
+ *    tools for creating a gRPG server in a browser, the communication with the
+ *    viewer service is a stream of ProtoBuf messages.
+ */
+
+syntax = "proto3";
+
+package Basil;
+
+import "BasilTypes.proto";
+
+// OBJECT/INSTANCE MANAGEMENT ===============================================
+
+// Describe an object to Basil for later display or manipulation
+// This associates an ID with a block of asset information that can be 
+//   later displayed or operated on.
+message IdentifyDisplayableObjectReq {
+    BasilType.AccessAuthorization auth = 1;
+    BasilType.TraceInfo trace = 2;
+    BasilType.ObjectIdentifier id = 3;
+    BasilType.AssetInformation assetInfo = 4;
+    BasilType.AaBoundingBox aabb = 5;
+}
+message IdentifyDisplayableObjectResp {
+    BasilType.BasilException success = 1;
+}
+// An object may occur multiple times. This defines one instance
+//   that is at a particular location in the world.
+// Returns an instanceIdentifer that can be used to refer to the instance.
+message CreateObjectInstanceReq {
+    BasilType.AccessAuthorization auth = 1;
+    BasilType.TraceInfo trace = 2;
+    BasilType.ObjectIdentifier id = 3;
+    BasilType.InstancePositionInfo pos = 4;
+    BasilType.PropertyList propertiesToSet = 5;
+}
+message CreateObjectInstanceResp {
+    BasilType.BasilException success = 1;
+    BasilType.InstanceIdentifier createInstanceId = 2;
+}
+// Update a property of an object. This could effect all instances.
+message UpdateObjectPropertyReq {
+    BasilType.AccessAuthorization auth = 1;
+    BasilType.TraceInfo trace = 2;
+    BasilType.ObjectIdentifier objectId = 3;
+    BasilType.PropertyList props = 4;
+}
+message UpdateObjectPropertyResp {
+    BasilType.BasilException success = 1;
+}
+// Update a property of an instance
+message UpdateInstancePropertyReq {
+    BasilType.AccessAuthorization auth = 1;
+    BasilType.TraceInfo trace = 2;
+    BasilType.InstanceIdentifier instanceId = 3;
+    BasilType.PropertyList props = 4;
+}
+message UpdateInstancePropertyResp {
+    BasilType.BasilException success = 1;
+}
+// A short form that updates the position properties of an instance
+message UpdateInstancePositionReq {
+    BasilType.AccessAuthorization auth = 1;
+    BasilType.TraceInfo trace = 2;
+    BasilType.InstanceIdentifier instanceId = 3;
+    BasilType.InstancePositionInfo pos = 4;
+}
+message UpdateInstancePositionResp {
+    BasilType.BasilException success = 1;
+}
+// Get the properties of an object
+message RequestObjectPropertiesReq {
+    BasilType.AccessAuthorization auth = 1;
+    BasilType.TraceInfo trace = 2;
+    int32 sequenceNumber = 3;
+    BasilType.ObjectIdentifier objectId = 4;
+    string propertyMatch = 5;   // wildcard used to match returned properties
+}
+message RequestObjectPropertiesResp {
+    BasilType.BasilException success = 1;
+    BasilType.PropertyList properties = 2;
+}
+// Get the properties of an instance
+message RequestInstancePropertiesReq {
+    BasilType.AccessAuthorization auth = 1;
+    BasilType.TraceInfo trace = 2;
+    int32 sequenceNumber = 3;
+    BasilType.InstanceIdentifier instanceId = 4;
+    string propertyMatch = 5;   // wildcard used to match returned properties
+}
+message RequestInstancePropertiesResp {
+    BasilType.BasilException success = 1;
+    BasilType.PropertyList properties = 2;
+}
+
+// RESOURCE MANAGEMENT ===============================================
+
+// CONNECTION MANAGEMENT =============================================
+
+// A client initiates a connection.
+// Returned property list is a collection of Basil renderer capabilities.
+message OpenSessionReq {
+    BasilType.AccessAuthorization auth = 1;
+    BasilType.TraceInfo trace = 2;
+    BasilType.PropertyList features = 3;    // features requested
+}
+message OpenSessionResp {
+    BasilType.BasilException success = 1;
+    BasilType.PropertyList properties = 2;
+}
+
+message CloseSessionReq {
+    BasilType.AccessAuthorization auth = 1;
+    BasilType.TraceInfo trace = 2;
+    string reason = 3;    // if there is a reason for leaving
+}
+message CloseSessionResp {
+    BasilType.BasilException success = 1;
+}
+// Ping the other side to measure delay and functionality
+message AliveCheckReq {
+    BasilType.AccessAuthorization auth = 1;   // not just anyone can see I'm alive
+    BasilType.TraceInfo trace = 2;
+    sint64 time = 3;
+    int32 sequenceNumber = 4;
+}
+message AliveCheckResp {
+    BasilType.AccessAuthorization auth = 1;
+    BasilType.TraceInfo trace = 2;
+    sint64 time = 3;
+    int32 sequenceNumber = 4;
+    sint64 timeReceived = 5;             // When the AliveCheck was received
+    int32 sequenceNumberReceived = 6;   // The sequence number sent in the AliveCheck
+}
+
+service BasilServer {
+    // OBJECT/INSTANCE MANAGEMENT ===============================================
+
+    // Describe an object to Basil for later display or manipulation
+    // This associates an ID with a block of asset information that can be 
+    //   later displayed or operated on.
+    rpc IdentifyDisplayableObject (IdentifyDisplayableObjectReq) returns (IdentifyDisplayableObjectResp);
+
+    // An object may occur multiple times. This defines one instance
+    //   that is at a particular location in the world.
+    // Returns an instanceIdentifer that can be used to refer to the instance.
+    rpc CreateObjectInstance (CreateObjectInstanceReq) returns (CreateObjectInstanceResp);
+
+    // Update a property of an object. This could effect all instances.
+    rpc UpdateObjectProperty (UpdateObjectPropertyReq) returns (UpdateObjectPropertyResp);
+
+    // Update a property of an instance
+    rpc UpdateInstanceProperty (UpdateInstancePropertyReq) returns (UpdateInstancePropertyResp);
+
+    // A short form that updates the position properties of an instance
+    rpc UpdateInstancePosition (UpdateInstancePositionReq) returns (UpdateInstancePositionResp);
+
+    // Get the properties of an object
+    rpc RequestObjectProperties (RequestObjectPropertiesReq) returns (RequestObjectPropertiesResp);
+
+    // Get the properties of an instance
+    rpc RequestInstanceProperties (RequestInstancePropertiesReq) returns (RequestInstancePropertiesResp);
+
+    // RESOURCE MANAGEMENT ===============================================
+
+    // CONNECTION MANAGEMENT =============================================
+
+    // A client initiates a connection.
+    // Returned property list is a collection of Basil renderer capabilities.
+    rpc OpenSession (OpenSessionReq) returns (OpenSessionResp);
+
+    // Client is initiating an end to the session
+    rpc CloseSession (CloseSessionReq) returns (CloseSessionResp);
+
+    // Ping the other side to measure delay and functionality
+    rpc AliveCheck (AliveCheckReq) returns (AliveCheckResp);
+}

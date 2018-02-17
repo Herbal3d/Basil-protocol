@@ -4,17 +4,17 @@
 cd "$( cd "$(dirname "${BASH_SOURCE[0]}" )" && pwd )"
 BASE=$(pwd)
 
-FLATBUFFER=/home/basil/flatbuffers
+PROTOBUF=/home/basil/protobuf
 
-FLATC=${FLATBUFFER}/flatc
+PROTOC=${PROTOBUF}/src/protoc
 
-# Do a generation for $1=fbsFile, $2=langSpec, $3=targetDir
+# Do a generation for $1=protoFile, $2=langTarget, $3=targetDir
 function doGen() {
     # echo "doGen  1=$1, 2=$2, 3=$3"
-    SRC=protocol/${1}.fbs
+    SRC=protocol/${1}.proto
     if [[ -e "$SRC" ]] ; then
         mkdir -p "$3"
-        ${FLATC} -I protocol --$2 -o "$3" "$SRC"
+        ${PROTOC} --${2}_out=$3 --proto_path=protocol/ "$SRC"
     else
         echo "No source file for $SRC"
     fi
@@ -25,10 +25,6 @@ doGen BasilTypes js             gen-BasilTypes-js
 doGen BasilTypes cpp            gen-BasilTypes-cpp
 doGen BasilTypes csharp         gen-BasilTypes-cs
 doGen BasilTypes java           gen-BasilTypes-java
-doGen BFlow js                  gen-BFlow-js
-doGen BFlow cpp                 gen-BFlow-cpp
-doGen BFlow csharp              gen-BFlow-cs
-doGen BFlow java                gen-BFlow-java
 
 # Basil Server -- for talking to the Basil server
 doGen BasilServer js            gen-BasilServer-js

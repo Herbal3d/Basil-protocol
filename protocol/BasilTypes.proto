@@ -1,0 +1,167 @@
+/*
+ * Types that are used in the communications with Basil
+ */
+syntax = "proto3";
+
+package BasilType;
+
+// GEOMETRY ==================================
+message Vector3 {
+    double X = 1;
+    double Y = 2;
+    double Z = 3;
+}
+
+/*
+message Vector3F {
+    float X = 1;
+    float Y = 2;
+    float Z = 3;
+}
+*/
+
+message Quaternion {
+    double X = 1;
+    double Y = 2;
+    double Z = 3;
+    double W = 4;
+}
+
+/*
+message QuaternionF {
+    float X = 1;
+    float Y = 2;
+    float Z = 3;
+    float W = 4;
+}
+*/
+
+message Transform {
+    repeated double matrix = 1; // 9 doubles making a row-ordered 3x3 matrix
+    Vector3 origin = 2;
+}
+
+/*
+message TransformF {
+    repeated float matrix = 1;    // 9 floats making a row-ordered 3x3 matrix
+    Vector3f origin = 2;
+}
+*/
+
+// MISC ==================================
+
+// NOTE: saddly, .proto doesn't have a typedef-like feature
+// signed milliseconds since 0 BCE UTC
+// typedef sint64 timeCode
+
+// Messages have sequence numbers which count up from 0 at the beginning of a session
+// typedef int32 messageSequenceNumber
+
+// Some items (subscriptions, ...) have IDs to track them.
+// typedef int32 simpleID
+
+// Objects can have properties that can be read and updated independently
+// typedef string propertyName
+// typedef string propertyValue
+// typedef map<propertyName,propertyValue> propertyList
+message PropertyList {
+    map<string,string> list = 1;
+}
+
+// typedef string topicName         // notifications are based on a topic
+
+// typedef int32 exceptionCode      // errors have codes so internationalization is possible
+message BasilException {
+    int32 reason = 1;                   // code for the exception, zero means no exception (success)
+    map<string,string> hints = 2;   // additional information for recovery. Error dependent.
+}
+
+enum CoordSystem {
+    WGS86 = 0;      // WGS84 earth coordinates
+    CAMERA = 1;     // Coordinates relative to camera position (-1..1 range, zero center)
+    CAMERAABS = 2;  // Absolute coordinates relative to the camera position (zero center)
+    VIRTUAL = 3;    // Zero based un-rooted coordinates
+    MOON = 4;       // Earth-moon coordinates
+    MARS = 5;       // Mars coordinates
+    REL1 = 6;       // Mutually agreed base coordinates
+    REL2 = 7;
+    REL3 = 8;
+}
+// typedef i8 coordRef
+
+enum RotationSystem {
+    WORLDR = 0;      // rotation is relative to world coordinates
+    FORR = 1;        // rotation is relative to current frame of reference
+    CAMERAR = 2;     // rotation is relative to the camera direction
+}
+// typedef i8 rotationRef
+
+message CoordPosition {
+    Vector3 pos = 1;
+    Quaternion rot = 2;
+    CoordSystem posRef = 3;
+    RotationSystem rotRef = 4;
+}
+
+// OBJECT INFORMATION ==================================
+
+// The globally unique identifier of an object is a string (text GUID or URI)
+// typedef string objectIdentifier
+message ObjectIdentifier {
+    string id = 1;
+}
+
+// An object is realized in the world as an 'instance' which has position and
+//    other individual properties. There can be multiple instances of an object.
+//    Instances are referenced by an ID given to them when created.
+// ID lifetime is the life of the particular Basil server being used.
+message InstanceIdentifier {
+    sint32 id = 1;
+}
+
+// An axis aligned area that contains an object
+message AaBoundingBox {
+    Vector3 upperFrontLeft = 1;
+    Vector3 lowerBackRight = 2;
+}
+
+message ObjectDisplayInfo {
+    AaBoundingBox aabb = 1;
+}
+
+// Description of the asset information for a displayable object
+message AssetInformation {
+    ObjectIdentifier id = 1;
+    ObjectDisplayInfo displayInfo = 2;
+}
+
+// Description of a path that the object is moving on. Future
+message PathDescription {
+    string pathType = 1;
+}
+
+// A specification of object motion/position
+message InstancePositionInfo {
+    InstanceIdentifier id = 1;
+    CoordPosition pos = 2;
+    Vector3 vel = 3;
+    PathDescription path = 4;
+}
+
+// Requests include authorization for the request.
+// It is expected that a client could have multiple authorizations from different
+//    sources and with different scopes so this access authorization blob
+//    can contain multiple properties which consist of the authorization
+//    source and a string representing that authorization. The coding
+//    of the authorization follows the 'Authorization:' header line specified
+//    in RFC2617 (https://tools.ietf.org/html/rfc2617)
+//    which is a scheme token followed by an encoding of the authentication.
+message AccessAuthorization {
+    PropertyList accessProperties = 1;
+}
+
+// Requests can include trace information (like using Zipkin)
+//   to trace calls. It's usually a JSON string but can be more complex.
+message TraceInfo {
+    string info = 1;
+}
