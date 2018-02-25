@@ -14,6 +14,7 @@ syntax = "proto3";
 package Basil;
 
 import "BasilTypes.proto";
+import "BTransport.proto";
 
 // OBJECT/INSTANCE MANAGEMENT ===============================================
 
@@ -21,82 +22,89 @@ import "BasilTypes.proto";
 // This associates an ID with a block of asset information that can be 
 //   later displayed or operated on.
 message IdentifyDisplayableObjectReq {
-    BasilType.AccessAuthorization auth = 1;
-    BasilType.TraceInfo trace = 2;
+    BTransport.BTransport transport = 1;
+    BasilType.AccessAuthorization auth = 2;
     BasilType.ObjectIdentifier id = 3;
     BasilType.AssetInformation assetInfo = 4;
     BasilType.AaBoundingBox aabb = 5;
 }
 message IdentifyDisplayableObjectResp {
-    BasilType.BasilException success = 1;
+    BTransport.BTransport transport = 1;
+    BasilType.BasilException success = 2;
 }
 // An object may occur multiple times. This defines one instance
 //   that is at a particular location in the world.
 // Returns an instanceIdentifer that can be used to refer to the instance.
 message CreateObjectInstanceReq {
-    BasilType.AccessAuthorization auth = 1;
-    BasilType.TraceInfo trace = 2;
+    BTransport.BTransport transport = 1;
+    BasilType.AccessAuthorization auth = 2;
     BasilType.ObjectIdentifier id = 3;
     BasilType.InstancePositionInfo pos = 4;
     BasilType.PropertyList propertiesToSet = 5;
 }
 message CreateObjectInstanceResp {
-    BasilType.BasilException success = 1;
-    BasilType.InstanceIdentifier createInstanceId = 2;
+    BTransport.BTransport transport = 1;
+    BasilType.BasilException success = 2;
+    BasilType.InstanceIdentifier createInstanceId = 3;
 }
 // Update a property of an object. This could effect all instances.
 message UpdateObjectPropertyReq {
-    BasilType.AccessAuthorization auth = 1;
-    BasilType.TraceInfo trace = 2;
+    BTransport.BTransport transport = 1;
+    BasilType.AccessAuthorization auth = 2;
     BasilType.ObjectIdentifier objectId = 3;
     BasilType.PropertyList props = 4;
 }
 message UpdateObjectPropertyResp {
-    BasilType.BasilException success = 1;
+    BTransport.BTransport transport = 1;
+    BasilType.BasilException success = 2;
 }
 // Update a property of an instance
 message UpdateInstancePropertyReq {
-    BasilType.AccessAuthorization auth = 1;
-    BasilType.TraceInfo trace = 2;
+    BTransport.BTransport transport = 1;
+    BasilType.AccessAuthorization auth = 2;
     BasilType.InstanceIdentifier instanceId = 3;
     BasilType.PropertyList props = 4;
 }
 message UpdateInstancePropertyResp {
-    BasilType.BasilException success = 1;
+    BTransport.BTransport transport = 1;
+    BasilType.BasilException success = 2;
 }
 // A short form that updates the position properties of an instance
 message UpdateInstancePositionReq {
-    BasilType.AccessAuthorization auth = 1;
-    BasilType.TraceInfo trace = 2;
+    BTransport.BTransport transport = 1;
+    BasilType.AccessAuthorization auth = 2;
     BasilType.InstanceIdentifier instanceId = 3;
     BasilType.InstancePositionInfo pos = 4;
 }
 message UpdateInstancePositionResp {
-    BasilType.BasilException success = 1;
+    BTransport.BTransport transport = 1;
+    BasilType.BasilException success = 2;
 }
 // Get the properties of an object
 message RequestObjectPropertiesReq {
-    BasilType.AccessAuthorization auth = 1;
-    BasilType.TraceInfo trace = 2;
+    BTransport.BTransport transport = 1;
+    BasilType.AccessAuthorization auth = 2;
     int32 sequenceNumber = 3;
     BasilType.ObjectIdentifier objectId = 4;
     string propertyMatch = 5;   // wildcard used to match returned properties
 }
 message RequestObjectPropertiesResp {
-    BasilType.BasilException success = 1;
-    BasilType.PropertyList properties = 2;
+    BTransport.BTransport transport = 1;
+    BasilType.BasilException success = 2;
+    BasilType.PropertyList properties = 3;
 }
 // Get the properties of an instance
 message RequestInstancePropertiesReq {
-    BasilType.AccessAuthorization auth = 1;
-    BasilType.TraceInfo trace = 2;
+    BTransport.BTransport transport = 1;
+    BasilType.AccessAuthorization auth = 2;
     int32 sequenceNumber = 3;
     BasilType.InstanceIdentifier instanceId = 4;
     string propertyMatch = 5;   // wildcard used to match returned properties
 }
 message RequestInstancePropertiesResp {
-    BasilType.BasilException success = 1;
-    BasilType.PropertyList properties = 2;
+    BTransport.BTransport transport = 1;
+    BasilType.BasilException success = 2;
+    BasilType.PropertyList properties = 3;
 }
 
 // RESOURCE MANAGEMENT ===============================================
@@ -106,33 +114,35 @@ message RequestInstancePropertiesResp {
 // A client initiates a connection.
 // Returned property list is a collection of Basil renderer capabilities.
 message OpenSessionReq {
-    BasilType.AccessAuthorization auth = 1;
-    BasilType.TraceInfo trace = 2;
+    BTransport.BTransport transport = 1;
+    BasilType.AccessAuthorization auth = 2;
     BasilType.PropertyList features = 3;    // features requested
 }
 message OpenSessionResp {
-    BasilType.BasilException success = 1;
-    BasilType.PropertyList properties = 2;
+    BTransport.BTransport transport = 1;
+    BasilType.BasilException success = 2;
+    BasilType.PropertyList properties = 3;
 }
 
 message CloseSessionReq {
-    BasilType.AccessAuthorization auth = 1;
-    BasilType.TraceInfo trace = 2;
+    BTransport.BTransport transport = 1;
+    BasilType.AccessAuthorization auth = 2;
     string reason = 3;    // if there is a reason for leaving
 }
 message CloseSessionResp {
-    BasilType.BasilException success = 1;
+    BTransport.BTransport transport = 1;
+    BasilType.BasilException success = 2;
 }
 // Ping the other side to measure delay and functionality
 message AliveCheckReq {
-    BasilType.AccessAuthorization auth = 1;   // not just anyone can see I'm alive
-    BasilType.TraceInfo trace = 2;
+    BTransport.BTransport transport = 1;
+    BasilType.AccessAuthorization auth = 2;   // not just anyone can see I'm alive
     sint64 time = 3;
     int32 sequenceNumber = 4;
 }
 message AliveCheckResp {
-    BasilType.AccessAuthorization auth = 1;
-    BasilType.TraceInfo trace = 2;
+    BTransport.BTransport transport = 1;
+    BasilType.AccessAuthorization auth = 2;
     sint64 time = 3;
     int32 sequenceNumber = 4;
     sint64 timeReceived = 5;             // When the AliveCheck was received

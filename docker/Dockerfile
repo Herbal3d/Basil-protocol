@@ -40,21 +40,23 @@ RUN apt-get update \
     && rm -rf /tmp/* var/tmp/* \
     && rm -rf /var/lib/apt/lists/*
 
+# Fetch and build protobuf compiler
+RUN mkdir =p /home/protobuf \
+    && cd /home/protobuf \
+    && git clone https://github.com/google/protobuf.git \
+    && cd protobuf \
+    && ./autogen.sh \
+    && ./configure --prefix=/usr \
+    && make \
+    && make check \
+    && make install
+
 # Add and switch to user
 # (From https://stackoverflow.com/questions/27701930/add-user-to-docker-container)
 RUN adduser --disabled-password --gecos 'Convoar user' ${USER} \
     && echo "${USER}:${USER_PASSWORD}" | chpasswd
 WORKDIR /home/${USER}
 USER ${USER}:${USER}
-
-# Fetch and build protobuf compiler
-RUN cd /home/${USER} \
-    && git clone https://github.com/google/protobuf.git \
-    && cd protobuf \
-    && ./autogen.sh \
-    && ./configure --prefix=/usr \
-    && make \
-    && make check
 
 # Fetch 
 
