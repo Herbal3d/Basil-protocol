@@ -11,10 +11,9 @@
 
 syntax = "proto3";
 
-package Basil;
+package BasilServer;
 
 import "BasilTypes.proto";
-import "BTransport.proto";
 
 // OBJECT/INSTANCE MANAGEMENT ===============================================
 
@@ -22,89 +21,75 @@ import "BTransport.proto";
 // This associates an ID with a block of asset information that can be 
 //   later displayed or operated on.
 message IdentifyDisplayableObjectReq {
-    BTransport.BTransport transport = 1;
-    BasilType.AccessAuthorization auth = 2;
-    BasilType.ObjectIdentifier id = 3;
-    BasilType.AssetInformation assetInfo = 4;
-    BasilType.AaBoundingBox aabb = 5;
+    BasilType.AccessAuthorization auth = 1;
+    BasilType.ObjectIdentifier id = 2;
+    BasilType.AssetInformation assetInfo = 3;
+    BasilType.AaBoundingBox aabb = 4;
 }
 message IdentifyDisplayableObjectResp {
-    BTransport.BTransport transport = 1;
-    BasilType.BasilException success = 2;
+    BasilType.BasilException success = 1;
 }
 // An object may occur multiple times. This defines one instance
 //   that is at a particular location in the world.
 // Returns an instanceIdentifer that can be used to refer to the instance.
 message CreateObjectInstanceReq {
-    BTransport.BTransport transport = 1;
-    BasilType.AccessAuthorization auth = 2;
-    BasilType.ObjectIdentifier id = 3;
-    BasilType.InstancePositionInfo pos = 4;
-    BasilType.PropertyList propertiesToSet = 5;
+    BasilType.AccessAuthorization auth = 1;
+    BasilType.ObjectIdentifier id = 2;
+    BasilType.InstancePositionInfo pos = 3;
+    BasilType.PropertyList propertiesToSet = 4;
 }
 message CreateObjectInstanceResp {
-    BTransport.BTransport transport = 1;
-    BasilType.BasilException success = 2;
-    BasilType.InstanceIdentifier createInstanceId = 3;
+    BasilType.BasilException success = 1;
+    BasilType.InstanceIdentifier createInstanceId = 2;
 }
 // Update a property of an object. This could effect all instances.
 message UpdateObjectPropertyReq {
-    BTransport.BTransport transport = 1;
-    BasilType.AccessAuthorization auth = 2;
-    BasilType.ObjectIdentifier objectId = 3;
-    BasilType.PropertyList props = 4;
+    BasilType.AccessAuthorization auth = 1;
+    BasilType.ObjectIdentifier objectId = 2;
+    BasilType.PropertyList props = 3;
 }
 message UpdateObjectPropertyResp {
-    BTransport.BTransport transport = 1;
-    BasilType.BasilException success = 2;
+    BasilType.BasilException success = 1;
 }
 // Update a property of an instance
 message UpdateInstancePropertyReq {
-    BTransport.BTransport transport = 1;
-    BasilType.AccessAuthorization auth = 2;
-    BasilType.InstanceIdentifier instanceId = 3;
-    BasilType.PropertyList props = 4;
+    BasilType.AccessAuthorization auth = 1;
+    BasilType.InstanceIdentifier instanceId = 2;
+    BasilType.PropertyList props = 3;
 }
 message UpdateInstancePropertyResp {
-    BTransport.BTransport transport = 1;
-    BasilType.BasilException success = 2;
+    BasilType.BasilException success = 1;
 }
 // A short form that updates the position properties of an instance
 message UpdateInstancePositionReq {
-    BTransport.BTransport transport = 1;
-    BasilType.AccessAuthorization auth = 2;
-    BasilType.InstanceIdentifier instanceId = 3;
-    BasilType.InstancePositionInfo pos = 4;
+    BasilType.AccessAuthorization auth = 1;
+    BasilType.InstanceIdentifier instanceId = 2;
+    BasilType.InstancePositionInfo pos = 3;
 }
 message UpdateInstancePositionResp {
-    BTransport.BTransport transport = 1;
-    BasilType.BasilException success = 2;
+    BasilType.BasilException success = 1;
 }
 // Get the properties of an object
 message RequestObjectPropertiesReq {
-    BTransport.BTransport transport = 1;
-    BasilType.AccessAuthorization auth = 2;
-    int32 sequenceNumber = 3;
-    BasilType.ObjectIdentifier objectId = 4;
-    string propertyMatch = 5;   // wildcard used to match returned properties
+    BasilType.AccessAuthorization auth = 1;
+    int32 sequenceNumber = 2;
+    BasilType.ObjectIdentifier objectId = 3;
+    string propertyMatch = 4;   // wildcard used to match returned properties
 }
 message RequestObjectPropertiesResp {
-    BTransport.BTransport transport = 1;
-    BasilType.BasilException success = 2;
-    BasilType.PropertyList properties = 3;
+    BasilType.BasilException success = 1;
+    BasilType.PropertyList properties = 2;
 }
 // Get the properties of an instance
 message RequestInstancePropertiesReq {
-    BTransport.BTransport transport = 1;
-    BasilType.AccessAuthorization auth = 2;
-    int32 sequenceNumber = 3;
-    BasilType.InstanceIdentifier instanceId = 4;
-    string propertyMatch = 5;   // wildcard used to match returned properties
+    BasilType.AccessAuthorization auth = 1;
+    int32 sequenceNumber = 2;
+    BasilType.InstanceIdentifier instanceId = 3;
+    string propertyMatch = 4;   // wildcard used to match returned properties
 }
 message RequestInstancePropertiesResp {
-    BTransport.BTransport transport = 1;
-    BasilType.BasilException success = 2;
-    BasilType.PropertyList properties = 3;
+    BasilType.BasilException success = 1;
+    BasilType.PropertyList properties = 2;
 }
 
 // RESOURCE MANAGEMENT ===============================================
@@ -114,43 +99,63 @@ message RequestInstancePropertiesResp {
 // A client initiates a connection.
 // Returned property list is a collection of Basil renderer capabilities.
 message OpenSessionReq {
-    BTransport.BTransport transport = 1;
-    BasilType.AccessAuthorization auth = 2;
-    BasilType.PropertyList features = 3;    // features requested
+    BasilType.AccessAuthorization auth = 1;
+    BasilType.PropertyList features = 2;    // features requested
 }
 message OpenSessionResp {
-    BTransport.BTransport transport = 1;
-    BasilType.BasilException success = 2;
-    BasilType.PropertyList properties = 3;
+    BasilType.BasilException success = 1;
+    BasilType.PropertyList properties = 2;
 }
 
 message CloseSessionReq {
-    BTransport.BTransport transport = 1;
-    BasilType.AccessAuthorization auth = 2;
-    string reason = 3;    // if there is a reason for leaving
+    BasilType.AccessAuthorization auth = 1;
+    string reason = 2;    // if there is a reason for leaving
 }
 message CloseSessionResp {
-    BTransport.BTransport transport = 1;
-    BasilType.BasilException success = 2;
+    BasilType.BasilException success = 1;
 }
 // Ping the other side to measure delay and functionality
 message AliveCheckReq {
-    BTransport.BTransport transport = 1;
-    BasilType.AccessAuthorization auth = 2;   // not just anyone can see I'm alive
-    sint64 time = 3;
-    int32 sequenceNumber = 4;
+    BasilType.AccessAuthorization auth = 1;   // not just anyone can see I'm alive
+    sint64 time = 2;
+    int32 sequenceNum = 3;
 }
 message AliveCheckResp {
-    BTransport.BTransport transport = 1;
-    BasilType.AccessAuthorization auth = 2;
-    sint64 time = 3;
-    int32 sequenceNumber = 4;
-    sint64 timeReceived = 5;             // When the AliveCheck was received
-    int32 sequenceNumberReceived = 6;   // The sequence number sent in the AliveCheck
+    sint64 time = 1;
+    int32 sequenceNum = 2;
+    sint64 timeReceived = 3;             // When the AliveCheck was received
+    int32 sequenceNumReceived = 4;   // The sequence number sent in the AliveCheck
 }
 
+// TRANSPORT MESSAGE DEFINITION  =======================================
+message BasilServerMessage {
+    oneof msg {
+        BasilServer.IdentifyDisplayableObjectReq    IdentifyDisplayableObjectReqMsg     = 1;
+        BasilServer.IdentifyDisplayableObjectResp   IdentifyDisplayableObjectRespMsg    = 2;
+        BasilServer.CreateObjectInstanceReq         CreateObjectInstanceReqMsg          = 3;
+        BasilServer.CreateObjectInstanceResp        CreateObjectInstanceRespMsg         = 4;
+        BasilServer.UpdateObjectPropertyReq         UpdateObjectPropertyReqMsg          = 5;
+        BasilServer.UpdateObjectPropertyResp        UpdateObjectPropertyRespMsg         = 6;
+        BasilServer.UpdateInstancePropertyReq       UpdateInstancePropertyReqMsg        = 7;
+        BasilServer.UpdateInstancePropertyResp      UpdateInstancePropertyRespMsg       = 8;
+        BasilServer.UpdateInstancePositionReq       UpdateInstancePositionReqMsg        = 9;
+        BasilServer.UpdateInstancePositionResp      UpdateInstancePositionRespMsg       = 10;
+        BasilServer.RequestObjectPropertiesReq      RequestObjectPropertiesReqMsg       = 11;
+        BasilServer.RequestObjectPropertiesResp     RequestObjectPropertiesRespMsg      = 12;
+        BasilServer.RequestInstancePropertiesReq    RequestInstancePropertiesReqMsg     = 13;
+        BasilServer.RequestInstancePropertiesResp   RequestInstancePropertiesRespMsg    = 14;
+        BasilServer.OpenSessionReq                  OpenSessionReqMsg                   = 15;
+        BasilServer.OpenSessionResp                 OpenSessionRespMsg                  = 16;
+        BasilServer.CloseSessionReq                 CloseSessionReqMsg                  = 17;
+        BasilServer.CloseSessionResp                CloseSessionRespMsg                 = 18;
+        BasilServer.AliveCheckReq                   AliveCheckReqMsg                    = 19;
+        BasilServer.AliveCheckResp                  AliveCheckRespMsg                   = 20;
+    }
+}
+
+// SERVER DEFINITION  ==================================================
 service BasilServer {
-    // OBJECT/INSTANCE MANAGEMENT ===============================================
+    // OBJECT/INSTANCE MANAGEMENT ======================================
 
     // Describe an object to Basil for later display or manipulation
     // This associates an ID with a block of asset information that can be 

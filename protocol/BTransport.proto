@@ -22,8 +22,10 @@ message BTransport {
 
     // Trace information
     // See "https://github.com/openzipkin/b3-propagation" for Zipkin trace description
-    uint64 traceID = 10;
-    uint64 parentSpanID = 11;
-    uint64 spanID = 12;
-    bool sampled = 13;
+    uint64 traceID = 8;
+    uint64 parentSpanID = 9;
+    uint64 spanID = 10;
+    bool sampled = 11;
+
+    bytes message = 15;  // the actual message being transported
 }
