@@ -130,26 +130,26 @@ message AliveCheckResp {
 // TRANSPORT MESSAGE DEFINITION  =======================================
 message BasilServerMessage {
     oneof msg {
-        BasilServer.IdentifyDisplayableObjectReq    IdentifyDisplayableObjectReqMsg     = 1;
-        BasilServer.IdentifyDisplayableObjectResp   IdentifyDisplayableObjectRespMsg    = 2;
-        BasilServer.CreateObjectInstanceReq         CreateObjectInstanceReqMsg          = 3;
-        BasilServer.CreateObjectInstanceResp        CreateObjectInstanceRespMsg         = 4;
-        BasilServer.UpdateObjectPropertyReq         UpdateObjectPropertyReqMsg          = 5;
-        BasilServer.UpdateObjectPropertyResp        UpdateObjectPropertyRespMsg         = 6;
-        BasilServer.UpdateInstancePropertyReq       UpdateInstancePropertyReqMsg        = 7;
-        BasilServer.UpdateInstancePropertyResp      UpdateInstancePropertyRespMsg       = 8;
-        BasilServer.UpdateInstancePositionReq       UpdateInstancePositionReqMsg        = 9;
-        BasilServer.UpdateInstancePositionResp      UpdateInstancePositionRespMsg       = 10;
-        BasilServer.RequestObjectPropertiesReq      RequestObjectPropertiesReqMsg       = 11;
-        BasilServer.RequestObjectPropertiesResp     RequestObjectPropertiesRespMsg      = 12;
-        BasilServer.RequestInstancePropertiesReq    RequestInstancePropertiesReqMsg     = 13;
-        BasilServer.RequestInstancePropertiesResp   RequestInstancePropertiesRespMsg    = 14;
-        BasilServer.OpenSessionReq                  OpenSessionReqMsg                   = 15;
-        BasilServer.OpenSessionResp                 OpenSessionRespMsg                  = 16;
-        BasilServer.CloseSessionReq                 CloseSessionReqMsg                  = 17;
-        BasilServer.CloseSessionResp                CloseSessionRespMsg                 = 18;
-        BasilServer.AliveCheckReq                   AliveCheckReqMsg                    = 19;
-        BasilServer.AliveCheckResp                  AliveCheckRespMsg                   = 20;
+        IdentifyDisplayableObjectReq    IdentifyDisplayableObjectReqMsg     = 1;
+        IdentifyDisplayableObjectResp   IdentifyDisplayableObjectRespMsg    = 2;
+        CreateObjectInstanceReq         CreateObjectInstanceReqMsg          = 3;
+        CreateObjectInstanceResp        CreateObjectInstanceRespMsg         = 4;
+        UpdateObjectPropertyReq         UpdateObjectPropertyReqMsg          = 5;
+        UpdateObjectPropertyResp        UpdateObjectPropertyRespMsg         = 6;
+        UpdateInstancePropertyReq       UpdateInstancePropertyReqMsg        = 7;
+        UpdateInstancePropertyResp      UpdateInstancePropertyRespMsg       = 8;
+        UpdateInstancePositionReq       UpdateInstancePositionReqMsg        = 9;
+        UpdateInstancePositionResp      UpdateInstancePositionRespMsg       = 10;
+        RequestObjectPropertiesReq      RequestObjectPropertiesReqMsg       = 11;
+        RequestObjectPropertiesResp     RequestObjectPropertiesRespMsg      = 12;
+        RequestInstancePropertiesReq    RequestInstancePropertiesReqMsg     = 13;
+        RequestInstancePropertiesResp   RequestInstancePropertiesRespMsg    = 14;
+        OpenSessionReq                  OpenSessionReqMsg                   = 15;
+        OpenSessionResp                 OpenSessionRespMsg                  = 16;
+        CloseSessionReq                 CloseSessionReqMsg                  = 17;
+        CloseSessionResp                CloseSessionRespMsg                 = 18;
+        AliveCheckReq                   AliveCheckReqMsg                    = 19;
+        AliveCheckResp                  AliveCheckRespMsg                   = 20;
     }
 }
 
