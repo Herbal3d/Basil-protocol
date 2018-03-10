@@ -29,6 +29,13 @@ message IdentifyDisplayableObjectReq {
 message IdentifyDisplayableObjectResp {
     BasilType.BasilException success = 1;
 }
+message ForgetDisplayableObjectReq {
+    BasilType.AccessAuthorization auth = 1;
+    BasilType.ObjectIdentifier id = 2;
+}
+message ForgetDisplayableObjectResp {
+    BasilType.BasilException success = 1;
+}
 // An object may occur multiple times. This defines one instance
 //   that is at a particular location in the world.
 // Returns an instanceIdentifer that can be used to refer to the instance.
@@ -41,6 +48,13 @@ message CreateObjectInstanceReq {
 message CreateObjectInstanceResp {
     BasilType.BasilException success = 1;
     BasilType.InstanceIdentifier createInstanceId = 2;
+}
+message DeleteObjectInstanceReq {
+    BasilType.AccessAuthorization auth = 1;
+    BasilType.InstanceIdentifier id = 2;
+}
+message DeleteObjectInstanceResp {
+    BasilType.BasilException success = 1;
 }
 // Update a property of an object. This could effect all instances.
 message UpdateObjectPropertyReq {
@@ -72,9 +86,8 @@ message UpdateInstancePositionResp {
 // Get the properties of an object
 message RequestObjectPropertiesReq {
     BasilType.AccessAuthorization auth = 1;
-    int32 sequenceNumber = 2;
-    BasilType.ObjectIdentifier objectId = 3;
-    string propertyMatch = 4;   // wildcard used to match returned properties
+    BasilType.ObjectIdentifier objectId = 2;
+    string propertyMatch = 3;   // wildcard used to match returned properties
 }
 message RequestObjectPropertiesResp {
     BasilType.BasilException success = 1;
@@ -83,9 +96,8 @@ message RequestObjectPropertiesResp {
 // Get the properties of an instance
 message RequestInstancePropertiesReq {
     BasilType.AccessAuthorization auth = 1;
-    int32 sequenceNumber = 2;
-    BasilType.InstanceIdentifier instanceId = 3;
-    string propertyMatch = 4;   // wildcard used to match returned properties
+    BasilType.InstanceIdentifier instanceId = 2;
+    string propertyMatch = 3;   // wildcard used to match returned properties
 }
 message RequestInstancePropertiesResp {
     BasilType.BasilException success = 1;
@@ -132,24 +144,28 @@ message BasilServerMessage {
     oneof msg {
         IdentifyDisplayableObjectReq    IdentifyDisplayableObjectReqMsg     = 1;
         IdentifyDisplayableObjectResp   IdentifyDisplayableObjectRespMsg    = 2;
-        CreateObjectInstanceReq         CreateObjectInstanceReqMsg          = 3;
-        CreateObjectInstanceResp        CreateObjectInstanceRespMsg         = 4;
-        UpdateObjectPropertyReq         UpdateObjectPropertyReqMsg          = 5;
-        UpdateObjectPropertyResp        UpdateObjectPropertyRespMsg         = 6;
-        UpdateInstancePropertyReq       UpdateInstancePropertyReqMsg        = 7;
-        UpdateInstancePropertyResp      UpdateInstancePropertyRespMsg       = 8;
-        UpdateInstancePositionReq       UpdateInstancePositionReqMsg        = 9;
-        UpdateInstancePositionResp      UpdateInstancePositionRespMsg       = 10;
-        RequestObjectPropertiesReq      RequestObjectPropertiesReqMsg       = 11;
-        RequestObjectPropertiesResp     RequestObjectPropertiesRespMsg      = 12;
-        RequestInstancePropertiesReq    RequestInstancePropertiesReqMsg     = 13;
-        RequestInstancePropertiesResp   RequestInstancePropertiesRespMsg    = 14;
-        OpenSessionReq                  OpenSessionReqMsg                   = 15;
-        OpenSessionResp                 OpenSessionRespMsg                  = 16;
-        CloseSessionReq                 CloseSessionReqMsg                  = 17;
-        CloseSessionResp                CloseSessionRespMsg                 = 18;
-        AliveCheckReq                   AliveCheckReqMsg                    = 19;
-        AliveCheckResp                  AliveCheckRespMsg                   = 20;
+        ForgetDisplayableObjectReq      ForgetDisplayableObjectReqMsg       = 3;
+        ForgetDisplayableObjectResp     ForgetDisplayableObjectRespMsg      = 4;
+        CreateObjectInstanceReq         CreateObjectInstanceReqMsg          = 5;
+        CreateObjectInstanceResp        CreateObjectInstanceRespMsg         = 6;
+        DeleteObjectInstanceReq         DeleteObjectInstanceReqMsg          = 7;
+        DeleteObjectInstanceResp        DeleteObjectInstanceRespMsg         = 8;
+        UpdateObjectPropertyReq         UpdateObjectPropertyReqMsg          = 9;
+        UpdateObjectPropertyResp        UpdateObjectPropertyRespMsg         = 10;
+        UpdateInstancePropertyReq       UpdateInstancePropertyReqMsg        = 11;
+        UpdateInstancePropertyResp      UpdateInstancePropertyRespMsg       = 12;
+        UpdateInstancePositionReq       UpdateInstancePositionReqMsg        = 13;
+        UpdateInstancePositionResp      UpdateInstancePositionRespMsg       = 14;
+        RequestObjectPropertiesReq      RequestObjectPropertiesReqMsg       = 15;
+        RequestObjectPropertiesResp     RequestObjectPropertiesRespMsg      = 16;
+        RequestInstancePropertiesReq    RequestInstancePropertiesReqMsg     = 17;
+        RequestInstancePropertiesResp   RequestInstancePropertiesRespMsg    = 18;
+        OpenSessionReq                  OpenSessionReqMsg                   = 19;
+        OpenSessionResp                 OpenSessionRespMsg                  = 20;
+        CloseSessionReq                 CloseSessionReqMsg                  = 21;
+        CloseSessionResp                CloseSessionRespMsg                 = 22;
+        AliveCheckReq                   AliveCheckReqMsg                    = 23;
+        AliveCheckResp                  AliveCheckRespMsg                   = 24;
     }
 }
 
