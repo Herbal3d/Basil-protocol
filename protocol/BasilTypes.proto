@@ -52,7 +52,7 @@ message TransformF {
 
 // NOTE: saddly, .proto doesn't have a typedef-like feature
 // signed milliseconds since 0 BCE UTC
-// typedef sint64 timeCode
+// typedef uint64 timeCode
 
 // Messages have sequence numbers which count up from 0 at the beginning of a session
 // typedef int32 messageSequenceNumber
@@ -125,14 +125,17 @@ message AaBoundingBox {
     Vector3 lowerBackRight = 2;
 }
 
-message ObjectDisplayInfo {
+message DisplayableInfo {
     AaBoundingBox aabb = 1;
+    string DisplayableType = 2;
+    string AssetContext = 3;
+    string AssetName = 4;
 }
 
 // Description of the asset information for a displayable object
 message AssetInformation {
     ObjectIdentifier id = 1;
-    ObjectDisplayInfo displayInfo = 2;
+    DisplayableInfo displayInfo = 2;
 }
 
 // Description of a path that the object is moving on. Future

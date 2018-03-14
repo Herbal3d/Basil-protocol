@@ -129,13 +129,13 @@ message CloseSessionResp {
 // Ping the other side to measure delay and functionality
 message AliveCheckReq {
     BasilType.AccessAuthorization auth = 1;   // not just anyone can see I'm alive
-    sint64 time = 2;
+    uint64 time = 2;
     int32 sequenceNum = 3;
 }
 message AliveCheckResp {
-    sint64 time = 1;
+    uint64 time = 1;
     int32 sequenceNum = 2;
-    sint64 timeReceived = 3;             // When the AliveCheck was received
+    uint64 timeReceived = 3;             // When the AliveCheck was received
     int32 sequenceNumReceived = 4;   // The sequence number sent in the AliveCheck
 }
 
