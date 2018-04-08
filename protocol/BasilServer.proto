@@ -44,6 +44,7 @@ message CreateObjectInstanceReq {
     BasilType.ObjectIdentifier id = 2;
     BasilType.InstancePositionInfo pos = 3;
     BasilType.PropertyList propertiesToSet = 4;
+    int32 InstanceCountHint = 5;    // hint as to total number of instances (zero means no hint)
 }
 message CreateObjectInstanceResp {
     BasilType.BasilException success = 1;

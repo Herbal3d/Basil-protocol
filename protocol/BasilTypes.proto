@@ -126,10 +126,9 @@ message AaBoundingBox {
 }
 
 message DisplayableInfo {
-    AaBoundingBox aabb = 1;
-    string DisplayableType = 2;
-    string AssetContext = 3;
-    string AssetName = 4;
+    AaBoundingBox aabb = 1;     // bounding box for quick LOD, etc
+    string DisplayableType = 2; // type name
+    PropertyList Asset = 3;     // attributes that make up the asset
 }
 
 // Description of the asset information for a displayable object
