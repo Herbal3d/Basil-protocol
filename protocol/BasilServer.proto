@@ -22,12 +22,12 @@ import "BasilTypes.proto";
 //   later displayed or operated on.
 message IdentifyDisplayableObjectReq {
     BasilType.AccessAuthorization auth = 1;
-    BasilType.ObjectIdentifier id = 2;
-    BasilType.AssetInformation assetInfo = 3;
-    BasilType.AaBoundingBox aabb = 4;
+    BasilType.AssetInformation assetInfo = 2;
+    BasilType.AaBoundingBox aabb = 3;
 }
 message IdentifyDisplayableObjectResp {
     BasilType.BasilException success = 1;
+    BasilType.ObjectIdentifier id = 2;
 }
 message ForgetDisplayableObjectReq {
     BasilType.AccessAuthorization auth = 1;
