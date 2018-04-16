@@ -48,7 +48,7 @@ message CreateObjectInstanceReq {
 }
 message CreateObjectInstanceResp {
     BasilType.BasilException exception = 1;
-    BasilType.InstanceIdentifier createInstanceId = 2;
+    BasilType.InstanceIdentifier instanceId = 2;
 }
 message DeleteObjectInstanceReq {
     BasilType.AccessAuthorization auth = 1;
