@@ -116,7 +116,7 @@ message ObjectIdentifier {
 //    Instances are referenced by an ID given to them when created.
 // ID lifetime is the life of the particular Basil server being used.
 message InstanceIdentifier {
-    sint32 id = 1;
+    string id = 1;
 }
 
 // An axis aligned area that contains an object

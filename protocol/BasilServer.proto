@@ -26,45 +26,45 @@ message IdentifyDisplayableObjectReq {
     BasilType.AaBoundingBox aabb = 3;
 }
 message IdentifyDisplayableObjectResp {
-    BasilType.BasilException success = 1;
-    BasilType.ObjectIdentifier id = 2;
+    BasilType.BasilException exception = 1;
+    BasilType.ObjectIdentifier identifier = 2;
 }
 message ForgetDisplayableObjectReq {
     BasilType.AccessAuthorization auth = 1;
-    BasilType.ObjectIdentifier id = 2;
+    BasilType.ObjectIdentifier identifier = 2;
 }
 message ForgetDisplayableObjectResp {
-    BasilType.BasilException success = 1;
+    BasilType.BasilException exception = 1;
 }
 // An object may occur multiple times. This defines one instance
 //   that is at a particular location in the world.
 // Returns an instanceIdentifer that can be used to refer to the instance.
 message CreateObjectInstanceReq {
     BasilType.AccessAuthorization auth = 1;
-    BasilType.ObjectIdentifier id = 2;
+    BasilType.ObjectIdentifier identifier = 2;
     BasilType.InstancePositionInfo pos = 3;
     BasilType.PropertyList propertiesToSet = 4;
     int32 InstanceCountHint = 5;    // hint as to total number of instances (zero means no hint)
 }
 message CreateObjectInstanceResp {
-    BasilType.BasilException success = 1;
+    BasilType.BasilException exception = 1;
     BasilType.InstanceIdentifier createInstanceId = 2;
 }
 message DeleteObjectInstanceReq {
     BasilType.AccessAuthorization auth = 1;
-    BasilType.InstanceIdentifier id = 2;
+    BasilType.InstanceIdentifier identifier = 2;
 }
 message DeleteObjectInstanceResp {
-    BasilType.BasilException success = 1;
+    BasilType.BasilException exception = 1;
 }
 // Update a property of an object. This could effect all instances.
 message UpdateObjectPropertyReq {
     BasilType.AccessAuthorization auth = 1;
-    BasilType.ObjectIdentifier objectId = 2;
+    BasilType.ObjectIdentifier identifier = 2;
     BasilType.PropertyList props = 3;
 }
 message UpdateObjectPropertyResp {
-    BasilType.BasilException success = 1;
+    BasilType.BasilException exception = 1;
 }
 // Update a property of an instance
 message UpdateInstancePropertyReq {
@@ -73,7 +73,7 @@ message UpdateInstancePropertyReq {
     BasilType.PropertyList props = 3;
 }
 message UpdateInstancePropertyResp {
-    BasilType.BasilException success = 1;
+    BasilType.BasilException exception = 1;
 }
 // A short form that updates the position properties of an instance
 message UpdateInstancePositionReq {
@@ -82,16 +82,16 @@ message UpdateInstancePositionReq {
     BasilType.InstancePositionInfo pos = 3;
 }
 message UpdateInstancePositionResp {
-    BasilType.BasilException success = 1;
+    BasilType.BasilException exception = 1;
 }
 // Get the properties of an object
 message RequestObjectPropertiesReq {
     BasilType.AccessAuthorization auth = 1;
-    BasilType.ObjectIdentifier objectId = 2;
+    BasilType.ObjectIdentifier identifier = 2;
     string propertyMatch = 3;   // wildcard used to match returned properties
 }
 message RequestObjectPropertiesResp {
-    BasilType.BasilException success = 1;
+    BasilType.BasilException exception = 1;
     BasilType.PropertyList properties = 2;
 }
 // Get the properties of an instance
@@ -101,7 +101,7 @@ message RequestInstancePropertiesReq {
     string propertyMatch = 3;   // wildcard used to match returned properties
 }
 message RequestInstancePropertiesResp {
-    BasilType.BasilException success = 1;
+    BasilType.BasilException exception = 1;
     BasilType.PropertyList properties = 2;
 }
 
@@ -116,7 +116,7 @@ message OpenSessionReq {
     BasilType.PropertyList features = 2;    // features requested
 }
 message OpenSessionResp {
-    BasilType.BasilException success = 1;
+    BasilType.BasilException exception = 1;
     BasilType.PropertyList properties = 2;
 }
 
@@ -125,7 +125,7 @@ message CloseSessionReq {
     string reason = 2;    // if there is a reason for leaving
 }
 message CloseSessionResp {
-    BasilType.BasilException success = 1;
+    BasilType.BasilException exception = 1;
 }
 // Ping the other side to measure delay and functionality
 message AliveCheckReq {
