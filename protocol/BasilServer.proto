@@ -52,7 +52,7 @@ message CreateObjectInstanceResp {
 }
 message DeleteObjectInstanceReq {
     BasilType.AccessAuthorization auth = 1;
-    BasilType.InstanceIdentifier identifier = 2;
+    BasilType.InstanceIdentifier instanceId = 2;
 }
 message DeleteObjectInstanceResp {
     BasilType.BasilException exception = 1;
