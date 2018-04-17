@@ -142,32 +142,30 @@ message AliveCheckResp {
 
 // TRANSPORT MESSAGE DEFINITION  =======================================
 message BasilServerMessage {
-    oneof msg {
-        IdentifyDisplayableObjectReq    IdentifyDisplayableObjectReqMsg     = 1;
-        IdentifyDisplayableObjectResp   IdentifyDisplayableObjectRespMsg    = 2;
-        ForgetDisplayableObjectReq      ForgetDisplayableObjectReqMsg       = 3;
-        ForgetDisplayableObjectResp     ForgetDisplayableObjectRespMsg      = 4;
-        CreateObjectInstanceReq         CreateObjectInstanceReqMsg          = 5;
-        CreateObjectInstanceResp        CreateObjectInstanceRespMsg         = 6;
-        DeleteObjectInstanceReq         DeleteObjectInstanceReqMsg          = 7;
-        DeleteObjectInstanceResp        DeleteObjectInstanceRespMsg         = 8;
-        UpdateObjectPropertyReq         UpdateObjectPropertyReqMsg          = 9;
-        UpdateObjectPropertyResp        UpdateObjectPropertyRespMsg         = 10;
-        UpdateInstancePropertyReq       UpdateInstancePropertyReqMsg        = 11;
-        UpdateInstancePropertyResp      UpdateInstancePropertyRespMsg       = 12;
-        UpdateInstancePositionReq       UpdateInstancePositionReqMsg        = 13;
-        UpdateInstancePositionResp      UpdateInstancePositionRespMsg       = 14;
-        RequestObjectPropertiesReq      RequestObjectPropertiesReqMsg       = 15;
-        RequestObjectPropertiesResp     RequestObjectPropertiesRespMsg      = 16;
-        RequestInstancePropertiesReq    RequestInstancePropertiesReqMsg     = 17;
-        RequestInstancePropertiesResp   RequestInstancePropertiesRespMsg    = 18;
-        OpenSessionReq                  OpenSessionReqMsg                   = 19;
-        OpenSessionResp                 OpenSessionRespMsg                  = 20;
-        CloseSessionReq                 CloseSessionReqMsg                  = 21;
-        CloseSessionResp                CloseSessionRespMsg                 = 22;
-        AliveCheckReq                   AliveCheckReqMsg                    = 23;
-        AliveCheckResp                  AliveCheckRespMsg                   = 24;
-    }
+    IdentifyDisplayableObjectReq    IdentifyDisplayableObjectReqMsg     = 1;
+    IdentifyDisplayableObjectResp   IdentifyDisplayableObjectRespMsg    = 2;
+    ForgetDisplayableObjectReq      ForgetDisplayableObjectReqMsg       = 3;
+    ForgetDisplayableObjectResp     ForgetDisplayableObjectRespMsg      = 4;
+    CreateObjectInstanceReq         CreateObjectInstanceReqMsg          = 5;
+    CreateObjectInstanceResp        CreateObjectInstanceRespMsg         = 6;
+    DeleteObjectInstanceReq         DeleteObjectInstanceReqMsg          = 7;
+    DeleteObjectInstanceResp        DeleteObjectInstanceRespMsg         = 8;
+    UpdateObjectPropertyReq         UpdateObjectPropertyReqMsg          = 9;
+    UpdateObjectPropertyResp        UpdateObjectPropertyRespMsg         = 10;
+    UpdateInstancePropertyReq       UpdateInstancePropertyReqMsg        = 11;
+    UpdateInstancePropertyResp      UpdateInstancePropertyRespMsg       = 12;
+    UpdateInstancePositionReq       UpdateInstancePositionReqMsg        = 13;
+    UpdateInstancePositionResp      UpdateInstancePositionRespMsg       = 14;
+    RequestObjectPropertiesReq      RequestObjectPropertiesReqMsg       = 15;
+    RequestObjectPropertiesResp     RequestObjectPropertiesRespMsg      = 16;
+    RequestInstancePropertiesReq    RequestInstancePropertiesReqMsg     = 17;
+    RequestInstancePropertiesResp   RequestInstancePropertiesRespMsg    = 18;
+    OpenSessionReq                  OpenSessionReqMsg                   = 19;
+    OpenSessionResp                 OpenSessionRespMsg                  = 20;
+    CloseSessionReq                 CloseSessionReqMsg                  = 21;
+    CloseSessionResp                CloseSessionRespMsg                 = 22;
+    AliveCheckReq                   AliveCheckReqMsg                    = 23;
+    AliveCheckResp                  AliveCheckRespMsg                   = 24;
 }
 
 // SERVER DEFINITION  ==================================================
