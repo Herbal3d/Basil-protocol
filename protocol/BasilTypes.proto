@@ -72,7 +72,7 @@ message PropertyList {
 
 // typedef int32 exceptionCode      // errors have codes so internationalization is possible
 message BasilException {
-    int32 reason = 1;                   // code for the exception, zero means no exception (success)
+    string reason = 1;              // explanation of exception
     map<string,string> hints = 2;   // additional information for recovery. Error dependent.
 }
 
