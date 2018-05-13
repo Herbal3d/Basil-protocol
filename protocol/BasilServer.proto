@@ -18,7 +18,7 @@ import "BasilTypes.proto";
 // OBJECT/INSTANCE MANAGEMENT ===============================================
 
 // Describe an object to Basil for later display or manipulation
-// This associates an ID with a block of asset information that can be 
+// This associates an ID with a block of asset information that can be
 //   later displayed or operated on.
 message IdentifyDisplayableObjectReq {
     BasilType.AccessAuthorization auth = 1;
@@ -43,7 +43,7 @@ message CreateObjectInstanceReq {
     BasilType.AccessAuthorization auth = 1;
     BasilType.ObjectIdentifier identifier = 2;
     BasilType.InstancePositionInfo pos = 3;
-    BasilType.PropertyList propertiesToSet = 4;
+    map<string,string> propertiesToSet = 4;
     int32 InstanceCountHint = 5;    // hint as to total number of instances (zero means no hint)
 }
 message CreateObjectInstanceResp {
@@ -61,7 +61,7 @@ message DeleteObjectInstanceResp {
 message UpdateObjectPropertyReq {
     BasilType.AccessAuthorization auth = 1;
     BasilType.ObjectIdentifier identifier = 2;
-    BasilType.PropertyList props = 3;
+    map<string,string> props = 3;
 }
 message UpdateObjectPropertyResp {
     BasilType.BasilException exception = 1;
@@ -70,7 +70,7 @@ message UpdateObjectPropertyResp {
 message UpdateInstancePropertyReq {
     BasilType.AccessAuthorization auth = 1;
     BasilType.InstanceIdentifier instanceId = 2;
-    BasilType.PropertyList props = 3;
+    map<string,string> props = 3;
 }
 message UpdateInstancePropertyResp {
     BasilType.BasilException exception = 1;
@@ -92,7 +92,7 @@ message RequestObjectPropertiesReq {
 }
 message RequestObjectPropertiesResp {
     BasilType.BasilException exception = 1;
-    BasilType.PropertyList properties = 2;
+    map<string,string> properties = 2;
 }
 // Get the properties of an instance
 message RequestInstancePropertiesReq {
@@ -102,7 +102,7 @@ message RequestInstancePropertiesReq {
 }
 message RequestInstancePropertiesResp {
     BasilType.BasilException exception = 1;
-    BasilType.PropertyList properties = 2;
+    map<string,string> properties = 2;
 }
 
 // RESOURCE MANAGEMENT ===============================================
@@ -113,11 +113,11 @@ message RequestInstancePropertiesResp {
 // Returned property list is a collection of Basil renderer capabilities.
 message OpenSessionReq {
     BasilType.AccessAuthorization auth = 1;
-    BasilType.PropertyList features = 2;    // features requested
+    map<string,string> features = 2;    // features requested
 }
 message OpenSessionResp {
     BasilType.BasilException exception = 1;
-    BasilType.PropertyList properties = 2;
+    map<string,string> properties = 2;
 }
 
 message CloseSessionReq {
@@ -125,6 +125,14 @@ message CloseSessionReq {
     string reason = 2;    // if there is a reason for leaving
 }
 message CloseSessionResp {
+    BasilType.BasilException exception = 1;
+}
+// Command to Basil to talk to some data source. Originated by Pesto.
+message MakeConnectionReq {
+    BasilType.AccessAuthorization auth = 1;
+    map<string,string> connectionParams = 2;
+}
+message MakeConnectionResp {
     BasilType.BasilException exception = 1;
 }
 // Ping the other side to measure delay and functionality
@@ -142,30 +150,35 @@ message AliveCheckResp {
 
 // TRANSPORT MESSAGE DEFINITION  =======================================
 message BasilServerMessage {
-    IdentifyDisplayableObjectReq    IdentifyDisplayableObjectReqMsg     = 1;
-    IdentifyDisplayableObjectResp   IdentifyDisplayableObjectRespMsg    = 2;
-    ForgetDisplayableObjectReq      ForgetDisplayableObjectReqMsg       = 3;
-    ForgetDisplayableObjectResp     ForgetDisplayableObjectRespMsg      = 4;
-    CreateObjectInstanceReq         CreateObjectInstanceReqMsg          = 5;
-    CreateObjectInstanceResp        CreateObjectInstanceRespMsg         = 6;
-    DeleteObjectInstanceReq         DeleteObjectInstanceReqMsg          = 7;
-    DeleteObjectInstanceResp        DeleteObjectInstanceRespMsg         = 8;
-    UpdateObjectPropertyReq         UpdateObjectPropertyReqMsg          = 9;
-    UpdateObjectPropertyResp        UpdateObjectPropertyRespMsg         = 10;
-    UpdateInstancePropertyReq       UpdateInstancePropertyReqMsg        = 11;
-    UpdateInstancePropertyResp      UpdateInstancePropertyRespMsg       = 12;
-    UpdateInstancePositionReq       UpdateInstancePositionReqMsg        = 13;
-    UpdateInstancePositionResp      UpdateInstancePositionRespMsg       = 14;
-    RequestObjectPropertiesReq      RequestObjectPropertiesReqMsg       = 15;
-    RequestObjectPropertiesResp     RequestObjectPropertiesRespMsg      = 16;
-    RequestInstancePropertiesReq    RequestInstancePropertiesReqMsg     = 17;
-    RequestInstancePropertiesResp   RequestInstancePropertiesRespMsg    = 18;
-    OpenSessionReq                  OpenSessionReqMsg                   = 19;
-    OpenSessionResp                 OpenSessionRespMsg                  = 20;
-    CloseSessionReq                 CloseSessionReqMsg                  = 21;
-    CloseSessionResp                CloseSessionRespMsg                 = 22;
-    AliveCheckReq                   AliveCheckReqMsg                    = 23;
-    AliveCheckResp                  AliveCheckRespMsg                   = 24;
+    message BasilServerMessageBody {
+        IdentifyDisplayableObjectReq    IdentifyDisplayableObjectReqMsg     = 1;
+        IdentifyDisplayableObjectResp   IdentifyDisplayableObjectRespMsg    = 2;
+        ForgetDisplayableObjectReq      ForgetDisplayableObjectReqMsg       = 3;
+        ForgetDisplayableObjectResp     ForgetDisplayableObjectRespMsg      = 4;
+        CreateObjectInstanceReq         CreateObjectInstanceReqMsg          = 5;
+        CreateObjectInstanceResp        CreateObjectInstanceRespMsg         = 6;
+        DeleteObjectInstanceReq         DeleteObjectInstanceReqMsg          = 7;
+        DeleteObjectInstanceResp        DeleteObjectInstanceRespMsg         = 8;
+        UpdateObjectPropertyReq         UpdateObjectPropertyReqMsg          = 9;
+        UpdateObjectPropertyResp        UpdateObjectPropertyRespMsg         = 10;
+        UpdateInstancePropertyReq       UpdateInstancePropertyReqMsg        = 11;
+        UpdateInstancePropertyResp      UpdateInstancePropertyRespMsg       = 12;
+        UpdateInstancePositionReq       UpdateInstancePositionReqMsg        = 13;
+        UpdateInstancePositionResp      UpdateInstancePositionRespMsg       = 14;
+        RequestObjectPropertiesReq      RequestObjectPropertiesReqMsg       = 15;
+        RequestObjectPropertiesResp     RequestObjectPropertiesRespMsg      = 16;
+        RequestInstancePropertiesReq    RequestInstancePropertiesReqMsg     = 17;
+        RequestInstancePropertiesResp   RequestInstancePropertiesRespMsg    = 18;
+        OpenSessionReq                  OpenSessionReqMsg                   = 19;
+        OpenSessionResp                 OpenSessionRespMsg                  = 20;
+        CloseSessionReq                 CloseSessionReqMsg                  = 21;
+        CloseSessionResp                CloseSessionRespMsg                 = 22;
+        AliveCheckReq                   AliveCheckReqMsg                    = 23;
+        AliveCheckResp                  AliveCheckRespMsg                   = 24;
+        MakeConnectionReq               MakeConnectionReqMsg                = 25;
+        MakeConnectionResp              MakeConnectionRespMsg               = 26;
+    };
+    repeated BasilServerMessageBody BasilServerMessages = 1;
 }
 
 // SERVER DEFINITION  ==================================================
@@ -173,7 +186,7 @@ service BasilServer {
     // OBJECT/INSTANCE MANAGEMENT ======================================
 
     // Describe an object to Basil for later display or manipulation
-    // This associates an ID with a block of asset information that can be 
+    // This associates an ID with a block of asset information that can be
     //   later displayed or operated on.
     rpc IdentifyDisplayableObject (IdentifyDisplayableObjectReq) returns (IdentifyDisplayableObjectResp);
 
@@ -207,6 +220,9 @@ service BasilServer {
 
     // Client is initiating an end to the session
     rpc CloseSession (CloseSessionReq) returns (CloseSessionResp);
+
+    // Command (from Pesto) to make a connection to some data Source
+    rpc MakeConnection (MakeConnectionreq) return (MakeConnectionResp);
 
     // Ping the other side to measure delay and functionality
     rpc AliveCheck (AliveCheckReq) returns (AliveCheckResp);

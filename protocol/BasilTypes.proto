@@ -64,13 +64,9 @@ message TransformF {
 // typedef string propertyName
 // typedef string propertyValue
 // typedef map<propertyName,propertyValue> propertyList
-message PropertyList {
-    map<string,string> list = 1;
-}
 
 // typedef string topicName         // notifications are based on a topic
 
-// typedef int32 exceptionCode      // errors have codes so internationalization is possible
 message BasilException {
     string reason = 1;              // explanation of exception
     map<string,string> hints = 2;   // additional information for recovery. Error dependent.
@@ -128,7 +124,7 @@ message AaBoundingBox {
 message DisplayableInfo {
     AaBoundingBox aabb = 1;     // bounding box for quick LOD, etc
     string displayableType = 2; // type name
-    PropertyList asset = 3;     // attributes that make up the asset
+    map<string,string> asset = 3;     // attributes that make up the asset
 }
 
 // Description of the asset information for a displayable object
@@ -159,7 +155,7 @@ message InstancePositionInfo {
 //    in RFC2617 (https://tools.ietf.org/html/rfc2617)
 //    which is a scheme token followed by an encoding of the authentication.
 message AccessAuthorization {
-    PropertyList accessProperties = 1;
+    map<string,string> accessProperties = 1;
 }
 
 // Requests can include trace information (like using Zipkin)
