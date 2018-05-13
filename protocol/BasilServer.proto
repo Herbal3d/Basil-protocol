@@ -222,7 +222,7 @@ service BasilServer {
     rpc CloseSession (CloseSessionReq) returns (CloseSessionResp);
 
     // Command (from Pesto) to make a connection to some data Source
-    rpc MakeConnection (MakeConnectionreq) return (MakeConnectionResp);
+    rpc MakeConnection (MakeConnectionReq) returns (MakeConnectionResp);
 
     // Ping the other side to measure delay and functionality
     rpc AliveCheck (AliveCheckReq) returns (AliveCheckResp);
