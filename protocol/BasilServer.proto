@@ -150,6 +150,7 @@ message AliveCheckResp {
 
 // TRANSPORT MESSAGE DEFINITION  =======================================
 message BasilServerMessage {
+    // This is used as a 'oneof'.
     message BasilServerMessageBody {
         IdentifyDisplayableObjectReq    IdentifyDisplayableObjectReqMsg     = 1;
         IdentifyDisplayableObjectResp   IdentifyDisplayableObjectRespMsg    = 2;
@@ -177,6 +178,9 @@ message BasilServerMessage {
         AliveCheckResp                  AliveCheckRespMsg                   = 24;
         MakeConnectionReq               MakeConnectionReqMsg                = 25;
         MakeConnectionResp              MakeConnectionRespMsg               = 26;
+
+        // RPC. If non-zero, build bindings so a request can have a response
+        uint32 RPCRequestSession                                            = 250;
     };
     repeated BasilServerMessageBody BasilServerMessages = 1;
 }

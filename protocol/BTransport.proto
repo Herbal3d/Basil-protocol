@@ -17,9 +17,6 @@ message BTransport {
     uint64 queueTime = 3;  // when message queued
     uint64 sendTime = 4;   // when message actually sent
 
-    // RPC hack. If non-zero, build bindings so a request can have a response
-    uint32 requestSession = 5;
-
     // Trace information
     // See "https://github.com/openzipkin/b3-propagation" for Zipkin trace description
     uint64 traceID = 8;
