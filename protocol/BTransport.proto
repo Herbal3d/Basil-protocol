@@ -11,6 +11,8 @@ syntax = "proto3";
 
 package BTransport;
 
+option csharp_namespace = "org.herbal3d.basil.protocol.BTransport";
+
 message BTransport {
     uint32 sequenceNum = 1;// transport sequence message
     uint32 stream = 2;     // stream/queue for message (if handling multiple streams)

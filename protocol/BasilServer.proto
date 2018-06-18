@@ -13,6 +13,8 @@ syntax = "proto3";
 
 package BasilServer;
 
+option csharp_namespace = "org.herbal3d.basil.protocol.BasilServer";
+
 import "BasilTypes.proto";
 
 // OBJECT/INSTANCE MANAGEMENT ===============================================

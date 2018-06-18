@@ -5,6 +5,8 @@ syntax = "proto3";
 
 package BasilType;
 
+option csharp_namespace = "org.herbal3d.basil.protocol.BasilType";
+
 // GEOMETRY ==================================
 message Vector3 {
     double x = 1;
