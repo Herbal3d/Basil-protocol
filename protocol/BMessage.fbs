@@ -1,0 +1,35 @@
+
+include "BasilTypes.fbs";
+include "BasilServer.fbs";
+
+namespace org.herbal3d.protocol.basil;
+
+// Information for tracing and debugging message streams and apps
+table BTransportTrace {
+    // See "https://github.com/openzipkin/b3-propagation" for Zipkin trace description
+    traceID: uint64;
+    parentSpanID: uint64;
+    spanID: uint64;
+    sampled: bool;
+}
+
+table BTransportMsg {
+    sequenceNum: uint32;    // sequence number for this message
+    stream: uint32;         // stream message is in (if handling multiple streams)
+    queueTime: uint64;      // when the message was queued for sending
+    sendTime: uint64;       // when the message was actually given to the network driver
+
+    auth: AccessAuthorization;
+
+    // The next variables implement a simple RPC mechanism.
+    // If defined in a request, they are returned in a response so the receiver
+    //     can match the response with the request.
+    responseSession: int64 = -1;// a unique number to link response to a request
+    responseSessionKey: string; // a key used to verify a response
+
+    // Trace information
+    trace: BTransportTrace;
+
+    // The actual message
+    msg: server.ServerMessage;
+}

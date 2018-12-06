@@ -1,0 +1,194 @@
+/*
+ * Interface to Basil.
+ * This includes both messages from the 'client' (the one asking for things
+ *    to be displayed) and 'Basil' (the one displaying).
+ *
+ * These fall into several classes:
+ *    Connection creation and management.
+ *    Entity/instance definition and management.
+ *    Resource queries and management.
+ */
+
+include "BasilTypes.fbs";
+
+namespace org.herbal3d.protocol.basil.server;
+
+// OBJECT/INSTANCE MANAGEMENT =======================================
+
+// Describe an entity to Basil for later display or manipulation.
+// This associates an ID with a block of asset information that can be 
+//   later displayed or operated on.
+table IdentifyDisplayableObjectReq {
+    auth: AccessAuthorization;
+    assetInfo: AssetInformation;
+    aabb: AaBoundingBox;
+}
+table IdentifyDisplayableObjectResp {
+    exception: BasilException;
+    identifier: string;
+}
+
+// Remove an entity from Basil. Removes all instances of the entity.
+table ForgetDisplayableObjectReq {
+    auth: AccessAuthorization;
+    identifier: string;
+}
+table ForgetDisplayableObjectResp {
+    exception: BasilException;
+}
+
+// An object may occur multiple times. This defines one instance
+//   that is at a particular location in the world.
+// Returns a instanceIdentifer that can be used to refer to the instance.
+table CreateObjectInstanceReq {
+    auth: AccessAuthorization;
+    identifier: string;
+    pos: InstancePositionInfo;
+    propertiesToSet: [ PropertyValue ];
+    instanceCountHint: int32;
+}
+table CreateObjectInstanceResp {
+    exception: BasilException;
+    instanceId: uint32;
+}
+
+// Remove an entity instance from the scene.
+table DeleteObjectInstanceReq {
+    auth: AccessAuthorization;
+    instanceId: uint32;
+}
+table DeleteObjectInstanceResp {
+    exception: BasilException;
+}
+
+// Update property of an object. This could effect all instances.
+table UpdateObjectPropertyReq {
+    auth: AccessAuthorization;
+    identifier: string;
+    props: [ PropertyValue ];
+}
+table UpdateObjectPropertyResp {
+    exception: BasilException;
+}
+
+// Update properties of an instance
+table UpdateInstancePropertyReq {
+    auth: AccessAuthorization;
+    instanceId: uint32;
+    props: [ PropertyValue ];
+}
+table UpdateInstancePropertyResp {
+    exception: BasilException;
+}
+
+// A short form to update positions of multiple objects.
+// Note that authorization applies to all of the objects effected.
+table UpdateInstancePositionReq {
+    auth: AccessAuthorization;
+    poss: [ InstancePositionInfo ];
+}
+table UpdateInstancePositionResp {
+    exception: BasilException;
+}
+
+// Get properties of an object
+table RequestObjectPropertiesReq {
+    auth: AccessAuthorization;
+    identifier: string;
+    propertyMatch: string;  // wildcard used to match returned properties
+}
+table RequestObjectPropertiesResp {
+    exception: BasilException;
+    identifier: string;
+    properties: [ PropertyValue ];
+}
+    
+// Get properties of an instance
+table RequestInstancePropertiesReq {
+    auth: AccessAuthorization;
+    instanceId: uint32;
+    propertyMatch: string;  // wildcard used to match returned properties
+}
+table RequestInstancePropertiesResp {
+    exception: BasilException;
+    instanceId: uint32;
+    properties: [ PropertyValue ];
+}
+    
+// RESOURCE MANAGEMENT ==============================================
+
+// SESSION MANAGEMENT ===============================================
+
+// A client initiates a connection.
+// Returned property list is a collection of Basil renderer capabilities.
+table OpenSessionReq {
+    auth: AccessAuthorization;
+    features: [ PropertyValue ];
+}
+table OpenSessionResp {
+    exception: BasilException;
+    properties: [ PropertyValue ];
+}
+
+// The renderer is initiating the end of the session
+table CloseSessionReq {
+    auth: AccessAuthorization;
+    reason: string;
+}
+table CloseSessionResp {
+    exception: BasilException;
+}
+
+// Command to Basil to talk to some data source. Usually originatd by Pesto.
+table MakeConnectionReq {
+    auth: AccessAuthorization;
+    connectionParams: [ PropertyValue ];
+}
+table MakeConnectionResp {
+    exception: BasilException;
+}
+
+// Ping to other side to measure delay and functionality
+table AliveCheckReq {
+    auth: AccessAuthorization;
+    time: uint64;                   // Time check was sent
+    sequenceNumber: int32;
+}
+
+// Response to an AliveCheck
+table AliveCheckResp {
+    time: uint64;                  // Time when response sent
+    sequenceNumber: int;           // response sequence number
+    timeReceived: uint64;          // Time code in the AliveCheck that caused this response
+    sequenceNumberReceived: int32; // Sequence number in AliveCheck that caused this response
+}
+
+// TRANSPORT MESSAGE DEFINITION
+union ServerMessage {
+    IdentifyDisplayableObjectReq,
+    IdentifyDisplayableObjectResp,
+    ForgetDisplayableObjectReq,
+    ForgetDisplayableObjectResp,
+    CreateObjectInstanceReq,
+    CreateObjectInstanceResp,
+    DeleteObjectInstanceReq,
+    DeleteObjectInstanceResp,
+    UpdateObjectPropertyReq,
+    UpdateObjectPropertyResp,
+    UpdateInstancePropertyReq,
+    UpdateInstancePropertyResp,
+    UpdateInstancePositionReq,
+    UpdateInstancePositionResp,
+    RequestObjectPropertiesReq,
+    RequestObjectPropertiesResp,
+    RequestInstancePropertiesReq,
+    RequestInstancePropertiesResp,
+    OpenSessionReq,
+    OpenSessionResp,
+    CloseSessionReq,
+    CloseSessionResp,
+    MakeConnectionReq,
+    MakeConnectionResp,
+    AliveCheckReq,
+    AliveCheckResp
+}
