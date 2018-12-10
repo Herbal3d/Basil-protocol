@@ -32,9 +32,9 @@ doGen BasilTypes csharp         gen-BasilTypes-cs
 doGen BasilTypes java           gen-BasilTypes-java
 
 # Message transport
-doGen BTransport cpp            gen-BasilTransport-cpp
-doGen BTransport csharp         gen-BasilTransport-cs
-doGen BTransport java           gen-BasilTransport-java
+doGen BMessage cpp              gen-BasilMessage-cpp
+doGen BMessage csharp           gen-BasilMessage-cs
+doGen BMessage java             gen-BasilMessage-java
 
 # Basil Server -- for talking to the Basil server
 doGen BasilServer cpp           gen-BasilServer-cpp

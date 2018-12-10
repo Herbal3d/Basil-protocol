@@ -9,15 +9,25 @@
 
 syntax = "proto3";
 
-package BTransport;
+package BMessage;
 
-option csharp_namespace = "org.herbal3d.basil.protocol.BTransport";
+option csharp_namespace = "org.herbal3d.basil.protocol.BMessage";
 
-message BTransport {
+import "BasilTypes.proto";
+
+message BMessage {
     uint32 sequenceNum = 1;// transport sequence message
     uint32 stream = 2;     // stream/queue for message (if handling multiple streams)
     uint64 queueTime = 3;  // when message queued
     uint64 sendTime = 4;   // when message actually sent
+
+    BasilType.AccessAuthorization auth = 5;   // any authentication for this request
+
+    // The next variables implement a simple RPC mechanism.
+    // If defined in a request, they are returned in a response so the receiver
+    //     can match the response with the request.
+    uint64 responseSession = 6;      // a unique number to link response to a request
+    string responseSessionKey = 7;  // a key used to verify a response
 
     // Trace information
     // See "https://github.com/openzipkin/b3-propagation" for Zipkin trace description
