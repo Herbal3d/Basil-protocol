@@ -155,9 +155,18 @@ message AliveCheckResp {
 
 // TRANSPORT MESSAGE DEFINITION  =======================================
 message BasilServerMessageBody {
+    message BResponseRequest {
+        // The next variables implement a simple RPC mechanism.
+        // If defined in a request, they are returned in a response so the receiver
+        //     can match the response with the request.
+        uint32 responseSession = 1;      // a unique number to link response to a request
+        string responseSessionKey = 2;  // a key used to verify a response
+    }
+
     message BasilServerMessage {
         // 'ResponseReq' present if requester want the response message returned.
         BMessage.BResponseRequest ResponseReq = 1;
+        // All fields must end with 'Msg' (used to find the 'oneof' field)
         oneof BasilServerMessage {
             IdentifyDisplayableObjectReq    IdentifyDisplayableObjectReqMsg     = 2;
             IdentifyDisplayableObjectResp   IdentifyDisplayableObjectRespMsg    = 3;
