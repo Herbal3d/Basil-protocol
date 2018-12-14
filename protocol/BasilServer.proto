@@ -15,6 +15,7 @@ package BasilServer;
 
 option csharp_namespace = "org.herbal3d.basil.protocol.BasilServer";
 
+import "BMessage.proto";
 import "BasilTypes.proto";
 
 // OBJECT/INSTANCE MANAGEMENT ===============================================
@@ -25,15 +26,16 @@ import "BasilTypes.proto";
 message IdentifyDisplayableObjectReq {
     BasilType.AccessAuthorization auth = 1;
     BasilType.AssetInformation assetInfo = 2;
-    BasilType.AaBoundingBox aabb = 3;
+    BasilType.ObjectIdentifier objectId = 3;  // if supplied, used if unique
+    BasilType.AaBoundingBox aabb = 4;
 }
 message IdentifyDisplayableObjectResp {
     BasilType.BasilException exception = 1;
-    BasilType.ObjectIdentifier identifier = 2;
+    BasilType.ObjectIdentifier objectId = 2;
 }
 message ForgetDisplayableObjectReq {
     BasilType.AccessAuthorization auth = 1;
-    BasilType.ObjectIdentifier identifier = 2;
+    BasilType.ObjectIdentifier objectId = 2;
 }
 message ForgetDisplayableObjectResp {
     BasilType.BasilException exception = 1;
@@ -43,10 +45,11 @@ message ForgetDisplayableObjectResp {
 // Returns an instanceIdentifer that can be used to refer to the instance.
 message CreateObjectInstanceReq {
     BasilType.AccessAuthorization auth = 1;
-    BasilType.ObjectIdentifier identifier = 2;
-    BasilType.InstancePositionInfo pos = 3;
-    map<string,string> propertiesToSet = 4;
-    int32 InstanceCountHint = 5;    // hint as to total number of instances (zero means no hint)
+    BasilType.ObjectIdentifier objectId = 2;
+    BasilType.InstanceIdentifier instanceId = 3;    // if supplied, used if unique
+    BasilType.InstancePositionInfo pos = 4;
+    map<string,string> propertiesToSet = 5;
+    int32 InstanceCountHint = 6;    // hint as to total number of instances (zero means no hint)
 }
 message CreateObjectInstanceResp {
     BasilType.BasilException exception = 1;
@@ -62,7 +65,7 @@ message DeleteObjectInstanceResp {
 // Update a property of an object. This could effect all instances.
 message UpdateObjectPropertyReq {
     BasilType.AccessAuthorization auth = 1;
-    BasilType.ObjectIdentifier identifier = 2;
+    BasilType.ObjectIdentifier objectId = 2;
     map<string,string> props = 3;
 }
 message UpdateObjectPropertyResp {
@@ -89,7 +92,7 @@ message UpdateInstancePositionResp {
 // Get the properties of an object
 message RequestObjectPropertiesReq {
     BasilType.AccessAuthorization auth = 1;
-    BasilType.ObjectIdentifier identifier = 2;
+    BasilType.ObjectIdentifier objectId = 2;
     string propertyMatch = 3;   // wildcard used to match returned properties
 }
 message RequestObjectPropertiesResp {
@@ -151,40 +154,40 @@ message AliveCheckResp {
 }
 
 // TRANSPORT MESSAGE DEFINITION  =======================================
-message BasilServerMessage {
-    // This is used as a 'oneof'.
-    message BasilServerMessageBody {
-        IdentifyDisplayableObjectReq    IdentifyDisplayableObjectReqMsg     = 1;
-        IdentifyDisplayableObjectResp   IdentifyDisplayableObjectRespMsg    = 2;
-        ForgetDisplayableObjectReq      ForgetDisplayableObjectReqMsg       = 3;
-        ForgetDisplayableObjectResp     ForgetDisplayableObjectRespMsg      = 4;
-        CreateObjectInstanceReq         CreateObjectInstanceReqMsg          = 5;
-        CreateObjectInstanceResp        CreateObjectInstanceRespMsg         = 6;
-        DeleteObjectInstanceReq         DeleteObjectInstanceReqMsg          = 7;
-        DeleteObjectInstanceResp        DeleteObjectInstanceRespMsg         = 8;
-        UpdateObjectPropertyReq         UpdateObjectPropertyReqMsg          = 9;
-        UpdateObjectPropertyResp        UpdateObjectPropertyRespMsg         = 10;
-        UpdateInstancePropertyReq       UpdateInstancePropertyReqMsg        = 11;
-        UpdateInstancePropertyResp      UpdateInstancePropertyRespMsg       = 12;
-        UpdateInstancePositionReq       UpdateInstancePositionReqMsg        = 13;
-        UpdateInstancePositionResp      UpdateInstancePositionRespMsg       = 14;
-        RequestObjectPropertiesReq      RequestObjectPropertiesReqMsg       = 15;
-        RequestObjectPropertiesResp     RequestObjectPropertiesRespMsg      = 16;
-        RequestInstancePropertiesReq    RequestInstancePropertiesReqMsg     = 17;
-        RequestInstancePropertiesResp   RequestInstancePropertiesRespMsg    = 18;
-        OpenSessionReq                  OpenSessionReqMsg                   = 19;
-        OpenSessionResp                 OpenSessionRespMsg                  = 20;
-        CloseSessionReq                 CloseSessionReqMsg                  = 21;
-        CloseSessionResp                CloseSessionRespMsg                 = 22;
-        AliveCheckReq                   AliveCheckReqMsg                    = 23;
-        AliveCheckResp                  AliveCheckRespMsg                   = 24;
-        MakeConnectionReq               MakeConnectionReqMsg                = 25;
-        MakeConnectionResp              MakeConnectionRespMsg               = 26;
-
-        // RPC. If non-zero, build bindings so a request can have a response
-        uint32 RPCRequestSession                                            = 250;
+message BasilServerMessageBody {
+    message BasilServerMessage {
+        // 'ResponseReq' present if requester want the response message returned.
+        BMessage.BResponseRequest ResponseReq = 1;
+        oneof BasilServerMessage {
+            IdentifyDisplayableObjectReq    IdentifyDisplayableObjectReqMsg     = 2;
+            IdentifyDisplayableObjectResp   IdentifyDisplayableObjectRespMsg    = 3;
+            ForgetDisplayableObjectReq      ForgetDisplayableObjectReqMsg       = 4;
+            ForgetDisplayableObjectResp     ForgetDisplayableObjectRespMsg      = 5;
+            CreateObjectInstanceReq         CreateObjectInstanceReqMsg          = 6;
+            CreateObjectInstanceResp        CreateObjectInstanceRespMsg         = 7;
+            DeleteObjectInstanceReq         DeleteObjectInstanceReqMsg          = 8;
+            DeleteObjectInstanceResp        DeleteObjectInstanceRespMsg         = 9;
+            UpdateObjectPropertyReq         UpdateObjectPropertyReqMsg          = 10;
+            UpdateObjectPropertyResp        UpdateObjectPropertyRespMsg         = 11;
+            UpdateInstancePropertyReq       UpdateInstancePropertyReqMsg        = 12;
+            UpdateInstancePropertyResp      UpdateInstancePropertyRespMsg       = 13;
+            UpdateInstancePositionReq       UpdateInstancePositionReqMsg        = 14;
+            UpdateInstancePositionResp      UpdateInstancePositionRespMsg       = 15;
+            RequestObjectPropertiesReq      RequestObjectPropertiesReqMsg       = 16;
+            RequestObjectPropertiesResp     RequestObjectPropertiesRespMsg      = 17;
+            RequestInstancePropertiesReq    RequestInstancePropertiesReqMsg     = 18;
+            RequestInstancePropertiesResp   RequestInstancePropertiesRespMsg    = 19;
+            OpenSessionReq                  OpenSessionReqMsg                   = 20;
+            OpenSessionResp                 OpenSessionRespMsg                  = 21;
+            CloseSessionReq                 CloseSessionReqMsg                  = 22;
+            CloseSessionResp                CloseSessionRespMsg                 = 23;
+            AliveCheckReq                   AliveCheckReqMsg                    = 24;
+            AliveCheckResp                  AliveCheckRespMsg                   = 25;
+            MakeConnectionReq               MakeConnectionReqMsg                = 26;
+            MakeConnectionResp              MakeConnectionRespMsg               = 27;
+        }
     };
-    repeated BasilServerMessageBody BasilServerMessages = 1;
+    repeated BasilServerMessage BasilServerMessages = 2;
 }
 
 // SERVER DEFINITION  ==================================================

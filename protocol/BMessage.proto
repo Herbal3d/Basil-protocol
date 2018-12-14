@@ -15,6 +15,14 @@ option csharp_namespace = "org.herbal3d.basil.protocol.BMessage";
 
 import "BasilTypes.proto";
 
+message BResponseRequest {
+    // The next variables implement a simple RPC mechanism.
+    // If defined in a request, they are returned in a response so the receiver
+    //     can match the response with the request.
+    uint64 responseSession = 1;      // a unique number to link response to a request
+    string responseSessionKey = 2;  // a key used to verify a response
+}
+
 message BMessage {
     uint32 sequenceNum = 1;// transport sequence message
     uint32 stream = 2;     // stream/queue for message (if handling multiple streams)
@@ -23,12 +31,6 @@ message BMessage {
 
     BasilType.AccessAuthorization auth = 5;   // any authentication for this request
 
-    // The next variables implement a simple RPC mechanism.
-    // If defined in a request, they are returned in a response so the receiver
-    //     can match the response with the request.
-    uint64 responseSession = 6;      // a unique number to link response to a request
-    string responseSessionKey = 7;  // a key used to verify a response
-
     // Trace information
     // See "https://github.com/openzipkin/b3-propagation" for Zipkin trace description
     uint64 traceID = 8;
@@ -36,5 +38,5 @@ message BMessage {
     uint64 spanID = 10;
     bool sampled = 11;
 
-    bytes message = 15;  // the actual message being transported
+    bytes data = 15;    // the message being sent
 }
