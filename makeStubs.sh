@@ -30,11 +30,31 @@ function doGen() {
 doGen BasilTypes cpp            gen-BasilTypes-cpp
 doGen BasilTypes csharp         gen-BasilTypes-cs
 doGen BasilTypes java           gen-BasilTypes-java
+doGen BasilTypes python         gen-BasilTypes-py
 
 # Basil Server -- for talking to the Basil server
 doGen BasilServer cpp           gen-BasilServer-cpp
 doGen BasilServer csharp        gen-BasilServer-cs
 doGen BasilServer java          gen-BasilServer-java
+doGen BasilServer python        gen-BasilServer-py
+
+# Space Server -- for talking to the Space server
+doGen SpaceServer cpp           gen-SpaceServer-cpp
+doGen SpaceServer csharp        gen-SpaceServer-cs
+doGen SpaceServer java          gen-SpaceServer-java
+doGen SpaceServer python        gen-SpaceServer-py
+
+# Common messages
+doGen AliveCheck cpp           gen-AliveCheck-cpp
+doGen AliveCheck csharp        gen-AliveCheck-cs
+doGen AliveCheck java          gen-AliveCheck-java
+doGen AliveCheck python        gen-AliveCheck-py
+
+# Basil to SpaceServer stream messages
+doGen BasilSpaceStream cpp      gen-BasilSpaceStream-cpp
+doGen BasilSpaceStream csharp   gen-BasilSpaceStream-cs
+doGen BasilSpaceStream java     gen-BasilSpaceStream-java
+doGen BasilSpaceStream python   gen-BasilSpaceStream-py
 
 # Pesto Server
 doGen PestoServer go            gen-PestoServer-go
@@ -46,4 +66,3 @@ doGen PestoClient csharp        gen-PestoClient-cs
 doGen PestoClient java          gen-PestoClient-java
 doGen PestoClient python        gen-PestoClient-py
 # doGen PestoClient go            gen-PestoClient
-

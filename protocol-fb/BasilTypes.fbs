@@ -44,29 +44,26 @@ table TransformF {
 // MISC ==================================
 
 // signed milliseconds since 0 BCE UTC
-// #typedef timecode ulong
+// #typedef timecode uint64
 
 // Messages have sequence numbers which count up from 0 at the beginning of a session
-// #typedef messageSequenceNumber uint
+// #typedef messageSequenceNumber uint32
 
 // Some items (subscriptions, ...) have IDs to track them.
-// #typedef simpleID uint
+// #typedef simpleID uint32
 
 // Entities and instances can have properties that can be read and updated independently
-table propertyValue { property: string; value: string; }
-table propertyList { 
-    props: [ propertyValue ] ;
+table PropertyValue {
+    property: string;
+    value: string;
 }
 // #typedef propertyList [propertyValue]
-
-// notifications are based on a topic
-// #typedef topicName string
 
 // errors have codes so internationalization is possible
 // #typedef exceptionCode uint
 table BasilException {
-    reason: uint;
-    hints: propertyList;   // additional information for recovery. Error dependent.
+    reason: string;
+    hints: [ PropertyValue ];   // additional information for recovery. Error dependent.
 }
 
 enum coordSystem : ubyte {
@@ -99,58 +96,39 @@ table coordPosition {
 // OBJECT INFORMATION ==================================
 
 // The globally unique identifier of an object is a string (text GUID or URI)
-// #typedef objectIdentifier string
+// #typedef ObjectIdentifier string
 
 // An object is realized in the world as an 'instance' which has position and
 //    other individual properties. There can be multiple instances of an object.
 //    Instances are referenced by an ID given to them when created.
 // ID lifetime is the life of the particular Basil server being used.
-// #typedef instanceIdentifier uint
+// #typedef InstanceIdentifier uint
 
 // An axis aligned area that contains an object
-struct aaBoundingBox {
+struct AaBoundingBox {
     upperFrontLeft: Vector3;
     lowerBackRight: Vector3;
 }
 
-// Initial information about what is displayed for an object
-table objectDisplayInfo {
-    aabb: aaBoundingBox;
-}
-
-// Different types of assets. The actual format is discovered later.
-enum assetType : ubyte {
-    unknown = 0,// what it is is not known
-    text,       // text file
-    mesh,       // mesh
-    sound,      // sound
-    animation,  // animation
-    location,   // some world location
-    image,      // a 2d image
-    directory   // directory of assets
-}
-
 // Description of the asset information for a displayable object
-table assetInformation {
-    displayInfo: objectDisplayInfo; // general display information
-    hash: string;                   // URI hash of asset for caching
-    fetchURL: string;               // if fetch is simple fetch
-    assetServer: string;            // server to fetch asset from
-    assetId: string;                // identifier of asset on assetServer
-    type: assetType = unknown;      // type of the asset
+table AssetInformation {
+    id: string;
+    aabb: AaBoundingBox;        // bounding box for quick LOD, ...
+    displayableType: string;    // type name
+    attributes: [ PropertyValue ];   // attributes that make up the asset
 }
 
 // Description of a path that the object is moving on. Future
-table pathDescription {
+table PathDescription {
     pathType: string;
 }
 
 // A specification of object motion/position
-table instancePositionInfo {
-    id: uint;       // objectIdentifier;
+table InstancePositionInfo {
+    id: uint32;       // InstanceIdentifier;
     pos: coordPosition;
     vel: Vector3;
-    path: pathDescription;
+    path: PathDescription;
 }
 
 // Requests include authorization for the request.
@@ -161,12 +139,12 @@ table instancePositionInfo {
 //    of the authorization follows the 'Authorization:' header line specified
 //    in RFC2617 (https://tools.ietf.org/html/rfc2617)
 //    which is a scheme token followed by an encoding of the authentication.
-table accessAuthorization {
-    accessProperties: propertyList;  //propertyList;
+table AccessAuthorization {
+    accessProperties: [ PropertyValue ];
 }
 
 // Requests can include trace information (like using Zipkin)
 //   to trace calls. It's usually a JSON string.
-
-// #typedef traceInfo string
-
+table TraceInfo {
+    info: string;
+}

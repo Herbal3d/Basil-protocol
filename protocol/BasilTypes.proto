@@ -165,3 +165,11 @@ message AccessAuthorization {
 message TraceInfo {
     string info = 1;
 }
+
+message BResponseRequest {
+    // The next variables implement a simple RPC mechanism.
+    // If defined in a request, they are returned in a response so the receiver
+    //     can match the response with the request.
+    uint32 responseSession = 1;      // a unique number to link response to a request
+    string responseSessionKey = 2;  // a key used to verify a response
+}

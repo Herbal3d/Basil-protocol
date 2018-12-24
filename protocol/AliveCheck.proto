@@ -1,0 +1,30 @@
+/*
+ * Interface between a Basil Viewer and a Space Server.
+ * The calls to the Basil Viewer fall into several classes:
+ *    Connection creation and management.
+ *    Object/instance definition and management.
+ *    Resource queries and management.
+ * The calls to the Space Server fall into a few categories:
+ */
+
+syntax = "proto3";
+
+package AliveCheck;
+
+option csharp_namespace = "org.herbal3d.basil.protocol.AliveCheck";
+
+import "BasilTypes.proto";
+
+// Ping the other side to measure delay and functionality
+message AliveCheckReq {
+    BasilType.AccessAuthorization auth = 1;   // not just anyone can see I'm alive
+    uint64 time = 2;
+    int32 sequenceNum = 3;
+}
+message AliveCheckResp {
+    uint64 time = 1;
+    int32 sequenceNum = 2;
+    uint64 timeReceived = 3;             // When the AliveCheck was received
+    int32 sequenceNumReceived = 4;   // The sequence number sent in the AliveCheck
+}
+

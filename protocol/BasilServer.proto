@@ -1,21 +1,18 @@
 /*
- * Interface to Basil. The interface a client talks to a Basil renderer.
- * These fall into several classes:
+ * Interface between a Basil Viewer and a Space Server.
+ * The calls to the Basil Viewer fall into several classes:
  *    Connection creation and management.
  *    Object/instance definition and management.
  *    Resource queries and management.
- * Since there is a browser version of Basil and (as of 20180201) there are not
- *    tools for creating a gRPG server in a browser, the communication with the
- *    viewer service is a stream of ProtoBuf messages.
+ * The calls to the Space Server fall into a few categories:
  */
 
 syntax = "proto3";
 
 package BasilServer;
 
-option csharp_namespace = "org.herbal3d.basil.protocol.BasilServer";
+option csharp_namespace = "org.herbal3d.basil.protocol.Basil";
 
-import "BMessage.proto";
 import "BasilTypes.proto";
 
 // OBJECT/INSTANCE MANAGEMENT ===============================================
@@ -114,17 +111,6 @@ message RequestInstancePropertiesResp {
 
 // CONNECTION MANAGEMENT =============================================
 
-// A client initiates a connection.
-// Returned property list is a collection of Basil renderer capabilities.
-message OpenSessionReq {
-    BasilType.AccessAuthorization auth = 1;
-    map<string,string> features = 2;    // features requested
-}
-message OpenSessionResp {
-    BasilType.BasilException exception = 1;
-    map<string,string> properties = 2;
-}
-
 message CloseSessionReq {
     BasilType.AccessAuthorization auth = 1;
     string reason = 2;    // if there is a reason for leaving
@@ -153,53 +139,7 @@ message AliveCheckResp {
     int32 sequenceNumReceived = 4;   // The sequence number sent in the AliveCheck
 }
 
-// TRANSPORT MESSAGE DEFINITION  =======================================
-message BasilServerMessageBody {
-    message BResponseRequest {
-        // The next variables implement a simple RPC mechanism.
-        // If defined in a request, they are returned in a response so the receiver
-        //     can match the response with the request.
-        uint32 responseSession = 1;      // a unique number to link response to a request
-        string responseSessionKey = 2;  // a key used to verify a response
-    }
-
-    message BasilServerMessage {
-        // 'ResponseReq' present if requester want the response message returned.
-        BMessage.BResponseRequest ResponseReq = 1;
-        // All fields must end with 'Msg' (used to find the 'oneof' field)
-        oneof BasilServerMessage {
-            IdentifyDisplayableObjectReq    IdentifyDisplayableObjectReqMsg     = 2;
-            IdentifyDisplayableObjectResp   IdentifyDisplayableObjectRespMsg    = 3;
-            ForgetDisplayableObjectReq      ForgetDisplayableObjectReqMsg       = 4;
-            ForgetDisplayableObjectResp     ForgetDisplayableObjectRespMsg      = 5;
-            CreateObjectInstanceReq         CreateObjectInstanceReqMsg          = 6;
-            CreateObjectInstanceResp        CreateObjectInstanceRespMsg         = 7;
-            DeleteObjectInstanceReq         DeleteObjectInstanceReqMsg          = 8;
-            DeleteObjectInstanceResp        DeleteObjectInstanceRespMsg         = 9;
-            UpdateObjectPropertyReq         UpdateObjectPropertyReqMsg          = 10;
-            UpdateObjectPropertyResp        UpdateObjectPropertyRespMsg         = 11;
-            UpdateInstancePropertyReq       UpdateInstancePropertyReqMsg        = 12;
-            UpdateInstancePropertyResp      UpdateInstancePropertyRespMsg       = 13;
-            UpdateInstancePositionReq       UpdateInstancePositionReqMsg        = 14;
-            UpdateInstancePositionResp      UpdateInstancePositionRespMsg       = 15;
-            RequestObjectPropertiesReq      RequestObjectPropertiesReqMsg       = 16;
-            RequestObjectPropertiesResp     RequestObjectPropertiesRespMsg      = 17;
-            RequestInstancePropertiesReq    RequestInstancePropertiesReqMsg     = 18;
-            RequestInstancePropertiesResp   RequestInstancePropertiesRespMsg    = 19;
-            OpenSessionReq                  OpenSessionReqMsg                   = 20;
-            OpenSessionResp                 OpenSessionRespMsg                  = 21;
-            CloseSessionReq                 CloseSessionReqMsg                  = 22;
-            CloseSessionResp                CloseSessionRespMsg                 = 23;
-            AliveCheckReq                   AliveCheckReqMsg                    = 24;
-            AliveCheckResp                  AliveCheckRespMsg                   = 25;
-            MakeConnectionReq               MakeConnectionReqMsg                = 26;
-            MakeConnectionResp              MakeConnectionRespMsg               = 27;
-        }
-    };
-    repeated BasilServerMessage BasilServerMessages = 2;
-}
-
-// SERVER DEFINITION  ==================================================
+// VIEWER RPC SERVICE  ============================
 service BasilServer {
     // OBJECT/INSTANCE MANAGEMENT ======================================
 
@@ -231,10 +171,6 @@ service BasilServer {
     // RESOURCE MANAGEMENT ===============================================
 
     // CONNECTION MANAGEMENT =============================================
-
-    // A client initiates a connection.
-    // Returned property list is a collection of Basil renderer capabilities.
-    rpc OpenSession (OpenSessionReq) returns (OpenSessionResp);
 
     // Client is initiating an end to the session
     rpc CloseSession (CloseSessionReq) returns (CloseSessionResp);

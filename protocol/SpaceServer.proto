@@ -1,0 +1,57 @@
+/*
+ * Interface between a Basil Viewer and a Space Server.
+ * The calls to the Basil Viewer fall into several classes:
+ *    Connection creation and management.
+ *    Object/instance definition and management.
+ *    Resource queries and management.
+ * The calls to the Space Server fall into a few categories:
+ */
+
+syntax = "proto3";
+
+package SpaceServer;
+
+option csharp_namespace = "org.herbal3d.basil.protocol.SpaceServer";
+
+import "BasilTypes.proto";
+
+// VIEW MANAGEMENT =============================================
+// The viewer is telling the space server where the camera is pointing
+message CameraViewReq {
+    BasilType.AccessAuthorization auth = 1;
+
+}
+message CameraViewResp {
+    BasilType.BasilException exception = 1;
+}
+// CONNECTION MANAGEMENT =============================================
+
+// A client initiates a connection.
+// Returned property list is a collection of Basil renderer capabilities.
+message OpenSessionReq {
+    BasilType.AccessAuthorization auth = 1;
+    map<string,string> features = 2;    // features requested
+}
+message OpenSessionResp {
+    BasilType.BasilException exception = 1;
+    map<string,string> properties = 2;
+}
+
+message CloseSessionReq {
+    BasilType.AccessAuthorization auth = 1;
+    string reason = 2;    // if there is a reason for leaving
+}
+message CloseSessionResp {
+    BasilType.BasilException exception = 1;
+}
+
+// SPACE SERVER RPC SERVICE  ============================
+service SpaceServer {
+    // A client initiates a connection.
+    // Returned property list is a collection of Space Server features
+    rpc OpenSession (OpenSessionReq) returns (OpenSessionResp);
+
+    // Client is initiating an end to the session
+    rpc CloseSession (CloseSessionReq) returns (CloseSessionResp);
+
+}
