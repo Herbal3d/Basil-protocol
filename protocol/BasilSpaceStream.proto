@@ -34,7 +34,9 @@ message BasilStreamMessage {
         BasilServer.RequestInstancePropertiesReq    RequestInstancePropertiesReqMsg     = 10;
         BasilServer.CloseSessionReq                 CloseSessionReqMsg                  = 11;
         // Messages from SpaceServer
-        SpaceServer.CloseSessionResp                CloseSessionRespMsg                 = 20;
+        SpaceServer.OpenSessionResp                 OpenSessionRespMsg                  = 20;
+        SpaceServer.CloseSessionResp                CloseSessionRespMsg                 = 21;
+        SpaceServer.CameraViewResp                  CameraViewSessionRespMsg            = 22;
         // Alive check
         AliveCheck.AliveCheckReq                    AliveCheckReqMsg                    = 250;
         AliveCheck.AliveCheckResp                   AliveCheckRespMsg                   = 251;
@@ -62,6 +64,7 @@ message SpaceStreamMessage {
         // Messages to SpaceServer
         SpaceServer.OpenSessionReq                  OpenSessionReqMsg                   = 20;
         SpaceServer.CloseSessionReq                 CloseSessionReqMsg                  = 21;
+        SpaceServer.CameraViewReq                   CameraViewReqMsg                    = 22;
         // Alive check
         AliveCheck.AliveCheckReq                    AliveCheckReqMsg                    = 250;
         AliveCheck.AliveCheckResp                   AliveCheckRespMsg                   = 251;
