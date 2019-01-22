@@ -1,0 +1,27 @@
+// Basic Basil message.
+// Each message consists of an operation and a collection of parameters.
+// Many possible parameters have protobuf defintions for compactness
+//    but any additional parameters can be added to 'opParameters'.
+syntax = "proto3";
+
+package BasilMessage;
+
+option csharp_namespace = "org.herbal3d.basil.protocol.Message";
+
+import "BasilTypes.proto";
+
+message BasilMessage {
+    int32 op                                =  1;   // operation to perform
+    BasilType.AccessAuthorization auth      =  2;   // authorization for op
+    BasilType.ObjectIdentifier objectId     =  3;   // if op needs object reference
+    BasilType.InstanceIdentifier instanceId =  4;   // if of needs instance reference
+    BasilType.InstancePositionInfo pos      =  5;   // if op needs a position spec
+    BasilType.AssetInformation assetInfo    =  6;   // if op needs asset info
+    BasilType.AaBoundingBox aabb            =  7;
+    string filter                           =  8;
+    map<string,string> properties           =  9;   // if op needs or returns property set
+    map<string,string> opParameters         = 10;   // other parameters needed by op
+    BasilType.BasilException exception      = 11;   // if op is returning an error
+    string exceptionReason                  = 12;   // readable info about exception
+    BasilType.BResponseRequest response     = 13;   // transport RPC information
+}

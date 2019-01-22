@@ -27,22 +27,22 @@ function doGen() {
 }
 
 # Base structs and tables
-doGen BasilTypes cpp            gen-BasilTypes-cpp
-doGen BasilTypes csharp         gen-BasilTypes-cs
-doGen BasilTypes java           gen-BasilTypes-java
-doGen BasilTypes python         gen-BasilTypes-py
+doGen BasilTypes cpp           gen-BasilTypes-cpp
+doGen BasilTypes csharp        gen-BasilTypes-cs
+doGen BasilTypes java          gen-BasilTypes-java
+doGen BasilTypes python        gen-BasilTypes-py
 
 # Basil Server -- for talking to the Basil server
-doGen BasilServer cpp           gen-BasilServer-cpp
-doGen BasilServer csharp        gen-BasilServer-cs
-doGen BasilServer java          gen-BasilServer-java
-doGen BasilServer python        gen-BasilServer-py
+doGen BasilServer cpp          gen-BasilServer-cpp
+doGen BasilServer csharp       gen-BasilServer-cs
+doGen BasilServer java         gen-BasilServer-java
+doGen BasilServer python       gen-BasilServer-py
 
 # Space Server -- for talking to the Space server
-doGen SpaceServer cpp           gen-SpaceServer-cpp
-doGen SpaceServer csharp        gen-SpaceServer-cs
-doGen SpaceServer java          gen-SpaceServer-java
-doGen SpaceServer python        gen-SpaceServer-py
+doGen SpaceServer cpp          gen-SpaceServer-cpp
+doGen SpaceServer csharp       gen-SpaceServer-cs
+doGen SpaceServer java         gen-SpaceServer-java
+doGen SpaceServer python       gen-SpaceServer-py
 
 # Common messages
 doGen AliveCheck cpp           gen-AliveCheck-cpp
@@ -51,14 +51,14 @@ doGen AliveCheck java          gen-AliveCheck-java
 doGen AliveCheck python        gen-AliveCheck-py
 
 # Basil to SpaceServer stream messages
-doGen BasilSpaceStream cpp      gen-BasilSpaceStream-cpp
-doGen BasilSpaceStream csharp   gen-BasilSpaceStream-cs
-doGen BasilSpaceStream java     gen-BasilSpaceStream-java
-doGen BasilSpaceStream python   gen-BasilSpaceStream-py
+doGen BasilMessage cpp         gen-BasilMessage-cpp
+doGen BasilMessage csharp      gen-BasilMessage-cs
+doGen BasilMessage java        gen-BasilMessage-java
+doGen BasilMessage python      gen-BasilMessage-py
 
 # Pesto Server
-doGen PestoServer go            gen-PestoServer-go
-doGen PestoServer csharp        gen-PestoServer-cs
+doGen PestoServer go           gen-PestoServer-go
+doGen PestoServer csharp       gen-PestoServer-cs
 
 # Pesto Client
 doGen PestoClient cpp           gen-PestoClient-cpp
