@@ -25,3 +25,38 @@ message BasilMessage {
     string exceptionReason                  = 12;   // readable info about exception
     BasilType.BResponseRequest response     = 13;   // transport RPC information
 }
+
+// The operation codes that go into BasilMessage.op
+enum BasilMessageOps {
+    UnknownReq                      = 0x00000;
+    IdentifyDisplayableObjectReq    = 0x01001;
+    IdentifyDisplayableObjectResp   = 0x01002;
+    ForgetDisplayableObjectReq      = 0x01003;
+    ForgetDisplayableObjectResp     = 0x01004;
+    CreateObjectInstanceReq         = 0x01005;
+    CreateObjectInstanceResp        = 0x01006;
+    DeleteObjectInstanceReq         = 0x01007;
+    DeleteObjectInstanceResp        = 0x01008;
+    UpdateObjectPropertyReq         = 0x01009;
+    UpdateObjectPropertyResp        = 0x0100a;
+    UpdateInstancePropertyReq       = 0x0100b;
+    UpdateInstancePropertyResp      = 0x0100c;
+    UpdateInstancePositionReq       = 0x0100d;
+    UpdateInstancePositionResp      = 0x0100e;
+    RequestObjectPropertiesReq      = 0x0100f;
+    RequestObjectPropertiesResp     = 0x01010;
+    RequestInstancePropertiesReq    = 0x01011;
+    RequestInstancePropertiesResp   = 0x01012;
+    CloseSessionReq                 = 0x01013;
+    CloseSessionResp                = 0x01014;
+    MakeConnectionReq               = 0x01015;
+    MakeConnectionRest              = 0x01016;
+    // AliveCheck ping/pong
+    AliveCheckReq                   = 0x02001;
+    AliveCheckResp                  = 0x02002;
+    // SpaceServer
+    OpenSessionReq                  = 0x03001;
+    OpenSessionResp                 = 0x03002;
+    CameraViewReq                   = 0x03003;
+    CameraViewResp                  = 0x03004;
+}
