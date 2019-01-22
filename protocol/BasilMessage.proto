@@ -50,7 +50,7 @@ enum BasilMessageOps {
     CloseSessionReq                 = 0x01013;
     CloseSessionResp                = 0x01014;
     MakeConnectionReq               = 0x01015;
-    MakeConnectionRest              = 0x01016;
+    MakeConnectionResp              = 0x01016;
     // AliveCheck ping/pong
     AliveCheckReq                   = 0x02001;
     AliveCheckResp                  = 0x02002;
