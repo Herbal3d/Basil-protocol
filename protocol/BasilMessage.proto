@@ -22,7 +22,6 @@ message BasilMessage {
     map<string,string> properties           =  9;   // if op needs or returns property set
     map<string,string> opParameters         = 10;   // other parameters needed by op
     BasilType.BasilException exception      = 11;   // if op is returning an error
-    string exceptionReason                  = 12;   // readable info about exception
     BasilType.BResponseRequest response     = 13;   // transport RPC information
 }
 
