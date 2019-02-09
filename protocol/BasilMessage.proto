@@ -13,6 +13,7 @@ import "BasilTypes.proto";
 message BasilMessage {
     int32 op                                =  1;   // operation to perform
     BasilType.AccessAuthorization auth      =  2;   // authorization for op
+    TransportClass class                    = 14;   // priority class of messsage
     BasilType.ObjectIdentifier objectId     =  3;   // if op needs object reference
     BasilType.InstanceIdentifier instanceId =  4;   // if of needs instance reference
     BasilType.InstancePositionInfo pos      =  5;   // if op needs a position spec
@@ -23,6 +24,14 @@ message BasilMessage {
     map<string,string> opParameters         = 10;   // other parameters needed by op
     BasilType.BasilException exception      = 11;   // if op is returning an error
     BasilType.BResponseRequest response     = 13;   // transport RPC information
+}
+
+enum TransportClass {
+    Default         =  0;
+    HighPriority    = 10;   // movement or announcements
+    MedPriority     = 20;   // significant scenery
+    LowPriority     = 30;   // scenery
+    BestCase        = 40;   // distant scenery
 }
 
 // The operation codes that go into BasilMessage.op
