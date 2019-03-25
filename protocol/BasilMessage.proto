@@ -67,4 +67,21 @@ enum BasilMessageOps {
     OpenSessionResp                 = 0x03002;
     CameraViewReq                   = 0x03003;
     CameraViewResp                  = 0x03004;
+    // BrothServer
+    RegisterTopicReq                = 0x04001;
+    RegisterTopicResp               = 0x04002;
+    DeregisterTopicReq              = 0x04003;
+    DeregisterTopicResp             = 0x04004;
+    SubscribeReq                    = 0x04005;
+    SubscribeResp                   = 0x04006;
+    UnsubscribeReq                  = 0x04007;
+    UnsubscribeResp                 = 0x04008;
+    SendEventReq                    = 0x04009;
+    SendEventResp                   = 0x04010;
+    EventReq                        = 0x04011;
+    EventResp                       = 0x04012;
+    SubscriptionMadeReq             = 0x04013;
+    SubscriptionMadeResp            = 0x04014;
+    SubscriptionClearReq            = 0x04015;
+    SubscriptionClearResp           = 0x04016;
 }

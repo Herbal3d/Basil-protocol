@@ -1,0 +1,85 @@
+/*
+ * Interface between a Basil Viewer the pub/sub system.
+ */
+
+syntax = "proto3";
+
+package BrothServer;
+
+option csharp_namespace = "org.herbal3d.basil.protocol.BrothServer";
+
+import "BasilTypes.proto";
+
+// TOPIC MANAGEMENT ============================================
+message RegisterTopicReq {
+    BasilType.AccessAuthorization auth = 1;
+    string topic = 2;
+    map<string,string> properties = 3;
+}
+message RegisterTopicResp {
+    BasilType.BasilException exception = 1;
+}
+message DeregisterTopicReq {
+    BasilType.AccessAuthorization auth = 1;
+    string topic = 2;
+}
+message DeregisterTopicResp {
+    BasilType.BasilException exception = 1;
+}
+// SUBSCRIPTION MANAGEMENT =======================================
+message SubscribeReq {
+    BasilType.AccessAuthorization auth = 1;
+    string topic = 2;
+    map<string,string> properties = 3;
+}
+message SubscribeResp {
+    BasilType.BasilException exception = 1;
+}
+message UnsubscribeReq {
+    BasilType.AccessAuthorization auth = 1;
+    string topic = 2;
+}
+message UnsubscribeResp {
+    BasilType.BasilException exception = 1;
+}
+
+// some remote device subscribed to a topic
+message SubscriptionMadeResp {
+    BasilType.BasilException exception = 1;
+    string topic = 2;
+    map<string,string> properties = 3;
+}
+// all remote subscriptions to a topic have been removed
+message SubscriptionClearResp {
+    BasilType.BasilException exception = 1;
+    string topic = 2;
+    map<string,string> properties = 3;
+}
+
+// EVENTS ==========================================================
+message SendEventReq {
+    BasilType.AccessAuthorization auth = 1;
+    string topic = 2;
+    map<string,string> features = 3;
+}
+message SendEventResp {
+    string topic = 2;
+}
+// Received event
+message EventResp {
+    BasilType.BasilException exception = 1;
+    string topic = 2;
+    map<string,string> filter = 3;
+    map<string,string> properties = 4;
+}
+
+// BROTH SERVER RPC SERVICE  ============================
+service BrothServer {
+    rpc RegisterTopic (RegisterTopicReq) returns (RegisterTopicResp);
+    rpc DeregisterTopic (DeregisterTopicReq) returns (DeregisterTopicResp);
+
+    rpc Subscribe (SubscribeReq) returns (SubscribeResp);
+    rpc Unsubscribe (UnsubscribeReq) returns (UnsubscribeResp);
+
+    rpc SendEvent (SendEventReq) return (SendEventResp);
+}
