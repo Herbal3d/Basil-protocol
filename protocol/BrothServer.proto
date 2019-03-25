@@ -81,5 +81,5 @@ service BrothServer {
     rpc Subscribe (SubscribeReq) returns (SubscribeResp);
     rpc Unsubscribe (UnsubscribeReq) returns (UnsubscribeResp);
 
-    rpc SendEvent (SendEventReq) return (SendEventResp);
+    rpc SendEvent (SendEventReq) returns (SendEventResp);
 }

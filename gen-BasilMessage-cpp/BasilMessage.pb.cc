@@ -178,7 +178,7 @@ const char descriptor_table_protodef_BasilMessage_2eproto[] =
   "\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001*_\n\016Transpo"
   "rtClass\022\013\n\007Default\020\000\022\020\n\014HighPriority\020\n\022\017"
   "\n\013MedPriority\020\024\022\017\n\013LowPriority\020\036\022\014\n\010Best"
-  "Case\020(*\311\006\n\017BasilMessageOps\022\016\n\nUnknownReq"
+  "Case\020(*\277\t\n\017BasilMessageOps\022\016\n\nUnknownReq"
   "\020\000\022!\n\034IdentifyDisplayableObjectReq\020\201 \022\"\n"
   "\035IdentifyDisplayableObjectResp\020\202 \022\037\n\032For"
   "getDisplayableObjectReq\020\203 \022 \n\033ForgetDisp"
@@ -199,13 +199,22 @@ const char descriptor_table_protodef_BasilMessage_2eproto[] =
   "sp\020\226 \022\022\n\rAliveCheckReq\020\201@\022\023\n\016AliveCheckR"
   "esp\020\202@\022\023\n\016OpenSessionReq\020\201`\022\024\n\017OpenSessi"
   "onResp\020\202`\022\022\n\rCameraViewReq\020\203`\022\023\n\016CameraV"
-  "iewResp\020\204`B&\252\002#org.herbal3d.basil.protoc"
-  "ol.Messageb\006proto3"
+  "iewResp\020\204`\022\026\n\020RegisterTopicReq\020\201\200\001\022\027\n\021Re"
+  "gisterTopicResp\020\202\200\001\022\030\n\022DeregisterTopicRe"
+  "q\020\203\200\001\022\031\n\023DeregisterTopicResp\020\204\200\001\022\022\n\014Subs"
+  "cribeReq\020\205\200\001\022\023\n\rSubscribeResp\020\206\200\001\022\024\n\016Uns"
+  "ubscribeReq\020\207\200\001\022\025\n\017UnsubscribeResp\020\210\200\001\022\022"
+  "\n\014SendEventReq\020\211\200\001\022\023\n\rSendEventResp\020\220\200\001\022"
+  "\016\n\010EventReq\020\221\200\001\022\017\n\tEventResp\020\222\200\001\022\031\n\023Subs"
+  "criptionMadeReq\020\223\200\001\022\032\n\024SubscriptionMadeR"
+  "esp\020\224\200\001\022\032\n\024SubscriptionClearReq\020\225\200\001\022\033\n\025S"
+  "ubscriptionClearResp\020\226\200\001B&\252\002#org.herbal3"
+  "d.basil.protocol.Messageb\006proto3"
   ;
 static ::google::protobuf::internal::DescriptorTable descriptor_table_BasilMessage_2eproto = {
   false, InitDefaults_BasilMessage_2eproto, 
   descriptor_table_protodef_BasilMessage_2eproto,
-  "BasilMessage.proto", &assign_descriptors_table_BasilMessage_2eproto, 1738,
+  "BasilMessage.proto", &assign_descriptors_table_BasilMessage_2eproto, 2112,
 };
 
 void AddDescriptors_BasilMessage_2eproto() {
@@ -271,6 +280,22 @@ bool BasilMessageOps_IsValid(int value) {
     case 12290:
     case 12291:
     case 12292:
+    case 16385:
+    case 16386:
+    case 16387:
+    case 16388:
+    case 16389:
+    case 16390:
+    case 16391:
+    case 16392:
+    case 16393:
+    case 16400:
+    case 16401:
+    case 16402:
+    case 16403:
+    case 16404:
+    case 16405:
+    case 16406:
       return true;
     default:
       return false;

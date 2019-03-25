@@ -304,6 +304,74 @@ public final class BasilMessageOuterClass {
      * <code>CameraViewResp = 12292;</code>
      */
     CameraViewResp(12292),
+    /**
+     * <pre>
+     * BrothServer
+     * </pre>
+     *
+     * <code>RegisterTopicReq = 16385;</code>
+     */
+    RegisterTopicReq(16385),
+    /**
+     * <code>RegisterTopicResp = 16386;</code>
+     */
+    RegisterTopicResp(16386),
+    /**
+     * <code>DeregisterTopicReq = 16387;</code>
+     */
+    DeregisterTopicReq(16387),
+    /**
+     * <code>DeregisterTopicResp = 16388;</code>
+     */
+    DeregisterTopicResp(16388),
+    /**
+     * <code>SubscribeReq = 16389;</code>
+     */
+    SubscribeReq(16389),
+    /**
+     * <code>SubscribeResp = 16390;</code>
+     */
+    SubscribeResp(16390),
+    /**
+     * <code>UnsubscribeReq = 16391;</code>
+     */
+    UnsubscribeReq(16391),
+    /**
+     * <code>UnsubscribeResp = 16392;</code>
+     */
+    UnsubscribeResp(16392),
+    /**
+     * <code>SendEventReq = 16393;</code>
+     */
+    SendEventReq(16393),
+    /**
+     * <code>SendEventResp = 16400;</code>
+     */
+    SendEventResp(16400),
+    /**
+     * <code>EventReq = 16401;</code>
+     */
+    EventReq(16401),
+    /**
+     * <code>EventResp = 16402;</code>
+     */
+    EventResp(16402),
+    /**
+     * <code>SubscriptionMadeReq = 16403;</code>
+     */
+    SubscriptionMadeReq(16403),
+    /**
+     * <code>SubscriptionMadeResp = 16404;</code>
+     */
+    SubscriptionMadeResp(16404),
+    /**
+     * <code>SubscriptionClearReq = 16405;</code>
+     */
+    SubscriptionClearReq(16405),
+    /**
+     * <code>SubscriptionClearResp = 16406;</code>
+     */
+    SubscriptionClearResp(16406),
     UNRECOGNIZED(-1),
     ;
 
@@ -431,6 +499,74 @@ public final class BasilMessageOuterClass {
      * <code>CameraViewResp = 12292;</code>
      */
     public static final int CameraViewResp_VALUE = 12292;
+    /**
+     * <pre>
+     * BrothServer
+     * </pre>
+     *
+     * <code>RegisterTopicReq = 16385;</code>
+     */
+    public static final int RegisterTopicReq_VALUE = 16385;
+    /**
+     * <code>RegisterTopicResp = 16386;</code>
+     */
+    public static final int RegisterTopicResp_VALUE = 16386;
+    /**
+     * <code>DeregisterTopicReq = 16387;</code>
+     */
+    public static final int DeregisterTopicReq_VALUE = 16387;
+    /**
+     * <code>DeregisterTopicResp = 16388;</code>
+     */
+    public static final int DeregisterTopicResp_VALUE = 16388;
+    /**
+     * <code>SubscribeReq = 16389;</code>
+     */
+    public static final int SubscribeReq_VALUE = 16389;
+    /**
+     * <code>SubscribeResp = 16390;</code>
+     */
+    public static final int SubscribeResp_VALUE = 16390;
+    /**
+     * <code>UnsubscribeReq = 16391;</code>
+     */
+    public static final int UnsubscribeReq_VALUE = 16391;
+    /**
+     * <code>UnsubscribeResp = 16392;</code>
+     */
+    public static final int UnsubscribeResp_VALUE = 16392;
+    /**
+     * <code>SendEventReq = 16393;</code>
+     */
+    public static final int SendEventReq_VALUE = 16393;
+    /**
+     * <code>SendEventResp = 16400;</code>
+     */
+    public static final int SendEventResp_VALUE = 16400;
+    /**
+     * <code>EventReq = 16401;</code>
+     */
+    public static final int EventReq_VALUE = 16401;
+    /**
+     * <code>EventResp = 16402;</code>
+     */
+    public static final int EventResp_VALUE = 16402;
+    /**
+     * <code>SubscriptionMadeReq = 16403;</code>
+     */
+    public static final int SubscriptionMadeReq_VALUE = 16403;
+    /**
+     * <code>SubscriptionMadeResp = 16404;</code>
+     */
+    public static final int SubscriptionMadeResp_VALUE = 16404;
+    /**
+     * <code>SubscriptionClearReq = 16405;</code>
+     */
+    public static final int SubscriptionClearReq_VALUE = 16405;
+    /**
+     * <code>SubscriptionClearResp = 16406;</code>
+     */
+    public static final int SubscriptionClearResp_VALUE = 16406;
 
 
     public final int getNumber() {
@@ -480,6 +616,22 @@ public final class BasilMessageOuterClass {
         case 12290: return OpenSessionResp;
         case 12291: return CameraViewReq;
         case 12292: return CameraViewResp;
+        case 16385: return RegisterTopicReq;
+        case 16386: return RegisterTopicResp;
+        case 16387: return DeregisterTopicReq;
+        case 16388: return DeregisterTopicResp;
+        case 16389: return SubscribeReq;
+        case 16390: return SubscribeResp;
+        case 16391: return UnsubscribeReq;
+        case 16392: return UnsubscribeResp;
+        case 16393: return SendEventReq;
+        case 16400: return SendEventResp;
+        case 16401: return EventReq;
+        case 16402: return EventResp;
+        case 16403: return SubscriptionMadeReq;
+        case 16404: return SubscriptionMadeResp;
+        case 16405: return SubscriptionClearReq;
+        case 16406: return SubscriptionClearResp;
         default: return null;
       }
     }
@@ -4026,7 +4178,7 @@ public final class BasilMessageOuterClass {
       "\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001*_\n\016Transpo" +
       "rtClass\022\013\n\007Default\020\000\022\020\n\014HighPriority\020\n\022\017" +
       "\n\013MedPriority\020\024\022\017\n\013LowPriority\020\036\022\014\n\010Best" +
-      "Case\020(*\311\006\n\017BasilMessageOps\022\016\n\nUnknownReq" +
+      "Case\020(*\277\t\n\017BasilMessageOps\022\016\n\nUnknownReq" +
       "\020\000\022!\n\034IdentifyDisplayableObjectReq\020\201 \022\"\n" +
       "\035IdentifyDisplayableObjectResp\020\202 \022\037\n\032For" +
       "getDisplayableObjectReq\020\203 \022 \n\033ForgetDisp" +
@@ -4047,8 +4199,17 @@ public final class BasilMessageOuterClass {
       "sp\020\226 \022\022\n\rAliveCheckReq\020\201@\022\023\n\016AliveCheckR" +
       "esp\020\202@\022\023\n\016OpenSessionReq\020\201`\022\024\n\017OpenSessi" +
       "onResp\020\202`\022\022\n\rCameraViewReq\020\203`\022\023\n\016CameraV" +
-      "iewResp\020\204`B&\252\002#org.herbal3d.basil.protoc" +
-      "ol.Messageb\006proto3"
+      "iewResp\020\204`\022\026\n\020RegisterTopicReq\020\201\200\001\022\027\n\021Re" +
+      "gisterTopicResp\020\202\200\001\022\030\n\022DeregisterTopicRe" +
+      "q\020\203\200\001\022\031\n\023DeregisterTopicResp\020\204\200\001\022\022\n\014Subs" +
+      "cribeReq\020\205\200\001\022\023\n\rSubscribeResp\020\206\200\001\022\024\n\016Uns" +
+      "ubscribeReq\020\207\200\001\022\025\n\017UnsubscribeResp\020\210\200\001\022\022" +
+      "\n\014SendEventReq\020\211\200\001\022\023\n\rSendEventResp\020\220\200\001\022" +
+      "\016\n\010EventReq\020\221\200\001\022\017\n\tEventResp\020\222\200\001\022\031\n\023Subs" +
+      "criptionMadeReq\020\223\200\001\022\032\n\024SubscriptionMadeR" +
+      "esp\020\224\200\001\022\032\n\024SubscriptionClearReq\020\225\200\001\022\033\n\025S" +
+      "ubscriptionClearResp\020\226\200\001B&\252\002#org.herbal3" +
+      "d.basil.protocol.Messageb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

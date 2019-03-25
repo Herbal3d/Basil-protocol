@@ -42,7 +42,7 @@ namespace org.herbal3d.basil.protocol.Message {
             "KAkSDQoFdmFsdWUYAiABKAk6AjgBGjMKEU9wUGFyYW1ldGVyc0VudHJ5EgsK",
             "A2tleRgBIAEoCRINCgV2YWx1ZRgCIAEoCToCOAEqXwoOVHJhbnNwb3J0Q2xh",
             "c3MSCwoHRGVmYXVsdBAAEhAKDEhpZ2hQcmlvcml0eRAKEg8KC01lZFByaW9y",
-            "aXR5EBQSDwoLTG93UHJpb3JpdHkQHhIMCghCZXN0Q2FzZRAoKskGCg9CYXNp",
+            "aXR5EBQSDwoLTG93UHJpb3JpdHkQHhIMCghCZXN0Q2FzZRAoKr8JCg9CYXNp",
             "bE1lc3NhZ2VPcHMSDgoKVW5rbm93blJlcRAAEiEKHElkZW50aWZ5RGlzcGxh",
             "eWFibGVPYmplY3RSZXEQgSASIgodSWRlbnRpZnlEaXNwbGF5YWJsZU9iamVj",
             "dFJlc3AQgiASHwoaRm9yZ2V0RGlzcGxheWFibGVPYmplY3RSZXEQgyASIAob",
@@ -61,8 +61,16 @@ namespace org.herbal3d.basil.protocol.Message {
             "dGlvblJlcRCVIBIXChJNYWtlQ29ubmVjdGlvblJlc3AQliASEgoNQWxpdmVD",
             "aGVja1JlcRCBQBITCg5BbGl2ZUNoZWNrUmVzcBCCQBITCg5PcGVuU2Vzc2lv",
             "blJlcRCBYBIUCg9PcGVuU2Vzc2lvblJlc3AQgmASEgoNQ2FtZXJhVmlld1Jl",
-            "cRCDYBITCg5DYW1lcmFWaWV3UmVzcBCEYEImqgIjb3JnLmhlcmJhbDNkLmJh",
-            "c2lsLnByb3RvY29sLk1lc3NhZ2ViBnByb3RvMw=="));
+            "cRCDYBITCg5DYW1lcmFWaWV3UmVzcBCEYBIWChBSZWdpc3RlclRvcGljUmVx",
+            "EIGAARIXChFSZWdpc3RlclRvcGljUmVzcBCCgAESGAoSRGVyZWdpc3RlclRv",
+            "cGljUmVxEIOAARIZChNEZXJlZ2lzdGVyVG9waWNSZXNwEISAARISCgxTdWJz",
+            "Y3JpYmVSZXEQhYABEhMKDVN1YnNjcmliZVJlc3AQhoABEhQKDlVuc3Vic2Ny",
+            "aWJlUmVxEIeAARIVCg9VbnN1YnNjcmliZVJlc3AQiIABEhIKDFNlbmRFdmVu",
+            "dFJlcRCJgAESEwoNU2VuZEV2ZW50UmVzcBCQgAESDgoIRXZlbnRSZXEQkYAB",
+            "Eg8KCUV2ZW50UmVzcBCSgAESGQoTU3Vic2NyaXB0aW9uTWFkZVJlcRCTgAES",
+            "GgoUU3Vic2NyaXB0aW9uTWFkZVJlc3AQlIABEhoKFFN1YnNjcmlwdGlvbkNs",
+            "ZWFyUmVxEJWAARIbChVTdWJzY3JpcHRpb25DbGVhclJlc3AQloABQiaqAiNv",
+            "cmcuaGVyYmFsM2QuYmFzaWwucHJvdG9jb2wuTWVzc2FnZWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::org.herbal3d.basil.protocol.BasilType.BasilTypesReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::org.herbal3d.basil.protocol.Message.TransportClass), typeof(global::org.herbal3d.basil.protocol.Message.BasilMessageOps), }, new pbr::GeneratedClrTypeInfo[] {
@@ -132,6 +140,25 @@ namespace org.herbal3d.basil.protocol.Message {
     [pbr::OriginalName("OpenSessionResp")] OpenSessionResp = 12290,
     [pbr::OriginalName("CameraViewReq")] CameraViewReq = 12291,
     [pbr::OriginalName("CameraViewResp")] CameraViewResp = 12292,
+    /// <summary>
+    /// BrothServer
+    /// </summary>
+    [pbr::OriginalName("RegisterTopicReq")] RegisterTopicReq = 16385,
+    [pbr::OriginalName("RegisterTopicResp")] RegisterTopicResp = 16386,
+    [pbr::OriginalName("DeregisterTopicReq")] DeregisterTopicReq = 16387,
+    [pbr::OriginalName("DeregisterTopicResp")] DeregisterTopicResp = 16388,
+    [pbr::OriginalName("SubscribeReq")] SubscribeReq = 16389,
+    [pbr::OriginalName("SubscribeResp")] SubscribeResp = 16390,
+    [pbr::OriginalName("UnsubscribeReq")] UnsubscribeReq = 16391,
+    [pbr::OriginalName("UnsubscribeResp")] UnsubscribeResp = 16392,
+    [pbr::OriginalName("SendEventReq")] SendEventReq = 16393,
+    [pbr::OriginalName("SendEventResp")] SendEventResp = 16400,
+    [pbr::OriginalName("EventReq")] EventReq = 16401,
+    [pbr::OriginalName("EventResp")] EventResp = 16402,
+    [pbr::OriginalName("SubscriptionMadeReq")] SubscriptionMadeReq = 16403,
+    [pbr::OriginalName("SubscriptionMadeResp")] SubscriptionMadeResp = 16404,
+    [pbr::OriginalName("SubscriptionClearReq")] SubscriptionClearReq = 16405,
+    [pbr::OriginalName("SubscriptionClearResp")] SubscriptionClearResp = 16406,
   }
 
   #endregion

@@ -134,12 +134,28 @@ enum BasilMessageOps {
   OpenSessionResp = 12290,
   CameraViewReq = 12291,
   CameraViewResp = 12292,
+  RegisterTopicReq = 16385,
+  RegisterTopicResp = 16386,
+  DeregisterTopicReq = 16387,
+  DeregisterTopicResp = 16388,
+  SubscribeReq = 16389,
+  SubscribeResp = 16390,
+  UnsubscribeReq = 16391,
+  UnsubscribeResp = 16392,
+  SendEventReq = 16393,
+  SendEventResp = 16400,
+  EventReq = 16401,
+  EventResp = 16402,
+  SubscriptionMadeReq = 16403,
+  SubscriptionMadeResp = 16404,
+  SubscriptionClearReq = 16405,
+  SubscriptionClearResp = 16406,
   BasilMessageOps_INT_MIN_SENTINEL_DO_NOT_USE_ = std::numeric_limits<::google::protobuf::int32>::min(),
   BasilMessageOps_INT_MAX_SENTINEL_DO_NOT_USE_ = std::numeric_limits<::google::protobuf::int32>::max()
 };
 bool BasilMessageOps_IsValid(int value);
 constexpr BasilMessageOps BasilMessageOps_MIN = UnknownReq;
-constexpr BasilMessageOps BasilMessageOps_MAX = CameraViewResp;
+constexpr BasilMessageOps BasilMessageOps_MAX = SubscriptionClearResp;
 constexpr int BasilMessageOps_ARRAYSIZE = BasilMessageOps_MAX + 1;
 
 const ::google::protobuf::EnumDescriptor* BasilMessageOps_descriptor();

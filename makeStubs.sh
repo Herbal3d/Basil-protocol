@@ -44,6 +44,12 @@ doGen SpaceServer csharp       gen-SpaceServer-cs
 doGen SpaceServer java         gen-SpaceServer-java
 doGen SpaceServer python       gen-SpaceServer-py
 
+# Broth Server -- for talking to the common message service
+doGen BrothServer cpp          gen-BrothServer-cpp
+doGen BrothServer csharp       gen-BrothServer-cs
+doGen BrothServer java         gen-BrothServer-java
+doGen BrothServer python       gen-BrothServer-py
+
 # Common messages
 doGen AliveCheck cpp           gen-AliveCheck-cpp
 doGen AliveCheck csharp        gen-AliveCheck-cs

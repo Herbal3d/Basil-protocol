@@ -22,7 +22,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   package='BasilMessage',
   syntax='proto3',
   serialized_options=_b('\252\002#org.herbal3d.basil.protocol.Message'),
-  serialized_pb=_b('\n\x12\x42\x61silMessage.proto\x12\x0c\x42\x61silMessage\x1a\x10\x42\x61silTypes.proto\"\xb6\x05\n\x0c\x42\x61silMessage\x12\n\n\x02op\x18\x01 \x01(\x05\x12,\n\x04\x61uth\x18\x02 \x01(\x0b\x32\x1e.BasilType.AccessAuthorization\x12+\n\x05\x63lass\x18\x0e \x01(\x0e\x32\x1c.BasilMessage.TransportClass\x12-\n\x08objectId\x18\x03 \x01(\x0b\x32\x1b.BasilType.ObjectIdentifier\x12\x31\n\ninstanceId\x18\x04 \x01(\x0b\x32\x1d.BasilType.InstanceIdentifier\x12,\n\x03pos\x18\x05 \x01(\x0b\x32\x1f.BasilType.InstancePositionInfo\x12.\n\tassetInfo\x18\x06 \x01(\x0b\x32\x1b.BasilType.AssetInformation\x12&\n\x04\x61\x61\x62\x62\x18\x07 \x01(\x0b\x32\x18.BasilType.AaBoundingBox\x12\x0e\n\x06\x66ilter\x18\x08 \x01(\t\x12>\n\nproperties\x18\t \x03(\x0b\x32*.BasilMessage.BasilMessage.PropertiesEntry\x12\x42\n\x0copParameters\x18\n \x03(\x0b\x32,.BasilMessage.BasilMessage.OpParametersEntry\x12,\n\texception\x18\x0b \x01(\x0b\x32\x19.BasilType.BasilException\x12-\n\x08response\x18\r \x01(\x0b\x32\x1b.BasilType.BResponseRequest\x1a\x31\n\x0fPropertiesEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t:\x02\x38\x01\x1a\x33\n\x11OpParametersEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t:\x02\x38\x01*_\n\x0eTransportClass\x12\x0b\n\x07\x44\x65\x66\x61ult\x10\x00\x12\x10\n\x0cHighPriority\x10\n\x12\x0f\n\x0bMedPriority\x10\x14\x12\x0f\n\x0bLowPriority\x10\x1e\x12\x0c\n\x08\x42\x65stCase\x10(*\xc9\x06\n\x0f\x42\x61silMessageOps\x12\x0e\n\nUnknownReq\x10\x00\x12!\n\x1cIdentifyDisplayableObjectReq\x10\x81 \x12\"\n\x1dIdentifyDisplayableObjectResp\x10\x82 \x12\x1f\n\x1a\x46orgetDisplayableObjectReq\x10\x83 \x12 \n\x1b\x46orgetDisplayableObjectResp\x10\x84 \x12\x1c\n\x17\x43reateObjectInstanceReq\x10\x85 \x12\x1d\n\x18\x43reateObjectInstanceResp\x10\x86 \x12\x1c\n\x17\x44\x65leteObjectInstanceReq\x10\x87 \x12\x1d\n\x18\x44\x65leteObjectInstanceResp\x10\x88 \x12\x1c\n\x17UpdateObjectPropertyReq\x10\x89 \x12\x1d\n\x18UpdateObjectPropertyResp\x10\x8a \x12\x1e\n\x19UpdateInstancePropertyReq\x10\x8b \x12\x1f\n\x1aUpdateInstancePropertyResp\x10\x8c \x12\x1e\n\x19UpdateInstancePositionReq\x10\x8d \x12\x1f\n\x1aUpdateInstancePositionResp\x10\x8e \x12\x1f\n\x1aRequestObjectPropertiesReq\x10\x8f \x12 \n\x1bRequestObjectPropertiesResp\x10\x90 \x12!\n\x1cRequestInstancePropertiesReq\x10\x91 \x12\"\n\x1dRequestInstancePropertiesResp\x10\x92 \x12\x14\n\x0f\x43loseSessionReq\x10\x93 \x12\x15\n\x10\x43loseSessionResp\x10\x94 \x12\x16\n\x11MakeConnectionReq\x10\x95 \x12\x17\n\x12MakeConnectionResp\x10\x96 \x12\x12\n\rAliveCheckReq\x10\x81@\x12\x13\n\x0e\x41liveCheckResp\x10\x82@\x12\x13\n\x0eOpenSessionReq\x10\x81`\x12\x14\n\x0fOpenSessionResp\x10\x82`\x12\x12\n\rCameraViewReq\x10\x83`\x12\x13\n\x0e\x43\x61meraViewResp\x10\x84`B&\xaa\x02#org.herbal3d.basil.protocol.Messageb\x06proto3')
+  serialized_pb=_b('\n\x12\x42\x61silMessage.proto\x12\x0c\x42\x61silMessage\x1a\x10\x42\x61silTypes.proto\"\xb6\x05\n\x0c\x42\x61silMessage\x12\n\n\x02op\x18\x01 \x01(\x05\x12,\n\x04\x61uth\x18\x02 \x01(\x0b\x32\x1e.BasilType.AccessAuthorization\x12+\n\x05\x63lass\x18\x0e \x01(\x0e\x32\x1c.BasilMessage.TransportClass\x12-\n\x08objectId\x18\x03 \x01(\x0b\x32\x1b.BasilType.ObjectIdentifier\x12\x31\n\ninstanceId\x18\x04 \x01(\x0b\x32\x1d.BasilType.InstanceIdentifier\x12,\n\x03pos\x18\x05 \x01(\x0b\x32\x1f.BasilType.InstancePositionInfo\x12.\n\tassetInfo\x18\x06 \x01(\x0b\x32\x1b.BasilType.AssetInformation\x12&\n\x04\x61\x61\x62\x62\x18\x07 \x01(\x0b\x32\x18.BasilType.AaBoundingBox\x12\x0e\n\x06\x66ilter\x18\x08 \x01(\t\x12>\n\nproperties\x18\t \x03(\x0b\x32*.BasilMessage.BasilMessage.PropertiesEntry\x12\x42\n\x0copParameters\x18\n \x03(\x0b\x32,.BasilMessage.BasilMessage.OpParametersEntry\x12,\n\texception\x18\x0b \x01(\x0b\x32\x19.BasilType.BasilException\x12-\n\x08response\x18\r \x01(\x0b\x32\x1b.BasilType.BResponseRequest\x1a\x31\n\x0fPropertiesEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t:\x02\x38\x01\x1a\x33\n\x11OpParametersEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t:\x02\x38\x01*_\n\x0eTransportClass\x12\x0b\n\x07\x44\x65\x66\x61ult\x10\x00\x12\x10\n\x0cHighPriority\x10\n\x12\x0f\n\x0bMedPriority\x10\x14\x12\x0f\n\x0bLowPriority\x10\x1e\x12\x0c\n\x08\x42\x65stCase\x10(*\xbf\t\n\x0f\x42\x61silMessageOps\x12\x0e\n\nUnknownReq\x10\x00\x12!\n\x1cIdentifyDisplayableObjectReq\x10\x81 \x12\"\n\x1dIdentifyDisplayableObjectResp\x10\x82 \x12\x1f\n\x1a\x46orgetDisplayableObjectReq\x10\x83 \x12 \n\x1b\x46orgetDisplayableObjectResp\x10\x84 \x12\x1c\n\x17\x43reateObjectInstanceReq\x10\x85 \x12\x1d\n\x18\x43reateObjectInstanceResp\x10\x86 \x12\x1c\n\x17\x44\x65leteObjectInstanceReq\x10\x87 \x12\x1d\n\x18\x44\x65leteObjectInstanceResp\x10\x88 \x12\x1c\n\x17UpdateObjectPropertyReq\x10\x89 \x12\x1d\n\x18UpdateObjectPropertyResp\x10\x8a \x12\x1e\n\x19UpdateInstancePropertyReq\x10\x8b \x12\x1f\n\x1aUpdateInstancePropertyResp\x10\x8c \x12\x1e\n\x19UpdateInstancePositionReq\x10\x8d \x12\x1f\n\x1aUpdateInstancePositionResp\x10\x8e \x12\x1f\n\x1aRequestObjectPropertiesReq\x10\x8f \x12 \n\x1bRequestObjectPropertiesResp\x10\x90 \x12!\n\x1cRequestInstancePropertiesReq\x10\x91 \x12\"\n\x1dRequestInstancePropertiesResp\x10\x92 \x12\x14\n\x0f\x43loseSessionReq\x10\x93 \x12\x15\n\x10\x43loseSessionResp\x10\x94 \x12\x16\n\x11MakeConnectionReq\x10\x95 \x12\x17\n\x12MakeConnectionResp\x10\x96 \x12\x12\n\rAliveCheckReq\x10\x81@\x12\x13\n\x0e\x41liveCheckResp\x10\x82@\x12\x13\n\x0eOpenSessionReq\x10\x81`\x12\x14\n\x0fOpenSessionResp\x10\x82`\x12\x12\n\rCameraViewReq\x10\x83`\x12\x13\n\x0e\x43\x61meraViewResp\x10\x84`\x12\x16\n\x10RegisterTopicReq\x10\x81\x80\x01\x12\x17\n\x11RegisterTopicResp\x10\x82\x80\x01\x12\x18\n\x12\x44\x65registerTopicReq\x10\x83\x80\x01\x12\x19\n\x13\x44\x65registerTopicResp\x10\x84\x80\x01\x12\x12\n\x0cSubscribeReq\x10\x85\x80\x01\x12\x13\n\rSubscribeResp\x10\x86\x80\x01\x12\x14\n\x0eUnsubscribeReq\x10\x87\x80\x01\x12\x15\n\x0fUnsubscribeResp\x10\x88\x80\x01\x12\x12\n\x0cSendEventReq\x10\x89\x80\x01\x12\x13\n\rSendEventResp\x10\x90\x80\x01\x12\x0e\n\x08\x45ventReq\x10\x91\x80\x01\x12\x0f\n\tEventResp\x10\x92\x80\x01\x12\x19\n\x13SubscriptionMadeReq\x10\x93\x80\x01\x12\x1a\n\x14SubscriptionMadeResp\x10\x94\x80\x01\x12\x1a\n\x14SubscriptionClearReq\x10\x95\x80\x01\x12\x1b\n\x15SubscriptionClearResp\x10\x96\x80\x01\x42&\xaa\x02#org.herbal3d.basil.protocol.Messageb\x06proto3')
   ,
   dependencies=[BasilTypes__pb2.DESCRIPTOR,])
 
@@ -183,11 +183,75 @@ _BASILMESSAGEOPS = _descriptor.EnumDescriptor(
       name='CameraViewResp', index=28, number=12292,
       serialized_options=None,
       type=None),
+    _descriptor.EnumValueDescriptor(
+      name='RegisterTopicReq', index=29, number=16385,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='RegisterTopicResp', index=30, number=16386,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='DeregisterTopicReq', index=31, number=16387,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='DeregisterTopicResp', index=32, number=16388,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='SubscribeReq', index=33, number=16389,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='SubscribeResp', index=34, number=16390,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='UnsubscribeReq', index=35, number=16391,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='UnsubscribeResp', index=36, number=16392,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='SendEventReq', index=37, number=16393,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='SendEventResp', index=38, number=16400,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='EventReq', index=39, number=16401,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='EventResp', index=40, number=16402,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='SubscriptionMadeReq', index=41, number=16403,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='SubscriptionMadeResp', index=42, number=16404,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='SubscriptionClearReq', index=43, number=16405,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='SubscriptionClearResp', index=44, number=16406,
+      serialized_options=None,
+      type=None),
   ],
   containing_type=None,
   serialized_options=None,
   serialized_start=849,
-  serialized_end=1690,
+  serialized_end=2064,
 )
 _sym_db.RegisterEnumDescriptor(_BASILMESSAGEOPS)
 
@@ -226,6 +290,22 @@ OpenSessionReq = 12289
 OpenSessionResp = 12290
 CameraViewReq = 12291
 CameraViewResp = 12292
+RegisterTopicReq = 16385
+RegisterTopicResp = 16386
+DeregisterTopicReq = 16387
+DeregisterTopicResp = 16388
+SubscribeReq = 16389
+SubscribeResp = 16390
+UnsubscribeReq = 16391
+UnsubscribeResp = 16392
+SendEventReq = 16393
+SendEventResp = 16400
+EventReq = 16401
+EventResp = 16402
+SubscriptionMadeReq = 16403
+SubscriptionMadeResp = 16404
+SubscriptionClearReq = 16405
+SubscriptionClearResp = 16406
 
 
 
