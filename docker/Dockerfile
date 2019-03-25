@@ -41,7 +41,7 @@ RUN apt-get update \
     && rm -rf /var/lib/apt/lists/*
 
 # Fetch and build protobuf compiler
-RUN mkdir =p /home/protobuf \
+RUN mkdir -p /home/protobuf \
     && cd /home/protobuf \
     && git clone https://github.com/google/protobuf.git \
     && cd protobuf \
