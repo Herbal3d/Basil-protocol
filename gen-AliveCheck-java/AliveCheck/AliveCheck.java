@@ -73,6 +73,13 @@ public final class AliveCheck {
     }
 
     @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new AliveCheckReq();
+    }
+
+    @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
@@ -860,6 +867,13 @@ public final class AliveCheck {
     }
 
     @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new AliveCheckResp();
+    }
+
+    @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
@@ -1541,19 +1555,11 @@ public final class AliveCheck {
       "ived\030\004 \001(\005B)\252\002&org.herbal3d.basil.protoc" +
       "ol.AliveCheckb\006proto3"
     };
-    com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
-          public com.google.protobuf.ExtensionRegistry assignDescriptors(
-              com.google.protobuf.Descriptors.FileDescriptor root) {
-            descriptor = root;
-            return null;
-          }
-        };
-    com.google.protobuf.Descriptors.FileDescriptor
+    descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           BasilType.BasilTypes.getDescriptor(),
-        }, assigner);
+        });
     internal_static_AliveCheck_AliveCheckReq_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_AliveCheck_AliveCheckReq_fieldAccessorTable = new

@@ -8,83 +8,128 @@
 #include <google/protobuf/stubs/common.h>
 #include <google/protobuf/io/coded_stream.h>
 #include <google/protobuf/extension_set.h>
-#include <google/protobuf/wire_format_lite_inl.h>
+#include <google/protobuf/wire_format_lite.h>
 #include <google/protobuf/descriptor.h>
 #include <google/protobuf/generated_message_reflection.h>
 #include <google/protobuf/reflection_ops.h>
 #include <google/protobuf/wire_format.h>
 // @@protoc_insertion_point(includes)
 #include <google/protobuf/port_def.inc>
-
-extern PROTOBUF_INTERNAL_EXPORT_BasilTypes_2eproto ::google::protobuf::internal::SCCInfo<1> scc_info_AccessAuthorization_BasilTypes_2eproto;
-extern PROTOBUF_INTERNAL_EXPORT_BasilTypes_2eproto ::google::protobuf::internal::SCCInfo<1> scc_info_BasilException_BasilTypes_2eproto;
-extern PROTOBUF_INTERNAL_EXPORT_SpaceServer_2eproto ::google::protobuf::internal::SCCInfo<0> scc_info_OpenSessionReq_FeaturesEntry_DoNotUse_SpaceServer_2eproto;
-extern PROTOBUF_INTERNAL_EXPORT_SpaceServer_2eproto ::google::protobuf::internal::SCCInfo<0> scc_info_OpenSessionResp_PropertiesEntry_DoNotUse_SpaceServer_2eproto;
+extern PROTOBUF_INTERNAL_EXPORT_BasilTypes_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<1> scc_info_AccessAuthorization_BasilTypes_2eproto;
+extern PROTOBUF_INTERNAL_EXPORT_BasilTypes_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<1> scc_info_BasilException_BasilTypes_2eproto;
+extern PROTOBUF_INTERNAL_EXPORT_SpaceServer_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_OpenSessionReq_FeaturesEntry_DoNotUse_SpaceServer_2eproto;
+extern PROTOBUF_INTERNAL_EXPORT_SpaceServer_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_OpenSessionResp_PropertiesEntry_DoNotUse_SpaceServer_2eproto;
 namespace SpaceServer {
 class CameraViewReqDefaultTypeInternal {
  public:
-  ::google::protobuf::internal::ExplicitlyConstructed<CameraViewReq> _instance;
+  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<CameraViewReq> _instance;
 } _CameraViewReq_default_instance_;
 class CameraViewRespDefaultTypeInternal {
  public:
-  ::google::protobuf::internal::ExplicitlyConstructed<CameraViewResp> _instance;
+  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<CameraViewResp> _instance;
 } _CameraViewResp_default_instance_;
 class OpenSessionReq_FeaturesEntry_DoNotUseDefaultTypeInternal {
  public:
-  ::google::protobuf::internal::ExplicitlyConstructed<OpenSessionReq_FeaturesEntry_DoNotUse> _instance;
+  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<OpenSessionReq_FeaturesEntry_DoNotUse> _instance;
 } _OpenSessionReq_FeaturesEntry_DoNotUse_default_instance_;
 class OpenSessionReqDefaultTypeInternal {
  public:
-  ::google::protobuf::internal::ExplicitlyConstructed<OpenSessionReq> _instance;
+  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<OpenSessionReq> _instance;
 } _OpenSessionReq_default_instance_;
 class OpenSessionResp_PropertiesEntry_DoNotUseDefaultTypeInternal {
  public:
-  ::google::protobuf::internal::ExplicitlyConstructed<OpenSessionResp_PropertiesEntry_DoNotUse> _instance;
+  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<OpenSessionResp_PropertiesEntry_DoNotUse> _instance;
 } _OpenSessionResp_PropertiesEntry_DoNotUse_default_instance_;
 class OpenSessionRespDefaultTypeInternal {
  public:
-  ::google::protobuf::internal::ExplicitlyConstructed<OpenSessionResp> _instance;
+  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<OpenSessionResp> _instance;
 } _OpenSessionResp_default_instance_;
 class CloseSessionReqDefaultTypeInternal {
  public:
-  ::google::protobuf::internal::ExplicitlyConstructed<CloseSessionReq> _instance;
+  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<CloseSessionReq> _instance;
 } _CloseSessionReq_default_instance_;
 class CloseSessionRespDefaultTypeInternal {
  public:
-  ::google::protobuf::internal::ExplicitlyConstructed<CloseSessionResp> _instance;
+  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<CloseSessionResp> _instance;
 } _CloseSessionResp_default_instance_;
 }  // namespace SpaceServer
-static void InitDefaultsCameraViewReq_SpaceServer_2eproto() {
+static void InitDefaultsscc_info_CameraViewReq_SpaceServer_2eproto() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
   {
     void* ptr = &::SpaceServer::_CameraViewReq_default_instance_;
     new (ptr) ::SpaceServer::CameraViewReq();
-    ::google::protobuf::internal::OnShutdownDestroyMessage(ptr);
+    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
   }
   ::SpaceServer::CameraViewReq::InitAsDefaultInstance();
 }
 
-::google::protobuf::internal::SCCInfo<1> scc_info_CameraViewReq_SpaceServer_2eproto =
-    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 1, InitDefaultsCameraViewReq_SpaceServer_2eproto}, {
+::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<1> scc_info_CameraViewReq_SpaceServer_2eproto =
+    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 1, InitDefaultsscc_info_CameraViewReq_SpaceServer_2eproto}, {
       &scc_info_AccessAuthorization_BasilTypes_2eproto.base,}};
 
-static void InitDefaultsCameraViewResp_SpaceServer_2eproto() {
+static void InitDefaultsscc_info_CameraViewResp_SpaceServer_2eproto() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
   {
     void* ptr = &::SpaceServer::_CameraViewResp_default_instance_;
     new (ptr) ::SpaceServer::CameraViewResp();
-    ::google::protobuf::internal::OnShutdownDestroyMessage(ptr);
+    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
   }
   ::SpaceServer::CameraViewResp::InitAsDefaultInstance();
 }
 
-::google::protobuf::internal::SCCInfo<1> scc_info_CameraViewResp_SpaceServer_2eproto =
-    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 1, InitDefaultsCameraViewResp_SpaceServer_2eproto}, {
+::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<1> scc_info_CameraViewResp_SpaceServer_2eproto =
+    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 1, InitDefaultsscc_info_CameraViewResp_SpaceServer_2eproto}, {
       &scc_info_BasilException_BasilTypes_2eproto.base,}};
 
-static void InitDefaultsOpenSessionReq_FeaturesEntry_DoNotUse_SpaceServer_2eproto() {
+static void InitDefaultsscc_info_CloseSessionReq_SpaceServer_2eproto() {
+  GOOGLE_PROTOBUF_VERIFY_VERSION;
+
+  {
+    void* ptr = &::SpaceServer::_CloseSessionReq_default_instance_;
+    new (ptr) ::SpaceServer::CloseSessionReq();
+    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
+  }
+  ::SpaceServer::CloseSessionReq::InitAsDefaultInstance();
+}
+
+::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<1> scc_info_CloseSessionReq_SpaceServer_2eproto =
+    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 1, InitDefaultsscc_info_CloseSessionReq_SpaceServer_2eproto}, {
+      &scc_info_AccessAuthorization_BasilTypes_2eproto.base,}};
+
+static void InitDefaultsscc_info_CloseSessionResp_SpaceServer_2eproto() {
+  GOOGLE_PROTOBUF_VERIFY_VERSION;
+
+  {
+    void* ptr = &::SpaceServer::_CloseSessionResp_default_instance_;
+    new (ptr) ::SpaceServer::CloseSessionResp();
+    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
+  }
+  ::SpaceServer::CloseSessionResp::InitAsDefaultInstance();
+}
+
+::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<1> scc_info_CloseSessionResp_SpaceServer_2eproto =
+    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 1, InitDefaultsscc_info_CloseSessionResp_SpaceServer_2eproto}, {
+      &scc_info_BasilException_BasilTypes_2eproto.base,}};
+
+static void InitDefaultsscc_info_OpenSessionReq_SpaceServer_2eproto() {
+  GOOGLE_PROTOBUF_VERIFY_VERSION;
+
+  {
+    void* ptr = &::SpaceServer::_OpenSessionReq_default_instance_;
+    new (ptr) ::SpaceServer::OpenSessionReq();
+    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
+  }
+  ::SpaceServer::OpenSessionReq::InitAsDefaultInstance();
+}
+
+::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<2> scc_info_OpenSessionReq_SpaceServer_2eproto =
+    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 2, InitDefaultsscc_info_OpenSessionReq_SpaceServer_2eproto}, {
+      &scc_info_AccessAuthorization_BasilTypes_2eproto.base,
+      &scc_info_OpenSessionReq_FeaturesEntry_DoNotUse_SpaceServer_2eproto.base,}};
+
+static void InitDefaultsscc_info_OpenSessionReq_FeaturesEntry_DoNotUse_SpaceServer_2eproto() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
   {
@@ -94,26 +139,26 @@ static void InitDefaultsOpenSessionReq_FeaturesEntry_DoNotUse_SpaceServer_2eprot
   ::SpaceServer::OpenSessionReq_FeaturesEntry_DoNotUse::InitAsDefaultInstance();
 }
 
-::google::protobuf::internal::SCCInfo<0> scc_info_OpenSessionReq_FeaturesEntry_DoNotUse_SpaceServer_2eproto =
-    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 0, InitDefaultsOpenSessionReq_FeaturesEntry_DoNotUse_SpaceServer_2eproto}, {}};
+::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_OpenSessionReq_FeaturesEntry_DoNotUse_SpaceServer_2eproto =
+    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, InitDefaultsscc_info_OpenSessionReq_FeaturesEntry_DoNotUse_SpaceServer_2eproto}, {}};
 
-static void InitDefaultsOpenSessionReq_SpaceServer_2eproto() {
+static void InitDefaultsscc_info_OpenSessionResp_SpaceServer_2eproto() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
   {
-    void* ptr = &::SpaceServer::_OpenSessionReq_default_instance_;
-    new (ptr) ::SpaceServer::OpenSessionReq();
-    ::google::protobuf::internal::OnShutdownDestroyMessage(ptr);
+    void* ptr = &::SpaceServer::_OpenSessionResp_default_instance_;
+    new (ptr) ::SpaceServer::OpenSessionResp();
+    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
   }
-  ::SpaceServer::OpenSessionReq::InitAsDefaultInstance();
+  ::SpaceServer::OpenSessionResp::InitAsDefaultInstance();
 }
 
-::google::protobuf::internal::SCCInfo<2> scc_info_OpenSessionReq_SpaceServer_2eproto =
-    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 2, InitDefaultsOpenSessionReq_SpaceServer_2eproto}, {
-      &scc_info_AccessAuthorization_BasilTypes_2eproto.base,
-      &scc_info_OpenSessionReq_FeaturesEntry_DoNotUse_SpaceServer_2eproto.base,}};
+::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<2> scc_info_OpenSessionResp_SpaceServer_2eproto =
+    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 2, InitDefaultsscc_info_OpenSessionResp_SpaceServer_2eproto}, {
+      &scc_info_BasilException_BasilTypes_2eproto.base,
+      &scc_info_OpenSessionResp_PropertiesEntry_DoNotUse_SpaceServer_2eproto.base,}};
 
-static void InitDefaultsOpenSessionResp_PropertiesEntry_DoNotUse_SpaceServer_2eproto() {
+static void InitDefaultsscc_info_OpenSessionResp_PropertiesEntry_DoNotUse_SpaceServer_2eproto() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
   {
@@ -123,71 +168,14 @@ static void InitDefaultsOpenSessionResp_PropertiesEntry_DoNotUse_SpaceServer_2ep
   ::SpaceServer::OpenSessionResp_PropertiesEntry_DoNotUse::InitAsDefaultInstance();
 }
 
-::google::protobuf::internal::SCCInfo<0> scc_info_OpenSessionResp_PropertiesEntry_DoNotUse_SpaceServer_2eproto =
-    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 0, InitDefaultsOpenSessionResp_PropertiesEntry_DoNotUse_SpaceServer_2eproto}, {}};
+::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_OpenSessionResp_PropertiesEntry_DoNotUse_SpaceServer_2eproto =
+    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, InitDefaultsscc_info_OpenSessionResp_PropertiesEntry_DoNotUse_SpaceServer_2eproto}, {}};
 
-static void InitDefaultsOpenSessionResp_SpaceServer_2eproto() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
+static ::PROTOBUF_NAMESPACE_ID::Metadata file_level_metadata_SpaceServer_2eproto[8];
+static constexpr ::PROTOBUF_NAMESPACE_ID::EnumDescriptor const** file_level_enum_descriptors_SpaceServer_2eproto = nullptr;
+static constexpr ::PROTOBUF_NAMESPACE_ID::ServiceDescriptor const** file_level_service_descriptors_SpaceServer_2eproto = nullptr;
 
-  {
-    void* ptr = &::SpaceServer::_OpenSessionResp_default_instance_;
-    new (ptr) ::SpaceServer::OpenSessionResp();
-    ::google::protobuf::internal::OnShutdownDestroyMessage(ptr);
-  }
-  ::SpaceServer::OpenSessionResp::InitAsDefaultInstance();
-}
-
-::google::protobuf::internal::SCCInfo<2> scc_info_OpenSessionResp_SpaceServer_2eproto =
-    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 2, InitDefaultsOpenSessionResp_SpaceServer_2eproto}, {
-      &scc_info_BasilException_BasilTypes_2eproto.base,
-      &scc_info_OpenSessionResp_PropertiesEntry_DoNotUse_SpaceServer_2eproto.base,}};
-
-static void InitDefaultsCloseSessionReq_SpaceServer_2eproto() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
-  {
-    void* ptr = &::SpaceServer::_CloseSessionReq_default_instance_;
-    new (ptr) ::SpaceServer::CloseSessionReq();
-    ::google::protobuf::internal::OnShutdownDestroyMessage(ptr);
-  }
-  ::SpaceServer::CloseSessionReq::InitAsDefaultInstance();
-}
-
-::google::protobuf::internal::SCCInfo<1> scc_info_CloseSessionReq_SpaceServer_2eproto =
-    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 1, InitDefaultsCloseSessionReq_SpaceServer_2eproto}, {
-      &scc_info_AccessAuthorization_BasilTypes_2eproto.base,}};
-
-static void InitDefaultsCloseSessionResp_SpaceServer_2eproto() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
-  {
-    void* ptr = &::SpaceServer::_CloseSessionResp_default_instance_;
-    new (ptr) ::SpaceServer::CloseSessionResp();
-    ::google::protobuf::internal::OnShutdownDestroyMessage(ptr);
-  }
-  ::SpaceServer::CloseSessionResp::InitAsDefaultInstance();
-}
-
-::google::protobuf::internal::SCCInfo<1> scc_info_CloseSessionResp_SpaceServer_2eproto =
-    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 1, InitDefaultsCloseSessionResp_SpaceServer_2eproto}, {
-      &scc_info_BasilException_BasilTypes_2eproto.base,}};
-
-void InitDefaults_SpaceServer_2eproto() {
-  ::google::protobuf::internal::InitSCC(&scc_info_CameraViewReq_SpaceServer_2eproto.base);
-  ::google::protobuf::internal::InitSCC(&scc_info_CameraViewResp_SpaceServer_2eproto.base);
-  ::google::protobuf::internal::InitSCC(&scc_info_OpenSessionReq_FeaturesEntry_DoNotUse_SpaceServer_2eproto.base);
-  ::google::protobuf::internal::InitSCC(&scc_info_OpenSessionReq_SpaceServer_2eproto.base);
-  ::google::protobuf::internal::InitSCC(&scc_info_OpenSessionResp_PropertiesEntry_DoNotUse_SpaceServer_2eproto.base);
-  ::google::protobuf::internal::InitSCC(&scc_info_OpenSessionResp_SpaceServer_2eproto.base);
-  ::google::protobuf::internal::InitSCC(&scc_info_CloseSessionReq_SpaceServer_2eproto.base);
-  ::google::protobuf::internal::InitSCC(&scc_info_CloseSessionResp_SpaceServer_2eproto.base);
-}
-
-static ::google::protobuf::Metadata file_level_metadata_SpaceServer_2eproto[8];
-static constexpr ::google::protobuf::EnumDescriptor const** file_level_enum_descriptors_SpaceServer_2eproto = nullptr;
-static constexpr ::google::protobuf::ServiceDescriptor const** file_level_service_descriptors_SpaceServer_2eproto = nullptr;
-
-const ::google::protobuf::uint32 TableStruct_SpaceServer_2eproto::offsets[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
+const ::PROTOBUF_NAMESPACE_ID::uint32 TableStruct_SpaceServer_2eproto::offsets[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
   ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::SpaceServer::CameraViewReq, _internal_metadata_),
   ~0u,  // no _extensions_
@@ -246,7 +234,7 @@ const ::google::protobuf::uint32 TableStruct_SpaceServer_2eproto::offsets[] PROT
   ~0u,  // no _weak_field_map_
   PROTOBUF_FIELD_OFFSET(::SpaceServer::CloseSessionResp, exception_),
 };
-static const ::google::protobuf::internal::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
+static const ::PROTOBUF_NAMESPACE_ID::internal::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
   { 0, -1, sizeof(::SpaceServer::CameraViewReq)},
   { 6, -1, sizeof(::SpaceServer::CameraViewResp)},
   { 12, 19, sizeof(::SpaceServer::OpenSessionReq_FeaturesEntry_DoNotUse)},
@@ -257,24 +245,18 @@ static const ::google::protobuf::internal::MigrationSchema schemas[] PROTOBUF_SE
   { 51, -1, sizeof(::SpaceServer::CloseSessionResp)},
 };
 
-static ::google::protobuf::Message const * const file_default_instances[] = {
-  reinterpret_cast<const ::google::protobuf::Message*>(&::SpaceServer::_CameraViewReq_default_instance_),
-  reinterpret_cast<const ::google::protobuf::Message*>(&::SpaceServer::_CameraViewResp_default_instance_),
-  reinterpret_cast<const ::google::protobuf::Message*>(&::SpaceServer::_OpenSessionReq_FeaturesEntry_DoNotUse_default_instance_),
-  reinterpret_cast<const ::google::protobuf::Message*>(&::SpaceServer::_OpenSessionReq_default_instance_),
-  reinterpret_cast<const ::google::protobuf::Message*>(&::SpaceServer::_OpenSessionResp_PropertiesEntry_DoNotUse_default_instance_),
-  reinterpret_cast<const ::google::protobuf::Message*>(&::SpaceServer::_OpenSessionResp_default_instance_),
-  reinterpret_cast<const ::google::protobuf::Message*>(&::SpaceServer::_CloseSessionReq_default_instance_),
-  reinterpret_cast<const ::google::protobuf::Message*>(&::SpaceServer::_CloseSessionResp_default_instance_),
+static ::PROTOBUF_NAMESPACE_ID::Message const * const file_default_instances[] = {
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::SpaceServer::_CameraViewReq_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::SpaceServer::_CameraViewResp_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::SpaceServer::_OpenSessionReq_FeaturesEntry_DoNotUse_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::SpaceServer::_OpenSessionReq_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::SpaceServer::_OpenSessionResp_PropertiesEntry_DoNotUse_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::SpaceServer::_OpenSessionResp_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::SpaceServer::_CloseSessionReq_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::SpaceServer::_CloseSessionResp_default_instance_),
 };
 
-static ::google::protobuf::internal::AssignDescriptorsTable assign_descriptors_table_SpaceServer_2eproto = {
-  {}, AddDescriptors_SpaceServer_2eproto, "SpaceServer.proto", schemas,
-  file_default_instances, TableStruct_SpaceServer_2eproto::offsets,
-  file_level_metadata_SpaceServer_2eproto, 8, file_level_enum_descriptors_SpaceServer_2eproto, file_level_service_descriptors_SpaceServer_2eproto,
-};
-
-const char descriptor_table_protodef_SpaceServer_2eproto[] =
+const char descriptor_table_protodef_SpaceServer_2eproto[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) =
   "\n\021SpaceServer.proto\022\013SpaceServer\032\020BasilT"
   "ypes.proto\"=\n\rCameraViewReq\022,\n\004auth\030\001 \001("
   "\0132\036.BasilType.AccessAuthorization\">\n\016Cam"
@@ -299,22 +281,30 @@ const char descriptor_table_protodef_SpaceServer_2eproto[] =
   "ssionRespB*\252\002\'org.herbal3d.basil.protoco"
   "l.SpaceServerb\006proto3"
   ;
-static ::google::protobuf::internal::DescriptorTable descriptor_table_SpaceServer_2eproto = {
-  false, InitDefaults_SpaceServer_2eproto, 
-  descriptor_table_protodef_SpaceServer_2eproto,
-  "SpaceServer.proto", &assign_descriptors_table_SpaceServer_2eproto, 901,
+static const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable*const descriptor_table_SpaceServer_2eproto_deps[1] = {
+  &::descriptor_table_BasilTypes_2eproto,
+};
+static ::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase*const descriptor_table_SpaceServer_2eproto_sccs[8] = {
+  &scc_info_CameraViewReq_SpaceServer_2eproto.base,
+  &scc_info_CameraViewResp_SpaceServer_2eproto.base,
+  &scc_info_CloseSessionReq_SpaceServer_2eproto.base,
+  &scc_info_CloseSessionResp_SpaceServer_2eproto.base,
+  &scc_info_OpenSessionReq_SpaceServer_2eproto.base,
+  &scc_info_OpenSessionReq_FeaturesEntry_DoNotUse_SpaceServer_2eproto.base,
+  &scc_info_OpenSessionResp_SpaceServer_2eproto.base,
+  &scc_info_OpenSessionResp_PropertiesEntry_DoNotUse_SpaceServer_2eproto.base,
+};
+static ::PROTOBUF_NAMESPACE_ID::internal::once_flag descriptor_table_SpaceServer_2eproto_once;
+static bool descriptor_table_SpaceServer_2eproto_initialized = false;
+const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_SpaceServer_2eproto = {
+  &descriptor_table_SpaceServer_2eproto_initialized, descriptor_table_protodef_SpaceServer_2eproto, "SpaceServer.proto", 901,
+  &descriptor_table_SpaceServer_2eproto_once, descriptor_table_SpaceServer_2eproto_sccs, descriptor_table_SpaceServer_2eproto_deps, 8, 1,
+  schemas, file_default_instances, TableStruct_SpaceServer_2eproto::offsets,
+  file_level_metadata_SpaceServer_2eproto, 8, file_level_enum_descriptors_SpaceServer_2eproto, file_level_service_descriptors_SpaceServer_2eproto,
 };
 
-void AddDescriptors_SpaceServer_2eproto() {
-  static constexpr ::google::protobuf::internal::InitFunc deps[1] =
-  {
-    ::AddDescriptors_BasilTypes_2eproto,
-  };
- ::google::protobuf::internal::AddDescriptors(&descriptor_table_SpaceServer_2eproto, deps, 1);
-}
-
 // Force running AddDescriptors() at dynamic initialization time.
-static bool dynamic_init_dummy_SpaceServer_2eproto = []() { AddDescriptors_SpaceServer_2eproto(); return true; }();
+static bool dynamic_init_dummy_SpaceServer_2eproto = (  ::PROTOBUF_NAMESPACE_ID::internal::AddDescriptors(&descriptor_table_SpaceServer_2eproto), true);
 namespace SpaceServer {
 
 // ===================================================================
@@ -343,12 +333,12 @@ const int CameraViewReq::kAuthFieldNumber;
 #endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
 
 CameraViewReq::CameraViewReq()
-  : ::google::protobuf::Message(), _internal_metadata_(nullptr) {
+  : ::PROTOBUF_NAMESPACE_ID::Message(), _internal_metadata_(nullptr) {
   SharedCtor();
   // @@protoc_insertion_point(constructor:SpaceServer.CameraViewReq)
 }
 CameraViewReq::CameraViewReq(const CameraViewReq& from)
-  : ::google::protobuf::Message(),
+  : ::PROTOBUF_NAMESPACE_ID::Message(),
       _internal_metadata_(nullptr) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   if (from.has_auth()) {
@@ -360,8 +350,7 @@ CameraViewReq::CameraViewReq(const CameraViewReq& from)
 }
 
 void CameraViewReq::SharedCtor() {
-  ::google::protobuf::internal::InitSCC(
-      &scc_info_CameraViewReq_SpaceServer_2eproto.base);
+  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_CameraViewReq_SpaceServer_2eproto.base);
   auth_ = nullptr;
 }
 
@@ -378,14 +367,14 @@ void CameraViewReq::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
 const CameraViewReq& CameraViewReq::default_instance() {
-  ::google::protobuf::internal::InitSCC(&::scc_info_CameraViewReq_SpaceServer_2eproto.base);
+  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_CameraViewReq_SpaceServer_2eproto.base);
   return *internal_default_instance();
 }
 
 
 void CameraViewReq::Clear() {
 // @@protoc_insertion_point(message_clear_start:SpaceServer.CameraViewReq)
-  ::google::protobuf::uint32 cached_has_bits = 0;
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
@@ -397,49 +386,54 @@ void CameraViewReq::Clear() {
 }
 
 #if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-const char* CameraViewReq::_InternalParse(const char* ptr, ::google::protobuf::internal::ParseContext* ctx) {
+const char* CameraViewReq::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
-    ::google::protobuf::uint32 tag;
-    ptr = ::google::protobuf::internal::ReadTag(ptr, &tag);
-    GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
+    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
+    CHK_(ptr);
     switch (tag >> 3) {
       // .BasilType.AccessAuthorization auth = 1;
-      case 1: {
-        if (static_cast<::google::protobuf::uint8>(tag) != 10) goto handle_unusual;
-        ptr = ctx->ParseMessage(mutable_auth(), ptr);
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
-        break;
-      }
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
+          ptr = ctx->ParseMessage(mutable_auth(), ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
       default: {
       handle_unusual:
         if ((tag & 7) == 4 || tag == 0) {
           ctx->SetLastTag(tag);
-          return ptr;
+          goto success;
         }
-        ptr = UnknownFieldParse(tag,
-          _internal_metadata_.mutable_unknown_fields(), ptr, ctx);
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr != nullptr);
-        break;
+        ptr = UnknownFieldParse(tag, &_internal_metadata_, ptr, ctx);
+        CHK_(ptr != nullptr);
+        continue;
       }
     }  // switch
   }  // while
+success:
   return ptr;
+failure:
+  ptr = nullptr;
+  goto success;
+#undef CHK_
 }
 #else  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
 bool CameraViewReq::MergePartialFromCodedStream(
-    ::google::protobuf::io::CodedInputStream* input) {
+    ::PROTOBUF_NAMESPACE_ID::io::CodedInputStream* input) {
 #define DO_(EXPRESSION) if (!PROTOBUF_PREDICT_TRUE(EXPRESSION)) goto failure
-  ::google::protobuf::uint32 tag;
+  ::PROTOBUF_NAMESPACE_ID::uint32 tag;
   // @@protoc_insertion_point(parse_start:SpaceServer.CameraViewReq)
   for (;;) {
-    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
+    ::std::pair<::PROTOBUF_NAMESPACE_ID::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
     tag = p.first;
     if (!p.second) goto handle_unusual;
-    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
+    switch (::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::GetTagFieldNumber(tag)) {
       // .BasilType.AccessAuthorization auth = 1;
       case 1: {
-        if (static_cast< ::google::protobuf::uint8>(tag) == (10 & 0xFF)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (10 & 0xFF)) {
+          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadMessage(
                input, mutable_auth()));
         } else {
           goto handle_unusual;
@@ -452,7 +446,7 @@ bool CameraViewReq::MergePartialFromCodedStream(
         if (tag == 0) {
           goto success;
         }
-        DO_(::google::protobuf::internal::WireFormat::SkipField(
+        DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SkipField(
               input, tag, _internal_metadata_.mutable_unknown_fields()));
         break;
       }
@@ -469,39 +463,39 @@ failure:
 #endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
 
 void CameraViewReq::SerializeWithCachedSizes(
-    ::google::protobuf::io::CodedOutputStream* output) const {
+    ::PROTOBUF_NAMESPACE_ID::io::CodedOutputStream* output) const {
   // @@protoc_insertion_point(serialize_start:SpaceServer.CameraViewReq)
-  ::google::protobuf::uint32 cached_has_bits = 0;
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
   // .BasilType.AccessAuthorization auth = 1;
   if (this->has_auth()) {
-    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteMessageMaybeToArray(
       1, HasBitSetters::auth(this), output);
   }
 
   if (_internal_metadata_.have_unknown_fields()) {
-    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SerializeUnknownFields(
         _internal_metadata_.unknown_fields(), output);
   }
   // @@protoc_insertion_point(serialize_end:SpaceServer.CameraViewReq)
 }
 
-::google::protobuf::uint8* CameraViewReq::InternalSerializeWithCachedSizesToArray(
-    ::google::protobuf::uint8* target) const {
+::PROTOBUF_NAMESPACE_ID::uint8* CameraViewReq::InternalSerializeWithCachedSizesToArray(
+    ::PROTOBUF_NAMESPACE_ID::uint8* target) const {
   // @@protoc_insertion_point(serialize_to_array_start:SpaceServer.CameraViewReq)
-  ::google::protobuf::uint32 cached_has_bits = 0;
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
   // .BasilType.AccessAuthorization auth = 1;
   if (this->has_auth()) {
-    target = ::google::protobuf::internal::WireFormatLite::
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessageToArray(
         1, HasBitSetters::auth(this), target);
   }
 
   if (_internal_metadata_.have_unknown_fields()) {
-    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields(), target);
   }
   // @@protoc_insertion_point(serialize_to_array_end:SpaceServer.CameraViewReq)
@@ -514,34 +508,34 @@ size_t CameraViewReq::ByteSizeLong() const {
 
   if (_internal_metadata_.have_unknown_fields()) {
     total_size +=
-      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::ComputeUnknownFieldsSize(
         _internal_metadata_.unknown_fields());
   }
-  ::google::protobuf::uint32 cached_has_bits = 0;
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // .BasilType.AccessAuthorization auth = 1;
   if (this->has_auth()) {
     total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::MessageSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *auth_);
   }
 
-  int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
+  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
   SetCachedSize(cached_size);
   return total_size;
 }
 
-void CameraViewReq::MergeFrom(const ::google::protobuf::Message& from) {
+void CameraViewReq::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
 // @@protoc_insertion_point(generalized_merge_from_start:SpaceServer.CameraViewReq)
   GOOGLE_DCHECK_NE(&from, this);
   const CameraViewReq* source =
-      ::google::protobuf::DynamicCastToGenerated<CameraViewReq>(
+      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<CameraViewReq>(
           &from);
   if (source == nullptr) {
   // @@protoc_insertion_point(generalized_merge_from_cast_fail:SpaceServer.CameraViewReq)
-    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
+    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
   } else {
   // @@protoc_insertion_point(generalized_merge_from_cast_success:SpaceServer.CameraViewReq)
     MergeFrom(*source);
@@ -552,7 +546,7 @@ void CameraViewReq::MergeFrom(const CameraViewReq& from) {
 // @@protoc_insertion_point(class_specific_merge_from_start:SpaceServer.CameraViewReq)
   GOOGLE_DCHECK_NE(&from, this);
   _internal_metadata_.MergeFrom(from._internal_metadata_);
-  ::google::protobuf::uint32 cached_has_bits = 0;
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
   if (from.has_auth()) {
@@ -560,7 +554,7 @@ void CameraViewReq::MergeFrom(const CameraViewReq& from) {
   }
 }
 
-void CameraViewReq::CopyFrom(const ::google::protobuf::Message& from) {
+void CameraViewReq::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
 // @@protoc_insertion_point(generalized_copy_from_start:SpaceServer.CameraViewReq)
   if (&from == this) return;
   Clear();
@@ -588,9 +582,8 @@ void CameraViewReq::InternalSwap(CameraViewReq* other) {
   swap(auth_, other->auth_);
 }
 
-::google::protobuf::Metadata CameraViewReq::GetMetadata() const {
-  ::google::protobuf::internal::AssignDescriptors(&::assign_descriptors_table_SpaceServer_2eproto);
-  return ::file_level_metadata_SpaceServer_2eproto[kIndexInFileMessages];
+::PROTOBUF_NAMESPACE_ID::Metadata CameraViewReq::GetMetadata() const {
+  return GetMetadataStatic();
 }
 
 
@@ -620,12 +613,12 @@ const int CameraViewResp::kExceptionFieldNumber;
 #endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
 
 CameraViewResp::CameraViewResp()
-  : ::google::protobuf::Message(), _internal_metadata_(nullptr) {
+  : ::PROTOBUF_NAMESPACE_ID::Message(), _internal_metadata_(nullptr) {
   SharedCtor();
   // @@protoc_insertion_point(constructor:SpaceServer.CameraViewResp)
 }
 CameraViewResp::CameraViewResp(const CameraViewResp& from)
-  : ::google::protobuf::Message(),
+  : ::PROTOBUF_NAMESPACE_ID::Message(),
       _internal_metadata_(nullptr) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   if (from.has_exception()) {
@@ -637,8 +630,7 @@ CameraViewResp::CameraViewResp(const CameraViewResp& from)
 }
 
 void CameraViewResp::SharedCtor() {
-  ::google::protobuf::internal::InitSCC(
-      &scc_info_CameraViewResp_SpaceServer_2eproto.base);
+  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_CameraViewResp_SpaceServer_2eproto.base);
   exception_ = nullptr;
 }
 
@@ -655,14 +647,14 @@ void CameraViewResp::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
 const CameraViewResp& CameraViewResp::default_instance() {
-  ::google::protobuf::internal::InitSCC(&::scc_info_CameraViewResp_SpaceServer_2eproto.base);
+  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_CameraViewResp_SpaceServer_2eproto.base);
   return *internal_default_instance();
 }
 
 
 void CameraViewResp::Clear() {
 // @@protoc_insertion_point(message_clear_start:SpaceServer.CameraViewResp)
-  ::google::protobuf::uint32 cached_has_bits = 0;
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
@@ -674,49 +666,54 @@ void CameraViewResp::Clear() {
 }
 
 #if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-const char* CameraViewResp::_InternalParse(const char* ptr, ::google::protobuf::internal::ParseContext* ctx) {
+const char* CameraViewResp::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
-    ::google::protobuf::uint32 tag;
-    ptr = ::google::protobuf::internal::ReadTag(ptr, &tag);
-    GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
+    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
+    CHK_(ptr);
     switch (tag >> 3) {
       // .BasilType.BasilException exception = 1;
-      case 1: {
-        if (static_cast<::google::protobuf::uint8>(tag) != 10) goto handle_unusual;
-        ptr = ctx->ParseMessage(mutable_exception(), ptr);
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
-        break;
-      }
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
+          ptr = ctx->ParseMessage(mutable_exception(), ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
       default: {
       handle_unusual:
         if ((tag & 7) == 4 || tag == 0) {
           ctx->SetLastTag(tag);
-          return ptr;
+          goto success;
         }
-        ptr = UnknownFieldParse(tag,
-          _internal_metadata_.mutable_unknown_fields(), ptr, ctx);
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr != nullptr);
-        break;
+        ptr = UnknownFieldParse(tag, &_internal_metadata_, ptr, ctx);
+        CHK_(ptr != nullptr);
+        continue;
       }
     }  // switch
   }  // while
+success:
   return ptr;
+failure:
+  ptr = nullptr;
+  goto success;
+#undef CHK_
 }
 #else  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
 bool CameraViewResp::MergePartialFromCodedStream(
-    ::google::protobuf::io::CodedInputStream* input) {
+    ::PROTOBUF_NAMESPACE_ID::io::CodedInputStream* input) {
 #define DO_(EXPRESSION) if (!PROTOBUF_PREDICT_TRUE(EXPRESSION)) goto failure
-  ::google::protobuf::uint32 tag;
+  ::PROTOBUF_NAMESPACE_ID::uint32 tag;
   // @@protoc_insertion_point(parse_start:SpaceServer.CameraViewResp)
   for (;;) {
-    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
+    ::std::pair<::PROTOBUF_NAMESPACE_ID::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
     tag = p.first;
     if (!p.second) goto handle_unusual;
-    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
+    switch (::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::GetTagFieldNumber(tag)) {
       // .BasilType.BasilException exception = 1;
       case 1: {
-        if (static_cast< ::google::protobuf::uint8>(tag) == (10 & 0xFF)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (10 & 0xFF)) {
+          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadMessage(
                input, mutable_exception()));
         } else {
           goto handle_unusual;
@@ -729,7 +726,7 @@ bool CameraViewResp::MergePartialFromCodedStream(
         if (tag == 0) {
           goto success;
         }
-        DO_(::google::protobuf::internal::WireFormat::SkipField(
+        DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SkipField(
               input, tag, _internal_metadata_.mutable_unknown_fields()));
         break;
       }
@@ -746,39 +743,39 @@ failure:
 #endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
 
 void CameraViewResp::SerializeWithCachedSizes(
-    ::google::protobuf::io::CodedOutputStream* output) const {
+    ::PROTOBUF_NAMESPACE_ID::io::CodedOutputStream* output) const {
   // @@protoc_insertion_point(serialize_start:SpaceServer.CameraViewResp)
-  ::google::protobuf::uint32 cached_has_bits = 0;
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
   // .BasilType.BasilException exception = 1;
   if (this->has_exception()) {
-    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteMessageMaybeToArray(
       1, HasBitSetters::exception(this), output);
   }
 
   if (_internal_metadata_.have_unknown_fields()) {
-    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SerializeUnknownFields(
         _internal_metadata_.unknown_fields(), output);
   }
   // @@protoc_insertion_point(serialize_end:SpaceServer.CameraViewResp)
 }
 
-::google::protobuf::uint8* CameraViewResp::InternalSerializeWithCachedSizesToArray(
-    ::google::protobuf::uint8* target) const {
+::PROTOBUF_NAMESPACE_ID::uint8* CameraViewResp::InternalSerializeWithCachedSizesToArray(
+    ::PROTOBUF_NAMESPACE_ID::uint8* target) const {
   // @@protoc_insertion_point(serialize_to_array_start:SpaceServer.CameraViewResp)
-  ::google::protobuf::uint32 cached_has_bits = 0;
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
   // .BasilType.BasilException exception = 1;
   if (this->has_exception()) {
-    target = ::google::protobuf::internal::WireFormatLite::
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessageToArray(
         1, HasBitSetters::exception(this), target);
   }
 
   if (_internal_metadata_.have_unknown_fields()) {
-    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields(), target);
   }
   // @@protoc_insertion_point(serialize_to_array_end:SpaceServer.CameraViewResp)
@@ -791,34 +788,34 @@ size_t CameraViewResp::ByteSizeLong() const {
 
   if (_internal_metadata_.have_unknown_fields()) {
     total_size +=
-      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::ComputeUnknownFieldsSize(
         _internal_metadata_.unknown_fields());
   }
-  ::google::protobuf::uint32 cached_has_bits = 0;
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // .BasilType.BasilException exception = 1;
   if (this->has_exception()) {
     total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::MessageSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *exception_);
   }
 
-  int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
+  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
   SetCachedSize(cached_size);
   return total_size;
 }
 
-void CameraViewResp::MergeFrom(const ::google::protobuf::Message& from) {
+void CameraViewResp::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
 // @@protoc_insertion_point(generalized_merge_from_start:SpaceServer.CameraViewResp)
   GOOGLE_DCHECK_NE(&from, this);
   const CameraViewResp* source =
-      ::google::protobuf::DynamicCastToGenerated<CameraViewResp>(
+      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<CameraViewResp>(
           &from);
   if (source == nullptr) {
   // @@protoc_insertion_point(generalized_merge_from_cast_fail:SpaceServer.CameraViewResp)
-    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
+    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
   } else {
   // @@protoc_insertion_point(generalized_merge_from_cast_success:SpaceServer.CameraViewResp)
     MergeFrom(*source);
@@ -829,7 +826,7 @@ void CameraViewResp::MergeFrom(const CameraViewResp& from) {
 // @@protoc_insertion_point(class_specific_merge_from_start:SpaceServer.CameraViewResp)
   GOOGLE_DCHECK_NE(&from, this);
   _internal_metadata_.MergeFrom(from._internal_metadata_);
-  ::google::protobuf::uint32 cached_has_bits = 0;
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
   if (from.has_exception()) {
@@ -837,7 +834,7 @@ void CameraViewResp::MergeFrom(const CameraViewResp& from) {
   }
 }
 
-void CameraViewResp::CopyFrom(const ::google::protobuf::Message& from) {
+void CameraViewResp::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
 // @@protoc_insertion_point(generalized_copy_from_start:SpaceServer.CameraViewResp)
   if (&from == this) return;
   Clear();
@@ -865,27 +862,25 @@ void CameraViewResp::InternalSwap(CameraViewResp* other) {
   swap(exception_, other->exception_);
 }
 
-::google::protobuf::Metadata CameraViewResp::GetMetadata() const {
-  ::google::protobuf::internal::AssignDescriptors(&::assign_descriptors_table_SpaceServer_2eproto);
-  return ::file_level_metadata_SpaceServer_2eproto[kIndexInFileMessages];
+::PROTOBUF_NAMESPACE_ID::Metadata CameraViewResp::GetMetadata() const {
+  return GetMetadataStatic();
 }
 
 
 // ===================================================================
 
 OpenSessionReq_FeaturesEntry_DoNotUse::OpenSessionReq_FeaturesEntry_DoNotUse() {}
-OpenSessionReq_FeaturesEntry_DoNotUse::OpenSessionReq_FeaturesEntry_DoNotUse(::google::protobuf::Arena* arena)
+OpenSessionReq_FeaturesEntry_DoNotUse::OpenSessionReq_FeaturesEntry_DoNotUse(::PROTOBUF_NAMESPACE_ID::Arena* arena)
     : SuperType(arena) {}
 void OpenSessionReq_FeaturesEntry_DoNotUse::MergeFrom(const OpenSessionReq_FeaturesEntry_DoNotUse& other) {
   MergeFromInternal(other);
 }
-::google::protobuf::Metadata OpenSessionReq_FeaturesEntry_DoNotUse::GetMetadata() const {
-  ::google::protobuf::internal::AssignDescriptors(&::assign_descriptors_table_SpaceServer_2eproto);
-  return ::file_level_metadata_SpaceServer_2eproto[2];
+::PROTOBUF_NAMESPACE_ID::Metadata OpenSessionReq_FeaturesEntry_DoNotUse::GetMetadata() const {
+  return GetMetadataStatic();
 }
 void OpenSessionReq_FeaturesEntry_DoNotUse::MergeFrom(
-    const ::google::protobuf::Message& other) {
-  ::google::protobuf::Message::MergeFrom(other);
+    const ::PROTOBUF_NAMESPACE_ID::Message& other) {
+  ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom(other);
 }
 
 
@@ -916,12 +911,12 @@ const int OpenSessionReq::kFeaturesFieldNumber;
 #endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
 
 OpenSessionReq::OpenSessionReq()
-  : ::google::protobuf::Message(), _internal_metadata_(nullptr) {
+  : ::PROTOBUF_NAMESPACE_ID::Message(), _internal_metadata_(nullptr) {
   SharedCtor();
   // @@protoc_insertion_point(constructor:SpaceServer.OpenSessionReq)
 }
 OpenSessionReq::OpenSessionReq(const OpenSessionReq& from)
-  : ::google::protobuf::Message(),
+  : ::PROTOBUF_NAMESPACE_ID::Message(),
       _internal_metadata_(nullptr) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   features_.MergeFrom(from.features_);
@@ -934,8 +929,7 @@ OpenSessionReq::OpenSessionReq(const OpenSessionReq& from)
 }
 
 void OpenSessionReq::SharedCtor() {
-  ::google::protobuf::internal::InitSCC(
-      &scc_info_OpenSessionReq_SpaceServer_2eproto.base);
+  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_OpenSessionReq_SpaceServer_2eproto.base);
   auth_ = nullptr;
 }
 
@@ -952,14 +946,14 @@ void OpenSessionReq::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
 const OpenSessionReq& OpenSessionReq::default_instance() {
-  ::google::protobuf::internal::InitSCC(&::scc_info_OpenSessionReq_SpaceServer_2eproto.base);
+  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_OpenSessionReq_SpaceServer_2eproto.base);
   return *internal_default_instance();
 }
 
 
 void OpenSessionReq::Clear() {
 // @@protoc_insertion_point(message_clear_start:SpaceServer.OpenSessionReq)
-  ::google::protobuf::uint32 cached_has_bits = 0;
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
@@ -972,59 +966,66 @@ void OpenSessionReq::Clear() {
 }
 
 #if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-const char* OpenSessionReq::_InternalParse(const char* ptr, ::google::protobuf::internal::ParseContext* ctx) {
+const char* OpenSessionReq::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
-    ::google::protobuf::uint32 tag;
-    ptr = ::google::protobuf::internal::ReadTag(ptr, &tag);
-    GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
+    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
+    CHK_(ptr);
     switch (tag >> 3) {
       // .BasilType.AccessAuthorization auth = 1;
-      case 1: {
-        if (static_cast<::google::protobuf::uint8>(tag) != 10) goto handle_unusual;
-        ptr = ctx->ParseMessage(mutable_auth(), ptr);
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
-        break;
-      }
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
+          ptr = ctx->ParseMessage(mutable_auth(), ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
       // map<string, string> features = 2;
-      case 2: {
-        if (static_cast<::google::protobuf::uint8>(tag) != 18) goto handle_unusual;
-        do {
-          ptr = ctx->ParseMessage(&features_, ptr);
-          GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
-          if (ctx->Done(&ptr)) return ptr;
-        } while ((::google::protobuf::internal::UnalignedLoad<::google::protobuf::uint64>(ptr) & 255) == 18 && (ptr += 1));
-        break;
-      }
+      case 2:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
+          ptr -= 1;
+          do {
+            ptr += 1;
+            ptr = ctx->ParseMessage(&features_, ptr);
+            CHK_(ptr);
+            if (!ctx->DataAvailable(ptr)) break;
+          } while (::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<::PROTOBUF_NAMESPACE_ID::uint8>(ptr) == 18);
+        } else goto handle_unusual;
+        continue;
       default: {
       handle_unusual:
         if ((tag & 7) == 4 || tag == 0) {
           ctx->SetLastTag(tag);
-          return ptr;
+          goto success;
         }
-        ptr = UnknownFieldParse(tag,
-          _internal_metadata_.mutable_unknown_fields(), ptr, ctx);
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr != nullptr);
-        break;
+        ptr = UnknownFieldParse(tag, &_internal_metadata_, ptr, ctx);
+        CHK_(ptr != nullptr);
+        continue;
       }
     }  // switch
   }  // while
+success:
   return ptr;
+failure:
+  ptr = nullptr;
+  goto success;
+#undef CHK_
 }
 #else  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
 bool OpenSessionReq::MergePartialFromCodedStream(
-    ::google::protobuf::io::CodedInputStream* input) {
+    ::PROTOBUF_NAMESPACE_ID::io::CodedInputStream* input) {
 #define DO_(EXPRESSION) if (!PROTOBUF_PREDICT_TRUE(EXPRESSION)) goto failure
-  ::google::protobuf::uint32 tag;
+  ::PROTOBUF_NAMESPACE_ID::uint32 tag;
   // @@protoc_insertion_point(parse_start:SpaceServer.OpenSessionReq)
   for (;;) {
-    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
+    ::std::pair<::PROTOBUF_NAMESPACE_ID::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
     tag = p.first;
     if (!p.second) goto handle_unusual;
-    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
+    switch (::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::GetTagFieldNumber(tag)) {
       // .BasilType.AccessAuthorization auth = 1;
       case 1: {
-        if (static_cast< ::google::protobuf::uint8>(tag) == (10 & 0xFF)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (10 & 0xFF)) {
+          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadMessage(
                input, mutable_auth()));
         } else {
           goto handle_unusual;
@@ -1034,23 +1035,23 @@ bool OpenSessionReq::MergePartialFromCodedStream(
 
       // map<string, string> features = 2;
       case 2: {
-        if (static_cast< ::google::protobuf::uint8>(tag) == (18 & 0xFF)) {
-          OpenSessionReq_FeaturesEntry_DoNotUse::Parser< ::google::protobuf::internal::MapField<
+        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (18 & 0xFF)) {
+          OpenSessionReq_FeaturesEntry_DoNotUse::Parser< ::PROTOBUF_NAMESPACE_ID::internal::MapField<
               OpenSessionReq_FeaturesEntry_DoNotUse,
-              ::std::string, ::std::string,
-              ::google::protobuf::internal::WireFormatLite::TYPE_STRING,
-              ::google::protobuf::internal::WireFormatLite::TYPE_STRING,
+              std::string, std::string,
+              ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_STRING,
+              ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_STRING,
               0 >,
-            ::google::protobuf::Map< ::std::string, ::std::string > > parser(&features_);
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
+            ::PROTOBUF_NAMESPACE_ID::Map< std::string, std::string > > parser(&features_);
+          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadMessageNoVirtual(
               input, &parser));
-          DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
             parser.key().data(), static_cast<int>(parser.key().length()),
-            ::google::protobuf::internal::WireFormatLite::PARSE,
+            ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::PARSE,
             "SpaceServer.OpenSessionReq.FeaturesEntry.key"));
-          DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
             parser.value().data(), static_cast<int>(parser.value().length()),
-            ::google::protobuf::internal::WireFormatLite::PARSE,
+            ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::PARSE,
             "SpaceServer.OpenSessionReq.FeaturesEntry.value"));
         } else {
           goto handle_unusual;
@@ -1063,7 +1064,7 @@ bool OpenSessionReq::MergePartialFromCodedStream(
         if (tag == 0) {
           goto success;
         }
-        DO_(::google::protobuf::internal::WireFormat::SkipField(
+        DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SkipField(
               input, tag, _internal_metadata_.mutable_unknown_fields()));
         break;
       }
@@ -1080,32 +1081,32 @@ failure:
 #endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
 
 void OpenSessionReq::SerializeWithCachedSizes(
-    ::google::protobuf::io::CodedOutputStream* output) const {
+    ::PROTOBUF_NAMESPACE_ID::io::CodedOutputStream* output) const {
   // @@protoc_insertion_point(serialize_start:SpaceServer.OpenSessionReq)
-  ::google::protobuf::uint32 cached_has_bits = 0;
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
   // .BasilType.AccessAuthorization auth = 1;
   if (this->has_auth()) {
-    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteMessageMaybeToArray(
       1, HasBitSetters::auth(this), output);
   }
 
   // map<string, string> features = 2;
   if (!this->features().empty()) {
-    typedef ::google::protobuf::Map< ::std::string, ::std::string >::const_pointer
+    typedef ::PROTOBUF_NAMESPACE_ID::Map< std::string, std::string >::const_pointer
         ConstPtr;
     typedef ConstPtr SortItem;
-    typedef ::google::protobuf::internal::CompareByDerefFirst<SortItem> Less;
+    typedef ::PROTOBUF_NAMESPACE_ID::internal::CompareByDerefFirst<SortItem> Less;
     struct Utf8Check {
       static void Check(ConstPtr p) {
-        ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
           p->first.data(), static_cast<int>(p->first.length()),
-          ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+          ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
           "SpaceServer.OpenSessionReq.FeaturesEntry.key");
-        ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
           p->second.data(), static_cast<int>(p->second.length()),
-          ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+          ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
           "SpaceServer.OpenSessionReq.FeaturesEntry.value");
       }
     };
@@ -1114,65 +1115,63 @@ void OpenSessionReq::SerializeWithCachedSizes(
         this->features().size() > 1) {
       ::std::unique_ptr<SortItem[]> items(
           new SortItem[this->features().size()]);
-      typedef ::google::protobuf::Map< ::std::string, ::std::string >::size_type size_type;
+      typedef ::PROTOBUF_NAMESPACE_ID::Map< std::string, std::string >::size_type size_type;
       size_type n = 0;
-      for (::google::protobuf::Map< ::std::string, ::std::string >::const_iterator
+      for (::PROTOBUF_NAMESPACE_ID::Map< std::string, std::string >::const_iterator
           it = this->features().begin();
           it != this->features().end(); ++it, ++n) {
         items[static_cast<ptrdiff_t>(n)] = SortItem(&*it);
       }
       ::std::sort(&items[0], &items[static_cast<ptrdiff_t>(n)], Less());
       for (size_type i = 0; i < n; i++) {
-        OpenSessionReq_FeaturesEntry_DoNotUse::MapEntryWrapper entry(nullptr, items[static_cast<ptrdiff_t>(i)]->first, items[static_cast<ptrdiff_t>(i)]->second);
-        ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(2, entry, output);
+        OpenSessionReq_FeaturesEntry_DoNotUse::Funcs::SerializeToCodedStream(2, items[static_cast<ptrdiff_t>(i)]->first, items[static_cast<ptrdiff_t>(i)]->second, output);
         Utf8Check::Check(&(*items[static_cast<ptrdiff_t>(i)]));
       }
     } else {
-      for (::google::protobuf::Map< ::std::string, ::std::string >::const_iterator
+      for (::PROTOBUF_NAMESPACE_ID::Map< std::string, std::string >::const_iterator
           it = this->features().begin();
           it != this->features().end(); ++it) {
-        OpenSessionReq_FeaturesEntry_DoNotUse::MapEntryWrapper entry(nullptr, it->first, it->second);
-        ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(2, entry, output);
+        OpenSessionReq_FeaturesEntry_DoNotUse::Funcs::SerializeToCodedStream(2, it->first, it->second, output);
         Utf8Check::Check(&(*it));
       }
     }
   }
 
   if (_internal_metadata_.have_unknown_fields()) {
-    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SerializeUnknownFields(
         _internal_metadata_.unknown_fields(), output);
   }
   // @@protoc_insertion_point(serialize_end:SpaceServer.OpenSessionReq)
 }
 
-::google::protobuf::uint8* OpenSessionReq::InternalSerializeWithCachedSizesToArray(
-    ::google::protobuf::uint8* target) const {
+::PROTOBUF_NAMESPACE_ID::uint8* OpenSessionReq::InternalSerializeWithCachedSizesToArray(
+    ::PROTOBUF_NAMESPACE_ID::uint8* target) const {
   // @@protoc_insertion_point(serialize_to_array_start:SpaceServer.OpenSessionReq)
-  ::google::protobuf::uint32 cached_has_bits = 0;
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
   // .BasilType.AccessAuthorization auth = 1;
   if (this->has_auth()) {
-    target = ::google::protobuf::internal::WireFormatLite::
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessageToArray(
         1, HasBitSetters::auth(this), target);
   }
 
   // map<string, string> features = 2;
   if (!this->features().empty()) {
-    typedef ::google::protobuf::Map< ::std::string, ::std::string >::const_pointer
+    typedef ::PROTOBUF_NAMESPACE_ID::Map< std::string, std::string >::const_pointer
         ConstPtr;
     typedef ConstPtr SortItem;
-    typedef ::google::protobuf::internal::CompareByDerefFirst<SortItem> Less;
+    typedef ::PROTOBUF_NAMESPACE_ID::internal::CompareByDerefFirst<SortItem> Less;
     struct Utf8Check {
       static void Check(ConstPtr p) {
-        ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
           p->first.data(), static_cast<int>(p->first.length()),
-          ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+          ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
           "SpaceServer.OpenSessionReq.FeaturesEntry.key");
-        ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
           p->second.data(), static_cast<int>(p->second.length()),
-          ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+          ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
           "SpaceServer.OpenSessionReq.FeaturesEntry.value");
       }
     };
@@ -1181,32 +1180,30 @@ void OpenSessionReq::SerializeWithCachedSizes(
         this->features().size() > 1) {
       ::std::unique_ptr<SortItem[]> items(
           new SortItem[this->features().size()]);
-      typedef ::google::protobuf::Map< ::std::string, ::std::string >::size_type size_type;
+      typedef ::PROTOBUF_NAMESPACE_ID::Map< std::string, std::string >::size_type size_type;
       size_type n = 0;
-      for (::google::protobuf::Map< ::std::string, ::std::string >::const_iterator
+      for (::PROTOBUF_NAMESPACE_ID::Map< std::string, std::string >::const_iterator
           it = this->features().begin();
           it != this->features().end(); ++it, ++n) {
         items[static_cast<ptrdiff_t>(n)] = SortItem(&*it);
       }
       ::std::sort(&items[0], &items[static_cast<ptrdiff_t>(n)], Less());
       for (size_type i = 0; i < n; i++) {
-        OpenSessionReq_FeaturesEntry_DoNotUse::MapEntryWrapper entry(nullptr, items[static_cast<ptrdiff_t>(i)]->first, items[static_cast<ptrdiff_t>(i)]->second);
-        target = ::google::protobuf::internal::WireFormatLite::InternalWriteMessageNoVirtualToArray(2, entry, target);
+        target = OpenSessionReq_FeaturesEntry_DoNotUse::Funcs::SerializeToArray(2, items[static_cast<ptrdiff_t>(i)]->first, items[static_cast<ptrdiff_t>(i)]->second, target);
         Utf8Check::Check(&(*items[static_cast<ptrdiff_t>(i)]));
       }
     } else {
-      for (::google::protobuf::Map< ::std::string, ::std::string >::const_iterator
+      for (::PROTOBUF_NAMESPACE_ID::Map< std::string, std::string >::const_iterator
           it = this->features().begin();
           it != this->features().end(); ++it) {
-        OpenSessionReq_FeaturesEntry_DoNotUse::MapEntryWrapper entry(nullptr, it->first, it->second);
-        target = ::google::protobuf::internal::WireFormatLite::InternalWriteMessageNoVirtualToArray(2, entry, target);
+        target = OpenSessionReq_FeaturesEntry_DoNotUse::Funcs::SerializeToArray(2, it->first, it->second, target);
         Utf8Check::Check(&(*it));
       }
     }
   }
 
   if (_internal_metadata_.have_unknown_fields()) {
-    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields(), target);
   }
   // @@protoc_insertion_point(serialize_to_array_end:SpaceServer.OpenSessionReq)
@@ -1219,45 +1216,43 @@ size_t OpenSessionReq::ByteSizeLong() const {
 
   if (_internal_metadata_.have_unknown_fields()) {
     total_size +=
-      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::ComputeUnknownFieldsSize(
         _internal_metadata_.unknown_fields());
   }
-  ::google::protobuf::uint32 cached_has_bits = 0;
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // map<string, string> features = 2;
   total_size += 1 *
-      ::google::protobuf::internal::FromIntSize(this->features_size());
-  for (::google::protobuf::Map< ::std::string, ::std::string >::const_iterator
+      ::PROTOBUF_NAMESPACE_ID::internal::FromIntSize(this->features_size());
+  for (::PROTOBUF_NAMESPACE_ID::Map< std::string, std::string >::const_iterator
       it = this->features().begin();
       it != this->features().end(); ++it) {
-    OpenSessionReq_FeaturesEntry_DoNotUse::MapEntryWrapper entry(nullptr, it->first, it->second);
-    total_size += ::google::protobuf::internal::WireFormatLite::
-        MessageSizeNoVirtual(entry);
+    total_size += OpenSessionReq_FeaturesEntry_DoNotUse::Funcs::ByteSizeLong(it->first, it->second);
   }
 
   // .BasilType.AccessAuthorization auth = 1;
   if (this->has_auth()) {
     total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::MessageSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *auth_);
   }
 
-  int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
+  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
   SetCachedSize(cached_size);
   return total_size;
 }
 
-void OpenSessionReq::MergeFrom(const ::google::protobuf::Message& from) {
+void OpenSessionReq::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
 // @@protoc_insertion_point(generalized_merge_from_start:SpaceServer.OpenSessionReq)
   GOOGLE_DCHECK_NE(&from, this);
   const OpenSessionReq* source =
-      ::google::protobuf::DynamicCastToGenerated<OpenSessionReq>(
+      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<OpenSessionReq>(
           &from);
   if (source == nullptr) {
   // @@protoc_insertion_point(generalized_merge_from_cast_fail:SpaceServer.OpenSessionReq)
-    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
+    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
   } else {
   // @@protoc_insertion_point(generalized_merge_from_cast_success:SpaceServer.OpenSessionReq)
     MergeFrom(*source);
@@ -1268,7 +1263,7 @@ void OpenSessionReq::MergeFrom(const OpenSessionReq& from) {
 // @@protoc_insertion_point(class_specific_merge_from_start:SpaceServer.OpenSessionReq)
   GOOGLE_DCHECK_NE(&from, this);
   _internal_metadata_.MergeFrom(from._internal_metadata_);
-  ::google::protobuf::uint32 cached_has_bits = 0;
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
   features_.MergeFrom(from.features_);
@@ -1277,7 +1272,7 @@ void OpenSessionReq::MergeFrom(const OpenSessionReq& from) {
   }
 }
 
-void OpenSessionReq::CopyFrom(const ::google::protobuf::Message& from) {
+void OpenSessionReq::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
 // @@protoc_insertion_point(generalized_copy_from_start:SpaceServer.OpenSessionReq)
   if (&from == this) return;
   Clear();
@@ -1306,27 +1301,25 @@ void OpenSessionReq::InternalSwap(OpenSessionReq* other) {
   swap(auth_, other->auth_);
 }
 
-::google::protobuf::Metadata OpenSessionReq::GetMetadata() const {
-  ::google::protobuf::internal::AssignDescriptors(&::assign_descriptors_table_SpaceServer_2eproto);
-  return ::file_level_metadata_SpaceServer_2eproto[kIndexInFileMessages];
+::PROTOBUF_NAMESPACE_ID::Metadata OpenSessionReq::GetMetadata() const {
+  return GetMetadataStatic();
 }
 
 
 // ===================================================================
 
 OpenSessionResp_PropertiesEntry_DoNotUse::OpenSessionResp_PropertiesEntry_DoNotUse() {}
-OpenSessionResp_PropertiesEntry_DoNotUse::OpenSessionResp_PropertiesEntry_DoNotUse(::google::protobuf::Arena* arena)
+OpenSessionResp_PropertiesEntry_DoNotUse::OpenSessionResp_PropertiesEntry_DoNotUse(::PROTOBUF_NAMESPACE_ID::Arena* arena)
     : SuperType(arena) {}
 void OpenSessionResp_PropertiesEntry_DoNotUse::MergeFrom(const OpenSessionResp_PropertiesEntry_DoNotUse& other) {
   MergeFromInternal(other);
 }
-::google::protobuf::Metadata OpenSessionResp_PropertiesEntry_DoNotUse::GetMetadata() const {
-  ::google::protobuf::internal::AssignDescriptors(&::assign_descriptors_table_SpaceServer_2eproto);
-  return ::file_level_metadata_SpaceServer_2eproto[4];
+::PROTOBUF_NAMESPACE_ID::Metadata OpenSessionResp_PropertiesEntry_DoNotUse::GetMetadata() const {
+  return GetMetadataStatic();
 }
 void OpenSessionResp_PropertiesEntry_DoNotUse::MergeFrom(
-    const ::google::protobuf::Message& other) {
-  ::google::protobuf::Message::MergeFrom(other);
+    const ::PROTOBUF_NAMESPACE_ID::Message& other) {
+  ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom(other);
 }
 
 
@@ -1357,12 +1350,12 @@ const int OpenSessionResp::kPropertiesFieldNumber;
 #endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
 
 OpenSessionResp::OpenSessionResp()
-  : ::google::protobuf::Message(), _internal_metadata_(nullptr) {
+  : ::PROTOBUF_NAMESPACE_ID::Message(), _internal_metadata_(nullptr) {
   SharedCtor();
   // @@protoc_insertion_point(constructor:SpaceServer.OpenSessionResp)
 }
 OpenSessionResp::OpenSessionResp(const OpenSessionResp& from)
-  : ::google::protobuf::Message(),
+  : ::PROTOBUF_NAMESPACE_ID::Message(),
       _internal_metadata_(nullptr) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   properties_.MergeFrom(from.properties_);
@@ -1375,8 +1368,7 @@ OpenSessionResp::OpenSessionResp(const OpenSessionResp& from)
 }
 
 void OpenSessionResp::SharedCtor() {
-  ::google::protobuf::internal::InitSCC(
-      &scc_info_OpenSessionResp_SpaceServer_2eproto.base);
+  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_OpenSessionResp_SpaceServer_2eproto.base);
   exception_ = nullptr;
 }
 
@@ -1393,14 +1385,14 @@ void OpenSessionResp::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
 const OpenSessionResp& OpenSessionResp::default_instance() {
-  ::google::protobuf::internal::InitSCC(&::scc_info_OpenSessionResp_SpaceServer_2eproto.base);
+  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_OpenSessionResp_SpaceServer_2eproto.base);
   return *internal_default_instance();
 }
 
 
 void OpenSessionResp::Clear() {
 // @@protoc_insertion_point(message_clear_start:SpaceServer.OpenSessionResp)
-  ::google::protobuf::uint32 cached_has_bits = 0;
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
@@ -1413,59 +1405,66 @@ void OpenSessionResp::Clear() {
 }
 
 #if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-const char* OpenSessionResp::_InternalParse(const char* ptr, ::google::protobuf::internal::ParseContext* ctx) {
+const char* OpenSessionResp::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
-    ::google::protobuf::uint32 tag;
-    ptr = ::google::protobuf::internal::ReadTag(ptr, &tag);
-    GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
+    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
+    CHK_(ptr);
     switch (tag >> 3) {
       // .BasilType.BasilException exception = 1;
-      case 1: {
-        if (static_cast<::google::protobuf::uint8>(tag) != 10) goto handle_unusual;
-        ptr = ctx->ParseMessage(mutable_exception(), ptr);
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
-        break;
-      }
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
+          ptr = ctx->ParseMessage(mutable_exception(), ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
       // map<string, string> properties = 2;
-      case 2: {
-        if (static_cast<::google::protobuf::uint8>(tag) != 18) goto handle_unusual;
-        do {
-          ptr = ctx->ParseMessage(&properties_, ptr);
-          GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
-          if (ctx->Done(&ptr)) return ptr;
-        } while ((::google::protobuf::internal::UnalignedLoad<::google::protobuf::uint64>(ptr) & 255) == 18 && (ptr += 1));
-        break;
-      }
+      case 2:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
+          ptr -= 1;
+          do {
+            ptr += 1;
+            ptr = ctx->ParseMessage(&properties_, ptr);
+            CHK_(ptr);
+            if (!ctx->DataAvailable(ptr)) break;
+          } while (::PROTOBUF_NAMESPACE_ID::internal::UnalignedLoad<::PROTOBUF_NAMESPACE_ID::uint8>(ptr) == 18);
+        } else goto handle_unusual;
+        continue;
       default: {
       handle_unusual:
         if ((tag & 7) == 4 || tag == 0) {
           ctx->SetLastTag(tag);
-          return ptr;
+          goto success;
         }
-        ptr = UnknownFieldParse(tag,
-          _internal_metadata_.mutable_unknown_fields(), ptr, ctx);
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr != nullptr);
-        break;
+        ptr = UnknownFieldParse(tag, &_internal_metadata_, ptr, ctx);
+        CHK_(ptr != nullptr);
+        continue;
       }
     }  // switch
   }  // while
+success:
   return ptr;
+failure:
+  ptr = nullptr;
+  goto success;
+#undef CHK_
 }
 #else  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
 bool OpenSessionResp::MergePartialFromCodedStream(
-    ::google::protobuf::io::CodedInputStream* input) {
+    ::PROTOBUF_NAMESPACE_ID::io::CodedInputStream* input) {
 #define DO_(EXPRESSION) if (!PROTOBUF_PREDICT_TRUE(EXPRESSION)) goto failure
-  ::google::protobuf::uint32 tag;
+  ::PROTOBUF_NAMESPACE_ID::uint32 tag;
   // @@protoc_insertion_point(parse_start:SpaceServer.OpenSessionResp)
   for (;;) {
-    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
+    ::std::pair<::PROTOBUF_NAMESPACE_ID::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
     tag = p.first;
     if (!p.second) goto handle_unusual;
-    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
+    switch (::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::GetTagFieldNumber(tag)) {
       // .BasilType.BasilException exception = 1;
       case 1: {
-        if (static_cast< ::google::protobuf::uint8>(tag) == (10 & 0xFF)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (10 & 0xFF)) {
+          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadMessage(
                input, mutable_exception()));
         } else {
           goto handle_unusual;
@@ -1475,23 +1474,23 @@ bool OpenSessionResp::MergePartialFromCodedStream(
 
       // map<string, string> properties = 2;
       case 2: {
-        if (static_cast< ::google::protobuf::uint8>(tag) == (18 & 0xFF)) {
-          OpenSessionResp_PropertiesEntry_DoNotUse::Parser< ::google::protobuf::internal::MapField<
+        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (18 & 0xFF)) {
+          OpenSessionResp_PropertiesEntry_DoNotUse::Parser< ::PROTOBUF_NAMESPACE_ID::internal::MapField<
               OpenSessionResp_PropertiesEntry_DoNotUse,
-              ::std::string, ::std::string,
-              ::google::protobuf::internal::WireFormatLite::TYPE_STRING,
-              ::google::protobuf::internal::WireFormatLite::TYPE_STRING,
+              std::string, std::string,
+              ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_STRING,
+              ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_STRING,
               0 >,
-            ::google::protobuf::Map< ::std::string, ::std::string > > parser(&properties_);
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
+            ::PROTOBUF_NAMESPACE_ID::Map< std::string, std::string > > parser(&properties_);
+          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadMessageNoVirtual(
               input, &parser));
-          DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
             parser.key().data(), static_cast<int>(parser.key().length()),
-            ::google::protobuf::internal::WireFormatLite::PARSE,
+            ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::PARSE,
             "SpaceServer.OpenSessionResp.PropertiesEntry.key"));
-          DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
             parser.value().data(), static_cast<int>(parser.value().length()),
-            ::google::protobuf::internal::WireFormatLite::PARSE,
+            ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::PARSE,
             "SpaceServer.OpenSessionResp.PropertiesEntry.value"));
         } else {
           goto handle_unusual;
@@ -1504,7 +1503,7 @@ bool OpenSessionResp::MergePartialFromCodedStream(
         if (tag == 0) {
           goto success;
         }
-        DO_(::google::protobuf::internal::WireFormat::SkipField(
+        DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SkipField(
               input, tag, _internal_metadata_.mutable_unknown_fields()));
         break;
       }
@@ -1521,32 +1520,32 @@ failure:
 #endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
 
 void OpenSessionResp::SerializeWithCachedSizes(
-    ::google::protobuf::io::CodedOutputStream* output) const {
+    ::PROTOBUF_NAMESPACE_ID::io::CodedOutputStream* output) const {
   // @@protoc_insertion_point(serialize_start:SpaceServer.OpenSessionResp)
-  ::google::protobuf::uint32 cached_has_bits = 0;
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
   // .BasilType.BasilException exception = 1;
   if (this->has_exception()) {
-    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteMessageMaybeToArray(
       1, HasBitSetters::exception(this), output);
   }
 
   // map<string, string> properties = 2;
   if (!this->properties().empty()) {
-    typedef ::google::protobuf::Map< ::std::string, ::std::string >::const_pointer
+    typedef ::PROTOBUF_NAMESPACE_ID::Map< std::string, std::string >::const_pointer
         ConstPtr;
     typedef ConstPtr SortItem;
-    typedef ::google::protobuf::internal::CompareByDerefFirst<SortItem> Less;
+    typedef ::PROTOBUF_NAMESPACE_ID::internal::CompareByDerefFirst<SortItem> Less;
     struct Utf8Check {
       static void Check(ConstPtr p) {
-        ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
           p->first.data(), static_cast<int>(p->first.length()),
-          ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+          ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
           "SpaceServer.OpenSessionResp.PropertiesEntry.key");
-        ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
           p->second.data(), static_cast<int>(p->second.length()),
-          ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+          ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
           "SpaceServer.OpenSessionResp.PropertiesEntry.value");
       }
     };
@@ -1555,65 +1554,63 @@ void OpenSessionResp::SerializeWithCachedSizes(
         this->properties().size() > 1) {
       ::std::unique_ptr<SortItem[]> items(
           new SortItem[this->properties().size()]);
-      typedef ::google::protobuf::Map< ::std::string, ::std::string >::size_type size_type;
+      typedef ::PROTOBUF_NAMESPACE_ID::Map< std::string, std::string >::size_type size_type;
       size_type n = 0;
-      for (::google::protobuf::Map< ::std::string, ::std::string >::const_iterator
+      for (::PROTOBUF_NAMESPACE_ID::Map< std::string, std::string >::const_iterator
           it = this->properties().begin();
           it != this->properties().end(); ++it, ++n) {
         items[static_cast<ptrdiff_t>(n)] = SortItem(&*it);
       }
       ::std::sort(&items[0], &items[static_cast<ptrdiff_t>(n)], Less());
       for (size_type i = 0; i < n; i++) {
-        OpenSessionResp_PropertiesEntry_DoNotUse::MapEntryWrapper entry(nullptr, items[static_cast<ptrdiff_t>(i)]->first, items[static_cast<ptrdiff_t>(i)]->second);
-        ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(2, entry, output);
+        OpenSessionResp_PropertiesEntry_DoNotUse::Funcs::SerializeToCodedStream(2, items[static_cast<ptrdiff_t>(i)]->first, items[static_cast<ptrdiff_t>(i)]->second, output);
         Utf8Check::Check(&(*items[static_cast<ptrdiff_t>(i)]));
       }
     } else {
-      for (::google::protobuf::Map< ::std::string, ::std::string >::const_iterator
+      for (::PROTOBUF_NAMESPACE_ID::Map< std::string, std::string >::const_iterator
           it = this->properties().begin();
           it != this->properties().end(); ++it) {
-        OpenSessionResp_PropertiesEntry_DoNotUse::MapEntryWrapper entry(nullptr, it->first, it->second);
-        ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(2, entry, output);
+        OpenSessionResp_PropertiesEntry_DoNotUse::Funcs::SerializeToCodedStream(2, it->first, it->second, output);
         Utf8Check::Check(&(*it));
       }
     }
   }
 
   if (_internal_metadata_.have_unknown_fields()) {
-    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SerializeUnknownFields(
         _internal_metadata_.unknown_fields(), output);
   }
   // @@protoc_insertion_point(serialize_end:SpaceServer.OpenSessionResp)
 }
 
-::google::protobuf::uint8* OpenSessionResp::InternalSerializeWithCachedSizesToArray(
-    ::google::protobuf::uint8* target) const {
+::PROTOBUF_NAMESPACE_ID::uint8* OpenSessionResp::InternalSerializeWithCachedSizesToArray(
+    ::PROTOBUF_NAMESPACE_ID::uint8* target) const {
   // @@protoc_insertion_point(serialize_to_array_start:SpaceServer.OpenSessionResp)
-  ::google::protobuf::uint32 cached_has_bits = 0;
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
   // .BasilType.BasilException exception = 1;
   if (this->has_exception()) {
-    target = ::google::protobuf::internal::WireFormatLite::
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessageToArray(
         1, HasBitSetters::exception(this), target);
   }
 
   // map<string, string> properties = 2;
   if (!this->properties().empty()) {
-    typedef ::google::protobuf::Map< ::std::string, ::std::string >::const_pointer
+    typedef ::PROTOBUF_NAMESPACE_ID::Map< std::string, std::string >::const_pointer
         ConstPtr;
     typedef ConstPtr SortItem;
-    typedef ::google::protobuf::internal::CompareByDerefFirst<SortItem> Less;
+    typedef ::PROTOBUF_NAMESPACE_ID::internal::CompareByDerefFirst<SortItem> Less;
     struct Utf8Check {
       static void Check(ConstPtr p) {
-        ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
           p->first.data(), static_cast<int>(p->first.length()),
-          ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+          ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
           "SpaceServer.OpenSessionResp.PropertiesEntry.key");
-        ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
           p->second.data(), static_cast<int>(p->second.length()),
-          ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+          ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
           "SpaceServer.OpenSessionResp.PropertiesEntry.value");
       }
     };
@@ -1622,32 +1619,30 @@ void OpenSessionResp::SerializeWithCachedSizes(
         this->properties().size() > 1) {
       ::std::unique_ptr<SortItem[]> items(
           new SortItem[this->properties().size()]);
-      typedef ::google::protobuf::Map< ::std::string, ::std::string >::size_type size_type;
+      typedef ::PROTOBUF_NAMESPACE_ID::Map< std::string, std::string >::size_type size_type;
       size_type n = 0;
-      for (::google::protobuf::Map< ::std::string, ::std::string >::const_iterator
+      for (::PROTOBUF_NAMESPACE_ID::Map< std::string, std::string >::const_iterator
           it = this->properties().begin();
           it != this->properties().end(); ++it, ++n) {
         items[static_cast<ptrdiff_t>(n)] = SortItem(&*it);
       }
       ::std::sort(&items[0], &items[static_cast<ptrdiff_t>(n)], Less());
       for (size_type i = 0; i < n; i++) {
-        OpenSessionResp_PropertiesEntry_DoNotUse::MapEntryWrapper entry(nullptr, items[static_cast<ptrdiff_t>(i)]->first, items[static_cast<ptrdiff_t>(i)]->second);
-        target = ::google::protobuf::internal::WireFormatLite::InternalWriteMessageNoVirtualToArray(2, entry, target);
+        target = OpenSessionResp_PropertiesEntry_DoNotUse::Funcs::SerializeToArray(2, items[static_cast<ptrdiff_t>(i)]->first, items[static_cast<ptrdiff_t>(i)]->second, target);
         Utf8Check::Check(&(*items[static_cast<ptrdiff_t>(i)]));
       }
     } else {
-      for (::google::protobuf::Map< ::std::string, ::std::string >::const_iterator
+      for (::PROTOBUF_NAMESPACE_ID::Map< std::string, std::string >::const_iterator
           it = this->properties().begin();
           it != this->properties().end(); ++it) {
-        OpenSessionResp_PropertiesEntry_DoNotUse::MapEntryWrapper entry(nullptr, it->first, it->second);
-        target = ::google::protobuf::internal::WireFormatLite::InternalWriteMessageNoVirtualToArray(2, entry, target);
+        target = OpenSessionResp_PropertiesEntry_DoNotUse::Funcs::SerializeToArray(2, it->first, it->second, target);
         Utf8Check::Check(&(*it));
       }
     }
   }
 
   if (_internal_metadata_.have_unknown_fields()) {
-    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields(), target);
   }
   // @@protoc_insertion_point(serialize_to_array_end:SpaceServer.OpenSessionResp)
@@ -1660,45 +1655,43 @@ size_t OpenSessionResp::ByteSizeLong() const {
 
   if (_internal_metadata_.have_unknown_fields()) {
     total_size +=
-      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::ComputeUnknownFieldsSize(
         _internal_metadata_.unknown_fields());
   }
-  ::google::protobuf::uint32 cached_has_bits = 0;
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // map<string, string> properties = 2;
   total_size += 1 *
-      ::google::protobuf::internal::FromIntSize(this->properties_size());
-  for (::google::protobuf::Map< ::std::string, ::std::string >::const_iterator
+      ::PROTOBUF_NAMESPACE_ID::internal::FromIntSize(this->properties_size());
+  for (::PROTOBUF_NAMESPACE_ID::Map< std::string, std::string >::const_iterator
       it = this->properties().begin();
       it != this->properties().end(); ++it) {
-    OpenSessionResp_PropertiesEntry_DoNotUse::MapEntryWrapper entry(nullptr, it->first, it->second);
-    total_size += ::google::protobuf::internal::WireFormatLite::
-        MessageSizeNoVirtual(entry);
+    total_size += OpenSessionResp_PropertiesEntry_DoNotUse::Funcs::ByteSizeLong(it->first, it->second);
   }
 
   // .BasilType.BasilException exception = 1;
   if (this->has_exception()) {
     total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::MessageSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *exception_);
   }
 
-  int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
+  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
   SetCachedSize(cached_size);
   return total_size;
 }
 
-void OpenSessionResp::MergeFrom(const ::google::protobuf::Message& from) {
+void OpenSessionResp::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
 // @@protoc_insertion_point(generalized_merge_from_start:SpaceServer.OpenSessionResp)
   GOOGLE_DCHECK_NE(&from, this);
   const OpenSessionResp* source =
-      ::google::protobuf::DynamicCastToGenerated<OpenSessionResp>(
+      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<OpenSessionResp>(
           &from);
   if (source == nullptr) {
   // @@protoc_insertion_point(generalized_merge_from_cast_fail:SpaceServer.OpenSessionResp)
-    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
+    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
   } else {
   // @@protoc_insertion_point(generalized_merge_from_cast_success:SpaceServer.OpenSessionResp)
     MergeFrom(*source);
@@ -1709,7 +1702,7 @@ void OpenSessionResp::MergeFrom(const OpenSessionResp& from) {
 // @@protoc_insertion_point(class_specific_merge_from_start:SpaceServer.OpenSessionResp)
   GOOGLE_DCHECK_NE(&from, this);
   _internal_metadata_.MergeFrom(from._internal_metadata_);
-  ::google::protobuf::uint32 cached_has_bits = 0;
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
   properties_.MergeFrom(from.properties_);
@@ -1718,7 +1711,7 @@ void OpenSessionResp::MergeFrom(const OpenSessionResp& from) {
   }
 }
 
-void OpenSessionResp::CopyFrom(const ::google::protobuf::Message& from) {
+void OpenSessionResp::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
 // @@protoc_insertion_point(generalized_copy_from_start:SpaceServer.OpenSessionResp)
   if (&from == this) return;
   Clear();
@@ -1747,9 +1740,8 @@ void OpenSessionResp::InternalSwap(OpenSessionResp* other) {
   swap(exception_, other->exception_);
 }
 
-::google::protobuf::Metadata OpenSessionResp::GetMetadata() const {
-  ::google::protobuf::internal::AssignDescriptors(&::assign_descriptors_table_SpaceServer_2eproto);
-  return ::file_level_metadata_SpaceServer_2eproto[kIndexInFileMessages];
+::PROTOBUF_NAMESPACE_ID::Metadata OpenSessionResp::GetMetadata() const {
+  return GetMetadataStatic();
 }
 
 
@@ -1780,17 +1772,17 @@ const int CloseSessionReq::kReasonFieldNumber;
 #endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
 
 CloseSessionReq::CloseSessionReq()
-  : ::google::protobuf::Message(), _internal_metadata_(nullptr) {
+  : ::PROTOBUF_NAMESPACE_ID::Message(), _internal_metadata_(nullptr) {
   SharedCtor();
   // @@protoc_insertion_point(constructor:SpaceServer.CloseSessionReq)
 }
 CloseSessionReq::CloseSessionReq(const CloseSessionReq& from)
-  : ::google::protobuf::Message(),
+  : ::PROTOBUF_NAMESPACE_ID::Message(),
       _internal_metadata_(nullptr) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
-  reason_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  reason_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (from.reason().size() > 0) {
-    reason_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.reason_);
+    reason_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.reason_);
   }
   if (from.has_auth()) {
     auth_ = new ::BasilType::AccessAuthorization(*from.auth_);
@@ -1801,9 +1793,8 @@ CloseSessionReq::CloseSessionReq(const CloseSessionReq& from)
 }
 
 void CloseSessionReq::SharedCtor() {
-  ::google::protobuf::internal::InitSCC(
-      &scc_info_CloseSessionReq_SpaceServer_2eproto.base);
-  reason_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_CloseSessionReq_SpaceServer_2eproto.base);
+  reason_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   auth_ = nullptr;
 }
 
@@ -1813,7 +1804,7 @@ CloseSessionReq::~CloseSessionReq() {
 }
 
 void CloseSessionReq::SharedDtor() {
-  reason_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  reason_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (this != internal_default_instance()) delete auth_;
 }
 
@@ -1821,18 +1812,18 @@ void CloseSessionReq::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
 const CloseSessionReq& CloseSessionReq::default_instance() {
-  ::google::protobuf::internal::InitSCC(&::scc_info_CloseSessionReq_SpaceServer_2eproto.base);
+  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_CloseSessionReq_SpaceServer_2eproto.base);
   return *internal_default_instance();
 }
 
 
 void CloseSessionReq::Clear() {
 // @@protoc_insertion_point(message_clear_start:SpaceServer.CloseSessionReq)
-  ::google::protobuf::uint32 cached_has_bits = 0;
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  reason_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  reason_.ClearToEmptyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (GetArenaNoVirtual() == nullptr && auth_ != nullptr) {
     delete auth_;
   }
@@ -1841,56 +1832,61 @@ void CloseSessionReq::Clear() {
 }
 
 #if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-const char* CloseSessionReq::_InternalParse(const char* ptr, ::google::protobuf::internal::ParseContext* ctx) {
+const char* CloseSessionReq::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
-    ::google::protobuf::uint32 tag;
-    ptr = ::google::protobuf::internal::ReadTag(ptr, &tag);
-    GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
+    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
+    CHK_(ptr);
     switch (tag >> 3) {
       // .BasilType.AccessAuthorization auth = 1;
-      case 1: {
-        if (static_cast<::google::protobuf::uint8>(tag) != 10) goto handle_unusual;
-        ptr = ctx->ParseMessage(mutable_auth(), ptr);
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
-        break;
-      }
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
+          ptr = ctx->ParseMessage(mutable_auth(), ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
       // string reason = 2;
-      case 2: {
-        if (static_cast<::google::protobuf::uint8>(tag) != 18) goto handle_unusual;
-        ptr = ::google::protobuf::internal::InlineGreedyStringParserUTF8(mutable_reason(), ptr, ctx, "SpaceServer.CloseSessionReq.reason");
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
-        break;
-      }
+      case 2:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParserUTF8(mutable_reason(), ptr, ctx, "SpaceServer.CloseSessionReq.reason");
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
       default: {
       handle_unusual:
         if ((tag & 7) == 4 || tag == 0) {
           ctx->SetLastTag(tag);
-          return ptr;
+          goto success;
         }
-        ptr = UnknownFieldParse(tag,
-          _internal_metadata_.mutable_unknown_fields(), ptr, ctx);
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr != nullptr);
-        break;
+        ptr = UnknownFieldParse(tag, &_internal_metadata_, ptr, ctx);
+        CHK_(ptr != nullptr);
+        continue;
       }
     }  // switch
   }  // while
+success:
   return ptr;
+failure:
+  ptr = nullptr;
+  goto success;
+#undef CHK_
 }
 #else  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
 bool CloseSessionReq::MergePartialFromCodedStream(
-    ::google::protobuf::io::CodedInputStream* input) {
+    ::PROTOBUF_NAMESPACE_ID::io::CodedInputStream* input) {
 #define DO_(EXPRESSION) if (!PROTOBUF_PREDICT_TRUE(EXPRESSION)) goto failure
-  ::google::protobuf::uint32 tag;
+  ::PROTOBUF_NAMESPACE_ID::uint32 tag;
   // @@protoc_insertion_point(parse_start:SpaceServer.CloseSessionReq)
   for (;;) {
-    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
+    ::std::pair<::PROTOBUF_NAMESPACE_ID::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
     tag = p.first;
     if (!p.second) goto handle_unusual;
-    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
+    switch (::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::GetTagFieldNumber(tag)) {
       // .BasilType.AccessAuthorization auth = 1;
       case 1: {
-        if (static_cast< ::google::protobuf::uint8>(tag) == (10 & 0xFF)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (10 & 0xFF)) {
+          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadMessage(
                input, mutable_auth()));
         } else {
           goto handle_unusual;
@@ -1900,12 +1896,12 @@ bool CloseSessionReq::MergePartialFromCodedStream(
 
       // string reason = 2;
       case 2: {
-        if (static_cast< ::google::protobuf::uint8>(tag) == (18 & 0xFF)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
+        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (18 & 0xFF)) {
+          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadString(
                 input, this->mutable_reason()));
-          DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
             this->reason().data(), static_cast<int>(this->reason().length()),
-            ::google::protobuf::internal::WireFormatLite::PARSE,
+            ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::PARSE,
             "SpaceServer.CloseSessionReq.reason"));
         } else {
           goto handle_unusual;
@@ -1918,7 +1914,7 @@ bool CloseSessionReq::MergePartialFromCodedStream(
         if (tag == 0) {
           goto success;
         }
-        DO_(::google::protobuf::internal::WireFormat::SkipField(
+        DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SkipField(
               input, tag, _internal_metadata_.mutable_unknown_fields()));
         break;
       }
@@ -1935,60 +1931,60 @@ failure:
 #endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
 
 void CloseSessionReq::SerializeWithCachedSizes(
-    ::google::protobuf::io::CodedOutputStream* output) const {
+    ::PROTOBUF_NAMESPACE_ID::io::CodedOutputStream* output) const {
   // @@protoc_insertion_point(serialize_start:SpaceServer.CloseSessionReq)
-  ::google::protobuf::uint32 cached_has_bits = 0;
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
   // .BasilType.AccessAuthorization auth = 1;
   if (this->has_auth()) {
-    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteMessageMaybeToArray(
       1, HasBitSetters::auth(this), output);
   }
 
   // string reason = 2;
   if (this->reason().size() > 0) {
-    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->reason().data(), static_cast<int>(this->reason().length()),
-      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
       "SpaceServer.CloseSessionReq.reason");
-    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteStringMaybeAliased(
       2, this->reason(), output);
   }
 
   if (_internal_metadata_.have_unknown_fields()) {
-    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SerializeUnknownFields(
         _internal_metadata_.unknown_fields(), output);
   }
   // @@protoc_insertion_point(serialize_end:SpaceServer.CloseSessionReq)
 }
 
-::google::protobuf::uint8* CloseSessionReq::InternalSerializeWithCachedSizesToArray(
-    ::google::protobuf::uint8* target) const {
+::PROTOBUF_NAMESPACE_ID::uint8* CloseSessionReq::InternalSerializeWithCachedSizesToArray(
+    ::PROTOBUF_NAMESPACE_ID::uint8* target) const {
   // @@protoc_insertion_point(serialize_to_array_start:SpaceServer.CloseSessionReq)
-  ::google::protobuf::uint32 cached_has_bits = 0;
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
   // .BasilType.AccessAuthorization auth = 1;
   if (this->has_auth()) {
-    target = ::google::protobuf::internal::WireFormatLite::
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessageToArray(
         1, HasBitSetters::auth(this), target);
   }
 
   // string reason = 2;
   if (this->reason().size() > 0) {
-    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->reason().data(), static_cast<int>(this->reason().length()),
-      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
       "SpaceServer.CloseSessionReq.reason");
     target =
-      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteStringToArray(
         2, this->reason(), target);
   }
 
   if (_internal_metadata_.have_unknown_fields()) {
-    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields(), target);
   }
   // @@protoc_insertion_point(serialize_to_array_end:SpaceServer.CloseSessionReq)
@@ -2001,41 +1997,41 @@ size_t CloseSessionReq::ByteSizeLong() const {
 
   if (_internal_metadata_.have_unknown_fields()) {
     total_size +=
-      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::ComputeUnknownFieldsSize(
         _internal_metadata_.unknown_fields());
   }
-  ::google::protobuf::uint32 cached_has_bits = 0;
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // string reason = 2;
   if (this->reason().size() > 0) {
     total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::StringSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->reason());
   }
 
   // .BasilType.AccessAuthorization auth = 1;
   if (this->has_auth()) {
     total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::MessageSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *auth_);
   }
 
-  int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
+  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
   SetCachedSize(cached_size);
   return total_size;
 }
 
-void CloseSessionReq::MergeFrom(const ::google::protobuf::Message& from) {
+void CloseSessionReq::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
 // @@protoc_insertion_point(generalized_merge_from_start:SpaceServer.CloseSessionReq)
   GOOGLE_DCHECK_NE(&from, this);
   const CloseSessionReq* source =
-      ::google::protobuf::DynamicCastToGenerated<CloseSessionReq>(
+      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<CloseSessionReq>(
           &from);
   if (source == nullptr) {
   // @@protoc_insertion_point(generalized_merge_from_cast_fail:SpaceServer.CloseSessionReq)
-    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
+    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
   } else {
   // @@protoc_insertion_point(generalized_merge_from_cast_success:SpaceServer.CloseSessionReq)
     MergeFrom(*source);
@@ -2046,19 +2042,19 @@ void CloseSessionReq::MergeFrom(const CloseSessionReq& from) {
 // @@protoc_insertion_point(class_specific_merge_from_start:SpaceServer.CloseSessionReq)
   GOOGLE_DCHECK_NE(&from, this);
   _internal_metadata_.MergeFrom(from._internal_metadata_);
-  ::google::protobuf::uint32 cached_has_bits = 0;
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
   if (from.reason().size() > 0) {
 
-    reason_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.reason_);
+    reason_.AssignWithDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from.reason_);
   }
   if (from.has_auth()) {
     mutable_auth()->::BasilType::AccessAuthorization::MergeFrom(from.auth());
   }
 }
 
-void CloseSessionReq::CopyFrom(const ::google::protobuf::Message& from) {
+void CloseSessionReq::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
 // @@protoc_insertion_point(generalized_copy_from_start:SpaceServer.CloseSessionReq)
   if (&from == this) return;
   Clear();
@@ -2083,14 +2079,13 @@ void CloseSessionReq::Swap(CloseSessionReq* other) {
 void CloseSessionReq::InternalSwap(CloseSessionReq* other) {
   using std::swap;
   _internal_metadata_.Swap(&other->_internal_metadata_);
-  reason_.Swap(&other->reason_, &::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+  reason_.Swap(&other->reason_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(),
     GetArenaNoVirtual());
   swap(auth_, other->auth_);
 }
 
-::google::protobuf::Metadata CloseSessionReq::GetMetadata() const {
-  ::google::protobuf::internal::AssignDescriptors(&::assign_descriptors_table_SpaceServer_2eproto);
-  return ::file_level_metadata_SpaceServer_2eproto[kIndexInFileMessages];
+::PROTOBUF_NAMESPACE_ID::Metadata CloseSessionReq::GetMetadata() const {
+  return GetMetadataStatic();
 }
 
 
@@ -2120,12 +2115,12 @@ const int CloseSessionResp::kExceptionFieldNumber;
 #endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
 
 CloseSessionResp::CloseSessionResp()
-  : ::google::protobuf::Message(), _internal_metadata_(nullptr) {
+  : ::PROTOBUF_NAMESPACE_ID::Message(), _internal_metadata_(nullptr) {
   SharedCtor();
   // @@protoc_insertion_point(constructor:SpaceServer.CloseSessionResp)
 }
 CloseSessionResp::CloseSessionResp(const CloseSessionResp& from)
-  : ::google::protobuf::Message(),
+  : ::PROTOBUF_NAMESPACE_ID::Message(),
       _internal_metadata_(nullptr) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   if (from.has_exception()) {
@@ -2137,8 +2132,7 @@ CloseSessionResp::CloseSessionResp(const CloseSessionResp& from)
 }
 
 void CloseSessionResp::SharedCtor() {
-  ::google::protobuf::internal::InitSCC(
-      &scc_info_CloseSessionResp_SpaceServer_2eproto.base);
+  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_CloseSessionResp_SpaceServer_2eproto.base);
   exception_ = nullptr;
 }
 
@@ -2155,14 +2149,14 @@ void CloseSessionResp::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
 const CloseSessionResp& CloseSessionResp::default_instance() {
-  ::google::protobuf::internal::InitSCC(&::scc_info_CloseSessionResp_SpaceServer_2eproto.base);
+  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_CloseSessionResp_SpaceServer_2eproto.base);
   return *internal_default_instance();
 }
 
 
 void CloseSessionResp::Clear() {
 // @@protoc_insertion_point(message_clear_start:SpaceServer.CloseSessionResp)
-  ::google::protobuf::uint32 cached_has_bits = 0;
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
@@ -2174,49 +2168,54 @@ void CloseSessionResp::Clear() {
 }
 
 #if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
-const char* CloseSessionResp::_InternalParse(const char* ptr, ::google::protobuf::internal::ParseContext* ctx) {
+const char* CloseSessionResp::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
   while (!ctx->Done(&ptr)) {
-    ::google::protobuf::uint32 tag;
-    ptr = ::google::protobuf::internal::ReadTag(ptr, &tag);
-    GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
+    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
+    CHK_(ptr);
     switch (tag >> 3) {
       // .BasilType.BasilException exception = 1;
-      case 1: {
-        if (static_cast<::google::protobuf::uint8>(tag) != 10) goto handle_unusual;
-        ptr = ctx->ParseMessage(mutable_exception(), ptr);
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
-        break;
-      }
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
+          ptr = ctx->ParseMessage(mutable_exception(), ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
       default: {
       handle_unusual:
         if ((tag & 7) == 4 || tag == 0) {
           ctx->SetLastTag(tag);
-          return ptr;
+          goto success;
         }
-        ptr = UnknownFieldParse(tag,
-          _internal_metadata_.mutable_unknown_fields(), ptr, ctx);
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr != nullptr);
-        break;
+        ptr = UnknownFieldParse(tag, &_internal_metadata_, ptr, ctx);
+        CHK_(ptr != nullptr);
+        continue;
       }
     }  // switch
   }  // while
+success:
   return ptr;
+failure:
+  ptr = nullptr;
+  goto success;
+#undef CHK_
 }
 #else  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
 bool CloseSessionResp::MergePartialFromCodedStream(
-    ::google::protobuf::io::CodedInputStream* input) {
+    ::PROTOBUF_NAMESPACE_ID::io::CodedInputStream* input) {
 #define DO_(EXPRESSION) if (!PROTOBUF_PREDICT_TRUE(EXPRESSION)) goto failure
-  ::google::protobuf::uint32 tag;
+  ::PROTOBUF_NAMESPACE_ID::uint32 tag;
   // @@protoc_insertion_point(parse_start:SpaceServer.CloseSessionResp)
   for (;;) {
-    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
+    ::std::pair<::PROTOBUF_NAMESPACE_ID::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
     tag = p.first;
     if (!p.second) goto handle_unusual;
-    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
+    switch (::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::GetTagFieldNumber(tag)) {
       // .BasilType.BasilException exception = 1;
       case 1: {
-        if (static_cast< ::google::protobuf::uint8>(tag) == (10 & 0xFF)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+        if (static_cast< ::PROTOBUF_NAMESPACE_ID::uint8>(tag) == (10 & 0xFF)) {
+          DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::ReadMessage(
                input, mutable_exception()));
         } else {
           goto handle_unusual;
@@ -2229,7 +2228,7 @@ bool CloseSessionResp::MergePartialFromCodedStream(
         if (tag == 0) {
           goto success;
         }
-        DO_(::google::protobuf::internal::WireFormat::SkipField(
+        DO_(::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SkipField(
               input, tag, _internal_metadata_.mutable_unknown_fields()));
         break;
       }
@@ -2246,39 +2245,39 @@ failure:
 #endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
 
 void CloseSessionResp::SerializeWithCachedSizes(
-    ::google::protobuf::io::CodedOutputStream* output) const {
+    ::PROTOBUF_NAMESPACE_ID::io::CodedOutputStream* output) const {
   // @@protoc_insertion_point(serialize_start:SpaceServer.CloseSessionResp)
-  ::google::protobuf::uint32 cached_has_bits = 0;
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
   // .BasilType.BasilException exception = 1;
   if (this->has_exception()) {
-    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteMessageMaybeToArray(
       1, HasBitSetters::exception(this), output);
   }
 
   if (_internal_metadata_.have_unknown_fields()) {
-    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SerializeUnknownFields(
         _internal_metadata_.unknown_fields(), output);
   }
   // @@protoc_insertion_point(serialize_end:SpaceServer.CloseSessionResp)
 }
 
-::google::protobuf::uint8* CloseSessionResp::InternalSerializeWithCachedSizesToArray(
-    ::google::protobuf::uint8* target) const {
+::PROTOBUF_NAMESPACE_ID::uint8* CloseSessionResp::InternalSerializeWithCachedSizesToArray(
+    ::PROTOBUF_NAMESPACE_ID::uint8* target) const {
   // @@protoc_insertion_point(serialize_to_array_start:SpaceServer.CloseSessionResp)
-  ::google::protobuf::uint32 cached_has_bits = 0;
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
   // .BasilType.BasilException exception = 1;
   if (this->has_exception()) {
-    target = ::google::protobuf::internal::WireFormatLite::
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessageToArray(
         1, HasBitSetters::exception(this), target);
   }
 
   if (_internal_metadata_.have_unknown_fields()) {
-    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::SerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields(), target);
   }
   // @@protoc_insertion_point(serialize_to_array_end:SpaceServer.CloseSessionResp)
@@ -2291,34 +2290,34 @@ size_t CloseSessionResp::ByteSizeLong() const {
 
   if (_internal_metadata_.have_unknown_fields()) {
     total_size +=
-      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::ComputeUnknownFieldsSize(
         _internal_metadata_.unknown_fields());
   }
-  ::google::protobuf::uint32 cached_has_bits = 0;
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
   // .BasilType.BasilException exception = 1;
   if (this->has_exception()) {
     total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::MessageSize(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
         *exception_);
   }
 
-  int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
+  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
   SetCachedSize(cached_size);
   return total_size;
 }
 
-void CloseSessionResp::MergeFrom(const ::google::protobuf::Message& from) {
+void CloseSessionResp::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
 // @@protoc_insertion_point(generalized_merge_from_start:SpaceServer.CloseSessionResp)
   GOOGLE_DCHECK_NE(&from, this);
   const CloseSessionResp* source =
-      ::google::protobuf::DynamicCastToGenerated<CloseSessionResp>(
+      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<CloseSessionResp>(
           &from);
   if (source == nullptr) {
   // @@protoc_insertion_point(generalized_merge_from_cast_fail:SpaceServer.CloseSessionResp)
-    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
+    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
   } else {
   // @@protoc_insertion_point(generalized_merge_from_cast_success:SpaceServer.CloseSessionResp)
     MergeFrom(*source);
@@ -2329,7 +2328,7 @@ void CloseSessionResp::MergeFrom(const CloseSessionResp& from) {
 // @@protoc_insertion_point(class_specific_merge_from_start:SpaceServer.CloseSessionResp)
   GOOGLE_DCHECK_NE(&from, this);
   _internal_metadata_.MergeFrom(from._internal_metadata_);
-  ::google::protobuf::uint32 cached_has_bits = 0;
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
   if (from.has_exception()) {
@@ -2337,7 +2336,7 @@ void CloseSessionResp::MergeFrom(const CloseSessionResp& from) {
   }
 }
 
-void CloseSessionResp::CopyFrom(const ::google::protobuf::Message& from) {
+void CloseSessionResp::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
 // @@protoc_insertion_point(generalized_copy_from_start:SpaceServer.CloseSessionResp)
   if (&from == this) return;
   Clear();
@@ -2365,16 +2364,14 @@ void CloseSessionResp::InternalSwap(CloseSessionResp* other) {
   swap(exception_, other->exception_);
 }
 
-::google::protobuf::Metadata CloseSessionResp::GetMetadata() const {
-  ::google::protobuf::internal::AssignDescriptors(&::assign_descriptors_table_SpaceServer_2eproto);
-  return ::file_level_metadata_SpaceServer_2eproto[kIndexInFileMessages];
+::PROTOBUF_NAMESPACE_ID::Metadata CloseSessionResp::GetMetadata() const {
+  return GetMetadataStatic();
 }
 
 
 // @@protoc_insertion_point(namespace_scope)
 }  // namespace SpaceServer
-namespace google {
-namespace protobuf {
+PROTOBUF_NAMESPACE_OPEN
 template<> PROTOBUF_NOINLINE ::SpaceServer::CameraViewReq* Arena::CreateMaybeMessage< ::SpaceServer::CameraViewReq >(Arena* arena) {
   return Arena::CreateInternal< ::SpaceServer::CameraViewReq >(arena);
 }
@@ -2399,8 +2396,7 @@ template<> PROTOBUF_NOINLINE ::SpaceServer::CloseSessionReq* Arena::CreateMaybeM
 template<> PROTOBUF_NOINLINE ::SpaceServer::CloseSessionResp* Arena::CreateMaybeMessage< ::SpaceServer::CloseSessionResp >(Arena* arena) {
   return Arena::CreateInternal< ::SpaceServer::CloseSessionResp >(arena);
 }
-}  // namespace protobuf
-}  // namespace google
+PROTOBUF_NAMESPACE_CLOSE
 
 // @@protoc_insertion_point(global_scope)
 #include <google/protobuf/port_undef.inc>

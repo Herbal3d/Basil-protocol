@@ -63,22 +63,22 @@ namespace org.herbal3d.basil.protocol.BasilType {
             "b3JnLmhlcmJhbDNkLmJhc2lsLnByb3RvY29sLkJhc2lsVHlwZWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
-          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::org.herbal3d.basil.protocol.BasilType.CoordSystem), typeof(global::org.herbal3d.basil.protocol.BasilType.RotationSystem), }, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::org.herbal3d.basil.protocol.BasilType.Vector3), global::org.herbal3d.basil.protocol.BasilType.Vector3.Parser, new[]{ "X", "Y", "Z" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::org.herbal3d.basil.protocol.BasilType.Quaternion), global::org.herbal3d.basil.protocol.BasilType.Quaternion.Parser, new[]{ "X", "Y", "Z", "W" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::org.herbal3d.basil.protocol.BasilType.Transform), global::org.herbal3d.basil.protocol.BasilType.Transform.Parser, new[]{ "Matrix", "Origin" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::org.herbal3d.basil.protocol.BasilType.BasilException), global::org.herbal3d.basil.protocol.BasilType.BasilException.Parser, new[]{ "Reason", "Hints" }, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
-            new pbr::GeneratedClrTypeInfo(typeof(global::org.herbal3d.basil.protocol.BasilType.CoordPosition), global::org.herbal3d.basil.protocol.BasilType.CoordPosition.Parser, new[]{ "Pos", "Rot", "PosRef", "RotRef" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::org.herbal3d.basil.protocol.BasilType.ObjectIdentifier), global::org.herbal3d.basil.protocol.BasilType.ObjectIdentifier.Parser, new[]{ "Id" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::org.herbal3d.basil.protocol.BasilType.InstanceIdentifier), global::org.herbal3d.basil.protocol.BasilType.InstanceIdentifier.Parser, new[]{ "Id" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::org.herbal3d.basil.protocol.BasilType.AaBoundingBox), global::org.herbal3d.basil.protocol.BasilType.AaBoundingBox.Parser, new[]{ "UpperFrontLeft", "LowerBackRight" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::org.herbal3d.basil.protocol.BasilType.DisplayableInfo), global::org.herbal3d.basil.protocol.BasilType.DisplayableInfo.Parser, new[]{ "Aabb", "DisplayableType", "Asset" }, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
-            new pbr::GeneratedClrTypeInfo(typeof(global::org.herbal3d.basil.protocol.BasilType.AssetInformation), global::org.herbal3d.basil.protocol.BasilType.AssetInformation.Parser, new[]{ "Id", "DisplayInfo" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::org.herbal3d.basil.protocol.BasilType.PathDescription), global::org.herbal3d.basil.protocol.BasilType.PathDescription.Parser, new[]{ "PathType" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::org.herbal3d.basil.protocol.BasilType.InstancePositionInfo), global::org.herbal3d.basil.protocol.BasilType.InstancePositionInfo.Parser, new[]{ "Id", "Pos", "Vel", "Path" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::org.herbal3d.basil.protocol.BasilType.AccessAuthorization), global::org.herbal3d.basil.protocol.BasilType.AccessAuthorization.Parser, new[]{ "AccessProperties" }, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
-            new pbr::GeneratedClrTypeInfo(typeof(global::org.herbal3d.basil.protocol.BasilType.TraceInfo), global::org.herbal3d.basil.protocol.BasilType.TraceInfo.Parser, new[]{ "Info" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::org.herbal3d.basil.protocol.BasilType.BResponseRequest), global::org.herbal3d.basil.protocol.BasilType.BResponseRequest.Parser, new[]{ "ResponseSession", "ResponseSessionKey" }, null, null, null)
+          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::org.herbal3d.basil.protocol.BasilType.CoordSystem), typeof(global::org.herbal3d.basil.protocol.BasilType.RotationSystem), }, null, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::org.herbal3d.basil.protocol.BasilType.Vector3), global::org.herbal3d.basil.protocol.BasilType.Vector3.Parser, new[]{ "X", "Y", "Z" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::org.herbal3d.basil.protocol.BasilType.Quaternion), global::org.herbal3d.basil.protocol.BasilType.Quaternion.Parser, new[]{ "X", "Y", "Z", "W" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::org.herbal3d.basil.protocol.BasilType.Transform), global::org.herbal3d.basil.protocol.BasilType.Transform.Parser, new[]{ "Matrix", "Origin" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::org.herbal3d.basil.protocol.BasilType.BasilException), global::org.herbal3d.basil.protocol.BasilType.BasilException.Parser, new[]{ "Reason", "Hints" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::org.herbal3d.basil.protocol.BasilType.CoordPosition), global::org.herbal3d.basil.protocol.BasilType.CoordPosition.Parser, new[]{ "Pos", "Rot", "PosRef", "RotRef" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::org.herbal3d.basil.protocol.BasilType.ObjectIdentifier), global::org.herbal3d.basil.protocol.BasilType.ObjectIdentifier.Parser, new[]{ "Id" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::org.herbal3d.basil.protocol.BasilType.InstanceIdentifier), global::org.herbal3d.basil.protocol.BasilType.InstanceIdentifier.Parser, new[]{ "Id" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::org.herbal3d.basil.protocol.BasilType.AaBoundingBox), global::org.herbal3d.basil.protocol.BasilType.AaBoundingBox.Parser, new[]{ "UpperFrontLeft", "LowerBackRight" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::org.herbal3d.basil.protocol.BasilType.DisplayableInfo), global::org.herbal3d.basil.protocol.BasilType.DisplayableInfo.Parser, new[]{ "Aabb", "DisplayableType", "Asset" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::org.herbal3d.basil.protocol.BasilType.AssetInformation), global::org.herbal3d.basil.protocol.BasilType.AssetInformation.Parser, new[]{ "Id", "DisplayInfo" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::org.herbal3d.basil.protocol.BasilType.PathDescription), global::org.herbal3d.basil.protocol.BasilType.PathDescription.Parser, new[]{ "PathType" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::org.herbal3d.basil.protocol.BasilType.InstancePositionInfo), global::org.herbal3d.basil.protocol.BasilType.InstancePositionInfo.Parser, new[]{ "Id", "Pos", "Vel", "Path" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::org.herbal3d.basil.protocol.BasilType.AccessAuthorization), global::org.herbal3d.basil.protocol.BasilType.AccessAuthorization.Parser, new[]{ "AccessProperties" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::org.herbal3d.basil.protocol.BasilType.TraceInfo), global::org.herbal3d.basil.protocol.BasilType.TraceInfo.Parser, new[]{ "Info" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::org.herbal3d.basil.protocol.BasilType.BResponseRequest), global::org.herbal3d.basil.protocol.BasilType.BResponseRequest.Parser, new[]{ "ResponseSession", "ResponseSessionKey" }, null, null, null, null)
           }));
     }
     #endregion
@@ -748,7 +748,7 @@ namespace org.herbal3d.basil.protocol.BasilType {
     /// <summary>Field number for the "hints" field.</summary>
     public const int HintsFieldNumber = 2;
     private static readonly pbc::MapField<string, string>.Codec _map_hints_codec
-        = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10), pb::FieldCodec.ForString(18), 18);
+        = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForString(18, ""), 18);
     private readonly pbc::MapField<string, string> hints_ = new pbc::MapField<string, string>();
     /// <summary>
     /// additional information for recovery. Error dependent.
@@ -912,7 +912,7 @@ namespace org.herbal3d.basil.protocol.BasilType {
 
     /// <summary>Field number for the "posRef" field.</summary>
     public const int PosRefFieldNumber = 3;
-    private global::org.herbal3d.basil.protocol.BasilType.CoordSystem posRef_ = 0;
+    private global::org.herbal3d.basil.protocol.BasilType.CoordSystem posRef_ = global::org.herbal3d.basil.protocol.BasilType.CoordSystem.Wgs86;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::org.herbal3d.basil.protocol.BasilType.CoordSystem PosRef {
       get { return posRef_; }
@@ -923,7 +923,7 @@ namespace org.herbal3d.basil.protocol.BasilType {
 
     /// <summary>Field number for the "rotRef" field.</summary>
     public const int RotRefFieldNumber = 4;
-    private global::org.herbal3d.basil.protocol.BasilType.RotationSystem rotRef_ = 0;
+    private global::org.herbal3d.basil.protocol.BasilType.RotationSystem rotRef_ = global::org.herbal3d.basil.protocol.BasilType.RotationSystem.Worldr;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public global::org.herbal3d.basil.protocol.BasilType.RotationSystem RotRef {
       get { return rotRef_; }
@@ -957,8 +957,8 @@ namespace org.herbal3d.basil.protocol.BasilType {
       int hash = 1;
       if (pos_ != null) hash ^= Pos.GetHashCode();
       if (rot_ != null) hash ^= Rot.GetHashCode();
-      if (PosRef != 0) hash ^= PosRef.GetHashCode();
-      if (RotRef != 0) hash ^= RotRef.GetHashCode();
+      if (PosRef != global::org.herbal3d.basil.protocol.BasilType.CoordSystem.Wgs86) hash ^= PosRef.GetHashCode();
+      if (RotRef != global::org.herbal3d.basil.protocol.BasilType.RotationSystem.Worldr) hash ^= RotRef.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -980,11 +980,11 @@ namespace org.herbal3d.basil.protocol.BasilType {
         output.WriteRawTag(18);
         output.WriteMessage(Rot);
       }
-      if (PosRef != 0) {
+      if (PosRef != global::org.herbal3d.basil.protocol.BasilType.CoordSystem.Wgs86) {
         output.WriteRawTag(24);
         output.WriteEnum((int) PosRef);
       }
-      if (RotRef != 0) {
+      if (RotRef != global::org.herbal3d.basil.protocol.BasilType.RotationSystem.Worldr) {
         output.WriteRawTag(32);
         output.WriteEnum((int) RotRef);
       }
@@ -1002,10 +1002,10 @@ namespace org.herbal3d.basil.protocol.BasilType {
       if (rot_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Rot);
       }
-      if (PosRef != 0) {
+      if (PosRef != global::org.herbal3d.basil.protocol.BasilType.CoordSystem.Wgs86) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) PosRef);
       }
-      if (RotRef != 0) {
+      if (RotRef != global::org.herbal3d.basil.protocol.BasilType.RotationSystem.Worldr) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) RotRef);
       }
       if (_unknownFields != null) {
@@ -1031,10 +1031,10 @@ namespace org.herbal3d.basil.protocol.BasilType {
         }
         Rot.MergeFrom(other.Rot);
       }
-      if (other.PosRef != 0) {
+      if (other.PosRef != global::org.herbal3d.basil.protocol.BasilType.CoordSystem.Wgs86) {
         PosRef = other.PosRef;
       }
-      if (other.RotRef != 0) {
+      if (other.RotRef != global::org.herbal3d.basil.protocol.BasilType.RotationSystem.Worldr) {
         RotRef = other.RotRef;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
@@ -1583,7 +1583,7 @@ namespace org.herbal3d.basil.protocol.BasilType {
     /// <summary>Field number for the "asset" field.</summary>
     public const int AssetFieldNumber = 3;
     private static readonly pbc::MapField<string, string>.Codec _map_asset_codec
-        = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10), pb::FieldCodec.ForString(18), 26);
+        = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForString(18, ""), 26);
     private readonly pbc::MapField<string, string> asset_ = new pbc::MapField<string, string>();
     /// <summary>
     /// attributes that make up the asset
@@ -2299,7 +2299,7 @@ namespace org.herbal3d.basil.protocol.BasilType {
     /// <summary>Field number for the "accessProperties" field.</summary>
     public const int AccessPropertiesFieldNumber = 1;
     private static readonly pbc::MapField<string, string>.Codec _map_accessProperties_codec
-        = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10), pb::FieldCodec.ForString(18), 10);
+        = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForString(18, ""), 10);
     private readonly pbc::MapField<string, string> accessProperties_ = new pbc::MapField<string, string>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::MapField<string, string> AccessProperties {

@@ -47,13 +47,13 @@ namespace org.herbal3d.basil.protocol.SpaceServer {
             "Mw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::org.herbal3d.basil.protocol.BasilType.BasilTypesReflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::org.herbal3d.basil.protocol.SpaceServer.CameraViewReq), global::org.herbal3d.basil.protocol.SpaceServer.CameraViewReq.Parser, new[]{ "Auth" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::org.herbal3d.basil.protocol.SpaceServer.CameraViewResp), global::org.herbal3d.basil.protocol.SpaceServer.CameraViewResp.Parser, new[]{ "Exception" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::org.herbal3d.basil.protocol.SpaceServer.OpenSessionReq), global::org.herbal3d.basil.protocol.SpaceServer.OpenSessionReq.Parser, new[]{ "Auth", "Features" }, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
-            new pbr::GeneratedClrTypeInfo(typeof(global::org.herbal3d.basil.protocol.SpaceServer.OpenSessionResp), global::org.herbal3d.basil.protocol.SpaceServer.OpenSessionResp.Parser, new[]{ "Exception", "Properties" }, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
-            new pbr::GeneratedClrTypeInfo(typeof(global::org.herbal3d.basil.protocol.SpaceServer.CloseSessionReq), global::org.herbal3d.basil.protocol.SpaceServer.CloseSessionReq.Parser, new[]{ "Auth", "Reason" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::org.herbal3d.basil.protocol.SpaceServer.CloseSessionResp), global::org.herbal3d.basil.protocol.SpaceServer.CloseSessionResp.Parser, new[]{ "Exception" }, null, null, null)
+          new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::org.herbal3d.basil.protocol.SpaceServer.CameraViewReq), global::org.herbal3d.basil.protocol.SpaceServer.CameraViewReq.Parser, new[]{ "Auth" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::org.herbal3d.basil.protocol.SpaceServer.CameraViewResp), global::org.herbal3d.basil.protocol.SpaceServer.CameraViewResp.Parser, new[]{ "Exception" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::org.herbal3d.basil.protocol.SpaceServer.OpenSessionReq), global::org.herbal3d.basil.protocol.SpaceServer.OpenSessionReq.Parser, new[]{ "Auth", "Features" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::org.herbal3d.basil.protocol.SpaceServer.OpenSessionResp), global::org.herbal3d.basil.protocol.SpaceServer.OpenSessionResp.Parser, new[]{ "Exception", "Properties" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::org.herbal3d.basil.protocol.SpaceServer.CloseSessionReq), global::org.herbal3d.basil.protocol.SpaceServer.CloseSessionReq.Parser, new[]{ "Auth", "Reason" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::org.herbal3d.basil.protocol.SpaceServer.CloseSessionResp), global::org.herbal3d.basil.protocol.SpaceServer.CloseSessionResp.Parser, new[]{ "Exception" }, null, null, null, null)
           }));
     }
     #endregion
@@ -387,7 +387,7 @@ namespace org.herbal3d.basil.protocol.SpaceServer {
     /// <summary>Field number for the "features" field.</summary>
     public const int FeaturesFieldNumber = 2;
     private static readonly pbc::MapField<string, string>.Codec _map_features_codec
-        = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10), pb::FieldCodec.ForString(18), 18);
+        = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForString(18, ""), 18);
     private readonly pbc::MapField<string, string> features_ = new pbc::MapField<string, string>();
     /// <summary>
     /// features requested
@@ -545,7 +545,7 @@ namespace org.herbal3d.basil.protocol.SpaceServer {
     /// <summary>Field number for the "properties" field.</summary>
     public const int PropertiesFieldNumber = 2;
     private static readonly pbc::MapField<string, string>.Codec _map_properties_codec
-        = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10), pb::FieldCodec.ForString(18), 18);
+        = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForString(18, ""), 18);
     private readonly pbc::MapField<string, string> properties_ = new pbc::MapField<string, string>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::MapField<string, string> Properties {

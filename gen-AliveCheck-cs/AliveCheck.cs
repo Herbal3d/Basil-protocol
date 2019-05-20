@@ -33,9 +33,9 @@ namespace org.herbal3d.basil.protocol.AliveCheck {
             "c2lsLnByb3RvY29sLkFsaXZlQ2hlY2tiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::org.herbal3d.basil.protocol.BasilType.BasilTypesReflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::org.herbal3d.basil.protocol.AliveCheck.AliveCheckReq), global::org.herbal3d.basil.protocol.AliveCheck.AliveCheckReq.Parser, new[]{ "Auth", "Time", "SequenceNum" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::org.herbal3d.basil.protocol.AliveCheck.AliveCheckResp), global::org.herbal3d.basil.protocol.AliveCheck.AliveCheckResp.Parser, new[]{ "Time", "SequenceNum", "TimeReceived", "SequenceNumReceived" }, null, null, null)
+          new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::org.herbal3d.basil.protocol.AliveCheck.AliveCheckReq), global::org.herbal3d.basil.protocol.AliveCheck.AliveCheckReq.Parser, new[]{ "Auth", "Time", "SequenceNum" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::org.herbal3d.basil.protocol.AliveCheck.AliveCheckResp), global::org.herbal3d.basil.protocol.AliveCheck.AliveCheckResp.Parser, new[]{ "Time", "SequenceNum", "TimeReceived", "SequenceNumReceived" }, null, null, null, null)
           }));
     }
     #endregion

@@ -128,31 +128,31 @@ namespace org.herbal3d.basil.protocol.BasilServer {
             "QmFzaWxTZXJ2ZXJiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::org.herbal3d.basil.protocol.BasilType.BasilTypesReflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::org.herbal3d.basil.protocol.BasilServer.IdentifyDisplayableObjectReq), global::org.herbal3d.basil.protocol.BasilServer.IdentifyDisplayableObjectReq.Parser, new[]{ "Auth", "AssetInfo", "ObjectId", "Aabb" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::org.herbal3d.basil.protocol.BasilServer.IdentifyDisplayableObjectResp), global::org.herbal3d.basil.protocol.BasilServer.IdentifyDisplayableObjectResp.Parser, new[]{ "Exception", "ObjectId" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::org.herbal3d.basil.protocol.BasilServer.ForgetDisplayableObjectReq), global::org.herbal3d.basil.protocol.BasilServer.ForgetDisplayableObjectReq.Parser, new[]{ "Auth", "ObjectId" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::org.herbal3d.basil.protocol.BasilServer.ForgetDisplayableObjectResp), global::org.herbal3d.basil.protocol.BasilServer.ForgetDisplayableObjectResp.Parser, new[]{ "Exception" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::org.herbal3d.basil.protocol.BasilServer.CreateObjectInstanceReq), global::org.herbal3d.basil.protocol.BasilServer.CreateObjectInstanceReq.Parser, new[]{ "Auth", "ObjectId", "InstanceId", "Pos", "PropertiesToSet", "InstanceCountHint" }, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
-            new pbr::GeneratedClrTypeInfo(typeof(global::org.herbal3d.basil.protocol.BasilServer.CreateObjectInstanceResp), global::org.herbal3d.basil.protocol.BasilServer.CreateObjectInstanceResp.Parser, new[]{ "Exception", "InstanceId" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::org.herbal3d.basil.protocol.BasilServer.DeleteObjectInstanceReq), global::org.herbal3d.basil.protocol.BasilServer.DeleteObjectInstanceReq.Parser, new[]{ "Auth", "InstanceId" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::org.herbal3d.basil.protocol.BasilServer.DeleteObjectInstanceResp), global::org.herbal3d.basil.protocol.BasilServer.DeleteObjectInstanceResp.Parser, new[]{ "Exception" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::org.herbal3d.basil.protocol.BasilServer.UpdateObjectPropertyReq), global::org.herbal3d.basil.protocol.BasilServer.UpdateObjectPropertyReq.Parser, new[]{ "Auth", "ObjectId", "Props" }, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
-            new pbr::GeneratedClrTypeInfo(typeof(global::org.herbal3d.basil.protocol.BasilServer.UpdateObjectPropertyResp), global::org.herbal3d.basil.protocol.BasilServer.UpdateObjectPropertyResp.Parser, new[]{ "Exception" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::org.herbal3d.basil.protocol.BasilServer.UpdateInstancePropertyReq), global::org.herbal3d.basil.protocol.BasilServer.UpdateInstancePropertyReq.Parser, new[]{ "Auth", "InstanceId", "Props" }, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
-            new pbr::GeneratedClrTypeInfo(typeof(global::org.herbal3d.basil.protocol.BasilServer.UpdateInstancePropertyResp), global::org.herbal3d.basil.protocol.BasilServer.UpdateInstancePropertyResp.Parser, new[]{ "Exception" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::org.herbal3d.basil.protocol.BasilServer.UpdateInstancePositionReq), global::org.herbal3d.basil.protocol.BasilServer.UpdateInstancePositionReq.Parser, new[]{ "Auth", "InstanceId", "Pos" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::org.herbal3d.basil.protocol.BasilServer.UpdateInstancePositionResp), global::org.herbal3d.basil.protocol.BasilServer.UpdateInstancePositionResp.Parser, new[]{ "Exception" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::org.herbal3d.basil.protocol.BasilServer.RequestObjectPropertiesReq), global::org.herbal3d.basil.protocol.BasilServer.RequestObjectPropertiesReq.Parser, new[]{ "Auth", "ObjectId", "PropertyMatch" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::org.herbal3d.basil.protocol.BasilServer.RequestObjectPropertiesResp), global::org.herbal3d.basil.protocol.BasilServer.RequestObjectPropertiesResp.Parser, new[]{ "Exception", "Properties" }, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
-            new pbr::GeneratedClrTypeInfo(typeof(global::org.herbal3d.basil.protocol.BasilServer.RequestInstancePropertiesReq), global::org.herbal3d.basil.protocol.BasilServer.RequestInstancePropertiesReq.Parser, new[]{ "Auth", "InstanceId", "PropertyMatch" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::org.herbal3d.basil.protocol.BasilServer.RequestInstancePropertiesResp), global::org.herbal3d.basil.protocol.BasilServer.RequestInstancePropertiesResp.Parser, new[]{ "Exception", "Properties" }, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
-            new pbr::GeneratedClrTypeInfo(typeof(global::org.herbal3d.basil.protocol.BasilServer.CloseSessionReq), global::org.herbal3d.basil.protocol.BasilServer.CloseSessionReq.Parser, new[]{ "Auth", "Reason" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::org.herbal3d.basil.protocol.BasilServer.CloseSessionResp), global::org.herbal3d.basil.protocol.BasilServer.CloseSessionResp.Parser, new[]{ "Exception" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::org.herbal3d.basil.protocol.BasilServer.MakeConnectionReq), global::org.herbal3d.basil.protocol.BasilServer.MakeConnectionReq.Parser, new[]{ "Auth", "ConnectionParams" }, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
-            new pbr::GeneratedClrTypeInfo(typeof(global::org.herbal3d.basil.protocol.BasilServer.MakeConnectionResp), global::org.herbal3d.basil.protocol.BasilServer.MakeConnectionResp.Parser, new[]{ "Exception" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::org.herbal3d.basil.protocol.BasilServer.AliveCheckReq), global::org.herbal3d.basil.protocol.BasilServer.AliveCheckReq.Parser, new[]{ "Auth", "Time", "SequenceNum" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::org.herbal3d.basil.protocol.BasilServer.AliveCheckResp), global::org.herbal3d.basil.protocol.BasilServer.AliveCheckResp.Parser, new[]{ "Time", "SequenceNum", "TimeReceived", "SequenceNumReceived" }, null, null, null)
+          new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::org.herbal3d.basil.protocol.BasilServer.IdentifyDisplayableObjectReq), global::org.herbal3d.basil.protocol.BasilServer.IdentifyDisplayableObjectReq.Parser, new[]{ "Auth", "AssetInfo", "ObjectId", "Aabb" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::org.herbal3d.basil.protocol.BasilServer.IdentifyDisplayableObjectResp), global::org.herbal3d.basil.protocol.BasilServer.IdentifyDisplayableObjectResp.Parser, new[]{ "Exception", "ObjectId" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::org.herbal3d.basil.protocol.BasilServer.ForgetDisplayableObjectReq), global::org.herbal3d.basil.protocol.BasilServer.ForgetDisplayableObjectReq.Parser, new[]{ "Auth", "ObjectId" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::org.herbal3d.basil.protocol.BasilServer.ForgetDisplayableObjectResp), global::org.herbal3d.basil.protocol.BasilServer.ForgetDisplayableObjectResp.Parser, new[]{ "Exception" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::org.herbal3d.basil.protocol.BasilServer.CreateObjectInstanceReq), global::org.herbal3d.basil.protocol.BasilServer.CreateObjectInstanceReq.Parser, new[]{ "Auth", "ObjectId", "InstanceId", "Pos", "PropertiesToSet", "InstanceCountHint" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::org.herbal3d.basil.protocol.BasilServer.CreateObjectInstanceResp), global::org.herbal3d.basil.protocol.BasilServer.CreateObjectInstanceResp.Parser, new[]{ "Exception", "InstanceId" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::org.herbal3d.basil.protocol.BasilServer.DeleteObjectInstanceReq), global::org.herbal3d.basil.protocol.BasilServer.DeleteObjectInstanceReq.Parser, new[]{ "Auth", "InstanceId" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::org.herbal3d.basil.protocol.BasilServer.DeleteObjectInstanceResp), global::org.herbal3d.basil.protocol.BasilServer.DeleteObjectInstanceResp.Parser, new[]{ "Exception" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::org.herbal3d.basil.protocol.BasilServer.UpdateObjectPropertyReq), global::org.herbal3d.basil.protocol.BasilServer.UpdateObjectPropertyReq.Parser, new[]{ "Auth", "ObjectId", "Props" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::org.herbal3d.basil.protocol.BasilServer.UpdateObjectPropertyResp), global::org.herbal3d.basil.protocol.BasilServer.UpdateObjectPropertyResp.Parser, new[]{ "Exception" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::org.herbal3d.basil.protocol.BasilServer.UpdateInstancePropertyReq), global::org.herbal3d.basil.protocol.BasilServer.UpdateInstancePropertyReq.Parser, new[]{ "Auth", "InstanceId", "Props" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::org.herbal3d.basil.protocol.BasilServer.UpdateInstancePropertyResp), global::org.herbal3d.basil.protocol.BasilServer.UpdateInstancePropertyResp.Parser, new[]{ "Exception" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::org.herbal3d.basil.protocol.BasilServer.UpdateInstancePositionReq), global::org.herbal3d.basil.protocol.BasilServer.UpdateInstancePositionReq.Parser, new[]{ "Auth", "InstanceId", "Pos" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::org.herbal3d.basil.protocol.BasilServer.UpdateInstancePositionResp), global::org.herbal3d.basil.protocol.BasilServer.UpdateInstancePositionResp.Parser, new[]{ "Exception" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::org.herbal3d.basil.protocol.BasilServer.RequestObjectPropertiesReq), global::org.herbal3d.basil.protocol.BasilServer.RequestObjectPropertiesReq.Parser, new[]{ "Auth", "ObjectId", "PropertyMatch" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::org.herbal3d.basil.protocol.BasilServer.RequestObjectPropertiesResp), global::org.herbal3d.basil.protocol.BasilServer.RequestObjectPropertiesResp.Parser, new[]{ "Exception", "Properties" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::org.herbal3d.basil.protocol.BasilServer.RequestInstancePropertiesReq), global::org.herbal3d.basil.protocol.BasilServer.RequestInstancePropertiesReq.Parser, new[]{ "Auth", "InstanceId", "PropertyMatch" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::org.herbal3d.basil.protocol.BasilServer.RequestInstancePropertiesResp), global::org.herbal3d.basil.protocol.BasilServer.RequestInstancePropertiesResp.Parser, new[]{ "Exception", "Properties" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::org.herbal3d.basil.protocol.BasilServer.CloseSessionReq), global::org.herbal3d.basil.protocol.BasilServer.CloseSessionReq.Parser, new[]{ "Auth", "Reason" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::org.herbal3d.basil.protocol.BasilServer.CloseSessionResp), global::org.herbal3d.basil.protocol.BasilServer.CloseSessionResp.Parser, new[]{ "Exception" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::org.herbal3d.basil.protocol.BasilServer.MakeConnectionReq), global::org.herbal3d.basil.protocol.BasilServer.MakeConnectionReq.Parser, new[]{ "Auth", "ConnectionParams" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::org.herbal3d.basil.protocol.BasilServer.MakeConnectionResp), global::org.herbal3d.basil.protocol.BasilServer.MakeConnectionResp.Parser, new[]{ "Exception" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::org.herbal3d.basil.protocol.BasilServer.AliveCheckReq), global::org.herbal3d.basil.protocol.BasilServer.AliveCheckReq.Parser, new[]{ "Auth", "Time", "SequenceNum" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::org.herbal3d.basil.protocol.BasilServer.AliveCheckResp), global::org.herbal3d.basil.protocol.BasilServer.AliveCheckResp.Parser, new[]{ "Time", "SequenceNum", "TimeReceived", "SequenceNumReceived" }, null, null, null, null)
           }));
     }
     #endregion
@@ -971,7 +971,7 @@ namespace org.herbal3d.basil.protocol.BasilServer {
     /// <summary>Field number for the "propertiesToSet" field.</summary>
     public const int PropertiesToSetFieldNumber = 5;
     private static readonly pbc::MapField<string, string>.Codec _map_propertiesToSet_codec
-        = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10), pb::FieldCodec.ForString(18), 42);
+        = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForString(18, ""), 42);
     private readonly pbc::MapField<string, string> propertiesToSet_ = new pbc::MapField<string, string>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::MapField<string, string> PropertiesToSet {
@@ -1710,7 +1710,7 @@ namespace org.herbal3d.basil.protocol.BasilServer {
     /// <summary>Field number for the "props" field.</summary>
     public const int PropsFieldNumber = 3;
     private static readonly pbc::MapField<string, string>.Codec _map_props_codec
-        = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10), pb::FieldCodec.ForString(18), 26);
+        = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForString(18, ""), 26);
     private readonly pbc::MapField<string, string> props_ = new pbc::MapField<string, string>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::MapField<string, string> Props {
@@ -2037,7 +2037,7 @@ namespace org.herbal3d.basil.protocol.BasilServer {
     /// <summary>Field number for the "props" field.</summary>
     public const int PropsFieldNumber = 3;
     private static readonly pbc::MapField<string, string>.Codec _map_props_codec
-        = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10), pb::FieldCodec.ForString(18), 26);
+        = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForString(18, ""), 26);
     private readonly pbc::MapField<string, string> props_ = new pbc::MapField<string, string>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::MapField<string, string> Props {
@@ -2893,7 +2893,7 @@ namespace org.herbal3d.basil.protocol.BasilServer {
     /// <summary>Field number for the "properties" field.</summary>
     public const int PropertiesFieldNumber = 2;
     private static readonly pbc::MapField<string, string>.Codec _map_properties_codec
-        = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10), pb::FieldCodec.ForString(18), 18);
+        = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForString(18, ""), 18);
     private readonly pbc::MapField<string, string> properties_ = new pbc::MapField<string, string>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::MapField<string, string> Properties {
@@ -3251,7 +3251,7 @@ namespace org.herbal3d.basil.protocol.BasilServer {
     /// <summary>Field number for the "properties" field.</summary>
     public const int PropertiesFieldNumber = 2;
     private static readonly pbc::MapField<string, string>.Codec _map_properties_codec
-        = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10), pb::FieldCodec.ForString(18), 18);
+        = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForString(18, ""), 18);
     private readonly pbc::MapField<string, string> properties_ = new pbc::MapField<string, string>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::MapField<string, string> Properties {
@@ -3710,7 +3710,7 @@ namespace org.herbal3d.basil.protocol.BasilServer {
     /// <summary>Field number for the "connectionParams" field.</summary>
     public const int ConnectionParamsFieldNumber = 2;
     private static readonly pbc::MapField<string, string>.Codec _map_connectionParams_codec
-        = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10), pb::FieldCodec.ForString(18), 18);
+        = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForString(18, ""), 18);
     private readonly pbc::MapField<string, string> connectionParams_ = new pbc::MapField<string, string>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::MapField<string, string> ConnectionParams {
