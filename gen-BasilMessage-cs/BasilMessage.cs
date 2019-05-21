@@ -73,8 +73,8 @@ namespace org.herbal3d.basil.protocol.Message {
             "cmcuaGVyYmFsM2QuYmFzaWwucHJvdG9jb2wuTWVzc2FnZWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::org.herbal3d.basil.protocol.BasilType.BasilTypesReflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::org.herbal3d.basil.protocol.Message.TransportClass), typeof(global::org.herbal3d.basil.protocol.Message.BasilMessageOps), }, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::org.herbal3d.basil.protocol.Message.BasilMessage), global::org.herbal3d.basil.protocol.Message.BasilMessage.Parser, new[]{ "Op", "Auth", "Class", "ObjectId", "InstanceId", "Pos", "AssetInfo", "Aabb", "Filter", "Properties", "OpParameters", "Exception", "Response" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, null, })
+          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::org.herbal3d.basil.protocol.Message.TransportClass), typeof(global::org.herbal3d.basil.protocol.Message.BasilMessageOps), }, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::org.herbal3d.basil.protocol.Message.BasilMessage), global::org.herbal3d.basil.protocol.Message.BasilMessage.Parser, new[]{ "Op", "Auth", "Class", "ObjectId", "InstanceId", "Pos", "AssetInfo", "Aabb", "Filter", "Properties", "OpParameters", "Exception", "Response" }, null, null, new pbr::GeneratedClrTypeInfo[] { null, null, })
           }));
     }
     #endregion
@@ -240,7 +240,7 @@ namespace org.herbal3d.basil.protocol.Message {
 
     /// <summary>Field number for the "class" field.</summary>
     public const int ClassFieldNumber = 14;
-    private global::org.herbal3d.basil.protocol.Message.TransportClass class_ = global::org.herbal3d.basil.protocol.Message.TransportClass.Default;
+    private global::org.herbal3d.basil.protocol.Message.TransportClass class_ = 0;
     /// <summary>
     /// priority class of messsage
     /// </summary>
@@ -333,7 +333,7 @@ namespace org.herbal3d.basil.protocol.Message {
     /// <summary>Field number for the "properties" field.</summary>
     public const int PropertiesFieldNumber = 9;
     private static readonly pbc::MapField<string, string>.Codec _map_properties_codec
-        = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForString(18, ""), 74);
+        = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10), pb::FieldCodec.ForString(18), 74);
     private readonly pbc::MapField<string, string> properties_ = new pbc::MapField<string, string>();
     /// <summary>
     /// if op needs or returns property set
@@ -346,7 +346,7 @@ namespace org.herbal3d.basil.protocol.Message {
     /// <summary>Field number for the "opParameters" field.</summary>
     public const int OpParametersFieldNumber = 10;
     private static readonly pbc::MapField<string, string>.Codec _map_opParameters_codec
-        = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForString(18, ""), 82);
+        = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10), pb::FieldCodec.ForString(18), 82);
     private readonly pbc::MapField<string, string> opParameters_ = new pbc::MapField<string, string>();
     /// <summary>
     /// other parameters needed by op
@@ -418,7 +418,7 @@ namespace org.herbal3d.basil.protocol.Message {
       int hash = 1;
       if (Op != 0) hash ^= Op.GetHashCode();
       if (auth_ != null) hash ^= Auth.GetHashCode();
-      if (Class != global::org.herbal3d.basil.protocol.Message.TransportClass.Default) hash ^= Class.GetHashCode();
+      if (Class != 0) hash ^= Class.GetHashCode();
       if (objectId_ != null) hash ^= ObjectId.GetHashCode();
       if (instanceId_ != null) hash ^= InstanceId.GetHashCode();
       if (pos_ != null) hash ^= Pos.GetHashCode();
@@ -484,7 +484,7 @@ namespace org.herbal3d.basil.protocol.Message {
         output.WriteRawTag(106);
         output.WriteMessage(Response);
       }
-      if (Class != global::org.herbal3d.basil.protocol.Message.TransportClass.Default) {
+      if (Class != 0) {
         output.WriteRawTag(112);
         output.WriteEnum((int) Class);
       }
@@ -502,7 +502,7 @@ namespace org.herbal3d.basil.protocol.Message {
       if (auth_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Auth);
       }
-      if (Class != global::org.herbal3d.basil.protocol.Message.TransportClass.Default) {
+      if (Class != 0) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Class);
       }
       if (objectId_ != null) {
@@ -551,7 +551,7 @@ namespace org.herbal3d.basil.protocol.Message {
         }
         Auth.MergeFrom(other.Auth);
       }
-      if (other.Class != global::org.herbal3d.basil.protocol.Message.TransportClass.Default) {
+      if (other.Class != 0) {
         Class = other.Class;
       }
       if (other.objectId_ != null) {

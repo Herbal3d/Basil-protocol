@@ -76,20 +76,20 @@ namespace org.herbal3d.basil.protocol.BrothServer {
             "cHJvdG9jb2wuQnJvdGhTZXJ2ZXJiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::org.herbal3d.basil.protocol.BasilType.BasilTypesReflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::org.herbal3d.basil.protocol.BrothServer.RegisterTopicReq), global::org.herbal3d.basil.protocol.BrothServer.RegisterTopicReq.Parser, new[]{ "Auth", "Topic", "Properties" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
-            new pbr::GeneratedClrTypeInfo(typeof(global::org.herbal3d.basil.protocol.BrothServer.RegisterTopicResp), global::org.herbal3d.basil.protocol.BrothServer.RegisterTopicResp.Parser, new[]{ "Exception" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::org.herbal3d.basil.protocol.BrothServer.DeregisterTopicReq), global::org.herbal3d.basil.protocol.BrothServer.DeregisterTopicReq.Parser, new[]{ "Auth", "Topic" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::org.herbal3d.basil.protocol.BrothServer.DeregisterTopicResp), global::org.herbal3d.basil.protocol.BrothServer.DeregisterTopicResp.Parser, new[]{ "Exception" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::org.herbal3d.basil.protocol.BrothServer.SubscribeReq), global::org.herbal3d.basil.protocol.BrothServer.SubscribeReq.Parser, new[]{ "Auth", "Topic", "Properties" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
-            new pbr::GeneratedClrTypeInfo(typeof(global::org.herbal3d.basil.protocol.BrothServer.SubscribeResp), global::org.herbal3d.basil.protocol.BrothServer.SubscribeResp.Parser, new[]{ "Exception" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::org.herbal3d.basil.protocol.BrothServer.UnsubscribeReq), global::org.herbal3d.basil.protocol.BrothServer.UnsubscribeReq.Parser, new[]{ "Auth", "Topic" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::org.herbal3d.basil.protocol.BrothServer.UnsubscribeResp), global::org.herbal3d.basil.protocol.BrothServer.UnsubscribeResp.Parser, new[]{ "Exception" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::org.herbal3d.basil.protocol.BrothServer.SubscriptionMadeResp), global::org.herbal3d.basil.protocol.BrothServer.SubscriptionMadeResp.Parser, new[]{ "Exception", "Topic", "Properties" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
-            new pbr::GeneratedClrTypeInfo(typeof(global::org.herbal3d.basil.protocol.BrothServer.SubscriptionClearResp), global::org.herbal3d.basil.protocol.BrothServer.SubscriptionClearResp.Parser, new[]{ "Exception", "Topic", "Properties" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
-            new pbr::GeneratedClrTypeInfo(typeof(global::org.herbal3d.basil.protocol.BrothServer.SendEventReq), global::org.herbal3d.basil.protocol.BrothServer.SendEventReq.Parser, new[]{ "Auth", "Topic", "Features" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
-            new pbr::GeneratedClrTypeInfo(typeof(global::org.herbal3d.basil.protocol.BrothServer.SendEventResp), global::org.herbal3d.basil.protocol.BrothServer.SendEventResp.Parser, new[]{ "Topic" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::org.herbal3d.basil.protocol.BrothServer.EventResp), global::org.herbal3d.basil.protocol.BrothServer.EventResp.Parser, new[]{ "Exception", "Topic", "Filter", "Properties" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, null, })
+          new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::org.herbal3d.basil.protocol.BrothServer.RegisterTopicReq), global::org.herbal3d.basil.protocol.BrothServer.RegisterTopicReq.Parser, new[]{ "Auth", "Topic", "Properties" }, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::org.herbal3d.basil.protocol.BrothServer.RegisterTopicResp), global::org.herbal3d.basil.protocol.BrothServer.RegisterTopicResp.Parser, new[]{ "Exception" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::org.herbal3d.basil.protocol.BrothServer.DeregisterTopicReq), global::org.herbal3d.basil.protocol.BrothServer.DeregisterTopicReq.Parser, new[]{ "Auth", "Topic" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::org.herbal3d.basil.protocol.BrothServer.DeregisterTopicResp), global::org.herbal3d.basil.protocol.BrothServer.DeregisterTopicResp.Parser, new[]{ "Exception" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::org.herbal3d.basil.protocol.BrothServer.SubscribeReq), global::org.herbal3d.basil.protocol.BrothServer.SubscribeReq.Parser, new[]{ "Auth", "Topic", "Properties" }, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::org.herbal3d.basil.protocol.BrothServer.SubscribeResp), global::org.herbal3d.basil.protocol.BrothServer.SubscribeResp.Parser, new[]{ "Exception" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::org.herbal3d.basil.protocol.BrothServer.UnsubscribeReq), global::org.herbal3d.basil.protocol.BrothServer.UnsubscribeReq.Parser, new[]{ "Auth", "Topic" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::org.herbal3d.basil.protocol.BrothServer.UnsubscribeResp), global::org.herbal3d.basil.protocol.BrothServer.UnsubscribeResp.Parser, new[]{ "Exception" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::org.herbal3d.basil.protocol.BrothServer.SubscriptionMadeResp), global::org.herbal3d.basil.protocol.BrothServer.SubscriptionMadeResp.Parser, new[]{ "Exception", "Topic", "Properties" }, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::org.herbal3d.basil.protocol.BrothServer.SubscriptionClearResp), global::org.herbal3d.basil.protocol.BrothServer.SubscriptionClearResp.Parser, new[]{ "Exception", "Topic", "Properties" }, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::org.herbal3d.basil.protocol.BrothServer.SendEventReq), global::org.herbal3d.basil.protocol.BrothServer.SendEventReq.Parser, new[]{ "Auth", "Topic", "Features" }, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::org.herbal3d.basil.protocol.BrothServer.SendEventResp), global::org.herbal3d.basil.protocol.BrothServer.SendEventResp.Parser, new[]{ "Topic" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::org.herbal3d.basil.protocol.BrothServer.EventResp), global::org.herbal3d.basil.protocol.BrothServer.EventResp.Parser, new[]{ "Exception", "Topic", "Filter", "Properties" }, null, null, new pbr::GeneratedClrTypeInfo[] { null, null, })
           }));
     }
     #endregion
@@ -160,7 +160,7 @@ namespace org.herbal3d.basil.protocol.BrothServer {
     /// <summary>Field number for the "properties" field.</summary>
     public const int PropertiesFieldNumber = 3;
     private static readonly pbc::MapField<string, string>.Codec _map_properties_codec
-        = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForString(18, ""), 26);
+        = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10), pb::FieldCodec.ForString(18), 26);
     private readonly pbc::MapField<string, string> properties_ = new pbc::MapField<string, string>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::MapField<string, string> Properties {
@@ -779,7 +779,7 @@ namespace org.herbal3d.basil.protocol.BrothServer {
     /// <summary>Field number for the "properties" field.</summary>
     public const int PropertiesFieldNumber = 3;
     private static readonly pbc::MapField<string, string>.Codec _map_properties_codec
-        = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForString(18, ""), 26);
+        = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10), pb::FieldCodec.ForString(18), 26);
     private readonly pbc::MapField<string, string> properties_ = new pbc::MapField<string, string>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::MapField<string, string> Properties {
@@ -1398,7 +1398,7 @@ namespace org.herbal3d.basil.protocol.BrothServer {
     /// <summary>Field number for the "properties" field.</summary>
     public const int PropertiesFieldNumber = 3;
     private static readonly pbc::MapField<string, string>.Codec _map_properties_codec
-        = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForString(18, ""), 26);
+        = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10), pb::FieldCodec.ForString(18), 26);
     private readonly pbc::MapField<string, string> properties_ = new pbc::MapField<string, string>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::MapField<string, string> Properties {
@@ -1584,7 +1584,7 @@ namespace org.herbal3d.basil.protocol.BrothServer {
     /// <summary>Field number for the "properties" field.</summary>
     public const int PropertiesFieldNumber = 3;
     private static readonly pbc::MapField<string, string>.Codec _map_properties_codec
-        = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForString(18, ""), 26);
+        = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10), pb::FieldCodec.ForString(18), 26);
     private readonly pbc::MapField<string, string> properties_ = new pbc::MapField<string, string>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::MapField<string, string> Properties {
@@ -1770,7 +1770,7 @@ namespace org.herbal3d.basil.protocol.BrothServer {
     /// <summary>Field number for the "features" field.</summary>
     public const int FeaturesFieldNumber = 3;
     private static readonly pbc::MapField<string, string>.Codec _map_features_codec
-        = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForString(18, ""), 26);
+        = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10), pb::FieldCodec.ForString(18), 26);
     private readonly pbc::MapField<string, string> features_ = new pbc::MapField<string, string>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::MapField<string, string> Features {
@@ -2086,7 +2086,7 @@ namespace org.herbal3d.basil.protocol.BrothServer {
     /// <summary>Field number for the "filter" field.</summary>
     public const int FilterFieldNumber = 3;
     private static readonly pbc::MapField<string, string>.Codec _map_filter_codec
-        = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForString(18, ""), 26);
+        = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10), pb::FieldCodec.ForString(18), 26);
     private readonly pbc::MapField<string, string> filter_ = new pbc::MapField<string, string>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::MapField<string, string> Filter {
@@ -2096,7 +2096,7 @@ namespace org.herbal3d.basil.protocol.BrothServer {
     /// <summary>Field number for the "properties" field.</summary>
     public const int PropertiesFieldNumber = 4;
     private static readonly pbc::MapField<string, string>.Codec _map_properties_codec
-        = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForString(18, ""), 34);
+        = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10), pb::FieldCodec.ForString(18), 34);
     private readonly pbc::MapField<string, string> properties_ = new pbc::MapField<string, string>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::MapField<string, string> Properties {

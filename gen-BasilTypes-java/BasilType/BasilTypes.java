@@ -401,13 +401,6 @@ public final class BasilTypes {
     }
 
     @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new Vector3();
-    }
-
-    @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
@@ -1017,13 +1010,6 @@ public final class BasilTypes {
       super(builder);
     }
     private Quaternion() {
-    }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new Quaternion();
     }
 
     @java.lang.Override
@@ -1710,13 +1696,6 @@ public final class BasilTypes {
     }
     private Transform() {
       matrix_ = emptyDoubleList();
-    }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new Transform();
     }
 
     @java.lang.Override
@@ -2581,13 +2560,6 @@ public final class BasilTypes {
     }
     private BasilException() {
       reason_ = "";
-    }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new BasilException();
     }
 
     @java.lang.Override
@@ -3519,13 +3491,6 @@ public final class BasilTypes {
     private CoordPosition() {
       posRef_ = 0;
       rotRef_ = 0;
-    }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new CoordPosition();
     }
 
     @java.lang.Override
@@ -4486,13 +4451,6 @@ public final class BasilTypes {
     }
 
     @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new ObjectIdentifier();
-    }
-
-    @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
@@ -5050,13 +5008,6 @@ public final class BasilTypes {
     }
     private InstanceIdentifier() {
       id_ = "";
-    }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new InstanceIdentifier();
     }
 
     @java.lang.Override
@@ -5631,13 +5582,6 @@ public final class BasilTypes {
       super(builder);
     }
     private AaBoundingBox() {
-    }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new AaBoundingBox();
     }
 
     @java.lang.Override
@@ -6513,13 +6457,6 @@ public final class BasilTypes {
     }
     private DisplayableInfo() {
       displayableType_ = "";
-    }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new DisplayableInfo();
     }
 
     @java.lang.Override
@@ -7667,13 +7604,6 @@ public final class BasilTypes {
     }
 
     @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new AssetInformation();
-    }
-
-    @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
@@ -8466,13 +8396,6 @@ public final class BasilTypes {
     }
 
     @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new PathDescription();
-    }
-
-    @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
@@ -9067,13 +8990,6 @@ public final class BasilTypes {
       super(builder);
     }
     private InstancePositionInfo() {
-    }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new InstancePositionInfo();
     }
 
     @java.lang.Override
@@ -10261,13 +10177,6 @@ public final class BasilTypes {
     }
 
     @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new AccessAuthorization();
-    }
-
-    @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
@@ -10982,13 +10891,6 @@ public final class BasilTypes {
     }
 
     @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new TraceInfo();
-    }
-
-    @java.lang.Override
     public final com.google.protobuf.UnknownFieldSet
     getUnknownFields() {
       return this.unknownFields;
@@ -11558,13 +11460,6 @@ public final class BasilTypes {
     }
     private BResponseRequest() {
       responseSessionKey_ = "";
-    }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new BResponseRequest();
     }
 
     @java.lang.Override
@@ -12336,10 +12231,18 @@ public final class BasilTypes {
       "\020\001\022\013\n\007CAMERAR\020\002B(\252\002%org.herbal3d.basil.p" +
       "rotocol.BasilTypeb\006proto3"
     };
-    descriptor = com.google.protobuf.Descriptors.FileDescriptor
+    com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
+        new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
+          public com.google.protobuf.ExtensionRegistry assignDescriptors(
+              com.google.protobuf.Descriptors.FileDescriptor root) {
+            descriptor = root;
+            return null;
+          }
+        };
+    com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-        });
+        }, assigner);
     internal_static_BasilType_Vector3_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_BasilType_Vector3_fieldAccessorTable = new
