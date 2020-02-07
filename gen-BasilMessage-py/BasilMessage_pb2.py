@@ -14,7 +14,6 @@ from google.protobuf import symbol_database as _symbol_database
 _sym_db = _symbol_database.Default()
 
 
-import BasilTypes_pb2 as BasilTypes__pb2
 
 
 DESCRIPTOR = _descriptor.FileDescriptor(
@@ -22,45 +21,9 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   package='BasilMessage',
   syntax='proto3',
   serialized_options=_b('\252\002#org.herbal3d.basil.protocol.Message'),
-  serialized_pb=_b('\n\x12\x42\x61silMessage.proto\x12\x0c\x42\x61silMessage\x1a\x10\x42\x61silTypes.proto\"\xb6\x05\n\x0c\x42\x61silMessage\x12\n\n\x02op\x18\x01 \x01(\x05\x12,\n\x04\x61uth\x18\x02 \x01(\x0b\x32\x1e.BasilType.AccessAuthorization\x12+\n\x05\x63lass\x18\x0e \x01(\x0e\x32\x1c.BasilMessage.TransportClass\x12-\n\x08objectId\x18\x03 \x01(\x0b\x32\x1b.BasilType.ObjectIdentifier\x12\x31\n\ninstanceId\x18\x04 \x01(\x0b\x32\x1d.BasilType.InstanceIdentifier\x12,\n\x03pos\x18\x05 \x01(\x0b\x32\x1f.BasilType.InstancePositionInfo\x12.\n\tassetInfo\x18\x06 \x01(\x0b\x32\x1b.BasilType.AssetInformation\x12&\n\x04\x61\x61\x62\x62\x18\x07 \x01(\x0b\x32\x18.BasilType.AaBoundingBox\x12\x0e\n\x06\x66ilter\x18\x08 \x01(\t\x12>\n\nproperties\x18\t \x03(\x0b\x32*.BasilMessage.BasilMessage.PropertiesEntry\x12\x42\n\x0copParameters\x18\n \x03(\x0b\x32,.BasilMessage.BasilMessage.OpParametersEntry\x12,\n\texception\x18\x0b \x01(\x0b\x32\x19.BasilType.BasilException\x12-\n\x08response\x18\r \x01(\x0b\x32\x1b.BasilType.BResponseRequest\x1a\x31\n\x0fPropertiesEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t:\x02\x38\x01\x1a\x33\n\x11OpParametersEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t:\x02\x38\x01*_\n\x0eTransportClass\x12\x0b\n\x07\x44\x65\x66\x61ult\x10\x00\x12\x10\n\x0cHighPriority\x10\n\x12\x0f\n\x0bMedPriority\x10\x14\x12\x0f\n\x0bLowPriority\x10\x1e\x12\x0c\n\x08\x42\x65stCase\x10(*\xbf\t\n\x0f\x42\x61silMessageOps\x12\x0e\n\nUnknownReq\x10\x00\x12!\n\x1cIdentifyDisplayableObjectReq\x10\x81 \x12\"\n\x1dIdentifyDisplayableObjectResp\x10\x82 \x12\x1f\n\x1a\x46orgetDisplayableObjectReq\x10\x83 \x12 \n\x1b\x46orgetDisplayableObjectResp\x10\x84 \x12\x1c\n\x17\x43reateObjectInstanceReq\x10\x85 \x12\x1d\n\x18\x43reateObjectInstanceResp\x10\x86 \x12\x1c\n\x17\x44\x65leteObjectInstanceReq\x10\x87 \x12\x1d\n\x18\x44\x65leteObjectInstanceResp\x10\x88 \x12\x1c\n\x17UpdateObjectPropertyReq\x10\x89 \x12\x1d\n\x18UpdateObjectPropertyResp\x10\x8a \x12\x1e\n\x19UpdateInstancePropertyReq\x10\x8b \x12\x1f\n\x1aUpdateInstancePropertyResp\x10\x8c \x12\x1e\n\x19UpdateInstancePositionReq\x10\x8d \x12\x1f\n\x1aUpdateInstancePositionResp\x10\x8e \x12\x1f\n\x1aRequestObjectPropertiesReq\x10\x8f \x12 \n\x1bRequestObjectPropertiesResp\x10\x90 \x12!\n\x1cRequestInstancePropertiesReq\x10\x91 \x12\"\n\x1dRequestInstancePropertiesResp\x10\x92 \x12\x14\n\x0f\x43loseSessionReq\x10\x93 \x12\x15\n\x10\x43loseSessionResp\x10\x94 \x12\x16\n\x11MakeConnectionReq\x10\x95 \x12\x17\n\x12MakeConnectionResp\x10\x96 \x12\x12\n\rAliveCheckReq\x10\x81@\x12\x13\n\x0e\x41liveCheckResp\x10\x82@\x12\x13\n\x0eOpenSessionReq\x10\x81`\x12\x14\n\x0fOpenSessionResp\x10\x82`\x12\x12\n\rCameraViewReq\x10\x83`\x12\x13\n\x0e\x43\x61meraViewResp\x10\x84`\x12\x16\n\x10RegisterTopicReq\x10\x81\x80\x01\x12\x17\n\x11RegisterTopicResp\x10\x82\x80\x01\x12\x18\n\x12\x44\x65registerTopicReq\x10\x83\x80\x01\x12\x19\n\x13\x44\x65registerTopicResp\x10\x84\x80\x01\x12\x12\n\x0cSubscribeReq\x10\x85\x80\x01\x12\x13\n\rSubscribeResp\x10\x86\x80\x01\x12\x14\n\x0eUnsubscribeReq\x10\x87\x80\x01\x12\x15\n\x0fUnsubscribeResp\x10\x88\x80\x01\x12\x12\n\x0cSendEventReq\x10\x89\x80\x01\x12\x13\n\rSendEventResp\x10\x90\x80\x01\x12\x0e\n\x08\x45ventReq\x10\x91\x80\x01\x12\x0f\n\tEventResp\x10\x92\x80\x01\x12\x19\n\x13SubscriptionMadeReq\x10\x93\x80\x01\x12\x1a\n\x14SubscriptionMadeResp\x10\x94\x80\x01\x12\x1a\n\x14SubscriptionClearReq\x10\x95\x80\x01\x12\x1b\n\x15SubscriptionClearResp\x10\x96\x80\x01\x42&\xaa\x02#org.herbal3d.basil.protocol.Messageb\x06proto3')
-  ,
-  dependencies=[BasilTypes__pb2.DESCRIPTOR,])
-
-_TRANSPORTCLASS = _descriptor.EnumDescriptor(
-  name='TransportClass',
-  full_name='BasilMessage.TransportClass',
-  filename=None,
-  file=DESCRIPTOR,
-  values=[
-    _descriptor.EnumValueDescriptor(
-      name='Default', index=0, number=0,
-      serialized_options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='HighPriority', index=1, number=10,
-      serialized_options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='MedPriority', index=2, number=20,
-      serialized_options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='LowPriority', index=3, number=30,
-      serialized_options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='BestCase', index=4, number=40,
-      serialized_options=None,
-      type=None),
-  ],
-  containing_type=None,
-  serialized_options=None,
-  serialized_start=751,
-  serialized_end=846,
+  serialized_pb=_b('\n\x12\x42\x61silMessage.proto\x12\x0c\x42\x61silMessage\"\xe5\x01\n\rPositionBlock\x12\x0b\n\x03Pos\x18\x01 \x03(\x01\x12\x0b\n\x03Rot\x18\x02 \x03(\x01\x12)\n\x06PosRef\x18\x03 \x01(\x0e\x32\x19.BasilMessage.CoordSystem\x12,\n\x06RotRef\x18\x04 \x01(\x0e\x32\x1c.BasilMessage.RotationSystem\x12\x0b\n\x03Vel\x18\x05 \x03(\x01\x12\x0c\n\x04Path\x18\x06 \x03(\x01\x12\x0f\n\x07ItemIdN\x18\n \x01(\r\x12\x0e\n\x06ItemId\x18\x0b \x01(\t\x12\x13\n\x0bSessionAuth\x18\x0c \x01(\t\x12\x10\n\x08ItemAuth\x18\r \x01(\t\"\x7f\n\nParamBlock\x12\x0f\n\x07\x41\x62ility\x18\x01 \x01(\t\x12\x32\n\x05Props\x18\x02 \x03(\x0b\x32#.BasilMessage.ParamBlock.PropsEntry\x1a,\n\nPropsEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t:\x02\x38\x01\"\xef\x04\n\x0c\x42\x61silMessage\x12\x14\n\x0cResponseCode\x18\x01 \x01(\r\x12\x13\n\x0bResponseKey\x18\x14 \x01(\t\x12\x10\n\x08StreamId\x18\x03 \x01(\r\x12\x17\n\x0fProtocolVersion\x18\x04 \x01(\r\x12\x11\n\tChangeSeq\x18\x1e \x01(\x04\x12\x12\n\nChangeTime\x18\x1f \x01(\x04\x12\x11\n\tQueueTime\x18( \x01(\r\x12\x10\n\x08SendTime\x18) \x01(\r\x12\x16\n\x0eTransportClass\x18* \x01(\r\x12\n\n\x02Op\x18\x05 \x01(\r\x12\x13\n\x0bSessionAuth\x18\x06 \x01(\t\x12\x0f\n\x07ItemIdN\x18\x07 \x01(\r\x12\x0e\n\x06ItemId\x18\x08 \x01(\t\x12\x10\n\x08ItemAuth\x18\x15 \x01(\t\x12\x36\n\x06IProps\x18\t \x03(\x0b\x32&.BasilMessage.BasilMessage.IPropsEntry\x12(\n\x06\x41Props\x18\n \x03(\x0b\x32\x18.BasilMessage.ParamBlock\x12.\n\tPositions\x18\x0b \x03(\x0b\x32\x1b.BasilMessage.PositionBlock\x12\x11\n\tException\x18\x0c \x01(\t\x12\x46\n\x0e\x45xceptionHints\x18\x16 \x03(\x0b\x32..BasilMessage.BasilMessage.ExceptionHintsEntry\x1a-\n\x0bIPropsEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t:\x02\x38\x01\x1a\x35\n\x13\x45xceptionHintsEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t:\x02\x38\x01*\xdd\x03\n\x0f\x42\x61silMessageOps\x12\x0e\n\nUnknownReq\x10\x00\x12\x11\n\rCreateItemReq\x10\x65\x12\x12\n\x0e\x43reateItemResp\x10\x66\x12\x11\n\rDeleteItemReq\x10g\x12\x12\n\x0e\x44\x65leteItemResp\x10h\x12\x11\n\rAddAbilityReq\x10i\x12\x12\n\x0e\x41\x64\x64\x41\x62ilityResp\x10j\x12\x14\n\x10RemoveAbilityReq\x10k\x12\x15\n\x11RemoveAbilityResp\x10l\x12\x18\n\x14RequestPropertiesReq\x10m\x12\x19\n\x15RequestPropertiesResp\x10n\x12\x17\n\x13UpdatePropertiesReq\x10o\x12\x18\n\x14UpdatePropertiesResp\x10p\x12\x13\n\x0eOpenSessionReq\x10\xc9\x01\x12\x14\n\x0fOpenSessionResp\x10\xca\x01\x12\x14\n\x0f\x43loseSessionReq\x10\xcb\x01\x12\x15\n\x10\x43loseSessionResp\x10\xcc\x01\x12\x16\n\x11MakeConnectionReq\x10\xcd\x01\x12\x17\n\x12MakeConnectionResp\x10\xce\x01\x12\x12\n\rAliveCheckReq\x10\xad\x02\x12\x13\n\x0e\x41liveCheckResp\x10\xae\x02*r\n\x0b\x43oordSystem\x12\t\n\x05WGS86\x10\x00\x12\n\n\x06\x43\x41MERA\x10\x01\x12\r\n\tCAMERAABS\x10\x02\x12\x0b\n\x07VIRTUAL\x10\x03\x12\x08\n\x04MOON\x10\x04\x12\x08\n\x04MARS\x10\x05\x12\x08\n\x04REL1\x10\x06\x12\x08\n\x04REL2\x10\x07\x12\x08\n\x04REL3\x10\x08*?\n\x0eRotationSystem\x12\n\n\x06WORLDR\x10\x00\x12\n\n\x06LOCALR\x10\x01\x12\x08\n\x04\x46ORR\x10\x02\x12\x0b\n\x07\x43\x41MERAR\x10\x03\x42&\xaa\x02#org.herbal3d.basil.protocol.Messageb\x06proto3')
 )
-_sym_db.RegisterEnumDescriptor(_TRANSPORTCLASS)
 
-TransportClass = enum_type_wrapper.EnumTypeWrapper(_TRANSPORTCLASS)
 _BASILMESSAGEOPS = _descriptor.EnumDescriptor(
   name='BasilMessageOps',
   full_name='BasilMessage.BasilMessageOps',
@@ -72,260 +35,286 @@ _BASILMESSAGEOPS = _descriptor.EnumDescriptor(
       serialized_options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='IdentifyDisplayableObjectReq', index=1, number=4097,
+      name='CreateItemReq', index=1, number=101,
       serialized_options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='IdentifyDisplayableObjectResp', index=2, number=4098,
+      name='CreateItemResp', index=2, number=102,
       serialized_options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='ForgetDisplayableObjectReq', index=3, number=4099,
+      name='DeleteItemReq', index=3, number=103,
       serialized_options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='ForgetDisplayableObjectResp', index=4, number=4100,
+      name='DeleteItemResp', index=4, number=104,
       serialized_options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='CreateObjectInstanceReq', index=5, number=4101,
+      name='AddAbilityReq', index=5, number=105,
       serialized_options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='CreateObjectInstanceResp', index=6, number=4102,
+      name='AddAbilityResp', index=6, number=106,
       serialized_options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='DeleteObjectInstanceReq', index=7, number=4103,
+      name='RemoveAbilityReq', index=7, number=107,
       serialized_options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='DeleteObjectInstanceResp', index=8, number=4104,
+      name='RemoveAbilityResp', index=8, number=108,
       serialized_options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='UpdateObjectPropertyReq', index=9, number=4105,
+      name='RequestPropertiesReq', index=9, number=109,
       serialized_options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='UpdateObjectPropertyResp', index=10, number=4106,
+      name='RequestPropertiesResp', index=10, number=110,
       serialized_options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='UpdateInstancePropertyReq', index=11, number=4107,
+      name='UpdatePropertiesReq', index=11, number=111,
       serialized_options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='UpdateInstancePropertyResp', index=12, number=4108,
+      name='UpdatePropertiesResp', index=12, number=112,
       serialized_options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='UpdateInstancePositionReq', index=13, number=4109,
+      name='OpenSessionReq', index=13, number=201,
       serialized_options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='UpdateInstancePositionResp', index=14, number=4110,
+      name='OpenSessionResp', index=14, number=202,
       serialized_options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='RequestObjectPropertiesReq', index=15, number=4111,
+      name='CloseSessionReq', index=15, number=203,
       serialized_options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='RequestObjectPropertiesResp', index=16, number=4112,
+      name='CloseSessionResp', index=16, number=204,
       serialized_options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='RequestInstancePropertiesReq', index=17, number=4113,
+      name='MakeConnectionReq', index=17, number=205,
       serialized_options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='RequestInstancePropertiesResp', index=18, number=4114,
+      name='MakeConnectionResp', index=18, number=206,
       serialized_options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='CloseSessionReq', index=19, number=4115,
+      name='AliveCheckReq', index=19, number=301,
       serialized_options=None,
       type=None),
     _descriptor.EnumValueDescriptor(
-      name='CloseSessionResp', index=20, number=4116,
-      serialized_options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='MakeConnectionReq', index=21, number=4117,
-      serialized_options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='MakeConnectionResp', index=22, number=4118,
-      serialized_options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='AliveCheckReq', index=23, number=8193,
-      serialized_options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='AliveCheckResp', index=24, number=8194,
-      serialized_options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='OpenSessionReq', index=25, number=12289,
-      serialized_options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='OpenSessionResp', index=26, number=12290,
-      serialized_options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='CameraViewReq', index=27, number=12291,
-      serialized_options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='CameraViewResp', index=28, number=12292,
-      serialized_options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='RegisterTopicReq', index=29, number=16385,
-      serialized_options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='RegisterTopicResp', index=30, number=16386,
-      serialized_options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='DeregisterTopicReq', index=31, number=16387,
-      serialized_options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='DeregisterTopicResp', index=32, number=16388,
-      serialized_options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='SubscribeReq', index=33, number=16389,
-      serialized_options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='SubscribeResp', index=34, number=16390,
-      serialized_options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='UnsubscribeReq', index=35, number=16391,
-      serialized_options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='UnsubscribeResp', index=36, number=16392,
-      serialized_options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='SendEventReq', index=37, number=16393,
-      serialized_options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='SendEventResp', index=38, number=16400,
-      serialized_options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='EventReq', index=39, number=16401,
-      serialized_options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='EventResp', index=40, number=16402,
-      serialized_options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='SubscriptionMadeReq', index=41, number=16403,
-      serialized_options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='SubscriptionMadeResp', index=42, number=16404,
-      serialized_options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='SubscriptionClearReq', index=43, number=16405,
-      serialized_options=None,
-      type=None),
-    _descriptor.EnumValueDescriptor(
-      name='SubscriptionClearResp', index=44, number=16406,
+      name='AliveCheckResp', index=20, number=302,
       serialized_options=None,
       type=None),
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=849,
-  serialized_end=2064,
+  serialized_start=1024,
+  serialized_end=1501,
 )
 _sym_db.RegisterEnumDescriptor(_BASILMESSAGEOPS)
 
 BasilMessageOps = enum_type_wrapper.EnumTypeWrapper(_BASILMESSAGEOPS)
-Default = 0
-HighPriority = 10
-MedPriority = 20
-LowPriority = 30
-BestCase = 40
+_COORDSYSTEM = _descriptor.EnumDescriptor(
+  name='CoordSystem',
+  full_name='BasilMessage.CoordSystem',
+  filename=None,
+  file=DESCRIPTOR,
+  values=[
+    _descriptor.EnumValueDescriptor(
+      name='WGS86', index=0, number=0,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='CAMERA', index=1, number=1,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='CAMERAABS', index=2, number=2,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='VIRTUAL', index=3, number=3,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='MOON', index=4, number=4,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='MARS', index=5, number=5,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='REL1', index=6, number=6,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='REL2', index=7, number=7,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='REL3', index=8, number=8,
+      serialized_options=None,
+      type=None),
+  ],
+  containing_type=None,
+  serialized_options=None,
+  serialized_start=1503,
+  serialized_end=1617,
+)
+_sym_db.RegisterEnumDescriptor(_COORDSYSTEM)
+
+CoordSystem = enum_type_wrapper.EnumTypeWrapper(_COORDSYSTEM)
+_ROTATIONSYSTEM = _descriptor.EnumDescriptor(
+  name='RotationSystem',
+  full_name='BasilMessage.RotationSystem',
+  filename=None,
+  file=DESCRIPTOR,
+  values=[
+    _descriptor.EnumValueDescriptor(
+      name='WORLDR', index=0, number=0,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='LOCALR', index=1, number=1,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='FORR', index=2, number=2,
+      serialized_options=None,
+      type=None),
+    _descriptor.EnumValueDescriptor(
+      name='CAMERAR', index=3, number=3,
+      serialized_options=None,
+      type=None),
+  ],
+  containing_type=None,
+  serialized_options=None,
+  serialized_start=1619,
+  serialized_end=1682,
+)
+_sym_db.RegisterEnumDescriptor(_ROTATIONSYSTEM)
+
+RotationSystem = enum_type_wrapper.EnumTypeWrapper(_ROTATIONSYSTEM)
 UnknownReq = 0
-IdentifyDisplayableObjectReq = 4097
-IdentifyDisplayableObjectResp = 4098
-ForgetDisplayableObjectReq = 4099
-ForgetDisplayableObjectResp = 4100
-CreateObjectInstanceReq = 4101
-CreateObjectInstanceResp = 4102
-DeleteObjectInstanceReq = 4103
-DeleteObjectInstanceResp = 4104
-UpdateObjectPropertyReq = 4105
-UpdateObjectPropertyResp = 4106
-UpdateInstancePropertyReq = 4107
-UpdateInstancePropertyResp = 4108
-UpdateInstancePositionReq = 4109
-UpdateInstancePositionResp = 4110
-RequestObjectPropertiesReq = 4111
-RequestObjectPropertiesResp = 4112
-RequestInstancePropertiesReq = 4113
-RequestInstancePropertiesResp = 4114
-CloseSessionReq = 4115
-CloseSessionResp = 4116
-MakeConnectionReq = 4117
-MakeConnectionResp = 4118
-AliveCheckReq = 8193
-AliveCheckResp = 8194
-OpenSessionReq = 12289
-OpenSessionResp = 12290
-CameraViewReq = 12291
-CameraViewResp = 12292
-RegisterTopicReq = 16385
-RegisterTopicResp = 16386
-DeregisterTopicReq = 16387
-DeregisterTopicResp = 16388
-SubscribeReq = 16389
-SubscribeResp = 16390
-UnsubscribeReq = 16391
-UnsubscribeResp = 16392
-SendEventReq = 16393
-SendEventResp = 16400
-EventReq = 16401
-EventResp = 16402
-SubscriptionMadeReq = 16403
-SubscriptionMadeResp = 16404
-SubscriptionClearReq = 16405
-SubscriptionClearResp = 16406
+CreateItemReq = 101
+CreateItemResp = 102
+DeleteItemReq = 103
+DeleteItemResp = 104
+AddAbilityReq = 105
+AddAbilityResp = 106
+RemoveAbilityReq = 107
+RemoveAbilityResp = 108
+RequestPropertiesReq = 109
+RequestPropertiesResp = 110
+UpdatePropertiesReq = 111
+UpdatePropertiesResp = 112
+OpenSessionReq = 201
+OpenSessionResp = 202
+CloseSessionReq = 203
+CloseSessionResp = 204
+MakeConnectionReq = 205
+MakeConnectionResp = 206
+AliveCheckReq = 301
+AliveCheckResp = 302
+WGS86 = 0
+CAMERA = 1
+CAMERAABS = 2
+VIRTUAL = 3
+MOON = 4
+MARS = 5
+REL1 = 6
+REL2 = 7
+REL3 = 8
+WORLDR = 0
+LOCALR = 1
+FORR = 2
+CAMERAR = 3
 
 
 
-_BASILMESSAGE_PROPERTIESENTRY = _descriptor.Descriptor(
-  name='PropertiesEntry',
-  full_name='BasilMessage.BasilMessage.PropertiesEntry',
+_POSITIONBLOCK = _descriptor.Descriptor(
+  name='PositionBlock',
+  full_name='BasilMessage.PositionBlock',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='key', full_name='BasilMessage.BasilMessage.PropertiesEntry.key', index=0,
-      number=1, type=9, cpp_type=9, label=1,
+      name='Pos', full_name='BasilMessage.PositionBlock.Pos', index=0,
+      number=1, type=1, cpp_type=5, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='Rot', full_name='BasilMessage.PositionBlock.Rot', index=1,
+      number=2, type=1, cpp_type=5, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='PosRef', full_name='BasilMessage.PositionBlock.PosRef', index=2,
+      number=3, type=14, cpp_type=8, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='RotRef', full_name='BasilMessage.PositionBlock.RotRef', index=3,
+      number=4, type=14, cpp_type=8, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='Vel', full_name='BasilMessage.PositionBlock.Vel', index=4,
+      number=5, type=1, cpp_type=5, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='Path', full_name='BasilMessage.PositionBlock.Path', index=5,
+      number=6, type=1, cpp_type=5, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='ItemIdN', full_name='BasilMessage.PositionBlock.ItemIdN', index=6,
+      number=10, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='ItemId', full_name='BasilMessage.PositionBlock.ItemId', index=7,
+      number=11, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='value', full_name='BasilMessage.BasilMessage.PropertiesEntry.value', index=1,
-      number=2, type=9, cpp_type=9, label=1,
+      name='SessionAuth', full_name='BasilMessage.PositionBlock.SessionAuth', index=8,
+      number=12, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='ItemAuth', full_name='BasilMessage.PositionBlock.ItemAuth', index=9,
+      number=13, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -336,32 +325,33 @@ _BASILMESSAGE_PROPERTIESENTRY = _descriptor.Descriptor(
   nested_types=[],
   enum_types=[
   ],
-  serialized_options=_b('8\001'),
+  serialized_options=None,
   is_extendable=False,
   syntax='proto3',
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=647,
-  serialized_end=696,
+  serialized_start=37,
+  serialized_end=266,
 )
 
-_BASILMESSAGE_OPPARAMETERSENTRY = _descriptor.Descriptor(
-  name='OpParametersEntry',
-  full_name='BasilMessage.BasilMessage.OpParametersEntry',
+
+_PARAMBLOCK_PROPSENTRY = _descriptor.Descriptor(
+  name='PropsEntry',
+  full_name='BasilMessage.ParamBlock.PropsEntry',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='key', full_name='BasilMessage.BasilMessage.OpParametersEntry.key', index=0,
+      name='key', full_name='BasilMessage.ParamBlock.PropsEntry.key', index=0,
       number=1, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='value', full_name='BasilMessage.BasilMessage.OpParametersEntry.value', index=1,
+      name='value', full_name='BasilMessage.ParamBlock.PropsEntry.value', index=1,
       number=2, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
@@ -379,8 +369,120 @@ _BASILMESSAGE_OPPARAMETERSENTRY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=698,
-  serialized_end=749,
+  serialized_start=351,
+  serialized_end=395,
+)
+
+_PARAMBLOCK = _descriptor.Descriptor(
+  name='ParamBlock',
+  full_name='BasilMessage.ParamBlock',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='Ability', full_name='BasilMessage.ParamBlock.Ability', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='Props', full_name='BasilMessage.ParamBlock.Props', index=1,
+      number=2, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[_PARAMBLOCK_PROPSENTRY, ],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=268,
+  serialized_end=395,
+)
+
+
+_BASILMESSAGE_IPROPSENTRY = _descriptor.Descriptor(
+  name='IPropsEntry',
+  full_name='BasilMessage.BasilMessage.IPropsEntry',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='key', full_name='BasilMessage.BasilMessage.IPropsEntry.key', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='value', full_name='BasilMessage.BasilMessage.IPropsEntry.value', index=1,
+      number=2, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=_b('8\001'),
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=921,
+  serialized_end=966,
+)
+
+_BASILMESSAGE_EXCEPTIONHINTSENTRY = _descriptor.Descriptor(
+  name='ExceptionHintsEntry',
+  full_name='BasilMessage.BasilMessage.ExceptionHintsEntry',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='key', full_name='BasilMessage.BasilMessage.ExceptionHintsEntry.key', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='value', full_name='BasilMessage.BasilMessage.ExceptionHintsEntry.value', index=1,
+      number=2, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=_b('8\001'),
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=968,
+  serialized_end=1021,
 )
 
 _BASILMESSAGE = _descriptor.Descriptor(
@@ -391,100 +493,142 @@ _BASILMESSAGE = _descriptor.Descriptor(
   containing_type=None,
   fields=[
     _descriptor.FieldDescriptor(
-      name='op', full_name='BasilMessage.BasilMessage.op', index=0,
-      number=1, type=5, cpp_type=1, label=1,
+      name='ResponseCode', full_name='BasilMessage.BasilMessage.ResponseCode', index=0,
+      number=1, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='auth', full_name='BasilMessage.BasilMessage.auth', index=1,
-      number=2, type=11, cpp_type=10, label=1,
-      has_default_value=False, default_value=None,
+      name='ResponseKey', full_name='BasilMessage.BasilMessage.ResponseKey', index=1,
+      number=20, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='class', full_name='BasilMessage.BasilMessage.class', index=2,
-      number=14, type=14, cpp_type=8, label=1,
+      name='StreamId', full_name='BasilMessage.BasilMessage.StreamId', index=2,
+      number=3, type=13, cpp_type=3, label=1,
       has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='objectId', full_name='BasilMessage.BasilMessage.objectId', index=3,
-      number=3, type=11, cpp_type=10, label=1,
-      has_default_value=False, default_value=None,
+      name='ProtocolVersion', full_name='BasilMessage.BasilMessage.ProtocolVersion', index=3,
+      number=4, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='instanceId', full_name='BasilMessage.BasilMessage.instanceId', index=4,
-      number=4, type=11, cpp_type=10, label=1,
-      has_default_value=False, default_value=None,
+      name='ChangeSeq', full_name='BasilMessage.BasilMessage.ChangeSeq', index=4,
+      number=30, type=4, cpp_type=4, label=1,
+      has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='pos', full_name='BasilMessage.BasilMessage.pos', index=5,
-      number=5, type=11, cpp_type=10, label=1,
-      has_default_value=False, default_value=None,
+      name='ChangeTime', full_name='BasilMessage.BasilMessage.ChangeTime', index=5,
+      number=31, type=4, cpp_type=4, label=1,
+      has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='assetInfo', full_name='BasilMessage.BasilMessage.assetInfo', index=6,
-      number=6, type=11, cpp_type=10, label=1,
-      has_default_value=False, default_value=None,
+      name='QueueTime', full_name='BasilMessage.BasilMessage.QueueTime', index=6,
+      number=40, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='aabb', full_name='BasilMessage.BasilMessage.aabb', index=7,
-      number=7, type=11, cpp_type=10, label=1,
-      has_default_value=False, default_value=None,
+      name='SendTime', full_name='BasilMessage.BasilMessage.SendTime', index=7,
+      number=41, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='filter', full_name='BasilMessage.BasilMessage.filter', index=8,
+      name='TransportClass', full_name='BasilMessage.BasilMessage.TransportClass', index=8,
+      number=42, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='Op', full_name='BasilMessage.BasilMessage.Op', index=9,
+      number=5, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='SessionAuth', full_name='BasilMessage.BasilMessage.SessionAuth', index=10,
+      number=6, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='ItemIdN', full_name='BasilMessage.BasilMessage.ItemIdN', index=11,
+      number=7, type=13, cpp_type=3, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='ItemId', full_name='BasilMessage.BasilMessage.ItemId', index=12,
       number=8, type=9, cpp_type=9, label=1,
       has_default_value=False, default_value=_b("").decode('utf-8'),
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='properties', full_name='BasilMessage.BasilMessage.properties', index=9,
+      name='ItemAuth', full_name='BasilMessage.BasilMessage.ItemAuth', index=13,
+      number=21, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='IProps', full_name='BasilMessage.BasilMessage.IProps', index=14,
       number=9, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='opParameters', full_name='BasilMessage.BasilMessage.opParameters', index=10,
+      name='AProps', full_name='BasilMessage.BasilMessage.AProps', index=15,
       number=10, type=11, cpp_type=10, label=3,
       has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='exception', full_name='BasilMessage.BasilMessage.exception', index=11,
-      number=11, type=11, cpp_type=10, label=1,
-      has_default_value=False, default_value=None,
+      name='Positions', full_name='BasilMessage.BasilMessage.Positions', index=16,
+      number=11, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
     _descriptor.FieldDescriptor(
-      name='response', full_name='BasilMessage.BasilMessage.response', index=12,
-      number=13, type=11, cpp_type=10, label=1,
-      has_default_value=False, default_value=None,
+      name='Exception', full_name='BasilMessage.BasilMessage.Exception', index=17,
+      number=12, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=_b("").decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR),
+    _descriptor.FieldDescriptor(
+      name='ExceptionHints', full_name='BasilMessage.BasilMessage.ExceptionHints', index=18,
+      number=22, type=11, cpp_type=10, label=3,
+      has_default_value=False, default_value=[],
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR),
   ],
   extensions=[
   ],
-  nested_types=[_BASILMESSAGE_PROPERTIESENTRY, _BASILMESSAGE_OPPARAMETERSENTRY, ],
+  nested_types=[_BASILMESSAGE_IPROPSENTRY, _BASILMESSAGE_EXCEPTIONHINTSENTRY, ],
   enum_types=[
   ],
   serialized_options=None,
@@ -493,41 +637,63 @@ _BASILMESSAGE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=55,
-  serialized_end=749,
+  serialized_start=398,
+  serialized_end=1021,
 )
 
-_BASILMESSAGE_PROPERTIESENTRY.containing_type = _BASILMESSAGE
-_BASILMESSAGE_OPPARAMETERSENTRY.containing_type = _BASILMESSAGE
-_BASILMESSAGE.fields_by_name['auth'].message_type = BasilTypes__pb2._ACCESSAUTHORIZATION
-_BASILMESSAGE.fields_by_name['class'].enum_type = _TRANSPORTCLASS
-_BASILMESSAGE.fields_by_name['objectId'].message_type = BasilTypes__pb2._OBJECTIDENTIFIER
-_BASILMESSAGE.fields_by_name['instanceId'].message_type = BasilTypes__pb2._INSTANCEIDENTIFIER
-_BASILMESSAGE.fields_by_name['pos'].message_type = BasilTypes__pb2._INSTANCEPOSITIONINFO
-_BASILMESSAGE.fields_by_name['assetInfo'].message_type = BasilTypes__pb2._ASSETINFORMATION
-_BASILMESSAGE.fields_by_name['aabb'].message_type = BasilTypes__pb2._AABOUNDINGBOX
-_BASILMESSAGE.fields_by_name['properties'].message_type = _BASILMESSAGE_PROPERTIESENTRY
-_BASILMESSAGE.fields_by_name['opParameters'].message_type = _BASILMESSAGE_OPPARAMETERSENTRY
-_BASILMESSAGE.fields_by_name['exception'].message_type = BasilTypes__pb2._BASILEXCEPTION
-_BASILMESSAGE.fields_by_name['response'].message_type = BasilTypes__pb2._BRESPONSEREQUEST
+_POSITIONBLOCK.fields_by_name['PosRef'].enum_type = _COORDSYSTEM
+_POSITIONBLOCK.fields_by_name['RotRef'].enum_type = _ROTATIONSYSTEM
+_PARAMBLOCK_PROPSENTRY.containing_type = _PARAMBLOCK
+_PARAMBLOCK.fields_by_name['Props'].message_type = _PARAMBLOCK_PROPSENTRY
+_BASILMESSAGE_IPROPSENTRY.containing_type = _BASILMESSAGE
+_BASILMESSAGE_EXCEPTIONHINTSENTRY.containing_type = _BASILMESSAGE
+_BASILMESSAGE.fields_by_name['IProps'].message_type = _BASILMESSAGE_IPROPSENTRY
+_BASILMESSAGE.fields_by_name['AProps'].message_type = _PARAMBLOCK
+_BASILMESSAGE.fields_by_name['Positions'].message_type = _POSITIONBLOCK
+_BASILMESSAGE.fields_by_name['ExceptionHints'].message_type = _BASILMESSAGE_EXCEPTIONHINTSENTRY
+DESCRIPTOR.message_types_by_name['PositionBlock'] = _POSITIONBLOCK
+DESCRIPTOR.message_types_by_name['ParamBlock'] = _PARAMBLOCK
 DESCRIPTOR.message_types_by_name['BasilMessage'] = _BASILMESSAGE
-DESCRIPTOR.enum_types_by_name['TransportClass'] = _TRANSPORTCLASS
 DESCRIPTOR.enum_types_by_name['BasilMessageOps'] = _BASILMESSAGEOPS
+DESCRIPTOR.enum_types_by_name['CoordSystem'] = _COORDSYSTEM
+DESCRIPTOR.enum_types_by_name['RotationSystem'] = _ROTATIONSYSTEM
 _sym_db.RegisterFileDescriptor(DESCRIPTOR)
+
+PositionBlock = _reflection.GeneratedProtocolMessageType('PositionBlock', (_message.Message,), {
+  'DESCRIPTOR' : _POSITIONBLOCK,
+  '__module__' : 'BasilMessage_pb2'
+  # @@protoc_insertion_point(class_scope:BasilMessage.PositionBlock)
+  })
+_sym_db.RegisterMessage(PositionBlock)
+
+ParamBlock = _reflection.GeneratedProtocolMessageType('ParamBlock', (_message.Message,), {
+
+  'PropsEntry' : _reflection.GeneratedProtocolMessageType('PropsEntry', (_message.Message,), {
+    'DESCRIPTOR' : _PARAMBLOCK_PROPSENTRY,
+    '__module__' : 'BasilMessage_pb2'
+    # @@protoc_insertion_point(class_scope:BasilMessage.ParamBlock.PropsEntry)
+    })
+  ,
+  'DESCRIPTOR' : _PARAMBLOCK,
+  '__module__' : 'BasilMessage_pb2'
+  # @@protoc_insertion_point(class_scope:BasilMessage.ParamBlock)
+  })
+_sym_db.RegisterMessage(ParamBlock)
+_sym_db.RegisterMessage(ParamBlock.PropsEntry)
 
 BasilMessage = _reflection.GeneratedProtocolMessageType('BasilMessage', (_message.Message,), {
 
-  'PropertiesEntry' : _reflection.GeneratedProtocolMessageType('PropertiesEntry', (_message.Message,), {
-    'DESCRIPTOR' : _BASILMESSAGE_PROPERTIESENTRY,
+  'IPropsEntry' : _reflection.GeneratedProtocolMessageType('IPropsEntry', (_message.Message,), {
+    'DESCRIPTOR' : _BASILMESSAGE_IPROPSENTRY,
     '__module__' : 'BasilMessage_pb2'
-    # @@protoc_insertion_point(class_scope:BasilMessage.BasilMessage.PropertiesEntry)
+    # @@protoc_insertion_point(class_scope:BasilMessage.BasilMessage.IPropsEntry)
     })
   ,
 
-  'OpParametersEntry' : _reflection.GeneratedProtocolMessageType('OpParametersEntry', (_message.Message,), {
-    'DESCRIPTOR' : _BASILMESSAGE_OPPARAMETERSENTRY,
+  'ExceptionHintsEntry' : _reflection.GeneratedProtocolMessageType('ExceptionHintsEntry', (_message.Message,), {
+    'DESCRIPTOR' : _BASILMESSAGE_EXCEPTIONHINTSENTRY,
     '__module__' : 'BasilMessage_pb2'
-    # @@protoc_insertion_point(class_scope:BasilMessage.BasilMessage.OpParametersEntry)
+    # @@protoc_insertion_point(class_scope:BasilMessage.BasilMessage.ExceptionHintsEntry)
     })
   ,
   'DESCRIPTOR' : _BASILMESSAGE,
@@ -535,11 +701,12 @@ BasilMessage = _reflection.GeneratedProtocolMessageType('BasilMessage', (_messag
   # @@protoc_insertion_point(class_scope:BasilMessage.BasilMessage)
   })
 _sym_db.RegisterMessage(BasilMessage)
-_sym_db.RegisterMessage(BasilMessage.PropertiesEntry)
-_sym_db.RegisterMessage(BasilMessage.OpParametersEntry)
+_sym_db.RegisterMessage(BasilMessage.IPropsEntry)
+_sym_db.RegisterMessage(BasilMessage.ExceptionHintsEntry)
 
 
 DESCRIPTOR._options = None
-_BASILMESSAGE_PROPERTIESENTRY._options = None
-_BASILMESSAGE_OPPARAMETERSENTRY._options = None
+_PARAMBLOCK_PROPSENTRY._options = None
+_BASILMESSAGE_IPROPSENTRY._options = None
+_BASILMESSAGE_EXCEPTIONHINTSENTRY._options = None
 # @@protoc_insertion_point(module_scope)

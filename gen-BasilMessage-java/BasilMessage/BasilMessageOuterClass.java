@@ -15,165 +15,8 @@ public final class BasilMessageOuterClass {
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
   /**
-   * Protobuf enum {@code BasilMessage.TransportClass}
-   */
-  public enum TransportClass
-      implements com.google.protobuf.ProtocolMessageEnum {
-    /**
-     * <code>Default = 0;</code>
-     */
-    Default(0),
-    /**
-     * <pre>
-     * movement or announcements
-     * </pre>
-     *
-     * <code>HighPriority = 10;</code>
-     */
-    HighPriority(10),
-    /**
-     * <pre>
-     * significant scenery
-     * </pre>
-     *
-     * <code>MedPriority = 20;</code>
-     */
-    MedPriority(20),
-    /**
-     * <pre>
-     * scenery
-     * </pre>
-     *
-     * <code>LowPriority = 30;</code>
-     */
-    LowPriority(30),
-    /**
-     * <pre>
-     * distant scenery
-     * </pre>
-     *
-     * <code>BestCase = 40;</code>
-     */
-    BestCase(40),
-    UNRECOGNIZED(-1),
-    ;
-
-    /**
-     * <code>Default = 0;</code>
-     */
-    public static final int Default_VALUE = 0;
-    /**
-     * <pre>
-     * movement or announcements
-     * </pre>
-     *
-     * <code>HighPriority = 10;</code>
-     */
-    public static final int HighPriority_VALUE = 10;
-    /**
-     * <pre>
-     * significant scenery
-     * </pre>
-     *
-     * <code>MedPriority = 20;</code>
-     */
-    public static final int MedPriority_VALUE = 20;
-    /**
-     * <pre>
-     * scenery
-     * </pre>
-     *
-     * <code>LowPriority = 30;</code>
-     */
-    public static final int LowPriority_VALUE = 30;
-    /**
-     * <pre>
-     * distant scenery
-     * </pre>
-     *
-     * <code>BestCase = 40;</code>
-     */
-    public static final int BestCase_VALUE = 40;
-
-
-    public final int getNumber() {
-      if (this == UNRECOGNIZED) {
-        throw new java.lang.IllegalArgumentException(
-            "Can't get the number of an unknown enum value.");
-      }
-      return value;
-    }
-
-    /**
-     * @deprecated Use {@link #forNumber(int)} instead.
-     */
-    @java.lang.Deprecated
-    public static TransportClass valueOf(int value) {
-      return forNumber(value);
-    }
-
-    public static TransportClass forNumber(int value) {
-      switch (value) {
-        case 0: return Default;
-        case 10: return HighPriority;
-        case 20: return MedPriority;
-        case 30: return LowPriority;
-        case 40: return BestCase;
-        default: return null;
-      }
-    }
-
-    public static com.google.protobuf.Internal.EnumLiteMap<TransportClass>
-        internalGetValueMap() {
-      return internalValueMap;
-    }
-    private static final com.google.protobuf.Internal.EnumLiteMap<
-        TransportClass> internalValueMap =
-          new com.google.protobuf.Internal.EnumLiteMap<TransportClass>() {
-            public TransportClass findValueByNumber(int number) {
-              return TransportClass.forNumber(number);
-            }
-          };
-
-    public final com.google.protobuf.Descriptors.EnumValueDescriptor
-        getValueDescriptor() {
-      return getDescriptor().getValues().get(ordinal());
-    }
-    public final com.google.protobuf.Descriptors.EnumDescriptor
-        getDescriptorForType() {
-      return getDescriptor();
-    }
-    public static final com.google.protobuf.Descriptors.EnumDescriptor
-        getDescriptor() {
-      return BasilMessage.BasilMessageOuterClass.getDescriptor().getEnumTypes().get(0);
-    }
-
-    private static final TransportClass[] VALUES = values();
-
-    public static TransportClass valueOf(
-        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
-      if (desc.getType() != getDescriptor()) {
-        throw new java.lang.IllegalArgumentException(
-          "EnumValueDescriptor is not for this type.");
-      }
-      if (desc.getIndex() == -1) {
-        return UNRECOGNIZED;
-      }
-      return VALUES[desc.getIndex()];
-    }
-
-    private final int value;
-
-    private TransportClass(int value) {
-      this.value = value;
-    }
-
-    // @@protoc_insertion_point(enum_scope:BasilMessage.TransportClass)
-  }
-
-  /**
    * <pre>
-   * The operation codes that go into BasilMessage.op
+   * The operations
    * </pre>
    *
    * Protobuf enum {@code BasilMessage.BasilMessageOps}
@@ -185,193 +28,85 @@ public final class BasilMessageOuterClass {
      */
     UnknownReq(0),
     /**
-     * <code>IdentifyDisplayableObjectReq = 4097;</code>
+     * <code>CreateItemReq = 101;</code>
      */
-    IdentifyDisplayableObjectReq(4097),
+    CreateItemReq(101),
     /**
-     * <code>IdentifyDisplayableObjectResp = 4098;</code>
+     * <code>CreateItemResp = 102;</code>
      */
-    IdentifyDisplayableObjectResp(4098),
+    CreateItemResp(102),
     /**
-     * <code>ForgetDisplayableObjectReq = 4099;</code>
+     * <code>DeleteItemReq = 103;</code>
      */
-    ForgetDisplayableObjectReq(4099),
+    DeleteItemReq(103),
     /**
-     * <code>ForgetDisplayableObjectResp = 4100;</code>
+     * <code>DeleteItemResp = 104;</code>
      */
-    ForgetDisplayableObjectResp(4100),
+    DeleteItemResp(104),
     /**
-     * <code>CreateObjectInstanceReq = 4101;</code>
+     * <code>AddAbilityReq = 105;</code>
      */
-    CreateObjectInstanceReq(4101),
+    AddAbilityReq(105),
     /**
-     * <code>CreateObjectInstanceResp = 4102;</code>
+     * <code>AddAbilityResp = 106;</code>
      */
-    CreateObjectInstanceResp(4102),
+    AddAbilityResp(106),
     /**
-     * <code>DeleteObjectInstanceReq = 4103;</code>
+     * <code>RemoveAbilityReq = 107;</code>
      */
-    DeleteObjectInstanceReq(4103),
+    RemoveAbilityReq(107),
     /**
-     * <code>DeleteObjectInstanceResp = 4104;</code>
+     * <code>RemoveAbilityResp = 108;</code>
      */
-    DeleteObjectInstanceResp(4104),
+    RemoveAbilityResp(108),
     /**
-     * <code>UpdateObjectPropertyReq = 4105;</code>
+     * <code>RequestPropertiesReq = 109;</code>
      */
-    UpdateObjectPropertyReq(4105),
+    RequestPropertiesReq(109),
     /**
-     * <code>UpdateObjectPropertyResp = 4106;</code>
+     * <code>RequestPropertiesResp = 110;</code>
      */
-    UpdateObjectPropertyResp(4106),
+    RequestPropertiesResp(110),
     /**
-     * <code>UpdateInstancePropertyReq = 4107;</code>
+     * <code>UpdatePropertiesReq = 111;</code>
      */
-    UpdateInstancePropertyReq(4107),
+    UpdatePropertiesReq(111),
     /**
-     * <code>UpdateInstancePropertyResp = 4108;</code>
+     * <code>UpdatePropertiesResp = 112;</code>
      */
-    UpdateInstancePropertyResp(4108),
+    UpdatePropertiesResp(112),
     /**
-     * <code>UpdateInstancePositionReq = 4109;</code>
+     * <code>OpenSessionReq = 201;</code>
      */
-    UpdateInstancePositionReq(4109),
+    OpenSessionReq(201),
     /**
-     * <code>UpdateInstancePositionResp = 4110;</code>
+     * <code>OpenSessionResp = 202;</code>
      */
-    UpdateInstancePositionResp(4110),
+    OpenSessionResp(202),
     /**
-     * <code>RequestObjectPropertiesReq = 4111;</code>
+     * <code>CloseSessionReq = 203;</code>
      */
-    RequestObjectPropertiesReq(4111),
+    CloseSessionReq(203),
     /**
-     * <code>RequestObjectPropertiesResp = 4112;</code>
+     * <code>CloseSessionResp = 204;</code>
      */
-    RequestObjectPropertiesResp(4112),
+    CloseSessionResp(204),
     /**
-     * <code>RequestInstancePropertiesReq = 4113;</code>
+     * <code>MakeConnectionReq = 205;</code>
      */
-    RequestInstancePropertiesReq(4113),
+    MakeConnectionReq(205),
     /**
-     * <code>RequestInstancePropertiesResp = 4114;</code>
+     * <code>MakeConnectionResp = 206;</code>
      */
-    RequestInstancePropertiesResp(4114),
+    MakeConnectionResp(206),
     /**
-     * <code>CloseSessionReq = 4115;</code>
+     * <code>AliveCheckReq = 301;</code>
      */
-    CloseSessionReq(4115),
+    AliveCheckReq(301),
     /**
-     * <code>CloseSessionResp = 4116;</code>
+     * <code>AliveCheckResp = 302;</code>
      */
-    CloseSessionResp(4116),
-    /**
-     * <code>MakeConnectionReq = 4117;</code>
-     */
-    MakeConnectionReq(4117),
-    /**
-     * <code>MakeConnectionResp = 4118;</code>
-     */
-    MakeConnectionResp(4118),
-    /**
-     * <pre>
-     * AliveCheck ping/pong
-     * </pre>
-     *
-     * <code>AliveCheckReq = 8193;</code>
-     */
-    AliveCheckReq(8193),
-    /**
-     * <code>AliveCheckResp = 8194;</code>
-     */
-    AliveCheckResp(8194),
-    /**
-     * <pre>
-     * SpaceServer
-     * </pre>
-     *
-     * <code>OpenSessionReq = 12289;</code>
-     */
-    OpenSessionReq(12289),
-    /**
-     * <code>OpenSessionResp = 12290;</code>
-     */
-    OpenSessionResp(12290),
-    /**
-     * <code>CameraViewReq = 12291;</code>
-     */
-    CameraViewReq(12291),
-    /**
-     * <code>CameraViewResp = 12292;</code>
-     */
-    CameraViewResp(12292),
-    /**
-     * <pre>
-     * BrothServer
-     * </pre>
-     *
-     * <code>RegisterTopicReq = 16385;</code>
-     */
-    RegisterTopicReq(16385),
-    /**
-     * <code>RegisterTopicResp = 16386;</code>
-     */
-    RegisterTopicResp(16386),
-    /**
-     * <code>DeregisterTopicReq = 16387;</code>
-     */
-    DeregisterTopicReq(16387),
-    /**
-     * <code>DeregisterTopicResp = 16388;</code>
-     */
-    DeregisterTopicResp(16388),
-    /**
-     * <code>SubscribeReq = 16389;</code>
-     */
-    SubscribeReq(16389),
-    /**
-     * <code>SubscribeResp = 16390;</code>
-     */
-    SubscribeResp(16390),
-    /**
-     * <code>UnsubscribeReq = 16391;</code>
-     */
-    UnsubscribeReq(16391),
-    /**
-     * <code>UnsubscribeResp = 16392;</code>
-     */
-    UnsubscribeResp(16392),
-    /**
-     * <code>SendEventReq = 16393;</code>
-     */
-    SendEventReq(16393),
-    /**
-     * <code>SendEventResp = 16400;</code>
-     */
-    SendEventResp(16400),
-    /**
-     * <code>EventReq = 16401;</code>
-     */
-    EventReq(16401),
-    /**
-     * <code>EventResp = 16402;</code>
-     */
-    EventResp(16402),
-    /**
-     * <code>SubscriptionMadeReq = 16403;</code>
-     */
-    SubscriptionMadeReq(16403),
-    /**
-     * <code>SubscriptionMadeResp = 16404;</code>
-     */
-    SubscriptionMadeResp(16404),
-    /**
-     * <code>SubscriptionClearReq = 16405;</code>
-     */
-    SubscriptionClearReq(16405),
-    /**
-     * <code>SubscriptionClearResp = 16406;</code>
-     */
-    SubscriptionClearResp(16406),
+    AliveCheckResp(302),
     UNRECOGNIZED(-1),
     ;
 
@@ -380,193 +115,85 @@ public final class BasilMessageOuterClass {
      */
     public static final int UnknownReq_VALUE = 0;
     /**
-     * <code>IdentifyDisplayableObjectReq = 4097;</code>
+     * <code>CreateItemReq = 101;</code>
      */
-    public static final int IdentifyDisplayableObjectReq_VALUE = 4097;
+    public static final int CreateItemReq_VALUE = 101;
     /**
-     * <code>IdentifyDisplayableObjectResp = 4098;</code>
+     * <code>CreateItemResp = 102;</code>
      */
-    public static final int IdentifyDisplayableObjectResp_VALUE = 4098;
+    public static final int CreateItemResp_VALUE = 102;
     /**
-     * <code>ForgetDisplayableObjectReq = 4099;</code>
+     * <code>DeleteItemReq = 103;</code>
      */
-    public static final int ForgetDisplayableObjectReq_VALUE = 4099;
+    public static final int DeleteItemReq_VALUE = 103;
     /**
-     * <code>ForgetDisplayableObjectResp = 4100;</code>
+     * <code>DeleteItemResp = 104;</code>
      */
-    public static final int ForgetDisplayableObjectResp_VALUE = 4100;
+    public static final int DeleteItemResp_VALUE = 104;
     /**
-     * <code>CreateObjectInstanceReq = 4101;</code>
+     * <code>AddAbilityReq = 105;</code>
      */
-    public static final int CreateObjectInstanceReq_VALUE = 4101;
+    public static final int AddAbilityReq_VALUE = 105;
     /**
-     * <code>CreateObjectInstanceResp = 4102;</code>
+     * <code>AddAbilityResp = 106;</code>
      */
-    public static final int CreateObjectInstanceResp_VALUE = 4102;
+    public static final int AddAbilityResp_VALUE = 106;
     /**
-     * <code>DeleteObjectInstanceReq = 4103;</code>
+     * <code>RemoveAbilityReq = 107;</code>
      */
-    public static final int DeleteObjectInstanceReq_VALUE = 4103;
+    public static final int RemoveAbilityReq_VALUE = 107;
     /**
-     * <code>DeleteObjectInstanceResp = 4104;</code>
+     * <code>RemoveAbilityResp = 108;</code>
      */
-    public static final int DeleteObjectInstanceResp_VALUE = 4104;
+    public static final int RemoveAbilityResp_VALUE = 108;
     /**
-     * <code>UpdateObjectPropertyReq = 4105;</code>
+     * <code>RequestPropertiesReq = 109;</code>
      */
-    public static final int UpdateObjectPropertyReq_VALUE = 4105;
+    public static final int RequestPropertiesReq_VALUE = 109;
     /**
-     * <code>UpdateObjectPropertyResp = 4106;</code>
+     * <code>RequestPropertiesResp = 110;</code>
      */
-    public static final int UpdateObjectPropertyResp_VALUE = 4106;
+    public static final int RequestPropertiesResp_VALUE = 110;
     /**
-     * <code>UpdateInstancePropertyReq = 4107;</code>
+     * <code>UpdatePropertiesReq = 111;</code>
      */
-    public static final int UpdateInstancePropertyReq_VALUE = 4107;
+    public static final int UpdatePropertiesReq_VALUE = 111;
     /**
-     * <code>UpdateInstancePropertyResp = 4108;</code>
+     * <code>UpdatePropertiesResp = 112;</code>
      */
-    public static final int UpdateInstancePropertyResp_VALUE = 4108;
+    public static final int UpdatePropertiesResp_VALUE = 112;
     /**
-     * <code>UpdateInstancePositionReq = 4109;</code>
+     * <code>OpenSessionReq = 201;</code>
      */
-    public static final int UpdateInstancePositionReq_VALUE = 4109;
+    public static final int OpenSessionReq_VALUE = 201;
     /**
-     * <code>UpdateInstancePositionResp = 4110;</code>
+     * <code>OpenSessionResp = 202;</code>
      */
-    public static final int UpdateInstancePositionResp_VALUE = 4110;
+    public static final int OpenSessionResp_VALUE = 202;
     /**
-     * <code>RequestObjectPropertiesReq = 4111;</code>
+     * <code>CloseSessionReq = 203;</code>
      */
-    public static final int RequestObjectPropertiesReq_VALUE = 4111;
+    public static final int CloseSessionReq_VALUE = 203;
     /**
-     * <code>RequestObjectPropertiesResp = 4112;</code>
+     * <code>CloseSessionResp = 204;</code>
      */
-    public static final int RequestObjectPropertiesResp_VALUE = 4112;
+    public static final int CloseSessionResp_VALUE = 204;
     /**
-     * <code>RequestInstancePropertiesReq = 4113;</code>
+     * <code>MakeConnectionReq = 205;</code>
      */
-    public static final int RequestInstancePropertiesReq_VALUE = 4113;
+    public static final int MakeConnectionReq_VALUE = 205;
     /**
-     * <code>RequestInstancePropertiesResp = 4114;</code>
+     * <code>MakeConnectionResp = 206;</code>
      */
-    public static final int RequestInstancePropertiesResp_VALUE = 4114;
+    public static final int MakeConnectionResp_VALUE = 206;
     /**
-     * <code>CloseSessionReq = 4115;</code>
+     * <code>AliveCheckReq = 301;</code>
      */
-    public static final int CloseSessionReq_VALUE = 4115;
+    public static final int AliveCheckReq_VALUE = 301;
     /**
-     * <code>CloseSessionResp = 4116;</code>
+     * <code>AliveCheckResp = 302;</code>
      */
-    public static final int CloseSessionResp_VALUE = 4116;
-    /**
-     * <code>MakeConnectionReq = 4117;</code>
-     */
-    public static final int MakeConnectionReq_VALUE = 4117;
-    /**
-     * <code>MakeConnectionResp = 4118;</code>
-     */
-    public static final int MakeConnectionResp_VALUE = 4118;
-    /**
-     * <pre>
-     * AliveCheck ping/pong
-     * </pre>
-     *
-     * <code>AliveCheckReq = 8193;</code>
-     */
-    public static final int AliveCheckReq_VALUE = 8193;
-    /**
-     * <code>AliveCheckResp = 8194;</code>
-     */
-    public static final int AliveCheckResp_VALUE = 8194;
-    /**
-     * <pre>
-     * SpaceServer
-     * </pre>
-     *
-     * <code>OpenSessionReq = 12289;</code>
-     */
-    public static final int OpenSessionReq_VALUE = 12289;
-    /**
-     * <code>OpenSessionResp = 12290;</code>
-     */
-    public static final int OpenSessionResp_VALUE = 12290;
-    /**
-     * <code>CameraViewReq = 12291;</code>
-     */
-    public static final int CameraViewReq_VALUE = 12291;
-    /**
-     * <code>CameraViewResp = 12292;</code>
-     */
-    public static final int CameraViewResp_VALUE = 12292;
-    /**
-     * <pre>
-     * BrothServer
-     * </pre>
-     *
-     * <code>RegisterTopicReq = 16385;</code>
-     */
-    public static final int RegisterTopicReq_VALUE = 16385;
-    /**
-     * <code>RegisterTopicResp = 16386;</code>
-     */
-    public static final int RegisterTopicResp_VALUE = 16386;
-    /**
-     * <code>DeregisterTopicReq = 16387;</code>
-     */
-    public static final int DeregisterTopicReq_VALUE = 16387;
-    /**
-     * <code>DeregisterTopicResp = 16388;</code>
-     */
-    public static final int DeregisterTopicResp_VALUE = 16388;
-    /**
-     * <code>SubscribeReq = 16389;</code>
-     */
-    public static final int SubscribeReq_VALUE = 16389;
-    /**
-     * <code>SubscribeResp = 16390;</code>
-     */
-    public static final int SubscribeResp_VALUE = 16390;
-    /**
-     * <code>UnsubscribeReq = 16391;</code>
-     */
-    public static final int UnsubscribeReq_VALUE = 16391;
-    /**
-     * <code>UnsubscribeResp = 16392;</code>
-     */
-    public static final int UnsubscribeResp_VALUE = 16392;
-    /**
-     * <code>SendEventReq = 16393;</code>
-     */
-    public static final int SendEventReq_VALUE = 16393;
-    /**
-     * <code>SendEventResp = 16400;</code>
-     */
-    public static final int SendEventResp_VALUE = 16400;
-    /**
-     * <code>EventReq = 16401;</code>
-     */
-    public static final int EventReq_VALUE = 16401;
-    /**
-     * <code>EventResp = 16402;</code>
-     */
-    public static final int EventResp_VALUE = 16402;
-    /**
-     * <code>SubscriptionMadeReq = 16403;</code>
-     */
-    public static final int SubscriptionMadeReq_VALUE = 16403;
-    /**
-     * <code>SubscriptionMadeResp = 16404;</code>
-     */
-    public static final int SubscriptionMadeResp_VALUE = 16404;
-    /**
-     * <code>SubscriptionClearReq = 16405;</code>
-     */
-    public static final int SubscriptionClearReq_VALUE = 16405;
-    /**
-     * <code>SubscriptionClearResp = 16406;</code>
-     */
-    public static final int SubscriptionClearResp_VALUE = 16406;
+    public static final int AliveCheckResp_VALUE = 302;
 
 
     public final int getNumber() {
@@ -588,50 +215,26 @@ public final class BasilMessageOuterClass {
     public static BasilMessageOps forNumber(int value) {
       switch (value) {
         case 0: return UnknownReq;
-        case 4097: return IdentifyDisplayableObjectReq;
-        case 4098: return IdentifyDisplayableObjectResp;
-        case 4099: return ForgetDisplayableObjectReq;
-        case 4100: return ForgetDisplayableObjectResp;
-        case 4101: return CreateObjectInstanceReq;
-        case 4102: return CreateObjectInstanceResp;
-        case 4103: return DeleteObjectInstanceReq;
-        case 4104: return DeleteObjectInstanceResp;
-        case 4105: return UpdateObjectPropertyReq;
-        case 4106: return UpdateObjectPropertyResp;
-        case 4107: return UpdateInstancePropertyReq;
-        case 4108: return UpdateInstancePropertyResp;
-        case 4109: return UpdateInstancePositionReq;
-        case 4110: return UpdateInstancePositionResp;
-        case 4111: return RequestObjectPropertiesReq;
-        case 4112: return RequestObjectPropertiesResp;
-        case 4113: return RequestInstancePropertiesReq;
-        case 4114: return RequestInstancePropertiesResp;
-        case 4115: return CloseSessionReq;
-        case 4116: return CloseSessionResp;
-        case 4117: return MakeConnectionReq;
-        case 4118: return MakeConnectionResp;
-        case 8193: return AliveCheckReq;
-        case 8194: return AliveCheckResp;
-        case 12289: return OpenSessionReq;
-        case 12290: return OpenSessionResp;
-        case 12291: return CameraViewReq;
-        case 12292: return CameraViewResp;
-        case 16385: return RegisterTopicReq;
-        case 16386: return RegisterTopicResp;
-        case 16387: return DeregisterTopicReq;
-        case 16388: return DeregisterTopicResp;
-        case 16389: return SubscribeReq;
-        case 16390: return SubscribeResp;
-        case 16391: return UnsubscribeReq;
-        case 16392: return UnsubscribeResp;
-        case 16393: return SendEventReq;
-        case 16400: return SendEventResp;
-        case 16401: return EventReq;
-        case 16402: return EventResp;
-        case 16403: return SubscriptionMadeReq;
-        case 16404: return SubscriptionMadeResp;
-        case 16405: return SubscriptionClearReq;
-        case 16406: return SubscriptionClearResp;
+        case 101: return CreateItemReq;
+        case 102: return CreateItemResp;
+        case 103: return DeleteItemReq;
+        case 104: return DeleteItemResp;
+        case 105: return AddAbilityReq;
+        case 106: return AddAbilityResp;
+        case 107: return RemoveAbilityReq;
+        case 108: return RemoveAbilityResp;
+        case 109: return RequestPropertiesReq;
+        case 110: return RequestPropertiesResp;
+        case 111: return UpdatePropertiesReq;
+        case 112: return UpdatePropertiesResp;
+        case 201: return OpenSessionReq;
+        case 202: return OpenSessionResp;
+        case 203: return CloseSessionReq;
+        case 204: return CloseSessionResp;
+        case 205: return MakeConnectionReq;
+        case 206: return MakeConnectionResp;
+        case 301: return AliveCheckReq;
+        case 302: return AliveCheckResp;
         default: return null;
       }
     }
@@ -658,7 +261,7 @@ public final class BasilMessageOuterClass {
     }
     public static final com.google.protobuf.Descriptors.EnumDescriptor
         getDescriptor() {
-      return BasilMessage.BasilMessageOuterClass.getDescriptor().getEnumTypes().get(1);
+      return BasilMessage.BasilMessageOuterClass.getDescriptor().getEnumTypes().get(0);
     }
 
     private static final BasilMessageOps[] VALUES = values();
@@ -684,343 +287,3728 @@ public final class BasilMessageOuterClass {
     // @@protoc_insertion_point(enum_scope:BasilMessage.BasilMessageOps)
   }
 
+  /**
+   * <pre>
+   * ========================== Data packaging
+   * Specifying a position.
+   * </pre>
+   *
+   * Protobuf enum {@code BasilMessage.CoordSystem}
+   */
+  public enum CoordSystem
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <pre>
+     * WGS84 earth coordinates
+     * </pre>
+     *
+     * <code>WGS86 = 0;</code>
+     */
+    WGS86(0),
+    /**
+     * <pre>
+     * Coordinates relative to camera position (-1..1 range, zero center)
+     * </pre>
+     *
+     * <code>CAMERA = 1;</code>
+     */
+    CAMERA(1),
+    /**
+     * <pre>
+     * Absolute coordinates relative to the camera position (zero center)
+     * </pre>
+     *
+     * <code>CAMERAABS = 2;</code>
+     */
+    CAMERAABS(2),
+    /**
+     * <pre>
+     * Zero based un-rooted coordinates
+     * </pre>
+     *
+     * <code>VIRTUAL = 3;</code>
+     */
+    VIRTUAL(3),
+    /**
+     * <pre>
+     * Earth-moon coordinates
+     * </pre>
+     *
+     * <code>MOON = 4;</code>
+     */
+    MOON(4),
+    /**
+     * <pre>
+     * Mars coordinates
+     * </pre>
+     *
+     * <code>MARS = 5;</code>
+     */
+    MARS(5),
+    /**
+     * <pre>
+     * Mutually agreed base coordinates
+     * </pre>
+     *
+     * <code>REL1 = 6;</code>
+     */
+    REL1(6),
+    /**
+     * <code>REL2 = 7;</code>
+     */
+    REL2(7),
+    /**
+     * <code>REL3 = 8;</code>
+     */
+    REL3(8),
+    UNRECOGNIZED(-1),
+    ;
+
+    /**
+     * <pre>
+     * WGS84 earth coordinates
+     * </pre>
+     *
+     * <code>WGS86 = 0;</code>
+     */
+    public static final int WGS86_VALUE = 0;
+    /**
+     * <pre>
+     * Coordinates relative to camera position (-1..1 range, zero center)
+     * </pre>
+     *
+     * <code>CAMERA = 1;</code>
+     */
+    public static final int CAMERA_VALUE = 1;
+    /**
+     * <pre>
+     * Absolute coordinates relative to the camera position (zero center)
+     * </pre>
+     *
+     * <code>CAMERAABS = 2;</code>
+     */
+    public static final int CAMERAABS_VALUE = 2;
+    /**
+     * <pre>
+     * Zero based un-rooted coordinates
+     * </pre>
+     *
+     * <code>VIRTUAL = 3;</code>
+     */
+    public static final int VIRTUAL_VALUE = 3;
+    /**
+     * <pre>
+     * Earth-moon coordinates
+     * </pre>
+     *
+     * <code>MOON = 4;</code>
+     */
+    public static final int MOON_VALUE = 4;
+    /**
+     * <pre>
+     * Mars coordinates
+     * </pre>
+     *
+     * <code>MARS = 5;</code>
+     */
+    public static final int MARS_VALUE = 5;
+    /**
+     * <pre>
+     * Mutually agreed base coordinates
+     * </pre>
+     *
+     * <code>REL1 = 6;</code>
+     */
+    public static final int REL1_VALUE = 6;
+    /**
+     * <code>REL2 = 7;</code>
+     */
+    public static final int REL2_VALUE = 7;
+    /**
+     * <code>REL3 = 8;</code>
+     */
+    public static final int REL3_VALUE = 8;
+
+
+    public final int getNumber() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalArgumentException(
+            "Can't get the number of an unknown enum value.");
+      }
+      return value;
+    }
+
+    /**
+     * @deprecated Use {@link #forNumber(int)} instead.
+     */
+    @java.lang.Deprecated
+    public static CoordSystem valueOf(int value) {
+      return forNumber(value);
+    }
+
+    public static CoordSystem forNumber(int value) {
+      switch (value) {
+        case 0: return WGS86;
+        case 1: return CAMERA;
+        case 2: return CAMERAABS;
+        case 3: return VIRTUAL;
+        case 4: return MOON;
+        case 5: return MARS;
+        case 6: return REL1;
+        case 7: return REL2;
+        case 8: return REL3;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<CoordSystem>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static final com.google.protobuf.Internal.EnumLiteMap<
+        CoordSystem> internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<CoordSystem>() {
+            public CoordSystem findValueByNumber(int number) {
+              return CoordSystem.forNumber(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      return getDescriptor().getValues().get(ordinal());
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return BasilMessage.BasilMessageOuterClass.getDescriptor().getEnumTypes().get(1);
+    }
+
+    private static final CoordSystem[] VALUES = values();
+
+    public static CoordSystem valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      if (desc.getIndex() == -1) {
+        return UNRECOGNIZED;
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int value;
+
+    private CoordSystem(int value) {
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:BasilMessage.CoordSystem)
+  }
+
+  /**
+   * Protobuf enum {@code BasilMessage.RotationSystem}
+   */
+  public enum RotationSystem
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <pre>
+     * rotation is relative to world coordinates
+     * </pre>
+     *
+     * <code>WORLDR = 0;</code>
+     */
+    WORLDR(0),
+    /**
+     * <pre>
+     * rotation is relative to referenced object
+     * </pre>
+     *
+     * <code>LOCALR = 1;</code>
+     */
+    LOCALR(1),
+    /**
+     * <pre>
+     * rotation is relative to current frame of reference
+     * </pre>
+     *
+     * <code>FORR = 2;</code>
+     */
+    FORR(2),
+    /**
+     * <pre>
+     * rotation is relative to the camera direction
+     * </pre>
+     *
+     * <code>CAMERAR = 3;</code>
+     */
+    CAMERAR(3),
+    UNRECOGNIZED(-1),
+    ;
+
+    /**
+     * <pre>
+     * rotation is relative to world coordinates
+     * </pre>
+     *
+     * <code>WORLDR = 0;</code>
+     */
+    public static final int WORLDR_VALUE = 0;
+    /**
+     * <pre>
+     * rotation is relative to referenced object
+     * </pre>
+     *
+     * <code>LOCALR = 1;</code>
+     */
+    public static final int LOCALR_VALUE = 1;
+    /**
+     * <pre>
+     * rotation is relative to current frame of reference
+     * </pre>
+     *
+     * <code>FORR = 2;</code>
+     */
+    public static final int FORR_VALUE = 2;
+    /**
+     * <pre>
+     * rotation is relative to the camera direction
+     * </pre>
+     *
+     * <code>CAMERAR = 3;</code>
+     */
+    public static final int CAMERAR_VALUE = 3;
+
+
+    public final int getNumber() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalArgumentException(
+            "Can't get the number of an unknown enum value.");
+      }
+      return value;
+    }
+
+    /**
+     * @deprecated Use {@link #forNumber(int)} instead.
+     */
+    @java.lang.Deprecated
+    public static RotationSystem valueOf(int value) {
+      return forNumber(value);
+    }
+
+    public static RotationSystem forNumber(int value) {
+      switch (value) {
+        case 0: return WORLDR;
+        case 1: return LOCALR;
+        case 2: return FORR;
+        case 3: return CAMERAR;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<RotationSystem>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static final com.google.protobuf.Internal.EnumLiteMap<
+        RotationSystem> internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<RotationSystem>() {
+            public RotationSystem findValueByNumber(int number) {
+              return RotationSystem.forNumber(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      return getDescriptor().getValues().get(ordinal());
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return BasilMessage.BasilMessageOuterClass.getDescriptor().getEnumTypes().get(2);
+    }
+
+    private static final RotationSystem[] VALUES = values();
+
+    public static RotationSystem valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      if (desc.getIndex() == -1) {
+        return UNRECOGNIZED;
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int value;
+
+    private RotationSystem(int value) {
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:BasilMessage.RotationSystem)
+  }
+
+  public interface PositionBlockOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:BasilMessage.PositionBlock)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * three doubles for a position
+     * </pre>
+     *
+     * <code>repeated double Pos = 1;</code>
+     */
+    java.util.List<java.lang.Double> getPosList();
+    /**
+     * <pre>
+     * three doubles for a position
+     * </pre>
+     *
+     * <code>repeated double Pos = 1;</code>
+     */
+    int getPosCount();
+    /**
+     * <pre>
+     * three doubles for a position
+     * </pre>
+     *
+     * <code>repeated double Pos = 1;</code>
+     */
+    double getPos(int index);
+
+    /**
+     * <pre>
+     * four doubles for a quaternion rotation
+     * </pre>
+     *
+     * <code>repeated double Rot = 2;</code>
+     */
+    java.util.List<java.lang.Double> getRotList();
+    /**
+     * <pre>
+     * four doubles for a quaternion rotation
+     * </pre>
+     *
+     * <code>repeated double Rot = 2;</code>
+     */
+    int getRotCount();
+    /**
+     * <pre>
+     * four doubles for a quaternion rotation
+     * </pre>
+     *
+     * <code>repeated double Rot = 2;</code>
+     */
+    double getRot(int index);
+
+    /**
+     * <code>.BasilMessage.CoordSystem PosRef = 3;</code>
+     */
+    int getPosRefValue();
+    /**
+     * <code>.BasilMessage.CoordSystem PosRef = 3;</code>
+     */
+    BasilMessage.BasilMessageOuterClass.CoordSystem getPosRef();
+
+    /**
+     * <code>.BasilMessage.RotationSystem RotRef = 4;</code>
+     */
+    int getRotRefValue();
+    /**
+     * <code>.BasilMessage.RotationSystem RotRef = 4;</code>
+     */
+    BasilMessage.BasilMessageOuterClass.RotationSystem getRotRef();
+
+    /**
+     * <pre>
+     * More complex position properties
+     * </pre>
+     *
+     * <code>repeated double Vel = 5;</code>
+     */
+    java.util.List<java.lang.Double> getVelList();
+    /**
+     * <pre>
+     * More complex position properties
+     * </pre>
+     *
+     * <code>repeated double Vel = 5;</code>
+     */
+    int getVelCount();
+    /**
+     * <pre>
+     * More complex position properties
+     * </pre>
+     *
+     * <code>repeated double Vel = 5;</code>
+     */
+    double getVel(int index);
+
+    /**
+     * <pre>
+     * pairs of pos/rot defining path
+     * </pre>
+     *
+     * <code>repeated double Path = 6;</code>
+     */
+    java.util.List<java.lang.Double> getPathList();
+    /**
+     * <pre>
+     * pairs of pos/rot defining path
+     * </pre>
+     *
+     * <code>repeated double Path = 6;</code>
+     */
+    int getPathCount();
+    /**
+     * <pre>
+     * pairs of pos/rot defining path
+     * </pre>
+     *
+     * <code>repeated double Path = 6;</code>
+     */
+    double getPath(int index);
+
+    /**
+     * <pre>
+     * Sometimes PositionBlock is repeated to apply to many Item/Components
+     * </pre>
+     *
+     * <code>uint32 ItemIdN = 10;</code>
+     */
+    int getItemIdN();
+
+    /**
+     * <pre>
+     * item being operated on
+     * </pre>
+     *
+     * <code>string ItemId = 11;</code>
+     */
+    java.lang.String getItemId();
+    /**
+     * <pre>
+     * item being operated on
+     * </pre>
+     *
+     * <code>string ItemId = 11;</code>
+     */
+    com.google.protobuf.ByteString
+        getItemIdBytes();
+
+    /**
+     * <pre>
+     * authorization to make request
+     * </pre>
+     *
+     * <code>string SessionAuth = 12;</code>
+     */
+    java.lang.String getSessionAuth();
+    /**
+     * <pre>
+     * authorization to make request
+     * </pre>
+     *
+     * <code>string SessionAuth = 12;</code>
+     */
+    com.google.protobuf.ByteString
+        getSessionAuthBytes();
+
+    /**
+     * <pre>
+     * per item authorization
+     * </pre>
+     *
+     * <code>string ItemAuth = 13;</code>
+     */
+    java.lang.String getItemAuth();
+    /**
+     * <pre>
+     * per item authorization
+     * </pre>
+     *
+     * <code>string ItemAuth = 13;</code>
+     */
+    com.google.protobuf.ByteString
+        getItemAuthBytes();
+  }
+  /**
+   * <pre>
+   * Used both for specifying a single position or repeated as update for multiple items
+   * Used to specify position and possibly future path.
+   * </pre>
+   *
+   * Protobuf type {@code BasilMessage.PositionBlock}
+   */
+  public  static final class PositionBlock extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:BasilMessage.PositionBlock)
+      PositionBlockOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use PositionBlock.newBuilder() to construct.
+    private PositionBlock(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private PositionBlock() {
+      pos_ = emptyDoubleList();
+      rot_ = emptyDoubleList();
+      posRef_ = 0;
+      rotRef_ = 0;
+      vel_ = emptyDoubleList();
+      path_ = emptyDoubleList();
+      itemId_ = "";
+      sessionAuth_ = "";
+      itemAuth_ = "";
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private PositionBlock(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 9: {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                pos_ = newDoubleList();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              pos_.addDouble(input.readDouble());
+              break;
+            }
+            case 10: {
+              int length = input.readRawVarint32();
+              int limit = input.pushLimit(length);
+              if (!((mutable_bitField0_ & 0x00000001) != 0) && input.getBytesUntilLimit() > 0) {
+                pos_ = newDoubleList();
+                mutable_bitField0_ |= 0x00000001;
+              }
+              while (input.getBytesUntilLimit() > 0) {
+                pos_.addDouble(input.readDouble());
+              }
+              input.popLimit(limit);
+              break;
+            }
+            case 17: {
+              if (!((mutable_bitField0_ & 0x00000002) != 0)) {
+                rot_ = newDoubleList();
+                mutable_bitField0_ |= 0x00000002;
+              }
+              rot_.addDouble(input.readDouble());
+              break;
+            }
+            case 18: {
+              int length = input.readRawVarint32();
+              int limit = input.pushLimit(length);
+              if (!((mutable_bitField0_ & 0x00000002) != 0) && input.getBytesUntilLimit() > 0) {
+                rot_ = newDoubleList();
+                mutable_bitField0_ |= 0x00000002;
+              }
+              while (input.getBytesUntilLimit() > 0) {
+                rot_.addDouble(input.readDouble());
+              }
+              input.popLimit(limit);
+              break;
+            }
+            case 24: {
+              int rawValue = input.readEnum();
+
+              posRef_ = rawValue;
+              break;
+            }
+            case 32: {
+              int rawValue = input.readEnum();
+
+              rotRef_ = rawValue;
+              break;
+            }
+            case 41: {
+              if (!((mutable_bitField0_ & 0x00000004) != 0)) {
+                vel_ = newDoubleList();
+                mutable_bitField0_ |= 0x00000004;
+              }
+              vel_.addDouble(input.readDouble());
+              break;
+            }
+            case 42: {
+              int length = input.readRawVarint32();
+              int limit = input.pushLimit(length);
+              if (!((mutable_bitField0_ & 0x00000004) != 0) && input.getBytesUntilLimit() > 0) {
+                vel_ = newDoubleList();
+                mutable_bitField0_ |= 0x00000004;
+              }
+              while (input.getBytesUntilLimit() > 0) {
+                vel_.addDouble(input.readDouble());
+              }
+              input.popLimit(limit);
+              break;
+            }
+            case 49: {
+              if (!((mutable_bitField0_ & 0x00000008) != 0)) {
+                path_ = newDoubleList();
+                mutable_bitField0_ |= 0x00000008;
+              }
+              path_.addDouble(input.readDouble());
+              break;
+            }
+            case 50: {
+              int length = input.readRawVarint32();
+              int limit = input.pushLimit(length);
+              if (!((mutable_bitField0_ & 0x00000008) != 0) && input.getBytesUntilLimit() > 0) {
+                path_ = newDoubleList();
+                mutable_bitField0_ |= 0x00000008;
+              }
+              while (input.getBytesUntilLimit() > 0) {
+                path_.addDouble(input.readDouble());
+              }
+              input.popLimit(limit);
+              break;
+            }
+            case 80: {
+
+              itemIdN_ = input.readUInt32();
+              break;
+            }
+            case 90: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              itemId_ = s;
+              break;
+            }
+            case 98: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              sessionAuth_ = s;
+              break;
+            }
+            case 106: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              itemAuth_ = s;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        if (((mutable_bitField0_ & 0x00000001) != 0)) {
+          pos_.makeImmutable(); // C
+        }
+        if (((mutable_bitField0_ & 0x00000002) != 0)) {
+          rot_.makeImmutable(); // C
+        }
+        if (((mutable_bitField0_ & 0x00000004) != 0)) {
+          vel_.makeImmutable(); // C
+        }
+        if (((mutable_bitField0_ & 0x00000008) != 0)) {
+          path_.makeImmutable(); // C
+        }
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return BasilMessage.BasilMessageOuterClass.internal_static_BasilMessage_PositionBlock_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return BasilMessage.BasilMessageOuterClass.internal_static_BasilMessage_PositionBlock_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              BasilMessage.BasilMessageOuterClass.PositionBlock.class, BasilMessage.BasilMessageOuterClass.PositionBlock.Builder.class);
+    }
+
+    public static final int POS_FIELD_NUMBER = 1;
+    private com.google.protobuf.Internal.DoubleList pos_;
+    /**
+     * <pre>
+     * three doubles for a position
+     * </pre>
+     *
+     * <code>repeated double Pos = 1;</code>
+     */
+    public java.util.List<java.lang.Double>
+        getPosList() {
+      return pos_;
+    }
+    /**
+     * <pre>
+     * three doubles for a position
+     * </pre>
+     *
+     * <code>repeated double Pos = 1;</code>
+     */
+    public int getPosCount() {
+      return pos_.size();
+    }
+    /**
+     * <pre>
+     * three doubles for a position
+     * </pre>
+     *
+     * <code>repeated double Pos = 1;</code>
+     */
+    public double getPos(int index) {
+      return pos_.getDouble(index);
+    }
+    private int posMemoizedSerializedSize = -1;
+
+    public static final int ROT_FIELD_NUMBER = 2;
+    private com.google.protobuf.Internal.DoubleList rot_;
+    /**
+     * <pre>
+     * four doubles for a quaternion rotation
+     * </pre>
+     *
+     * <code>repeated double Rot = 2;</code>
+     */
+    public java.util.List<java.lang.Double>
+        getRotList() {
+      return rot_;
+    }
+    /**
+     * <pre>
+     * four doubles for a quaternion rotation
+     * </pre>
+     *
+     * <code>repeated double Rot = 2;</code>
+     */
+    public int getRotCount() {
+      return rot_.size();
+    }
+    /**
+     * <pre>
+     * four doubles for a quaternion rotation
+     * </pre>
+     *
+     * <code>repeated double Rot = 2;</code>
+     */
+    public double getRot(int index) {
+      return rot_.getDouble(index);
+    }
+    private int rotMemoizedSerializedSize = -1;
+
+    public static final int POSREF_FIELD_NUMBER = 3;
+    private int posRef_;
+    /**
+     * <code>.BasilMessage.CoordSystem PosRef = 3;</code>
+     */
+    public int getPosRefValue() {
+      return posRef_;
+    }
+    /**
+     * <code>.BasilMessage.CoordSystem PosRef = 3;</code>
+     */
+    public BasilMessage.BasilMessageOuterClass.CoordSystem getPosRef() {
+      @SuppressWarnings("deprecation")
+      BasilMessage.BasilMessageOuterClass.CoordSystem result = BasilMessage.BasilMessageOuterClass.CoordSystem.valueOf(posRef_);
+      return result == null ? BasilMessage.BasilMessageOuterClass.CoordSystem.UNRECOGNIZED : result;
+    }
+
+    public static final int ROTREF_FIELD_NUMBER = 4;
+    private int rotRef_;
+    /**
+     * <code>.BasilMessage.RotationSystem RotRef = 4;</code>
+     */
+    public int getRotRefValue() {
+      return rotRef_;
+    }
+    /**
+     * <code>.BasilMessage.RotationSystem RotRef = 4;</code>
+     */
+    public BasilMessage.BasilMessageOuterClass.RotationSystem getRotRef() {
+      @SuppressWarnings("deprecation")
+      BasilMessage.BasilMessageOuterClass.RotationSystem result = BasilMessage.BasilMessageOuterClass.RotationSystem.valueOf(rotRef_);
+      return result == null ? BasilMessage.BasilMessageOuterClass.RotationSystem.UNRECOGNIZED : result;
+    }
+
+    public static final int VEL_FIELD_NUMBER = 5;
+    private com.google.protobuf.Internal.DoubleList vel_;
+    /**
+     * <pre>
+     * More complex position properties
+     * </pre>
+     *
+     * <code>repeated double Vel = 5;</code>
+     */
+    public java.util.List<java.lang.Double>
+        getVelList() {
+      return vel_;
+    }
+    /**
+     * <pre>
+     * More complex position properties
+     * </pre>
+     *
+     * <code>repeated double Vel = 5;</code>
+     */
+    public int getVelCount() {
+      return vel_.size();
+    }
+    /**
+     * <pre>
+     * More complex position properties
+     * </pre>
+     *
+     * <code>repeated double Vel = 5;</code>
+     */
+    public double getVel(int index) {
+      return vel_.getDouble(index);
+    }
+    private int velMemoizedSerializedSize = -1;
+
+    public static final int PATH_FIELD_NUMBER = 6;
+    private com.google.protobuf.Internal.DoubleList path_;
+    /**
+     * <pre>
+     * pairs of pos/rot defining path
+     * </pre>
+     *
+     * <code>repeated double Path = 6;</code>
+     */
+    public java.util.List<java.lang.Double>
+        getPathList() {
+      return path_;
+    }
+    /**
+     * <pre>
+     * pairs of pos/rot defining path
+     * </pre>
+     *
+     * <code>repeated double Path = 6;</code>
+     */
+    public int getPathCount() {
+      return path_.size();
+    }
+    /**
+     * <pre>
+     * pairs of pos/rot defining path
+     * </pre>
+     *
+     * <code>repeated double Path = 6;</code>
+     */
+    public double getPath(int index) {
+      return path_.getDouble(index);
+    }
+    private int pathMemoizedSerializedSize = -1;
+
+    public static final int ITEMIDN_FIELD_NUMBER = 10;
+    private int itemIdN_;
+    /**
+     * <pre>
+     * Sometimes PositionBlock is repeated to apply to many Item/Components
+     * </pre>
+     *
+     * <code>uint32 ItemIdN = 10;</code>
+     */
+    public int getItemIdN() {
+      return itemIdN_;
+    }
+
+    public static final int ITEMID_FIELD_NUMBER = 11;
+    private volatile java.lang.Object itemId_;
+    /**
+     * <pre>
+     * item being operated on
+     * </pre>
+     *
+     * <code>string ItemId = 11;</code>
+     */
+    public java.lang.String getItemId() {
+      java.lang.Object ref = itemId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        itemId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * item being operated on
+     * </pre>
+     *
+     * <code>string ItemId = 11;</code>
+     */
+    public com.google.protobuf.ByteString
+        getItemIdBytes() {
+      java.lang.Object ref = itemId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        itemId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int SESSIONAUTH_FIELD_NUMBER = 12;
+    private volatile java.lang.Object sessionAuth_;
+    /**
+     * <pre>
+     * authorization to make request
+     * </pre>
+     *
+     * <code>string SessionAuth = 12;</code>
+     */
+    public java.lang.String getSessionAuth() {
+      java.lang.Object ref = sessionAuth_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        sessionAuth_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * authorization to make request
+     * </pre>
+     *
+     * <code>string SessionAuth = 12;</code>
+     */
+    public com.google.protobuf.ByteString
+        getSessionAuthBytes() {
+      java.lang.Object ref = sessionAuth_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        sessionAuth_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ITEMAUTH_FIELD_NUMBER = 13;
+    private volatile java.lang.Object itemAuth_;
+    /**
+     * <pre>
+     * per item authorization
+     * </pre>
+     *
+     * <code>string ItemAuth = 13;</code>
+     */
+    public java.lang.String getItemAuth() {
+      java.lang.Object ref = itemAuth_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        itemAuth_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * per item authorization
+     * </pre>
+     *
+     * <code>string ItemAuth = 13;</code>
+     */
+    public com.google.protobuf.ByteString
+        getItemAuthBytes() {
+      java.lang.Object ref = itemAuth_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        itemAuth_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getSerializedSize();
+      if (getPosList().size() > 0) {
+        output.writeUInt32NoTag(10);
+        output.writeUInt32NoTag(posMemoizedSerializedSize);
+      }
+      for (int i = 0; i < pos_.size(); i++) {
+        output.writeDoubleNoTag(pos_.getDouble(i));
+      }
+      if (getRotList().size() > 0) {
+        output.writeUInt32NoTag(18);
+        output.writeUInt32NoTag(rotMemoizedSerializedSize);
+      }
+      for (int i = 0; i < rot_.size(); i++) {
+        output.writeDoubleNoTag(rot_.getDouble(i));
+      }
+      if (posRef_ != BasilMessage.BasilMessageOuterClass.CoordSystem.WGS86.getNumber()) {
+        output.writeEnum(3, posRef_);
+      }
+      if (rotRef_ != BasilMessage.BasilMessageOuterClass.RotationSystem.WORLDR.getNumber()) {
+        output.writeEnum(4, rotRef_);
+      }
+      if (getVelList().size() > 0) {
+        output.writeUInt32NoTag(42);
+        output.writeUInt32NoTag(velMemoizedSerializedSize);
+      }
+      for (int i = 0; i < vel_.size(); i++) {
+        output.writeDoubleNoTag(vel_.getDouble(i));
+      }
+      if (getPathList().size() > 0) {
+        output.writeUInt32NoTag(50);
+        output.writeUInt32NoTag(pathMemoizedSerializedSize);
+      }
+      for (int i = 0; i < path_.size(); i++) {
+        output.writeDoubleNoTag(path_.getDouble(i));
+      }
+      if (itemIdN_ != 0) {
+        output.writeUInt32(10, itemIdN_);
+      }
+      if (!getItemIdBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 11, itemId_);
+      }
+      if (!getSessionAuthBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 12, sessionAuth_);
+      }
+      if (!getItemAuthBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 13, itemAuth_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      {
+        int dataSize = 0;
+        dataSize = 8 * getPosList().size();
+        size += dataSize;
+        if (!getPosList().isEmpty()) {
+          size += 1;
+          size += com.google.protobuf.CodedOutputStream
+              .computeInt32SizeNoTag(dataSize);
+        }
+        posMemoizedSerializedSize = dataSize;
+      }
+      {
+        int dataSize = 0;
+        dataSize = 8 * getRotList().size();
+        size += dataSize;
+        if (!getRotList().isEmpty()) {
+          size += 1;
+          size += com.google.protobuf.CodedOutputStream
+              .computeInt32SizeNoTag(dataSize);
+        }
+        rotMemoizedSerializedSize = dataSize;
+      }
+      if (posRef_ != BasilMessage.BasilMessageOuterClass.CoordSystem.WGS86.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(3, posRef_);
+      }
+      if (rotRef_ != BasilMessage.BasilMessageOuterClass.RotationSystem.WORLDR.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(4, rotRef_);
+      }
+      {
+        int dataSize = 0;
+        dataSize = 8 * getVelList().size();
+        size += dataSize;
+        if (!getVelList().isEmpty()) {
+          size += 1;
+          size += com.google.protobuf.CodedOutputStream
+              .computeInt32SizeNoTag(dataSize);
+        }
+        velMemoizedSerializedSize = dataSize;
+      }
+      {
+        int dataSize = 0;
+        dataSize = 8 * getPathList().size();
+        size += dataSize;
+        if (!getPathList().isEmpty()) {
+          size += 1;
+          size += com.google.protobuf.CodedOutputStream
+              .computeInt32SizeNoTag(dataSize);
+        }
+        pathMemoizedSerializedSize = dataSize;
+      }
+      if (itemIdN_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(10, itemIdN_);
+      }
+      if (!getItemIdBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(11, itemId_);
+      }
+      if (!getSessionAuthBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(12, sessionAuth_);
+      }
+      if (!getItemAuthBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(13, itemAuth_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof BasilMessage.BasilMessageOuterClass.PositionBlock)) {
+        return super.equals(obj);
+      }
+      BasilMessage.BasilMessageOuterClass.PositionBlock other = (BasilMessage.BasilMessageOuterClass.PositionBlock) obj;
+
+      if (!getPosList()
+          .equals(other.getPosList())) return false;
+      if (!getRotList()
+          .equals(other.getRotList())) return false;
+      if (posRef_ != other.posRef_) return false;
+      if (rotRef_ != other.rotRef_) return false;
+      if (!getVelList()
+          .equals(other.getVelList())) return false;
+      if (!getPathList()
+          .equals(other.getPathList())) return false;
+      if (getItemIdN()
+          != other.getItemIdN()) return false;
+      if (!getItemId()
+          .equals(other.getItemId())) return false;
+      if (!getSessionAuth()
+          .equals(other.getSessionAuth())) return false;
+      if (!getItemAuth()
+          .equals(other.getItemAuth())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getPosCount() > 0) {
+        hash = (37 * hash) + POS_FIELD_NUMBER;
+        hash = (53 * hash) + getPosList().hashCode();
+      }
+      if (getRotCount() > 0) {
+        hash = (37 * hash) + ROT_FIELD_NUMBER;
+        hash = (53 * hash) + getRotList().hashCode();
+      }
+      hash = (37 * hash) + POSREF_FIELD_NUMBER;
+      hash = (53 * hash) + posRef_;
+      hash = (37 * hash) + ROTREF_FIELD_NUMBER;
+      hash = (53 * hash) + rotRef_;
+      if (getVelCount() > 0) {
+        hash = (37 * hash) + VEL_FIELD_NUMBER;
+        hash = (53 * hash) + getVelList().hashCode();
+      }
+      if (getPathCount() > 0) {
+        hash = (37 * hash) + PATH_FIELD_NUMBER;
+        hash = (53 * hash) + getPathList().hashCode();
+      }
+      hash = (37 * hash) + ITEMIDN_FIELD_NUMBER;
+      hash = (53 * hash) + getItemIdN();
+      hash = (37 * hash) + ITEMID_FIELD_NUMBER;
+      hash = (53 * hash) + getItemId().hashCode();
+      hash = (37 * hash) + SESSIONAUTH_FIELD_NUMBER;
+      hash = (53 * hash) + getSessionAuth().hashCode();
+      hash = (37 * hash) + ITEMAUTH_FIELD_NUMBER;
+      hash = (53 * hash) + getItemAuth().hashCode();
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static BasilMessage.BasilMessageOuterClass.PositionBlock parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static BasilMessage.BasilMessageOuterClass.PositionBlock parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static BasilMessage.BasilMessageOuterClass.PositionBlock parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static BasilMessage.BasilMessageOuterClass.PositionBlock parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static BasilMessage.BasilMessageOuterClass.PositionBlock parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static BasilMessage.BasilMessageOuterClass.PositionBlock parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static BasilMessage.BasilMessageOuterClass.PositionBlock parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static BasilMessage.BasilMessageOuterClass.PositionBlock parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static BasilMessage.BasilMessageOuterClass.PositionBlock parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static BasilMessage.BasilMessageOuterClass.PositionBlock parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static BasilMessage.BasilMessageOuterClass.PositionBlock parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static BasilMessage.BasilMessageOuterClass.PositionBlock parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(BasilMessage.BasilMessageOuterClass.PositionBlock prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * Used both for specifying a single position or repeated as update for multiple items
+     * Used to specify position and possibly future path.
+     * </pre>
+     *
+     * Protobuf type {@code BasilMessage.PositionBlock}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:BasilMessage.PositionBlock)
+        BasilMessage.BasilMessageOuterClass.PositionBlockOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return BasilMessage.BasilMessageOuterClass.internal_static_BasilMessage_PositionBlock_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return BasilMessage.BasilMessageOuterClass.internal_static_BasilMessage_PositionBlock_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                BasilMessage.BasilMessageOuterClass.PositionBlock.class, BasilMessage.BasilMessageOuterClass.PositionBlock.Builder.class);
+      }
+
+      // Construct using BasilMessage.BasilMessageOuterClass.PositionBlock.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        pos_ = emptyDoubleList();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        rot_ = emptyDoubleList();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        posRef_ = 0;
+
+        rotRef_ = 0;
+
+        vel_ = emptyDoubleList();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        path_ = emptyDoubleList();
+        bitField0_ = (bitField0_ & ~0x00000008);
+        itemIdN_ = 0;
+
+        itemId_ = "";
+
+        sessionAuth_ = "";
+
+        itemAuth_ = "";
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return BasilMessage.BasilMessageOuterClass.internal_static_BasilMessage_PositionBlock_descriptor;
+      }
+
+      @java.lang.Override
+      public BasilMessage.BasilMessageOuterClass.PositionBlock getDefaultInstanceForType() {
+        return BasilMessage.BasilMessageOuterClass.PositionBlock.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public BasilMessage.BasilMessageOuterClass.PositionBlock build() {
+        BasilMessage.BasilMessageOuterClass.PositionBlock result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public BasilMessage.BasilMessageOuterClass.PositionBlock buildPartial() {
+        BasilMessage.BasilMessageOuterClass.PositionBlock result = new BasilMessage.BasilMessageOuterClass.PositionBlock(this);
+        int from_bitField0_ = bitField0_;
+        if (((bitField0_ & 0x00000001) != 0)) {
+          pos_.makeImmutable();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        }
+        result.pos_ = pos_;
+        if (((bitField0_ & 0x00000002) != 0)) {
+          rot_.makeImmutable();
+          bitField0_ = (bitField0_ & ~0x00000002);
+        }
+        result.rot_ = rot_;
+        result.posRef_ = posRef_;
+        result.rotRef_ = rotRef_;
+        if (((bitField0_ & 0x00000004) != 0)) {
+          vel_.makeImmutable();
+          bitField0_ = (bitField0_ & ~0x00000004);
+        }
+        result.vel_ = vel_;
+        if (((bitField0_ & 0x00000008) != 0)) {
+          path_.makeImmutable();
+          bitField0_ = (bitField0_ & ~0x00000008);
+        }
+        result.path_ = path_;
+        result.itemIdN_ = itemIdN_;
+        result.itemId_ = itemId_;
+        result.sessionAuth_ = sessionAuth_;
+        result.itemAuth_ = itemAuth_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof BasilMessage.BasilMessageOuterClass.PositionBlock) {
+          return mergeFrom((BasilMessage.BasilMessageOuterClass.PositionBlock)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(BasilMessage.BasilMessageOuterClass.PositionBlock other) {
+        if (other == BasilMessage.BasilMessageOuterClass.PositionBlock.getDefaultInstance()) return this;
+        if (!other.pos_.isEmpty()) {
+          if (pos_.isEmpty()) {
+            pos_ = other.pos_;
+            bitField0_ = (bitField0_ & ~0x00000001);
+          } else {
+            ensurePosIsMutable();
+            pos_.addAll(other.pos_);
+          }
+          onChanged();
+        }
+        if (!other.rot_.isEmpty()) {
+          if (rot_.isEmpty()) {
+            rot_ = other.rot_;
+            bitField0_ = (bitField0_ & ~0x00000002);
+          } else {
+            ensureRotIsMutable();
+            rot_.addAll(other.rot_);
+          }
+          onChanged();
+        }
+        if (other.posRef_ != 0) {
+          setPosRefValue(other.getPosRefValue());
+        }
+        if (other.rotRef_ != 0) {
+          setRotRefValue(other.getRotRefValue());
+        }
+        if (!other.vel_.isEmpty()) {
+          if (vel_.isEmpty()) {
+            vel_ = other.vel_;
+            bitField0_ = (bitField0_ & ~0x00000004);
+          } else {
+            ensureVelIsMutable();
+            vel_.addAll(other.vel_);
+          }
+          onChanged();
+        }
+        if (!other.path_.isEmpty()) {
+          if (path_.isEmpty()) {
+            path_ = other.path_;
+            bitField0_ = (bitField0_ & ~0x00000008);
+          } else {
+            ensurePathIsMutable();
+            path_.addAll(other.path_);
+          }
+          onChanged();
+        }
+        if (other.getItemIdN() != 0) {
+          setItemIdN(other.getItemIdN());
+        }
+        if (!other.getItemId().isEmpty()) {
+          itemId_ = other.itemId_;
+          onChanged();
+        }
+        if (!other.getSessionAuth().isEmpty()) {
+          sessionAuth_ = other.sessionAuth_;
+          onChanged();
+        }
+        if (!other.getItemAuth().isEmpty()) {
+          itemAuth_ = other.itemAuth_;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        BasilMessage.BasilMessageOuterClass.PositionBlock parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (BasilMessage.BasilMessageOuterClass.PositionBlock) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private com.google.protobuf.Internal.DoubleList pos_ = emptyDoubleList();
+      private void ensurePosIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          pos_ = mutableCopy(pos_);
+          bitField0_ |= 0x00000001;
+         }
+      }
+      /**
+       * <pre>
+       * three doubles for a position
+       * </pre>
+       *
+       * <code>repeated double Pos = 1;</code>
+       */
+      public java.util.List<java.lang.Double>
+          getPosList() {
+        return ((bitField0_ & 0x00000001) != 0) ?
+                 java.util.Collections.unmodifiableList(pos_) : pos_;
+      }
+      /**
+       * <pre>
+       * three doubles for a position
+       * </pre>
+       *
+       * <code>repeated double Pos = 1;</code>
+       */
+      public int getPosCount() {
+        return pos_.size();
+      }
+      /**
+       * <pre>
+       * three doubles for a position
+       * </pre>
+       *
+       * <code>repeated double Pos = 1;</code>
+       */
+      public double getPos(int index) {
+        return pos_.getDouble(index);
+      }
+      /**
+       * <pre>
+       * three doubles for a position
+       * </pre>
+       *
+       * <code>repeated double Pos = 1;</code>
+       */
+      public Builder setPos(
+          int index, double value) {
+        ensurePosIsMutable();
+        pos_.setDouble(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * three doubles for a position
+       * </pre>
+       *
+       * <code>repeated double Pos = 1;</code>
+       */
+      public Builder addPos(double value) {
+        ensurePosIsMutable();
+        pos_.addDouble(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * three doubles for a position
+       * </pre>
+       *
+       * <code>repeated double Pos = 1;</code>
+       */
+      public Builder addAllPos(
+          java.lang.Iterable<? extends java.lang.Double> values) {
+        ensurePosIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, pos_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * three doubles for a position
+       * </pre>
+       *
+       * <code>repeated double Pos = 1;</code>
+       */
+      public Builder clearPos() {
+        pos_ = emptyDoubleList();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.Internal.DoubleList rot_ = emptyDoubleList();
+      private void ensureRotIsMutable() {
+        if (!((bitField0_ & 0x00000002) != 0)) {
+          rot_ = mutableCopy(rot_);
+          bitField0_ |= 0x00000002;
+         }
+      }
+      /**
+       * <pre>
+       * four doubles for a quaternion rotation
+       * </pre>
+       *
+       * <code>repeated double Rot = 2;</code>
+       */
+      public java.util.List<java.lang.Double>
+          getRotList() {
+        return ((bitField0_ & 0x00000002) != 0) ?
+                 java.util.Collections.unmodifiableList(rot_) : rot_;
+      }
+      /**
+       * <pre>
+       * four doubles for a quaternion rotation
+       * </pre>
+       *
+       * <code>repeated double Rot = 2;</code>
+       */
+      public int getRotCount() {
+        return rot_.size();
+      }
+      /**
+       * <pre>
+       * four doubles for a quaternion rotation
+       * </pre>
+       *
+       * <code>repeated double Rot = 2;</code>
+       */
+      public double getRot(int index) {
+        return rot_.getDouble(index);
+      }
+      /**
+       * <pre>
+       * four doubles for a quaternion rotation
+       * </pre>
+       *
+       * <code>repeated double Rot = 2;</code>
+       */
+      public Builder setRot(
+          int index, double value) {
+        ensureRotIsMutable();
+        rot_.setDouble(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * four doubles for a quaternion rotation
+       * </pre>
+       *
+       * <code>repeated double Rot = 2;</code>
+       */
+      public Builder addRot(double value) {
+        ensureRotIsMutable();
+        rot_.addDouble(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * four doubles for a quaternion rotation
+       * </pre>
+       *
+       * <code>repeated double Rot = 2;</code>
+       */
+      public Builder addAllRot(
+          java.lang.Iterable<? extends java.lang.Double> values) {
+        ensureRotIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, rot_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * four doubles for a quaternion rotation
+       * </pre>
+       *
+       * <code>repeated double Rot = 2;</code>
+       */
+      public Builder clearRot() {
+        rot_ = emptyDoubleList();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+
+      private int posRef_ = 0;
+      /**
+       * <code>.BasilMessage.CoordSystem PosRef = 3;</code>
+       */
+      public int getPosRefValue() {
+        return posRef_;
+      }
+      /**
+       * <code>.BasilMessage.CoordSystem PosRef = 3;</code>
+       */
+      public Builder setPosRefValue(int value) {
+        posRef_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.BasilMessage.CoordSystem PosRef = 3;</code>
+       */
+      public BasilMessage.BasilMessageOuterClass.CoordSystem getPosRef() {
+        @SuppressWarnings("deprecation")
+        BasilMessage.BasilMessageOuterClass.CoordSystem result = BasilMessage.BasilMessageOuterClass.CoordSystem.valueOf(posRef_);
+        return result == null ? BasilMessage.BasilMessageOuterClass.CoordSystem.UNRECOGNIZED : result;
+      }
+      /**
+       * <code>.BasilMessage.CoordSystem PosRef = 3;</code>
+       */
+      public Builder setPosRef(BasilMessage.BasilMessageOuterClass.CoordSystem value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        
+        posRef_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.BasilMessage.CoordSystem PosRef = 3;</code>
+       */
+      public Builder clearPosRef() {
+        
+        posRef_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int rotRef_ = 0;
+      /**
+       * <code>.BasilMessage.RotationSystem RotRef = 4;</code>
+       */
+      public int getRotRefValue() {
+        return rotRef_;
+      }
+      /**
+       * <code>.BasilMessage.RotationSystem RotRef = 4;</code>
+       */
+      public Builder setRotRefValue(int value) {
+        rotRef_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.BasilMessage.RotationSystem RotRef = 4;</code>
+       */
+      public BasilMessage.BasilMessageOuterClass.RotationSystem getRotRef() {
+        @SuppressWarnings("deprecation")
+        BasilMessage.BasilMessageOuterClass.RotationSystem result = BasilMessage.BasilMessageOuterClass.RotationSystem.valueOf(rotRef_);
+        return result == null ? BasilMessage.BasilMessageOuterClass.RotationSystem.UNRECOGNIZED : result;
+      }
+      /**
+       * <code>.BasilMessage.RotationSystem RotRef = 4;</code>
+       */
+      public Builder setRotRef(BasilMessage.BasilMessageOuterClass.RotationSystem value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        
+        rotRef_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.BasilMessage.RotationSystem RotRef = 4;</code>
+       */
+      public Builder clearRotRef() {
+        
+        rotRef_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.Internal.DoubleList vel_ = emptyDoubleList();
+      private void ensureVelIsMutable() {
+        if (!((bitField0_ & 0x00000004) != 0)) {
+          vel_ = mutableCopy(vel_);
+          bitField0_ |= 0x00000004;
+         }
+      }
+      /**
+       * <pre>
+       * More complex position properties
+       * </pre>
+       *
+       * <code>repeated double Vel = 5;</code>
+       */
+      public java.util.List<java.lang.Double>
+          getVelList() {
+        return ((bitField0_ & 0x00000004) != 0) ?
+                 java.util.Collections.unmodifiableList(vel_) : vel_;
+      }
+      /**
+       * <pre>
+       * More complex position properties
+       * </pre>
+       *
+       * <code>repeated double Vel = 5;</code>
+       */
+      public int getVelCount() {
+        return vel_.size();
+      }
+      /**
+       * <pre>
+       * More complex position properties
+       * </pre>
+       *
+       * <code>repeated double Vel = 5;</code>
+       */
+      public double getVel(int index) {
+        return vel_.getDouble(index);
+      }
+      /**
+       * <pre>
+       * More complex position properties
+       * </pre>
+       *
+       * <code>repeated double Vel = 5;</code>
+       */
+      public Builder setVel(
+          int index, double value) {
+        ensureVelIsMutable();
+        vel_.setDouble(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * More complex position properties
+       * </pre>
+       *
+       * <code>repeated double Vel = 5;</code>
+       */
+      public Builder addVel(double value) {
+        ensureVelIsMutable();
+        vel_.addDouble(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * More complex position properties
+       * </pre>
+       *
+       * <code>repeated double Vel = 5;</code>
+       */
+      public Builder addAllVel(
+          java.lang.Iterable<? extends java.lang.Double> values) {
+        ensureVelIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, vel_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * More complex position properties
+       * </pre>
+       *
+       * <code>repeated double Vel = 5;</code>
+       */
+      public Builder clearVel() {
+        vel_ = emptyDoubleList();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.Internal.DoubleList path_ = emptyDoubleList();
+      private void ensurePathIsMutable() {
+        if (!((bitField0_ & 0x00000008) != 0)) {
+          path_ = mutableCopy(path_);
+          bitField0_ |= 0x00000008;
+         }
+      }
+      /**
+       * <pre>
+       * pairs of pos/rot defining path
+       * </pre>
+       *
+       * <code>repeated double Path = 6;</code>
+       */
+      public java.util.List<java.lang.Double>
+          getPathList() {
+        return ((bitField0_ & 0x00000008) != 0) ?
+                 java.util.Collections.unmodifiableList(path_) : path_;
+      }
+      /**
+       * <pre>
+       * pairs of pos/rot defining path
+       * </pre>
+       *
+       * <code>repeated double Path = 6;</code>
+       */
+      public int getPathCount() {
+        return path_.size();
+      }
+      /**
+       * <pre>
+       * pairs of pos/rot defining path
+       * </pre>
+       *
+       * <code>repeated double Path = 6;</code>
+       */
+      public double getPath(int index) {
+        return path_.getDouble(index);
+      }
+      /**
+       * <pre>
+       * pairs of pos/rot defining path
+       * </pre>
+       *
+       * <code>repeated double Path = 6;</code>
+       */
+      public Builder setPath(
+          int index, double value) {
+        ensurePathIsMutable();
+        path_.setDouble(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * pairs of pos/rot defining path
+       * </pre>
+       *
+       * <code>repeated double Path = 6;</code>
+       */
+      public Builder addPath(double value) {
+        ensurePathIsMutable();
+        path_.addDouble(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * pairs of pos/rot defining path
+       * </pre>
+       *
+       * <code>repeated double Path = 6;</code>
+       */
+      public Builder addAllPath(
+          java.lang.Iterable<? extends java.lang.Double> values) {
+        ensurePathIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, path_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * pairs of pos/rot defining path
+       * </pre>
+       *
+       * <code>repeated double Path = 6;</code>
+       */
+      public Builder clearPath() {
+        path_ = emptyDoubleList();
+        bitField0_ = (bitField0_ & ~0x00000008);
+        onChanged();
+        return this;
+      }
+
+      private int itemIdN_ ;
+      /**
+       * <pre>
+       * Sometimes PositionBlock is repeated to apply to many Item/Components
+       * </pre>
+       *
+       * <code>uint32 ItemIdN = 10;</code>
+       */
+      public int getItemIdN() {
+        return itemIdN_;
+      }
+      /**
+       * <pre>
+       * Sometimes PositionBlock is repeated to apply to many Item/Components
+       * </pre>
+       *
+       * <code>uint32 ItemIdN = 10;</code>
+       */
+      public Builder setItemIdN(int value) {
+        
+        itemIdN_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Sometimes PositionBlock is repeated to apply to many Item/Components
+       * </pre>
+       *
+       * <code>uint32 ItemIdN = 10;</code>
+       */
+      public Builder clearItemIdN() {
+        
+        itemIdN_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object itemId_ = "";
+      /**
+       * <pre>
+       * item being operated on
+       * </pre>
+       *
+       * <code>string ItemId = 11;</code>
+       */
+      public java.lang.String getItemId() {
+        java.lang.Object ref = itemId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          itemId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * item being operated on
+       * </pre>
+       *
+       * <code>string ItemId = 11;</code>
+       */
+      public com.google.protobuf.ByteString
+          getItemIdBytes() {
+        java.lang.Object ref = itemId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          itemId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * item being operated on
+       * </pre>
+       *
+       * <code>string ItemId = 11;</code>
+       */
+      public Builder setItemId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        itemId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * item being operated on
+       * </pre>
+       *
+       * <code>string ItemId = 11;</code>
+       */
+      public Builder clearItemId() {
+        
+        itemId_ = getDefaultInstance().getItemId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * item being operated on
+       * </pre>
+       *
+       * <code>string ItemId = 11;</code>
+       */
+      public Builder setItemIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        itemId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object sessionAuth_ = "";
+      /**
+       * <pre>
+       * authorization to make request
+       * </pre>
+       *
+       * <code>string SessionAuth = 12;</code>
+       */
+      public java.lang.String getSessionAuth() {
+        java.lang.Object ref = sessionAuth_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          sessionAuth_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * authorization to make request
+       * </pre>
+       *
+       * <code>string SessionAuth = 12;</code>
+       */
+      public com.google.protobuf.ByteString
+          getSessionAuthBytes() {
+        java.lang.Object ref = sessionAuth_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          sessionAuth_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * authorization to make request
+       * </pre>
+       *
+       * <code>string SessionAuth = 12;</code>
+       */
+      public Builder setSessionAuth(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        sessionAuth_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * authorization to make request
+       * </pre>
+       *
+       * <code>string SessionAuth = 12;</code>
+       */
+      public Builder clearSessionAuth() {
+        
+        sessionAuth_ = getDefaultInstance().getSessionAuth();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * authorization to make request
+       * </pre>
+       *
+       * <code>string SessionAuth = 12;</code>
+       */
+      public Builder setSessionAuthBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        sessionAuth_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object itemAuth_ = "";
+      /**
+       * <pre>
+       * per item authorization
+       * </pre>
+       *
+       * <code>string ItemAuth = 13;</code>
+       */
+      public java.lang.String getItemAuth() {
+        java.lang.Object ref = itemAuth_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          itemAuth_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * per item authorization
+       * </pre>
+       *
+       * <code>string ItemAuth = 13;</code>
+       */
+      public com.google.protobuf.ByteString
+          getItemAuthBytes() {
+        java.lang.Object ref = itemAuth_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          itemAuth_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * per item authorization
+       * </pre>
+       *
+       * <code>string ItemAuth = 13;</code>
+       */
+      public Builder setItemAuth(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        itemAuth_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * per item authorization
+       * </pre>
+       *
+       * <code>string ItemAuth = 13;</code>
+       */
+      public Builder clearItemAuth() {
+        
+        itemAuth_ = getDefaultInstance().getItemAuth();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * per item authorization
+       * </pre>
+       *
+       * <code>string ItemAuth = 13;</code>
+       */
+      public Builder setItemAuthBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        itemAuth_ = value;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:BasilMessage.PositionBlock)
+    }
+
+    // @@protoc_insertion_point(class_scope:BasilMessage.PositionBlock)
+    private static final BasilMessage.BasilMessageOuterClass.PositionBlock DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new BasilMessage.BasilMessageOuterClass.PositionBlock();
+    }
+
+    public static BasilMessage.BasilMessageOuterClass.PositionBlock getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<PositionBlock>
+        PARSER = new com.google.protobuf.AbstractParser<PositionBlock>() {
+      @java.lang.Override
+      public PositionBlock parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new PositionBlock(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<PositionBlock> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<PositionBlock> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public BasilMessage.BasilMessageOuterClass.PositionBlock getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface ParamBlockOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:BasilMessage.ParamBlock)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string Ability = 1;</code>
+     */
+    java.lang.String getAbility();
+    /**
+     * <code>string Ability = 1;</code>
+     */
+    com.google.protobuf.ByteString
+        getAbilityBytes();
+
+    /**
+     * <code>map&lt;string, string&gt; Props = 2;</code>
+     */
+    int getPropsCount();
+    /**
+     * <code>map&lt;string, string&gt; Props = 2;</code>
+     */
+    boolean containsProps(
+        java.lang.String key);
+    /**
+     * Use {@link #getPropsMap()} instead.
+     */
+    @java.lang.Deprecated
+    java.util.Map<java.lang.String, java.lang.String>
+    getProps();
+    /**
+     * <code>map&lt;string, string&gt; Props = 2;</code>
+     */
+    java.util.Map<java.lang.String, java.lang.String>
+    getPropsMap();
+    /**
+     * <code>map&lt;string, string&gt; Props = 2;</code>
+     */
+
+    java.lang.String getPropsOrDefault(
+        java.lang.String key,
+        java.lang.String defaultValue);
+    /**
+     * <code>map&lt;string, string&gt; Props = 2;</code>
+     */
+
+    java.lang.String getPropsOrThrow(
+        java.lang.String key);
+  }
+  /**
+   * <pre>
+   * A block of parameters.
+   * Can be used for a Ability property setting
+   * </pre>
+   *
+   * Protobuf type {@code BasilMessage.ParamBlock}
+   */
+  public  static final class ParamBlock extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:BasilMessage.ParamBlock)
+      ParamBlockOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use ParamBlock.newBuilder() to construct.
+    private ParamBlock(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ParamBlock() {
+      ability_ = "";
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private ParamBlock(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      int mutable_bitField0_ = 0;
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              ability_ = s;
+              break;
+            }
+            case 18: {
+              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+                props_ = com.google.protobuf.MapField.newMapField(
+                    PropsDefaultEntryHolder.defaultEntry);
+                mutable_bitField0_ |= 0x00000001;
+              }
+              com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
+              props__ = input.readMessage(
+                  PropsDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+              props_.getMutableMap().put(
+                  props__.getKey(), props__.getValue());
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return BasilMessage.BasilMessageOuterClass.internal_static_BasilMessage_ParamBlock_descriptor;
+    }
+
+    @SuppressWarnings({"rawtypes"})
+    @java.lang.Override
+    protected com.google.protobuf.MapField internalGetMapField(
+        int number) {
+      switch (number) {
+        case 2:
+          return internalGetProps();
+        default:
+          throw new RuntimeException(
+              "Invalid map field number: " + number);
+      }
+    }
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return BasilMessage.BasilMessageOuterClass.internal_static_BasilMessage_ParamBlock_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              BasilMessage.BasilMessageOuterClass.ParamBlock.class, BasilMessage.BasilMessageOuterClass.ParamBlock.Builder.class);
+    }
+
+    public static final int ABILITY_FIELD_NUMBER = 1;
+    private volatile java.lang.Object ability_;
+    /**
+     * <code>string Ability = 1;</code>
+     */
+    public java.lang.String getAbility() {
+      java.lang.Object ref = ability_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        ability_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string Ability = 1;</code>
+     */
+    public com.google.protobuf.ByteString
+        getAbilityBytes() {
+      java.lang.Object ref = ability_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        ability_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int PROPS_FIELD_NUMBER = 2;
+    private static final class PropsDefaultEntryHolder {
+      static final com.google.protobuf.MapEntry<
+          java.lang.String, java.lang.String> defaultEntry =
+              com.google.protobuf.MapEntry
+              .<java.lang.String, java.lang.String>newDefaultInstance(
+                  BasilMessage.BasilMessageOuterClass.internal_static_BasilMessage_ParamBlock_PropsEntry_descriptor, 
+                  com.google.protobuf.WireFormat.FieldType.STRING,
+                  "",
+                  com.google.protobuf.WireFormat.FieldType.STRING,
+                  "");
+    }
+    private com.google.protobuf.MapField<
+        java.lang.String, java.lang.String> props_;
+    private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+    internalGetProps() {
+      if (props_ == null) {
+        return com.google.protobuf.MapField.emptyMapField(
+            PropsDefaultEntryHolder.defaultEntry);
+      }
+      return props_;
+    }
+
+    public int getPropsCount() {
+      return internalGetProps().getMap().size();
+    }
+    /**
+     * <code>map&lt;string, string&gt; Props = 2;</code>
+     */
+
+    public boolean containsProps(
+        java.lang.String key) {
+      if (key == null) { throw new java.lang.NullPointerException(); }
+      return internalGetProps().getMap().containsKey(key);
+    }
+    /**
+     * Use {@link #getPropsMap()} instead.
+     */
+    @java.lang.Deprecated
+    public java.util.Map<java.lang.String, java.lang.String> getProps() {
+      return getPropsMap();
+    }
+    /**
+     * <code>map&lt;string, string&gt; Props = 2;</code>
+     */
+
+    public java.util.Map<java.lang.String, java.lang.String> getPropsMap() {
+      return internalGetProps().getMap();
+    }
+    /**
+     * <code>map&lt;string, string&gt; Props = 2;</code>
+     */
+
+    public java.lang.String getPropsOrDefault(
+        java.lang.String key,
+        java.lang.String defaultValue) {
+      if (key == null) { throw new java.lang.NullPointerException(); }
+      java.util.Map<java.lang.String, java.lang.String> map =
+          internalGetProps().getMap();
+      return map.containsKey(key) ? map.get(key) : defaultValue;
+    }
+    /**
+     * <code>map&lt;string, string&gt; Props = 2;</code>
+     */
+
+    public java.lang.String getPropsOrThrow(
+        java.lang.String key) {
+      if (key == null) { throw new java.lang.NullPointerException(); }
+      java.util.Map<java.lang.String, java.lang.String> map =
+          internalGetProps().getMap();
+      if (!map.containsKey(key)) {
+        throw new java.lang.IllegalArgumentException();
+      }
+      return map.get(key);
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!getAbilityBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, ability_);
+      }
+      com.google.protobuf.GeneratedMessageV3
+        .serializeStringMapTo(
+          output,
+          internalGetProps(),
+          PropsDefaultEntryHolder.defaultEntry,
+          2);
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!getAbilityBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, ability_);
+      }
+      for (java.util.Map.Entry<java.lang.String, java.lang.String> entry
+           : internalGetProps().getMap().entrySet()) {
+        com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
+        props__ = PropsDefaultEntryHolder.defaultEntry.newBuilderForType()
+            .setKey(entry.getKey())
+            .setValue(entry.getValue())
+            .build();
+        size += com.google.protobuf.CodedOutputStream
+            .computeMessageSize(2, props__);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof BasilMessage.BasilMessageOuterClass.ParamBlock)) {
+        return super.equals(obj);
+      }
+      BasilMessage.BasilMessageOuterClass.ParamBlock other = (BasilMessage.BasilMessageOuterClass.ParamBlock) obj;
+
+      if (!getAbility()
+          .equals(other.getAbility())) return false;
+      if (!internalGetProps().equals(
+          other.internalGetProps())) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + ABILITY_FIELD_NUMBER;
+      hash = (53 * hash) + getAbility().hashCode();
+      if (!internalGetProps().getMap().isEmpty()) {
+        hash = (37 * hash) + PROPS_FIELD_NUMBER;
+        hash = (53 * hash) + internalGetProps().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static BasilMessage.BasilMessageOuterClass.ParamBlock parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static BasilMessage.BasilMessageOuterClass.ParamBlock parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static BasilMessage.BasilMessageOuterClass.ParamBlock parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static BasilMessage.BasilMessageOuterClass.ParamBlock parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static BasilMessage.BasilMessageOuterClass.ParamBlock parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static BasilMessage.BasilMessageOuterClass.ParamBlock parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static BasilMessage.BasilMessageOuterClass.ParamBlock parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static BasilMessage.BasilMessageOuterClass.ParamBlock parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static BasilMessage.BasilMessageOuterClass.ParamBlock parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static BasilMessage.BasilMessageOuterClass.ParamBlock parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static BasilMessage.BasilMessageOuterClass.ParamBlock parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static BasilMessage.BasilMessageOuterClass.ParamBlock parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(BasilMessage.BasilMessageOuterClass.ParamBlock prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * A block of parameters.
+     * Can be used for a Ability property setting
+     * </pre>
+     *
+     * Protobuf type {@code BasilMessage.ParamBlock}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:BasilMessage.ParamBlock)
+        BasilMessage.BasilMessageOuterClass.ParamBlockOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return BasilMessage.BasilMessageOuterClass.internal_static_BasilMessage_ParamBlock_descriptor;
+      }
+
+      @SuppressWarnings({"rawtypes"})
+      protected com.google.protobuf.MapField internalGetMapField(
+          int number) {
+        switch (number) {
+          case 2:
+            return internalGetProps();
+          default:
+            throw new RuntimeException(
+                "Invalid map field number: " + number);
+        }
+      }
+      @SuppressWarnings({"rawtypes"})
+      protected com.google.protobuf.MapField internalGetMutableMapField(
+          int number) {
+        switch (number) {
+          case 2:
+            return internalGetMutableProps();
+          default:
+            throw new RuntimeException(
+                "Invalid map field number: " + number);
+        }
+      }
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return BasilMessage.BasilMessageOuterClass.internal_static_BasilMessage_ParamBlock_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                BasilMessage.BasilMessageOuterClass.ParamBlock.class, BasilMessage.BasilMessageOuterClass.ParamBlock.Builder.class);
+      }
+
+      // Construct using BasilMessage.BasilMessageOuterClass.ParamBlock.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        ability_ = "";
+
+        internalGetMutableProps().clear();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return BasilMessage.BasilMessageOuterClass.internal_static_BasilMessage_ParamBlock_descriptor;
+      }
+
+      @java.lang.Override
+      public BasilMessage.BasilMessageOuterClass.ParamBlock getDefaultInstanceForType() {
+        return BasilMessage.BasilMessageOuterClass.ParamBlock.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public BasilMessage.BasilMessageOuterClass.ParamBlock build() {
+        BasilMessage.BasilMessageOuterClass.ParamBlock result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public BasilMessage.BasilMessageOuterClass.ParamBlock buildPartial() {
+        BasilMessage.BasilMessageOuterClass.ParamBlock result = new BasilMessage.BasilMessageOuterClass.ParamBlock(this);
+        int from_bitField0_ = bitField0_;
+        result.ability_ = ability_;
+        result.props_ = internalGetProps();
+        result.props_.makeImmutable();
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof BasilMessage.BasilMessageOuterClass.ParamBlock) {
+          return mergeFrom((BasilMessage.BasilMessageOuterClass.ParamBlock)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(BasilMessage.BasilMessageOuterClass.ParamBlock other) {
+        if (other == BasilMessage.BasilMessageOuterClass.ParamBlock.getDefaultInstance()) return this;
+        if (!other.getAbility().isEmpty()) {
+          ability_ = other.ability_;
+          onChanged();
+        }
+        internalGetMutableProps().mergeFrom(
+            other.internalGetProps());
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        BasilMessage.BasilMessageOuterClass.ParamBlock parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (BasilMessage.BasilMessageOuterClass.ParamBlock) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object ability_ = "";
+      /**
+       * <code>string Ability = 1;</code>
+       */
+      public java.lang.String getAbility() {
+        java.lang.Object ref = ability_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          ability_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string Ability = 1;</code>
+       */
+      public com.google.protobuf.ByteString
+          getAbilityBytes() {
+        java.lang.Object ref = ability_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          ability_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string Ability = 1;</code>
+       */
+      public Builder setAbility(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        ability_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string Ability = 1;</code>
+       */
+      public Builder clearAbility() {
+        
+        ability_ = getDefaultInstance().getAbility();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string Ability = 1;</code>
+       */
+      public Builder setAbilityBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        ability_ = value;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.MapField<
+          java.lang.String, java.lang.String> props_;
+      private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+      internalGetProps() {
+        if (props_ == null) {
+          return com.google.protobuf.MapField.emptyMapField(
+              PropsDefaultEntryHolder.defaultEntry);
+        }
+        return props_;
+      }
+      private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+      internalGetMutableProps() {
+        onChanged();;
+        if (props_ == null) {
+          props_ = com.google.protobuf.MapField.newMapField(
+              PropsDefaultEntryHolder.defaultEntry);
+        }
+        if (!props_.isMutable()) {
+          props_ = props_.copy();
+        }
+        return props_;
+      }
+
+      public int getPropsCount() {
+        return internalGetProps().getMap().size();
+      }
+      /**
+       * <code>map&lt;string, string&gt; Props = 2;</code>
+       */
+
+      public boolean containsProps(
+          java.lang.String key) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        return internalGetProps().getMap().containsKey(key);
+      }
+      /**
+       * Use {@link #getPropsMap()} instead.
+       */
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.String, java.lang.String> getProps() {
+        return getPropsMap();
+      }
+      /**
+       * <code>map&lt;string, string&gt; Props = 2;</code>
+       */
+
+      public java.util.Map<java.lang.String, java.lang.String> getPropsMap() {
+        return internalGetProps().getMap();
+      }
+      /**
+       * <code>map&lt;string, string&gt; Props = 2;</code>
+       */
+
+      public java.lang.String getPropsOrDefault(
+          java.lang.String key,
+          java.lang.String defaultValue) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        java.util.Map<java.lang.String, java.lang.String> map =
+            internalGetProps().getMap();
+        return map.containsKey(key) ? map.get(key) : defaultValue;
+      }
+      /**
+       * <code>map&lt;string, string&gt; Props = 2;</code>
+       */
+
+      public java.lang.String getPropsOrThrow(
+          java.lang.String key) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        java.util.Map<java.lang.String, java.lang.String> map =
+            internalGetProps().getMap();
+        if (!map.containsKey(key)) {
+          throw new java.lang.IllegalArgumentException();
+        }
+        return map.get(key);
+      }
+
+      public Builder clearProps() {
+        internalGetMutableProps().getMutableMap()
+            .clear();
+        return this;
+      }
+      /**
+       * <code>map&lt;string, string&gt; Props = 2;</code>
+       */
+
+      public Builder removeProps(
+          java.lang.String key) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        internalGetMutableProps().getMutableMap()
+            .remove(key);
+        return this;
+      }
+      /**
+       * Use alternate mutation accessors instead.
+       */
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.String, java.lang.String>
+      getMutableProps() {
+        return internalGetMutableProps().getMutableMap();
+      }
+      /**
+       * <code>map&lt;string, string&gt; Props = 2;</code>
+       */
+      public Builder putProps(
+          java.lang.String key,
+          java.lang.String value) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (value == null) { throw new java.lang.NullPointerException(); }
+        internalGetMutableProps().getMutableMap()
+            .put(key, value);
+        return this;
+      }
+      /**
+       * <code>map&lt;string, string&gt; Props = 2;</code>
+       */
+
+      public Builder putAllProps(
+          java.util.Map<java.lang.String, java.lang.String> values) {
+        internalGetMutableProps().getMutableMap()
+            .putAll(values);
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:BasilMessage.ParamBlock)
+    }
+
+    // @@protoc_insertion_point(class_scope:BasilMessage.ParamBlock)
+    private static final BasilMessage.BasilMessageOuterClass.ParamBlock DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new BasilMessage.BasilMessageOuterClass.ParamBlock();
+    }
+
+    public static BasilMessage.BasilMessageOuterClass.ParamBlock getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<ParamBlock>
+        PARSER = new com.google.protobuf.AbstractParser<ParamBlock>() {
+      @java.lang.Override
+      public ParamBlock parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new ParamBlock(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<ParamBlock> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ParamBlock> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public BasilMessage.BasilMessageOuterClass.ParamBlock getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
   public interface BasilMessageOrBuilder extends
       // @@protoc_insertion_point(interface_extends:BasilMessage.BasilMessage)
       com.google.protobuf.MessageOrBuilder {
 
     /**
      * <pre>
-     * operation to perform
+     * header for tracking and response (RPC) linkage
      * </pre>
      *
-     * <code>int32 op = 1;</code>
+     * <code>uint32 ResponseCode = 1;</code>
+     */
+    int getResponseCode();
+
+    /**
+     * <pre>
+     * optional key to verify response
+     * </pre>
+     *
+     * <code>string ResponseKey = 20;</code>
+     */
+    java.lang.String getResponseKey();
+    /**
+     * <pre>
+     * optional key to verify response
+     * </pre>
+     *
+     * <code>string ResponseKey = 20;</code>
+     */
+    com.google.protobuf.ByteString
+        getResponseKeyBytes();
+
+    /**
+     * <pre>
+     * if there are multiple streams in the connection
+     * </pre>
+     *
+     * <code>uint32 StreamId = 3;</code>
+     */
+    int getStreamId();
+
+    /**
+     * <pre>
+     * versioning info
+     * </pre>
+     *
+     * <code>uint32 ProtocolVersion = 4;</code>
+     */
+    int getProtocolVersion();
+
+    /**
+     * <pre>
+     * Change ordering
+     * </pre>
+     *
+     * <code>uint64 ChangeSeq = 30;</code>
+     */
+    long getChangeSeq();
+
+    /**
+     * <pre>
+     * time code for change
+     * </pre>
+     *
+     * <code>uint64 ChangeTime = 31;</code>
+     */
+    long getChangeTime();
+
+    /**
+     * <pre>
+     * Preformance/metrics
+     * </pre>
+     *
+     * <code>uint32 QueueTime = 40;</code>
+     */
+    int getQueueTime();
+
+    /**
+     * <pre>
+     * when request was sent
+     * </pre>
+     *
+     * <code>uint32 SendTime = 41;</code>
+     */
+    int getSendTime();
+
+    /**
+     * <pre>
+     * prioritization
+     * </pre>
+     *
+     * <code>uint32 TransportClass = 42;</code>
+     */
+    int getTransportClass();
+
+    /**
+     * <pre>
+     * Operation and operation parameters
+     * </pre>
+     *
+     * <code>uint32 Op = 5;</code>
      */
     int getOp();
 
     /**
      * <pre>
-     * authorization for op
+     * authorization to make request
      * </pre>
      *
-     * <code>.BasilType.AccessAuthorization auth = 2;</code>
+     * <code>string SessionAuth = 6;</code>
      */
-    boolean hasAuth();
+    java.lang.String getSessionAuth();
     /**
      * <pre>
-     * authorization for op
+     * authorization to make request
      * </pre>
      *
-     * <code>.BasilType.AccessAuthorization auth = 2;</code>
-     */
-    BasilType.BasilTypes.AccessAuthorization getAuth();
-    /**
-     * <pre>
-     * authorization for op
-     * </pre>
-     *
-     * <code>.BasilType.AccessAuthorization auth = 2;</code>
-     */
-    BasilType.BasilTypes.AccessAuthorizationOrBuilder getAuthOrBuilder();
-
-    /**
-     * <pre>
-     * priority class of messsage
-     * </pre>
-     *
-     * <code>.BasilMessage.TransportClass class = 14;</code>
-     */
-    int getClass_Value();
-    /**
-     * <pre>
-     * priority class of messsage
-     * </pre>
-     *
-     * <code>.BasilMessage.TransportClass class = 14;</code>
-     */
-    BasilMessage.BasilMessageOuterClass.TransportClass getClass_();
-
-    /**
-     * <pre>
-     * if op needs object reference
-     * </pre>
-     *
-     * <code>.BasilType.ObjectIdentifier objectId = 3;</code>
-     */
-    boolean hasObjectId();
-    /**
-     * <pre>
-     * if op needs object reference
-     * </pre>
-     *
-     * <code>.BasilType.ObjectIdentifier objectId = 3;</code>
-     */
-    BasilType.BasilTypes.ObjectIdentifier getObjectId();
-    /**
-     * <pre>
-     * if op needs object reference
-     * </pre>
-     *
-     * <code>.BasilType.ObjectIdentifier objectId = 3;</code>
-     */
-    BasilType.BasilTypes.ObjectIdentifierOrBuilder getObjectIdOrBuilder();
-
-    /**
-     * <pre>
-     * if of needs instance reference
-     * </pre>
-     *
-     * <code>.BasilType.InstanceIdentifier instanceId = 4;</code>
-     */
-    boolean hasInstanceId();
-    /**
-     * <pre>
-     * if of needs instance reference
-     * </pre>
-     *
-     * <code>.BasilType.InstanceIdentifier instanceId = 4;</code>
-     */
-    BasilType.BasilTypes.InstanceIdentifier getInstanceId();
-    /**
-     * <pre>
-     * if of needs instance reference
-     * </pre>
-     *
-     * <code>.BasilType.InstanceIdentifier instanceId = 4;</code>
-     */
-    BasilType.BasilTypes.InstanceIdentifierOrBuilder getInstanceIdOrBuilder();
-
-    /**
-     * <pre>
-     * if op needs a position spec
-     * </pre>
-     *
-     * <code>.BasilType.InstancePositionInfo pos = 5;</code>
-     */
-    boolean hasPos();
-    /**
-     * <pre>
-     * if op needs a position spec
-     * </pre>
-     *
-     * <code>.BasilType.InstancePositionInfo pos = 5;</code>
-     */
-    BasilType.BasilTypes.InstancePositionInfo getPos();
-    /**
-     * <pre>
-     * if op needs a position spec
-     * </pre>
-     *
-     * <code>.BasilType.InstancePositionInfo pos = 5;</code>
-     */
-    BasilType.BasilTypes.InstancePositionInfoOrBuilder getPosOrBuilder();
-
-    /**
-     * <pre>
-     * if op needs asset info
-     * </pre>
-     *
-     * <code>.BasilType.AssetInformation assetInfo = 6;</code>
-     */
-    boolean hasAssetInfo();
-    /**
-     * <pre>
-     * if op needs asset info
-     * </pre>
-     *
-     * <code>.BasilType.AssetInformation assetInfo = 6;</code>
-     */
-    BasilType.BasilTypes.AssetInformation getAssetInfo();
-    /**
-     * <pre>
-     * if op needs asset info
-     * </pre>
-     *
-     * <code>.BasilType.AssetInformation assetInfo = 6;</code>
-     */
-    BasilType.BasilTypes.AssetInformationOrBuilder getAssetInfoOrBuilder();
-
-    /**
-     * <code>.BasilType.AaBoundingBox aabb = 7;</code>
-     */
-    boolean hasAabb();
-    /**
-     * <code>.BasilType.AaBoundingBox aabb = 7;</code>
-     */
-    BasilType.BasilTypes.AaBoundingBox getAabb();
-    /**
-     * <code>.BasilType.AaBoundingBox aabb = 7;</code>
-     */
-    BasilType.BasilTypes.AaBoundingBoxOrBuilder getAabbOrBuilder();
-
-    /**
-     * <code>string filter = 8;</code>
-     */
-    java.lang.String getFilter();
-    /**
-     * <code>string filter = 8;</code>
+     * <code>string SessionAuth = 6;</code>
      */
     com.google.protobuf.ByteString
-        getFilterBytes();
+        getSessionAuthBytes();
 
     /**
      * <pre>
-     * if op needs or returns property set
+     * item being operated on (by session assigned number)
      * </pre>
      *
-     * <code>map&lt;string, string&gt; properties = 9;</code>
+     * <code>uint32 ItemIdN = 7;</code>
      */
-    int getPropertiesCount();
+    int getItemIdN();
+
     /**
      * <pre>
-     * if op needs or returns property set
+     * item being operated on
      * </pre>
      *
-     * <code>map&lt;string, string&gt; properties = 9;</code>
+     * <code>string ItemId = 8;</code>
      */
-    boolean containsProperties(
+    java.lang.String getItemId();
+    /**
+     * <pre>
+     * item being operated on
+     * </pre>
+     *
+     * <code>string ItemId = 8;</code>
+     */
+    com.google.protobuf.ByteString
+        getItemIdBytes();
+
+    /**
+     * <pre>
+     * per item authorization
+     * </pre>
+     *
+     * <code>string ItemAuth = 21;</code>
+     */
+    java.lang.String getItemAuth();
+    /**
+     * <pre>
+     * per item authorization
+     * </pre>
+     *
+     * <code>string ItemAuth = 21;</code>
+     */
+    com.google.protobuf.ByteString
+        getItemAuthBytes();
+
+    /**
+     * <pre>
+     * properties to update on item
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; IProps = 9;</code>
+     */
+    int getIPropsCount();
+    /**
+     * <pre>
+     * properties to update on item
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; IProps = 9;</code>
+     */
+    boolean containsIProps(
         java.lang.String key);
     /**
-     * Use {@link #getPropertiesMap()} instead.
+     * Use {@link #getIPropsMap()} instead.
      */
     @java.lang.Deprecated
     java.util.Map<java.lang.String, java.lang.String>
-    getProperties();
+    getIProps();
     /**
      * <pre>
-     * if op needs or returns property set
+     * properties to update on item
      * </pre>
      *
-     * <code>map&lt;string, string&gt; properties = 9;</code>
+     * <code>map&lt;string, string&gt; IProps = 9;</code>
      */
     java.util.Map<java.lang.String, java.lang.String>
-    getPropertiesMap();
+    getIPropsMap();
     /**
      * <pre>
-     * if op needs or returns property set
+     * properties to update on item
      * </pre>
      *
-     * <code>map&lt;string, string&gt; properties = 9;</code>
+     * <code>map&lt;string, string&gt; IProps = 9;</code>
      */
 
-    java.lang.String getPropertiesOrDefault(
+    java.lang.String getIPropsOrDefault(
         java.lang.String key,
         java.lang.String defaultValue);
     /**
      * <pre>
-     * if op needs or returns property set
+     * properties to update on item
      * </pre>
      *
-     * <code>map&lt;string, string&gt; properties = 9;</code>
+     * <code>map&lt;string, string&gt; IProps = 9;</code>
      */
 
-    java.lang.String getPropertiesOrThrow(
+    java.lang.String getIPropsOrThrow(
         java.lang.String key);
 
     /**
      * <pre>
-     * other parameters needed by op
+     * Abilities and their properties
      * </pre>
      *
-     * <code>map&lt;string, string&gt; opParameters = 10;</code>
+     * <code>repeated .BasilMessage.ParamBlock AProps = 10;</code>
      */
-    int getOpParametersCount();
+    java.util.List<BasilMessage.BasilMessageOuterClass.ParamBlock> 
+        getAPropsList();
     /**
      * <pre>
-     * other parameters needed by op
+     * Abilities and their properties
      * </pre>
      *
-     * <code>map&lt;string, string&gt; opParameters = 10;</code>
+     * <code>repeated .BasilMessage.ParamBlock AProps = 10;</code>
      */
-    boolean containsOpParameters(
+    BasilMessage.BasilMessageOuterClass.ParamBlock getAProps(int index);
+    /**
+     * <pre>
+     * Abilities and their properties
+     * </pre>
+     *
+     * <code>repeated .BasilMessage.ParamBlock AProps = 10;</code>
+     */
+    int getAPropsCount();
+    /**
+     * <pre>
+     * Abilities and their properties
+     * </pre>
+     *
+     * <code>repeated .BasilMessage.ParamBlock AProps = 10;</code>
+     */
+    java.util.List<? extends BasilMessage.BasilMessageOuterClass.ParamBlockOrBuilder> 
+        getAPropsOrBuilderList();
+    /**
+     * <pre>
+     * Abilities and their properties
+     * </pre>
+     *
+     * <code>repeated .BasilMessage.ParamBlock AProps = 10;</code>
+     */
+    BasilMessage.BasilMessageOuterClass.ParamBlockOrBuilder getAPropsOrBuilder(
+        int index);
+
+    /**
+     * <pre>
+     * Some messages are just pos updates
+     * </pre>
+     *
+     * <code>repeated .BasilMessage.PositionBlock Positions = 11;</code>
+     */
+    java.util.List<BasilMessage.BasilMessageOuterClass.PositionBlock> 
+        getPositionsList();
+    /**
+     * <pre>
+     * Some messages are just pos updates
+     * </pre>
+     *
+     * <code>repeated .BasilMessage.PositionBlock Positions = 11;</code>
+     */
+    BasilMessage.BasilMessageOuterClass.PositionBlock getPositions(int index);
+    /**
+     * <pre>
+     * Some messages are just pos updates
+     * </pre>
+     *
+     * <code>repeated .BasilMessage.PositionBlock Positions = 11;</code>
+     */
+    int getPositionsCount();
+    /**
+     * <pre>
+     * Some messages are just pos updates
+     * </pre>
+     *
+     * <code>repeated .BasilMessage.PositionBlock Positions = 11;</code>
+     */
+    java.util.List<? extends BasilMessage.BasilMessageOuterClass.PositionBlockOrBuilder> 
+        getPositionsOrBuilderList();
+    /**
+     * <pre>
+     * Some messages are just pos updates
+     * </pre>
+     *
+     * <code>repeated .BasilMessage.PositionBlock Positions = 11;</code>
+     */
+    BasilMessage.BasilMessageOuterClass.PositionBlockOrBuilder getPositionsOrBuilder(
+        int index);
+
+    /**
+     * <pre>
+     * Responses can report errors
+     * </pre>
+     *
+     * <code>string Exception = 12;</code>
+     */
+    java.lang.String getException();
+    /**
+     * <pre>
+     * Responses can report errors
+     * </pre>
+     *
+     * <code>string Exception = 12;</code>
+     */
+    com.google.protobuf.ByteString
+        getExceptionBytes();
+
+    /**
+     * <pre>
+     * more information about the error
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; ExceptionHints = 22;</code>
+     */
+    int getExceptionHintsCount();
+    /**
+     * <pre>
+     * more information about the error
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; ExceptionHints = 22;</code>
+     */
+    boolean containsExceptionHints(
         java.lang.String key);
     /**
-     * Use {@link #getOpParametersMap()} instead.
+     * Use {@link #getExceptionHintsMap()} instead.
      */
     @java.lang.Deprecated
     java.util.Map<java.lang.String, java.lang.String>
-    getOpParameters();
+    getExceptionHints();
     /**
      * <pre>
-     * other parameters needed by op
+     * more information about the error
      * </pre>
      *
-     * <code>map&lt;string, string&gt; opParameters = 10;</code>
+     * <code>map&lt;string, string&gt; ExceptionHints = 22;</code>
      */
     java.util.Map<java.lang.String, java.lang.String>
-    getOpParametersMap();
+    getExceptionHintsMap();
     /**
      * <pre>
-     * other parameters needed by op
+     * more information about the error
      * </pre>
      *
-     * <code>map&lt;string, string&gt; opParameters = 10;</code>
+     * <code>map&lt;string, string&gt; ExceptionHints = 22;</code>
      */
 
-    java.lang.String getOpParametersOrDefault(
+    java.lang.String getExceptionHintsOrDefault(
         java.lang.String key,
         java.lang.String defaultValue);
     /**
      * <pre>
-     * other parameters needed by op
+     * more information about the error
      * </pre>
      *
-     * <code>map&lt;string, string&gt; opParameters = 10;</code>
+     * <code>map&lt;string, string&gt; ExceptionHints = 22;</code>
      */
 
-    java.lang.String getOpParametersOrThrow(
+    java.lang.String getExceptionHintsOrThrow(
         java.lang.String key);
-
-    /**
-     * <pre>
-     * if op is returning an error
-     * </pre>
-     *
-     * <code>.BasilType.BasilException exception = 11;</code>
-     */
-    boolean hasException();
-    /**
-     * <pre>
-     * if op is returning an error
-     * </pre>
-     *
-     * <code>.BasilType.BasilException exception = 11;</code>
-     */
-    BasilType.BasilTypes.BasilException getException();
-    /**
-     * <pre>
-     * if op is returning an error
-     * </pre>
-     *
-     * <code>.BasilType.BasilException exception = 11;</code>
-     */
-    BasilType.BasilTypes.BasilExceptionOrBuilder getExceptionOrBuilder();
-
-    /**
-     * <pre>
-     * transport RPC information
-     * </pre>
-     *
-     * <code>.BasilType.BResponseRequest response = 13;</code>
-     */
-    boolean hasResponse();
-    /**
-     * <pre>
-     * transport RPC information
-     * </pre>
-     *
-     * <code>.BasilType.BResponseRequest response = 13;</code>
-     */
-    BasilType.BasilTypes.BResponseRequest getResponse();
-    /**
-     * <pre>
-     * transport RPC information
-     * </pre>
-     *
-     * <code>.BasilType.BResponseRequest response = 13;</code>
-     */
-    BasilType.BasilTypes.BResponseRequestOrBuilder getResponseOrBuilder();
   }
   /**
+   * <pre>
+   * ========================== Message sent between Basil and a SpaceServer
+   * Bi-directional and used like a syncronization protocol
+   * </pre>
+   *
    * Protobuf type {@code BasilMessage.BasilMessage}
    */
   public  static final class BasilMessage extends
@@ -1033,8 +4021,13 @@ public final class BasilMessageOuterClass {
       super(builder);
     }
     private BasilMessage() {
-      class__ = 0;
-      filter_ = "";
+      responseKey_ = "";
+      sessionAuth_ = "";
+      itemId_ = "";
+      itemAuth_ = "";
+      aProps_ = java.util.Collections.emptyList();
+      positions_ = java.util.Collections.emptyList();
+      exception_ = "";
     }
 
     @java.lang.Override
@@ -1063,149 +4056,126 @@ public final class BasilMessageOuterClass {
               break;
             case 8: {
 
-              op_ = input.readInt32();
+              responseCode_ = input.readUInt32();
               break;
             }
-            case 18: {
-              BasilType.BasilTypes.AccessAuthorization.Builder subBuilder = null;
-              if (auth_ != null) {
-                subBuilder = auth_.toBuilder();
-              }
-              auth_ = input.readMessage(BasilType.BasilTypes.AccessAuthorization.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(auth_);
-                auth_ = subBuilder.buildPartial();
-              }
+            case 24: {
 
+              streamId_ = input.readUInt32();
               break;
             }
-            case 26: {
-              BasilType.BasilTypes.ObjectIdentifier.Builder subBuilder = null;
-              if (objectId_ != null) {
-                subBuilder = objectId_.toBuilder();
-              }
-              objectId_ = input.readMessage(BasilType.BasilTypes.ObjectIdentifier.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(objectId_);
-                objectId_ = subBuilder.buildPartial();
-              }
+            case 32: {
 
+              protocolVersion_ = input.readUInt32();
               break;
             }
-            case 34: {
-              BasilType.BasilTypes.InstanceIdentifier.Builder subBuilder = null;
-              if (instanceId_ != null) {
-                subBuilder = instanceId_.toBuilder();
-              }
-              instanceId_ = input.readMessage(BasilType.BasilTypes.InstanceIdentifier.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(instanceId_);
-                instanceId_ = subBuilder.buildPartial();
-              }
+            case 40: {
 
-              break;
-            }
-            case 42: {
-              BasilType.BasilTypes.InstancePositionInfo.Builder subBuilder = null;
-              if (pos_ != null) {
-                subBuilder = pos_.toBuilder();
-              }
-              pos_ = input.readMessage(BasilType.BasilTypes.InstancePositionInfo.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(pos_);
-                pos_ = subBuilder.buildPartial();
-              }
-
+              op_ = input.readUInt32();
               break;
             }
             case 50: {
-              BasilType.BasilTypes.AssetInformation.Builder subBuilder = null;
-              if (assetInfo_ != null) {
-                subBuilder = assetInfo_.toBuilder();
-              }
-              assetInfo_ = input.readMessage(BasilType.BasilTypes.AssetInformation.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(assetInfo_);
-                assetInfo_ = subBuilder.buildPartial();
-              }
+              java.lang.String s = input.readStringRequireUtf8();
 
+              sessionAuth_ = s;
               break;
             }
-            case 58: {
-              BasilType.BasilTypes.AaBoundingBox.Builder subBuilder = null;
-              if (aabb_ != null) {
-                subBuilder = aabb_.toBuilder();
-              }
-              aabb_ = input.readMessage(BasilType.BasilTypes.AaBoundingBox.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(aabb_);
-                aabb_ = subBuilder.buildPartial();
-              }
+            case 56: {
 
+              itemIdN_ = input.readUInt32();
               break;
             }
             case 66: {
               java.lang.String s = input.readStringRequireUtf8();
 
-              filter_ = s;
+              itemId_ = s;
               break;
             }
             case 74: {
               if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-                properties_ = com.google.protobuf.MapField.newMapField(
-                    PropertiesDefaultEntryHolder.defaultEntry);
+                iProps_ = com.google.protobuf.MapField.newMapField(
+                    IPropsDefaultEntryHolder.defaultEntry);
                 mutable_bitField0_ |= 0x00000001;
               }
               com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
-              properties__ = input.readMessage(
-                  PropertiesDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
-              properties_.getMutableMap().put(
-                  properties__.getKey(), properties__.getValue());
+              iProps__ = input.readMessage(
+                  IPropsDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+              iProps_.getMutableMap().put(
+                  iProps__.getKey(), iProps__.getValue());
               break;
             }
             case 82: {
               if (!((mutable_bitField0_ & 0x00000002) != 0)) {
-                opParameters_ = com.google.protobuf.MapField.newMapField(
-                    OpParametersDefaultEntryHolder.defaultEntry);
+                aProps_ = new java.util.ArrayList<BasilMessage.BasilMessageOuterClass.ParamBlock>();
                 mutable_bitField0_ |= 0x00000002;
               }
-              com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
-              opParameters__ = input.readMessage(
-                  OpParametersDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
-              opParameters_.getMutableMap().put(
-                  opParameters__.getKey(), opParameters__.getValue());
+              aProps_.add(
+                  input.readMessage(BasilMessage.BasilMessageOuterClass.ParamBlock.parser(), extensionRegistry));
               break;
             }
             case 90: {
-              BasilType.BasilTypes.BasilException.Builder subBuilder = null;
-              if (exception_ != null) {
-                subBuilder = exception_.toBuilder();
+              if (!((mutable_bitField0_ & 0x00000004) != 0)) {
+                positions_ = new java.util.ArrayList<BasilMessage.BasilMessageOuterClass.PositionBlock>();
+                mutable_bitField0_ |= 0x00000004;
               }
-              exception_ = input.readMessage(BasilType.BasilTypes.BasilException.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(exception_);
-                exception_ = subBuilder.buildPartial();
-              }
-
+              positions_.add(
+                  input.readMessage(BasilMessage.BasilMessageOuterClass.PositionBlock.parser(), extensionRegistry));
               break;
             }
-            case 106: {
-              BasilType.BasilTypes.BResponseRequest.Builder subBuilder = null;
-              if (response_ != null) {
-                subBuilder = response_.toBuilder();
-              }
-              response_ = input.readMessage(BasilType.BasilTypes.BResponseRequest.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom(response_);
-                response_ = subBuilder.buildPartial();
-              }
+            case 98: {
+              java.lang.String s = input.readStringRequireUtf8();
 
+              exception_ = s;
               break;
             }
-            case 112: {
-              int rawValue = input.readEnum();
+            case 162: {
+              java.lang.String s = input.readStringRequireUtf8();
 
-              class__ = rawValue;
+              responseKey_ = s;
+              break;
+            }
+            case 170: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              itemAuth_ = s;
+              break;
+            }
+            case 178: {
+              if (!((mutable_bitField0_ & 0x00000008) != 0)) {
+                exceptionHints_ = com.google.protobuf.MapField.newMapField(
+                    ExceptionHintsDefaultEntryHolder.defaultEntry);
+                mutable_bitField0_ |= 0x00000008;
+              }
+              com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
+              exceptionHints__ = input.readMessage(
+                  ExceptionHintsDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+              exceptionHints_.getMutableMap().put(
+                  exceptionHints__.getKey(), exceptionHints__.getValue());
+              break;
+            }
+            case 240: {
+
+              changeSeq_ = input.readUInt64();
+              break;
+            }
+            case 248: {
+
+              changeTime_ = input.readUInt64();
+              break;
+            }
+            case 320: {
+
+              queueTime_ = input.readUInt32();
+              break;
+            }
+            case 328: {
+
+              sendTime_ = input.readUInt32();
+              break;
+            }
+            case 336: {
+
+              transportClass_ = input.readUInt32();
               break;
             }
             default: {
@@ -1223,6 +4193,12 @@ public final class BasilMessageOuterClass {
         throw new com.google.protobuf.InvalidProtocolBufferException(
             e).setUnfinishedMessage(this);
       } finally {
+        if (((mutable_bitField0_ & 0x00000002) != 0)) {
+          aProps_ = java.util.Collections.unmodifiableList(aProps_);
+        }
+        if (((mutable_bitField0_ & 0x00000004) != 0)) {
+          positions_ = java.util.Collections.unmodifiableList(positions_);
+        }
         this.unknownFields = unknownFields.build();
         makeExtensionsImmutable();
       }
@@ -1238,9 +4214,9 @@ public final class BasilMessageOuterClass {
         int number) {
       switch (number) {
         case 9:
-          return internalGetProperties();
-        case 10:
-          return internalGetOpParameters();
+          return internalGetIProps();
+        case 22:
+          return internalGetExceptionHints();
         default:
           throw new RuntimeException(
               "Invalid map field number: " + number);
@@ -1254,512 +4230,638 @@ public final class BasilMessageOuterClass {
               BasilMessage.BasilMessageOuterClass.BasilMessage.class, BasilMessage.BasilMessageOuterClass.BasilMessage.Builder.class);
     }
 
-    public static final int OP_FIELD_NUMBER = 1;
-    private int op_;
+    public static final int RESPONSECODE_FIELD_NUMBER = 1;
+    private int responseCode_;
     /**
      * <pre>
-     * operation to perform
+     * header for tracking and response (RPC) linkage
      * </pre>
      *
-     * <code>int32 op = 1;</code>
+     * <code>uint32 ResponseCode = 1;</code>
      */
-    public int getOp() {
-      return op_;
+    public int getResponseCode() {
+      return responseCode_;
     }
 
-    public static final int AUTH_FIELD_NUMBER = 2;
-    private BasilType.BasilTypes.AccessAuthorization auth_;
+    public static final int RESPONSEKEY_FIELD_NUMBER = 20;
+    private volatile java.lang.Object responseKey_;
     /**
      * <pre>
-     * authorization for op
+     * optional key to verify response
      * </pre>
      *
-     * <code>.BasilType.AccessAuthorization auth = 2;</code>
+     * <code>string ResponseKey = 20;</code>
      */
-    public boolean hasAuth() {
-      return auth_ != null;
-    }
-    /**
-     * <pre>
-     * authorization for op
-     * </pre>
-     *
-     * <code>.BasilType.AccessAuthorization auth = 2;</code>
-     */
-    public BasilType.BasilTypes.AccessAuthorization getAuth() {
-      return auth_ == null ? BasilType.BasilTypes.AccessAuthorization.getDefaultInstance() : auth_;
-    }
-    /**
-     * <pre>
-     * authorization for op
-     * </pre>
-     *
-     * <code>.BasilType.AccessAuthorization auth = 2;</code>
-     */
-    public BasilType.BasilTypes.AccessAuthorizationOrBuilder getAuthOrBuilder() {
-      return getAuth();
-    }
-
-    public static final int CLASS_FIELD_NUMBER = 14;
-    private int class__;
-    /**
-     * <pre>
-     * priority class of messsage
-     * </pre>
-     *
-     * <code>.BasilMessage.TransportClass class = 14;</code>
-     */
-    public int getClass_Value() {
-      return class__;
-    }
-    /**
-     * <pre>
-     * priority class of messsage
-     * </pre>
-     *
-     * <code>.BasilMessage.TransportClass class = 14;</code>
-     */
-    public BasilMessage.BasilMessageOuterClass.TransportClass getClass_() {
-      @SuppressWarnings("deprecation")
-      BasilMessage.BasilMessageOuterClass.TransportClass result = BasilMessage.BasilMessageOuterClass.TransportClass.valueOf(class__);
-      return result == null ? BasilMessage.BasilMessageOuterClass.TransportClass.UNRECOGNIZED : result;
-    }
-
-    public static final int OBJECTID_FIELD_NUMBER = 3;
-    private BasilType.BasilTypes.ObjectIdentifier objectId_;
-    /**
-     * <pre>
-     * if op needs object reference
-     * </pre>
-     *
-     * <code>.BasilType.ObjectIdentifier objectId = 3;</code>
-     */
-    public boolean hasObjectId() {
-      return objectId_ != null;
-    }
-    /**
-     * <pre>
-     * if op needs object reference
-     * </pre>
-     *
-     * <code>.BasilType.ObjectIdentifier objectId = 3;</code>
-     */
-    public BasilType.BasilTypes.ObjectIdentifier getObjectId() {
-      return objectId_ == null ? BasilType.BasilTypes.ObjectIdentifier.getDefaultInstance() : objectId_;
-    }
-    /**
-     * <pre>
-     * if op needs object reference
-     * </pre>
-     *
-     * <code>.BasilType.ObjectIdentifier objectId = 3;</code>
-     */
-    public BasilType.BasilTypes.ObjectIdentifierOrBuilder getObjectIdOrBuilder() {
-      return getObjectId();
-    }
-
-    public static final int INSTANCEID_FIELD_NUMBER = 4;
-    private BasilType.BasilTypes.InstanceIdentifier instanceId_;
-    /**
-     * <pre>
-     * if of needs instance reference
-     * </pre>
-     *
-     * <code>.BasilType.InstanceIdentifier instanceId = 4;</code>
-     */
-    public boolean hasInstanceId() {
-      return instanceId_ != null;
-    }
-    /**
-     * <pre>
-     * if of needs instance reference
-     * </pre>
-     *
-     * <code>.BasilType.InstanceIdentifier instanceId = 4;</code>
-     */
-    public BasilType.BasilTypes.InstanceIdentifier getInstanceId() {
-      return instanceId_ == null ? BasilType.BasilTypes.InstanceIdentifier.getDefaultInstance() : instanceId_;
-    }
-    /**
-     * <pre>
-     * if of needs instance reference
-     * </pre>
-     *
-     * <code>.BasilType.InstanceIdentifier instanceId = 4;</code>
-     */
-    public BasilType.BasilTypes.InstanceIdentifierOrBuilder getInstanceIdOrBuilder() {
-      return getInstanceId();
-    }
-
-    public static final int POS_FIELD_NUMBER = 5;
-    private BasilType.BasilTypes.InstancePositionInfo pos_;
-    /**
-     * <pre>
-     * if op needs a position spec
-     * </pre>
-     *
-     * <code>.BasilType.InstancePositionInfo pos = 5;</code>
-     */
-    public boolean hasPos() {
-      return pos_ != null;
-    }
-    /**
-     * <pre>
-     * if op needs a position spec
-     * </pre>
-     *
-     * <code>.BasilType.InstancePositionInfo pos = 5;</code>
-     */
-    public BasilType.BasilTypes.InstancePositionInfo getPos() {
-      return pos_ == null ? BasilType.BasilTypes.InstancePositionInfo.getDefaultInstance() : pos_;
-    }
-    /**
-     * <pre>
-     * if op needs a position spec
-     * </pre>
-     *
-     * <code>.BasilType.InstancePositionInfo pos = 5;</code>
-     */
-    public BasilType.BasilTypes.InstancePositionInfoOrBuilder getPosOrBuilder() {
-      return getPos();
-    }
-
-    public static final int ASSETINFO_FIELD_NUMBER = 6;
-    private BasilType.BasilTypes.AssetInformation assetInfo_;
-    /**
-     * <pre>
-     * if op needs asset info
-     * </pre>
-     *
-     * <code>.BasilType.AssetInformation assetInfo = 6;</code>
-     */
-    public boolean hasAssetInfo() {
-      return assetInfo_ != null;
-    }
-    /**
-     * <pre>
-     * if op needs asset info
-     * </pre>
-     *
-     * <code>.BasilType.AssetInformation assetInfo = 6;</code>
-     */
-    public BasilType.BasilTypes.AssetInformation getAssetInfo() {
-      return assetInfo_ == null ? BasilType.BasilTypes.AssetInformation.getDefaultInstance() : assetInfo_;
-    }
-    /**
-     * <pre>
-     * if op needs asset info
-     * </pre>
-     *
-     * <code>.BasilType.AssetInformation assetInfo = 6;</code>
-     */
-    public BasilType.BasilTypes.AssetInformationOrBuilder getAssetInfoOrBuilder() {
-      return getAssetInfo();
-    }
-
-    public static final int AABB_FIELD_NUMBER = 7;
-    private BasilType.BasilTypes.AaBoundingBox aabb_;
-    /**
-     * <code>.BasilType.AaBoundingBox aabb = 7;</code>
-     */
-    public boolean hasAabb() {
-      return aabb_ != null;
-    }
-    /**
-     * <code>.BasilType.AaBoundingBox aabb = 7;</code>
-     */
-    public BasilType.BasilTypes.AaBoundingBox getAabb() {
-      return aabb_ == null ? BasilType.BasilTypes.AaBoundingBox.getDefaultInstance() : aabb_;
-    }
-    /**
-     * <code>.BasilType.AaBoundingBox aabb = 7;</code>
-     */
-    public BasilType.BasilTypes.AaBoundingBoxOrBuilder getAabbOrBuilder() {
-      return getAabb();
-    }
-
-    public static final int FILTER_FIELD_NUMBER = 8;
-    private volatile java.lang.Object filter_;
-    /**
-     * <code>string filter = 8;</code>
-     */
-    public java.lang.String getFilter() {
-      java.lang.Object ref = filter_;
+    public java.lang.String getResponseKey() {
+      java.lang.Object ref = responseKey_;
       if (ref instanceof java.lang.String) {
         return (java.lang.String) ref;
       } else {
         com.google.protobuf.ByteString bs = 
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        filter_ = s;
+        responseKey_ = s;
         return s;
       }
     }
     /**
-     * <code>string filter = 8;</code>
+     * <pre>
+     * optional key to verify response
+     * </pre>
+     *
+     * <code>string ResponseKey = 20;</code>
      */
     public com.google.protobuf.ByteString
-        getFilterBytes() {
-      java.lang.Object ref = filter_;
+        getResponseKeyBytes() {
+      java.lang.Object ref = responseKey_;
       if (ref instanceof java.lang.String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
-        filter_ = b;
+        responseKey_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
     }
 
-    public static final int PROPERTIES_FIELD_NUMBER = 9;
-    private static final class PropertiesDefaultEntryHolder {
+    public static final int STREAMID_FIELD_NUMBER = 3;
+    private int streamId_;
+    /**
+     * <pre>
+     * if there are multiple streams in the connection
+     * </pre>
+     *
+     * <code>uint32 StreamId = 3;</code>
+     */
+    public int getStreamId() {
+      return streamId_;
+    }
+
+    public static final int PROTOCOLVERSION_FIELD_NUMBER = 4;
+    private int protocolVersion_;
+    /**
+     * <pre>
+     * versioning info
+     * </pre>
+     *
+     * <code>uint32 ProtocolVersion = 4;</code>
+     */
+    public int getProtocolVersion() {
+      return protocolVersion_;
+    }
+
+    public static final int CHANGESEQ_FIELD_NUMBER = 30;
+    private long changeSeq_;
+    /**
+     * <pre>
+     * Change ordering
+     * </pre>
+     *
+     * <code>uint64 ChangeSeq = 30;</code>
+     */
+    public long getChangeSeq() {
+      return changeSeq_;
+    }
+
+    public static final int CHANGETIME_FIELD_NUMBER = 31;
+    private long changeTime_;
+    /**
+     * <pre>
+     * time code for change
+     * </pre>
+     *
+     * <code>uint64 ChangeTime = 31;</code>
+     */
+    public long getChangeTime() {
+      return changeTime_;
+    }
+
+    public static final int QUEUETIME_FIELD_NUMBER = 40;
+    private int queueTime_;
+    /**
+     * <pre>
+     * Preformance/metrics
+     * </pre>
+     *
+     * <code>uint32 QueueTime = 40;</code>
+     */
+    public int getQueueTime() {
+      return queueTime_;
+    }
+
+    public static final int SENDTIME_FIELD_NUMBER = 41;
+    private int sendTime_;
+    /**
+     * <pre>
+     * when request was sent
+     * </pre>
+     *
+     * <code>uint32 SendTime = 41;</code>
+     */
+    public int getSendTime() {
+      return sendTime_;
+    }
+
+    public static final int TRANSPORTCLASS_FIELD_NUMBER = 42;
+    private int transportClass_;
+    /**
+     * <pre>
+     * prioritization
+     * </pre>
+     *
+     * <code>uint32 TransportClass = 42;</code>
+     */
+    public int getTransportClass() {
+      return transportClass_;
+    }
+
+    public static final int OP_FIELD_NUMBER = 5;
+    private int op_;
+    /**
+     * <pre>
+     * Operation and operation parameters
+     * </pre>
+     *
+     * <code>uint32 Op = 5;</code>
+     */
+    public int getOp() {
+      return op_;
+    }
+
+    public static final int SESSIONAUTH_FIELD_NUMBER = 6;
+    private volatile java.lang.Object sessionAuth_;
+    /**
+     * <pre>
+     * authorization to make request
+     * </pre>
+     *
+     * <code>string SessionAuth = 6;</code>
+     */
+    public java.lang.String getSessionAuth() {
+      java.lang.Object ref = sessionAuth_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        sessionAuth_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * authorization to make request
+     * </pre>
+     *
+     * <code>string SessionAuth = 6;</code>
+     */
+    public com.google.protobuf.ByteString
+        getSessionAuthBytes() {
+      java.lang.Object ref = sessionAuth_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        sessionAuth_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ITEMIDN_FIELD_NUMBER = 7;
+    private int itemIdN_;
+    /**
+     * <pre>
+     * item being operated on (by session assigned number)
+     * </pre>
+     *
+     * <code>uint32 ItemIdN = 7;</code>
+     */
+    public int getItemIdN() {
+      return itemIdN_;
+    }
+
+    public static final int ITEMID_FIELD_NUMBER = 8;
+    private volatile java.lang.Object itemId_;
+    /**
+     * <pre>
+     * item being operated on
+     * </pre>
+     *
+     * <code>string ItemId = 8;</code>
+     */
+    public java.lang.String getItemId() {
+      java.lang.Object ref = itemId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        itemId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * item being operated on
+     * </pre>
+     *
+     * <code>string ItemId = 8;</code>
+     */
+    public com.google.protobuf.ByteString
+        getItemIdBytes() {
+      java.lang.Object ref = itemId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        itemId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int ITEMAUTH_FIELD_NUMBER = 21;
+    private volatile java.lang.Object itemAuth_;
+    /**
+     * <pre>
+     * per item authorization
+     * </pre>
+     *
+     * <code>string ItemAuth = 21;</code>
+     */
+    public java.lang.String getItemAuth() {
+      java.lang.Object ref = itemAuth_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        itemAuth_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * per item authorization
+     * </pre>
+     *
+     * <code>string ItemAuth = 21;</code>
+     */
+    public com.google.protobuf.ByteString
+        getItemAuthBytes() {
+      java.lang.Object ref = itemAuth_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        itemAuth_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int IPROPS_FIELD_NUMBER = 9;
+    private static final class IPropsDefaultEntryHolder {
       static final com.google.protobuf.MapEntry<
           java.lang.String, java.lang.String> defaultEntry =
               com.google.protobuf.MapEntry
               .<java.lang.String, java.lang.String>newDefaultInstance(
-                  BasilMessage.BasilMessageOuterClass.internal_static_BasilMessage_BasilMessage_PropertiesEntry_descriptor, 
+                  BasilMessage.BasilMessageOuterClass.internal_static_BasilMessage_BasilMessage_IPropsEntry_descriptor, 
                   com.google.protobuf.WireFormat.FieldType.STRING,
                   "",
                   com.google.protobuf.WireFormat.FieldType.STRING,
                   "");
     }
     private com.google.protobuf.MapField<
-        java.lang.String, java.lang.String> properties_;
+        java.lang.String, java.lang.String> iProps_;
     private com.google.protobuf.MapField<java.lang.String, java.lang.String>
-    internalGetProperties() {
-      if (properties_ == null) {
+    internalGetIProps() {
+      if (iProps_ == null) {
         return com.google.protobuf.MapField.emptyMapField(
-            PropertiesDefaultEntryHolder.defaultEntry);
+            IPropsDefaultEntryHolder.defaultEntry);
       }
-      return properties_;
+      return iProps_;
     }
 
-    public int getPropertiesCount() {
-      return internalGetProperties().getMap().size();
+    public int getIPropsCount() {
+      return internalGetIProps().getMap().size();
     }
     /**
      * <pre>
-     * if op needs or returns property set
+     * properties to update on item
      * </pre>
      *
-     * <code>map&lt;string, string&gt; properties = 9;</code>
+     * <code>map&lt;string, string&gt; IProps = 9;</code>
      */
 
-    public boolean containsProperties(
+    public boolean containsIProps(
         java.lang.String key) {
       if (key == null) { throw new java.lang.NullPointerException(); }
-      return internalGetProperties().getMap().containsKey(key);
+      return internalGetIProps().getMap().containsKey(key);
     }
     /**
-     * Use {@link #getPropertiesMap()} instead.
+     * Use {@link #getIPropsMap()} instead.
      */
     @java.lang.Deprecated
-    public java.util.Map<java.lang.String, java.lang.String> getProperties() {
-      return getPropertiesMap();
+    public java.util.Map<java.lang.String, java.lang.String> getIProps() {
+      return getIPropsMap();
     }
     /**
      * <pre>
-     * if op needs or returns property set
+     * properties to update on item
      * </pre>
      *
-     * <code>map&lt;string, string&gt; properties = 9;</code>
+     * <code>map&lt;string, string&gt; IProps = 9;</code>
      */
 
-    public java.util.Map<java.lang.String, java.lang.String> getPropertiesMap() {
-      return internalGetProperties().getMap();
+    public java.util.Map<java.lang.String, java.lang.String> getIPropsMap() {
+      return internalGetIProps().getMap();
     }
     /**
      * <pre>
-     * if op needs or returns property set
+     * properties to update on item
      * </pre>
      *
-     * <code>map&lt;string, string&gt; properties = 9;</code>
+     * <code>map&lt;string, string&gt; IProps = 9;</code>
      */
 
-    public java.lang.String getPropertiesOrDefault(
+    public java.lang.String getIPropsOrDefault(
         java.lang.String key,
         java.lang.String defaultValue) {
       if (key == null) { throw new java.lang.NullPointerException(); }
       java.util.Map<java.lang.String, java.lang.String> map =
-          internalGetProperties().getMap();
+          internalGetIProps().getMap();
       return map.containsKey(key) ? map.get(key) : defaultValue;
     }
     /**
      * <pre>
-     * if op needs or returns property set
+     * properties to update on item
      * </pre>
      *
-     * <code>map&lt;string, string&gt; properties = 9;</code>
+     * <code>map&lt;string, string&gt; IProps = 9;</code>
      */
 
-    public java.lang.String getPropertiesOrThrow(
+    public java.lang.String getIPropsOrThrow(
         java.lang.String key) {
       if (key == null) { throw new java.lang.NullPointerException(); }
       java.util.Map<java.lang.String, java.lang.String> map =
-          internalGetProperties().getMap();
+          internalGetIProps().getMap();
       if (!map.containsKey(key)) {
         throw new java.lang.IllegalArgumentException();
       }
       return map.get(key);
     }
 
-    public static final int OPPARAMETERS_FIELD_NUMBER = 10;
-    private static final class OpParametersDefaultEntryHolder {
+    public static final int APROPS_FIELD_NUMBER = 10;
+    private java.util.List<BasilMessage.BasilMessageOuterClass.ParamBlock> aProps_;
+    /**
+     * <pre>
+     * Abilities and their properties
+     * </pre>
+     *
+     * <code>repeated .BasilMessage.ParamBlock AProps = 10;</code>
+     */
+    public java.util.List<BasilMessage.BasilMessageOuterClass.ParamBlock> getAPropsList() {
+      return aProps_;
+    }
+    /**
+     * <pre>
+     * Abilities and their properties
+     * </pre>
+     *
+     * <code>repeated .BasilMessage.ParamBlock AProps = 10;</code>
+     */
+    public java.util.List<? extends BasilMessage.BasilMessageOuterClass.ParamBlockOrBuilder> 
+        getAPropsOrBuilderList() {
+      return aProps_;
+    }
+    /**
+     * <pre>
+     * Abilities and their properties
+     * </pre>
+     *
+     * <code>repeated .BasilMessage.ParamBlock AProps = 10;</code>
+     */
+    public int getAPropsCount() {
+      return aProps_.size();
+    }
+    /**
+     * <pre>
+     * Abilities and their properties
+     * </pre>
+     *
+     * <code>repeated .BasilMessage.ParamBlock AProps = 10;</code>
+     */
+    public BasilMessage.BasilMessageOuterClass.ParamBlock getAProps(int index) {
+      return aProps_.get(index);
+    }
+    /**
+     * <pre>
+     * Abilities and their properties
+     * </pre>
+     *
+     * <code>repeated .BasilMessage.ParamBlock AProps = 10;</code>
+     */
+    public BasilMessage.BasilMessageOuterClass.ParamBlockOrBuilder getAPropsOrBuilder(
+        int index) {
+      return aProps_.get(index);
+    }
+
+    public static final int POSITIONS_FIELD_NUMBER = 11;
+    private java.util.List<BasilMessage.BasilMessageOuterClass.PositionBlock> positions_;
+    /**
+     * <pre>
+     * Some messages are just pos updates
+     * </pre>
+     *
+     * <code>repeated .BasilMessage.PositionBlock Positions = 11;</code>
+     */
+    public java.util.List<BasilMessage.BasilMessageOuterClass.PositionBlock> getPositionsList() {
+      return positions_;
+    }
+    /**
+     * <pre>
+     * Some messages are just pos updates
+     * </pre>
+     *
+     * <code>repeated .BasilMessage.PositionBlock Positions = 11;</code>
+     */
+    public java.util.List<? extends BasilMessage.BasilMessageOuterClass.PositionBlockOrBuilder> 
+        getPositionsOrBuilderList() {
+      return positions_;
+    }
+    /**
+     * <pre>
+     * Some messages are just pos updates
+     * </pre>
+     *
+     * <code>repeated .BasilMessage.PositionBlock Positions = 11;</code>
+     */
+    public int getPositionsCount() {
+      return positions_.size();
+    }
+    /**
+     * <pre>
+     * Some messages are just pos updates
+     * </pre>
+     *
+     * <code>repeated .BasilMessage.PositionBlock Positions = 11;</code>
+     */
+    public BasilMessage.BasilMessageOuterClass.PositionBlock getPositions(int index) {
+      return positions_.get(index);
+    }
+    /**
+     * <pre>
+     * Some messages are just pos updates
+     * </pre>
+     *
+     * <code>repeated .BasilMessage.PositionBlock Positions = 11;</code>
+     */
+    public BasilMessage.BasilMessageOuterClass.PositionBlockOrBuilder getPositionsOrBuilder(
+        int index) {
+      return positions_.get(index);
+    }
+
+    public static final int EXCEPTION_FIELD_NUMBER = 12;
+    private volatile java.lang.Object exception_;
+    /**
+     * <pre>
+     * Responses can report errors
+     * </pre>
+     *
+     * <code>string Exception = 12;</code>
+     */
+    public java.lang.String getException() {
+      java.lang.Object ref = exception_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        exception_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * Responses can report errors
+     * </pre>
+     *
+     * <code>string Exception = 12;</code>
+     */
+    public com.google.protobuf.ByteString
+        getExceptionBytes() {
+      java.lang.Object ref = exception_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        exception_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int EXCEPTIONHINTS_FIELD_NUMBER = 22;
+    private static final class ExceptionHintsDefaultEntryHolder {
       static final com.google.protobuf.MapEntry<
           java.lang.String, java.lang.String> defaultEntry =
               com.google.protobuf.MapEntry
               .<java.lang.String, java.lang.String>newDefaultInstance(
-                  BasilMessage.BasilMessageOuterClass.internal_static_BasilMessage_BasilMessage_OpParametersEntry_descriptor, 
+                  BasilMessage.BasilMessageOuterClass.internal_static_BasilMessage_BasilMessage_ExceptionHintsEntry_descriptor, 
                   com.google.protobuf.WireFormat.FieldType.STRING,
                   "",
                   com.google.protobuf.WireFormat.FieldType.STRING,
                   "");
     }
     private com.google.protobuf.MapField<
-        java.lang.String, java.lang.String> opParameters_;
+        java.lang.String, java.lang.String> exceptionHints_;
     private com.google.protobuf.MapField<java.lang.String, java.lang.String>
-    internalGetOpParameters() {
-      if (opParameters_ == null) {
+    internalGetExceptionHints() {
+      if (exceptionHints_ == null) {
         return com.google.protobuf.MapField.emptyMapField(
-            OpParametersDefaultEntryHolder.defaultEntry);
+            ExceptionHintsDefaultEntryHolder.defaultEntry);
       }
-      return opParameters_;
+      return exceptionHints_;
     }
 
-    public int getOpParametersCount() {
-      return internalGetOpParameters().getMap().size();
+    public int getExceptionHintsCount() {
+      return internalGetExceptionHints().getMap().size();
     }
     /**
      * <pre>
-     * other parameters needed by op
+     * more information about the error
      * </pre>
      *
-     * <code>map&lt;string, string&gt; opParameters = 10;</code>
+     * <code>map&lt;string, string&gt; ExceptionHints = 22;</code>
      */
 
-    public boolean containsOpParameters(
+    public boolean containsExceptionHints(
         java.lang.String key) {
       if (key == null) { throw new java.lang.NullPointerException(); }
-      return internalGetOpParameters().getMap().containsKey(key);
+      return internalGetExceptionHints().getMap().containsKey(key);
     }
     /**
-     * Use {@link #getOpParametersMap()} instead.
+     * Use {@link #getExceptionHintsMap()} instead.
      */
     @java.lang.Deprecated
-    public java.util.Map<java.lang.String, java.lang.String> getOpParameters() {
-      return getOpParametersMap();
+    public java.util.Map<java.lang.String, java.lang.String> getExceptionHints() {
+      return getExceptionHintsMap();
     }
     /**
      * <pre>
-     * other parameters needed by op
+     * more information about the error
      * </pre>
      *
-     * <code>map&lt;string, string&gt; opParameters = 10;</code>
+     * <code>map&lt;string, string&gt; ExceptionHints = 22;</code>
      */
 
-    public java.util.Map<java.lang.String, java.lang.String> getOpParametersMap() {
-      return internalGetOpParameters().getMap();
+    public java.util.Map<java.lang.String, java.lang.String> getExceptionHintsMap() {
+      return internalGetExceptionHints().getMap();
     }
     /**
      * <pre>
-     * other parameters needed by op
+     * more information about the error
      * </pre>
      *
-     * <code>map&lt;string, string&gt; opParameters = 10;</code>
+     * <code>map&lt;string, string&gt; ExceptionHints = 22;</code>
      */
 
-    public java.lang.String getOpParametersOrDefault(
+    public java.lang.String getExceptionHintsOrDefault(
         java.lang.String key,
         java.lang.String defaultValue) {
       if (key == null) { throw new java.lang.NullPointerException(); }
       java.util.Map<java.lang.String, java.lang.String> map =
-          internalGetOpParameters().getMap();
+          internalGetExceptionHints().getMap();
       return map.containsKey(key) ? map.get(key) : defaultValue;
     }
     /**
      * <pre>
-     * other parameters needed by op
+     * more information about the error
      * </pre>
      *
-     * <code>map&lt;string, string&gt; opParameters = 10;</code>
+     * <code>map&lt;string, string&gt; ExceptionHints = 22;</code>
      */
 
-    public java.lang.String getOpParametersOrThrow(
+    public java.lang.String getExceptionHintsOrThrow(
         java.lang.String key) {
       if (key == null) { throw new java.lang.NullPointerException(); }
       java.util.Map<java.lang.String, java.lang.String> map =
-          internalGetOpParameters().getMap();
+          internalGetExceptionHints().getMap();
       if (!map.containsKey(key)) {
         throw new java.lang.IllegalArgumentException();
       }
       return map.get(key);
-    }
-
-    public static final int EXCEPTION_FIELD_NUMBER = 11;
-    private BasilType.BasilTypes.BasilException exception_;
-    /**
-     * <pre>
-     * if op is returning an error
-     * </pre>
-     *
-     * <code>.BasilType.BasilException exception = 11;</code>
-     */
-    public boolean hasException() {
-      return exception_ != null;
-    }
-    /**
-     * <pre>
-     * if op is returning an error
-     * </pre>
-     *
-     * <code>.BasilType.BasilException exception = 11;</code>
-     */
-    public BasilType.BasilTypes.BasilException getException() {
-      return exception_ == null ? BasilType.BasilTypes.BasilException.getDefaultInstance() : exception_;
-    }
-    /**
-     * <pre>
-     * if op is returning an error
-     * </pre>
-     *
-     * <code>.BasilType.BasilException exception = 11;</code>
-     */
-    public BasilType.BasilTypes.BasilExceptionOrBuilder getExceptionOrBuilder() {
-      return getException();
-    }
-
-    public static final int RESPONSE_FIELD_NUMBER = 13;
-    private BasilType.BasilTypes.BResponseRequest response_;
-    /**
-     * <pre>
-     * transport RPC information
-     * </pre>
-     *
-     * <code>.BasilType.BResponseRequest response = 13;</code>
-     */
-    public boolean hasResponse() {
-      return response_ != null;
-    }
-    /**
-     * <pre>
-     * transport RPC information
-     * </pre>
-     *
-     * <code>.BasilType.BResponseRequest response = 13;</code>
-     */
-    public BasilType.BasilTypes.BResponseRequest getResponse() {
-      return response_ == null ? BasilType.BasilTypes.BResponseRequest.getDefaultInstance() : response_;
-    }
-    /**
-     * <pre>
-     * transport RPC information
-     * </pre>
-     *
-     * <code>.BasilType.BResponseRequest response = 13;</code>
-     */
-    public BasilType.BasilTypes.BResponseRequestOrBuilder getResponseOrBuilder() {
-      return getResponse();
     }
 
     private byte memoizedIsInitialized = -1;
@@ -1776,50 +4878,68 @@ public final class BasilMessageOuterClass {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
+      if (responseCode_ != 0) {
+        output.writeUInt32(1, responseCode_);
+      }
+      if (streamId_ != 0) {
+        output.writeUInt32(3, streamId_);
+      }
+      if (protocolVersion_ != 0) {
+        output.writeUInt32(4, protocolVersion_);
+      }
       if (op_ != 0) {
-        output.writeInt32(1, op_);
+        output.writeUInt32(5, op_);
       }
-      if (auth_ != null) {
-        output.writeMessage(2, getAuth());
+      if (!getSessionAuthBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 6, sessionAuth_);
       }
-      if (objectId_ != null) {
-        output.writeMessage(3, getObjectId());
+      if (itemIdN_ != 0) {
+        output.writeUInt32(7, itemIdN_);
       }
-      if (instanceId_ != null) {
-        output.writeMessage(4, getInstanceId());
-      }
-      if (pos_ != null) {
-        output.writeMessage(5, getPos());
-      }
-      if (assetInfo_ != null) {
-        output.writeMessage(6, getAssetInfo());
-      }
-      if (aabb_ != null) {
-        output.writeMessage(7, getAabb());
-      }
-      if (!getFilterBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 8, filter_);
+      if (!getItemIdBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 8, itemId_);
       }
       com.google.protobuf.GeneratedMessageV3
         .serializeStringMapTo(
           output,
-          internalGetProperties(),
-          PropertiesDefaultEntryHolder.defaultEntry,
+          internalGetIProps(),
+          IPropsDefaultEntryHolder.defaultEntry,
           9);
+      for (int i = 0; i < aProps_.size(); i++) {
+        output.writeMessage(10, aProps_.get(i));
+      }
+      for (int i = 0; i < positions_.size(); i++) {
+        output.writeMessage(11, positions_.get(i));
+      }
+      if (!getExceptionBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 12, exception_);
+      }
+      if (!getResponseKeyBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 20, responseKey_);
+      }
+      if (!getItemAuthBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 21, itemAuth_);
+      }
       com.google.protobuf.GeneratedMessageV3
         .serializeStringMapTo(
           output,
-          internalGetOpParameters(),
-          OpParametersDefaultEntryHolder.defaultEntry,
-          10);
-      if (exception_ != null) {
-        output.writeMessage(11, getException());
+          internalGetExceptionHints(),
+          ExceptionHintsDefaultEntryHolder.defaultEntry,
+          22);
+      if (changeSeq_ != 0L) {
+        output.writeUInt64(30, changeSeq_);
       }
-      if (response_ != null) {
-        output.writeMessage(13, getResponse());
+      if (changeTime_ != 0L) {
+        output.writeUInt64(31, changeTime_);
       }
-      if (class__ != BasilMessage.BasilMessageOuterClass.TransportClass.Default.getNumber()) {
-        output.writeEnum(14, class__);
+      if (queueTime_ != 0) {
+        output.writeUInt32(40, queueTime_);
+      }
+      if (sendTime_ != 0) {
+        output.writeUInt32(41, sendTime_);
+      }
+      if (transportClass_ != 0) {
+        output.writeUInt32(42, transportClass_);
       }
       unknownFields.writeTo(output);
     }
@@ -1830,68 +4950,88 @@ public final class BasilMessageOuterClass {
       if (size != -1) return size;
 
       size = 0;
+      if (responseCode_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(1, responseCode_);
+      }
+      if (streamId_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(3, streamId_);
+      }
+      if (protocolVersion_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(4, protocolVersion_);
+      }
       if (op_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeInt32Size(1, op_);
+          .computeUInt32Size(5, op_);
       }
-      if (auth_ != null) {
+      if (!getSessionAuthBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, sessionAuth_);
+      }
+      if (itemIdN_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(2, getAuth());
+          .computeUInt32Size(7, itemIdN_);
       }
-      if (objectId_ != null) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(3, getObjectId());
-      }
-      if (instanceId_ != null) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(4, getInstanceId());
-      }
-      if (pos_ != null) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(5, getPos());
-      }
-      if (assetInfo_ != null) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(6, getAssetInfo());
-      }
-      if (aabb_ != null) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(7, getAabb());
-      }
-      if (!getFilterBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(8, filter_);
+      if (!getItemIdBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(8, itemId_);
       }
       for (java.util.Map.Entry<java.lang.String, java.lang.String> entry
-           : internalGetProperties().getMap().entrySet()) {
+           : internalGetIProps().getMap().entrySet()) {
         com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
-        properties__ = PropertiesDefaultEntryHolder.defaultEntry.newBuilderForType()
+        iProps__ = IPropsDefaultEntryHolder.defaultEntry.newBuilderForType()
             .setKey(entry.getKey())
             .setValue(entry.getValue())
             .build();
         size += com.google.protobuf.CodedOutputStream
-            .computeMessageSize(9, properties__);
+            .computeMessageSize(9, iProps__);
+      }
+      for (int i = 0; i < aProps_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(10, aProps_.get(i));
+      }
+      for (int i = 0; i < positions_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(11, positions_.get(i));
+      }
+      if (!getExceptionBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(12, exception_);
+      }
+      if (!getResponseKeyBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(20, responseKey_);
+      }
+      if (!getItemAuthBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(21, itemAuth_);
       }
       for (java.util.Map.Entry<java.lang.String, java.lang.String> entry
-           : internalGetOpParameters().getMap().entrySet()) {
+           : internalGetExceptionHints().getMap().entrySet()) {
         com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
-        opParameters__ = OpParametersDefaultEntryHolder.defaultEntry.newBuilderForType()
+        exceptionHints__ = ExceptionHintsDefaultEntryHolder.defaultEntry.newBuilderForType()
             .setKey(entry.getKey())
             .setValue(entry.getValue())
             .build();
         size += com.google.protobuf.CodedOutputStream
-            .computeMessageSize(10, opParameters__);
+            .computeMessageSize(22, exceptionHints__);
       }
-      if (exception_ != null) {
+      if (changeSeq_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(11, getException());
+          .computeUInt64Size(30, changeSeq_);
       }
-      if (response_ != null) {
+      if (changeTime_ != 0L) {
         size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(13, getResponse());
+          .computeUInt64Size(31, changeTime_);
       }
-      if (class__ != BasilMessage.BasilMessageOuterClass.TransportClass.Default.getNumber()) {
+      if (queueTime_ != 0) {
         size += com.google.protobuf.CodedOutputStream
-          .computeEnumSize(14, class__);
+          .computeUInt32Size(40, queueTime_);
+      }
+      if (sendTime_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(41, sendTime_);
+      }
+      if (transportClass_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeUInt32Size(42, transportClass_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -1908,55 +5048,44 @@ public final class BasilMessageOuterClass {
       }
       BasilMessage.BasilMessageOuterClass.BasilMessage other = (BasilMessage.BasilMessageOuterClass.BasilMessage) obj;
 
+      if (getResponseCode()
+          != other.getResponseCode()) return false;
+      if (!getResponseKey()
+          .equals(other.getResponseKey())) return false;
+      if (getStreamId()
+          != other.getStreamId()) return false;
+      if (getProtocolVersion()
+          != other.getProtocolVersion()) return false;
+      if (getChangeSeq()
+          != other.getChangeSeq()) return false;
+      if (getChangeTime()
+          != other.getChangeTime()) return false;
+      if (getQueueTime()
+          != other.getQueueTime()) return false;
+      if (getSendTime()
+          != other.getSendTime()) return false;
+      if (getTransportClass()
+          != other.getTransportClass()) return false;
       if (getOp()
           != other.getOp()) return false;
-      if (hasAuth() != other.hasAuth()) return false;
-      if (hasAuth()) {
-        if (!getAuth()
-            .equals(other.getAuth())) return false;
-      }
-      if (class__ != other.class__) return false;
-      if (hasObjectId() != other.hasObjectId()) return false;
-      if (hasObjectId()) {
-        if (!getObjectId()
-            .equals(other.getObjectId())) return false;
-      }
-      if (hasInstanceId() != other.hasInstanceId()) return false;
-      if (hasInstanceId()) {
-        if (!getInstanceId()
-            .equals(other.getInstanceId())) return false;
-      }
-      if (hasPos() != other.hasPos()) return false;
-      if (hasPos()) {
-        if (!getPos()
-            .equals(other.getPos())) return false;
-      }
-      if (hasAssetInfo() != other.hasAssetInfo()) return false;
-      if (hasAssetInfo()) {
-        if (!getAssetInfo()
-            .equals(other.getAssetInfo())) return false;
-      }
-      if (hasAabb() != other.hasAabb()) return false;
-      if (hasAabb()) {
-        if (!getAabb()
-            .equals(other.getAabb())) return false;
-      }
-      if (!getFilter()
-          .equals(other.getFilter())) return false;
-      if (!internalGetProperties().equals(
-          other.internalGetProperties())) return false;
-      if (!internalGetOpParameters().equals(
-          other.internalGetOpParameters())) return false;
-      if (hasException() != other.hasException()) return false;
-      if (hasException()) {
-        if (!getException()
-            .equals(other.getException())) return false;
-      }
-      if (hasResponse() != other.hasResponse()) return false;
-      if (hasResponse()) {
-        if (!getResponse()
-            .equals(other.getResponse())) return false;
-      }
+      if (!getSessionAuth()
+          .equals(other.getSessionAuth())) return false;
+      if (getItemIdN()
+          != other.getItemIdN()) return false;
+      if (!getItemId()
+          .equals(other.getItemId())) return false;
+      if (!getItemAuth()
+          .equals(other.getItemAuth())) return false;
+      if (!internalGetIProps().equals(
+          other.internalGetIProps())) return false;
+      if (!getAPropsList()
+          .equals(other.getAPropsList())) return false;
+      if (!getPositionsList()
+          .equals(other.getPositionsList())) return false;
+      if (!getException()
+          .equals(other.getException())) return false;
+      if (!internalGetExceptionHints().equals(
+          other.internalGetExceptionHints())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -1968,51 +5097,53 @@ public final class BasilMessageOuterClass {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + RESPONSECODE_FIELD_NUMBER;
+      hash = (53 * hash) + getResponseCode();
+      hash = (37 * hash) + RESPONSEKEY_FIELD_NUMBER;
+      hash = (53 * hash) + getResponseKey().hashCode();
+      hash = (37 * hash) + STREAMID_FIELD_NUMBER;
+      hash = (53 * hash) + getStreamId();
+      hash = (37 * hash) + PROTOCOLVERSION_FIELD_NUMBER;
+      hash = (53 * hash) + getProtocolVersion();
+      hash = (37 * hash) + CHANGESEQ_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getChangeSeq());
+      hash = (37 * hash) + CHANGETIME_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+          getChangeTime());
+      hash = (37 * hash) + QUEUETIME_FIELD_NUMBER;
+      hash = (53 * hash) + getQueueTime();
+      hash = (37 * hash) + SENDTIME_FIELD_NUMBER;
+      hash = (53 * hash) + getSendTime();
+      hash = (37 * hash) + TRANSPORTCLASS_FIELD_NUMBER;
+      hash = (53 * hash) + getTransportClass();
       hash = (37 * hash) + OP_FIELD_NUMBER;
       hash = (53 * hash) + getOp();
-      if (hasAuth()) {
-        hash = (37 * hash) + AUTH_FIELD_NUMBER;
-        hash = (53 * hash) + getAuth().hashCode();
+      hash = (37 * hash) + SESSIONAUTH_FIELD_NUMBER;
+      hash = (53 * hash) + getSessionAuth().hashCode();
+      hash = (37 * hash) + ITEMIDN_FIELD_NUMBER;
+      hash = (53 * hash) + getItemIdN();
+      hash = (37 * hash) + ITEMID_FIELD_NUMBER;
+      hash = (53 * hash) + getItemId().hashCode();
+      hash = (37 * hash) + ITEMAUTH_FIELD_NUMBER;
+      hash = (53 * hash) + getItemAuth().hashCode();
+      if (!internalGetIProps().getMap().isEmpty()) {
+        hash = (37 * hash) + IPROPS_FIELD_NUMBER;
+        hash = (53 * hash) + internalGetIProps().hashCode();
       }
-      hash = (37 * hash) + CLASS_FIELD_NUMBER;
-      hash = (53 * hash) + class__;
-      if (hasObjectId()) {
-        hash = (37 * hash) + OBJECTID_FIELD_NUMBER;
-        hash = (53 * hash) + getObjectId().hashCode();
+      if (getAPropsCount() > 0) {
+        hash = (37 * hash) + APROPS_FIELD_NUMBER;
+        hash = (53 * hash) + getAPropsList().hashCode();
       }
-      if (hasInstanceId()) {
-        hash = (37 * hash) + INSTANCEID_FIELD_NUMBER;
-        hash = (53 * hash) + getInstanceId().hashCode();
+      if (getPositionsCount() > 0) {
+        hash = (37 * hash) + POSITIONS_FIELD_NUMBER;
+        hash = (53 * hash) + getPositionsList().hashCode();
       }
-      if (hasPos()) {
-        hash = (37 * hash) + POS_FIELD_NUMBER;
-        hash = (53 * hash) + getPos().hashCode();
-      }
-      if (hasAssetInfo()) {
-        hash = (37 * hash) + ASSETINFO_FIELD_NUMBER;
-        hash = (53 * hash) + getAssetInfo().hashCode();
-      }
-      if (hasAabb()) {
-        hash = (37 * hash) + AABB_FIELD_NUMBER;
-        hash = (53 * hash) + getAabb().hashCode();
-      }
-      hash = (37 * hash) + FILTER_FIELD_NUMBER;
-      hash = (53 * hash) + getFilter().hashCode();
-      if (!internalGetProperties().getMap().isEmpty()) {
-        hash = (37 * hash) + PROPERTIES_FIELD_NUMBER;
-        hash = (53 * hash) + internalGetProperties().hashCode();
-      }
-      if (!internalGetOpParameters().getMap().isEmpty()) {
-        hash = (37 * hash) + OPPARAMETERS_FIELD_NUMBER;
-        hash = (53 * hash) + internalGetOpParameters().hashCode();
-      }
-      if (hasException()) {
-        hash = (37 * hash) + EXCEPTION_FIELD_NUMBER;
-        hash = (53 * hash) + getException().hashCode();
-      }
-      if (hasResponse()) {
-        hash = (37 * hash) + RESPONSE_FIELD_NUMBER;
-        hash = (53 * hash) + getResponse().hashCode();
+      hash = (37 * hash) + EXCEPTION_FIELD_NUMBER;
+      hash = (53 * hash) + getException().hashCode();
+      if (!internalGetExceptionHints().getMap().isEmpty()) {
+        hash = (37 * hash) + EXCEPTIONHINTS_FIELD_NUMBER;
+        hash = (53 * hash) + internalGetExceptionHints().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -2110,6 +5241,11 @@ public final class BasilMessageOuterClass {
       return builder;
     }
     /**
+     * <pre>
+     * ========================== Message sent between Basil and a SpaceServer
+     * Bi-directional and used like a syncronization protocol
+     * </pre>
+     *
      * Protobuf type {@code BasilMessage.BasilMessage}
      */
     public static final class Builder extends
@@ -2126,9 +5262,9 @@ public final class BasilMessageOuterClass {
           int number) {
         switch (number) {
           case 9:
-            return internalGetProperties();
-          case 10:
-            return internalGetOpParameters();
+            return internalGetIProps();
+          case 22:
+            return internalGetExceptionHints();
           default:
             throw new RuntimeException(
                 "Invalid map field number: " + number);
@@ -2139,9 +5275,9 @@ public final class BasilMessageOuterClass {
           int number) {
         switch (number) {
           case 9:
-            return internalGetMutableProperties();
-          case 10:
-            return internalGetMutableOpParameters();
+            return internalGetMutableIProps();
+          case 22:
+            return internalGetMutableExceptionHints();
           default:
             throw new RuntimeException(
                 "Invalid map field number: " + number);
@@ -2168,67 +5304,57 @@ public final class BasilMessageOuterClass {
       private void maybeForceBuilderInitialization() {
         if (com.google.protobuf.GeneratedMessageV3
                 .alwaysUseFieldBuilders) {
+          getAPropsFieldBuilder();
+          getPositionsFieldBuilder();
         }
       }
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        responseCode_ = 0;
+
+        responseKey_ = "";
+
+        streamId_ = 0;
+
+        protocolVersion_ = 0;
+
+        changeSeq_ = 0L;
+
+        changeTime_ = 0L;
+
+        queueTime_ = 0;
+
+        sendTime_ = 0;
+
+        transportClass_ = 0;
+
         op_ = 0;
 
-        if (authBuilder_ == null) {
-          auth_ = null;
-        } else {
-          auth_ = null;
-          authBuilder_ = null;
-        }
-        class__ = 0;
+        sessionAuth_ = "";
 
-        if (objectIdBuilder_ == null) {
-          objectId_ = null;
-        } else {
-          objectId_ = null;
-          objectIdBuilder_ = null;
-        }
-        if (instanceIdBuilder_ == null) {
-          instanceId_ = null;
-        } else {
-          instanceId_ = null;
-          instanceIdBuilder_ = null;
-        }
-        if (posBuilder_ == null) {
-          pos_ = null;
-        } else {
-          pos_ = null;
-          posBuilder_ = null;
-        }
-        if (assetInfoBuilder_ == null) {
-          assetInfo_ = null;
-        } else {
-          assetInfo_ = null;
-          assetInfoBuilder_ = null;
-        }
-        if (aabbBuilder_ == null) {
-          aabb_ = null;
-        } else {
-          aabb_ = null;
-          aabbBuilder_ = null;
-        }
-        filter_ = "";
+        itemIdN_ = 0;
 
-        internalGetMutableProperties().clear();
-        internalGetMutableOpParameters().clear();
-        if (exceptionBuilder_ == null) {
-          exception_ = null;
+        itemId_ = "";
+
+        itemAuth_ = "";
+
+        internalGetMutableIProps().clear();
+        if (aPropsBuilder_ == null) {
+          aProps_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000002);
         } else {
-          exception_ = null;
-          exceptionBuilder_ = null;
+          aPropsBuilder_.clear();
         }
-        if (responseBuilder_ == null) {
-          response_ = null;
+        if (positionsBuilder_ == null) {
+          positions_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000004);
         } else {
-          response_ = null;
-          responseBuilder_ = null;
+          positionsBuilder_.clear();
         }
+        exception_ = "";
+
+        internalGetMutableExceptionHints().clear();
         return this;
       }
 
@@ -2256,53 +5382,43 @@ public final class BasilMessageOuterClass {
       public BasilMessage.BasilMessageOuterClass.BasilMessage buildPartial() {
         BasilMessage.BasilMessageOuterClass.BasilMessage result = new BasilMessage.BasilMessageOuterClass.BasilMessage(this);
         int from_bitField0_ = bitField0_;
+        result.responseCode_ = responseCode_;
+        result.responseKey_ = responseKey_;
+        result.streamId_ = streamId_;
+        result.protocolVersion_ = protocolVersion_;
+        result.changeSeq_ = changeSeq_;
+        result.changeTime_ = changeTime_;
+        result.queueTime_ = queueTime_;
+        result.sendTime_ = sendTime_;
+        result.transportClass_ = transportClass_;
         result.op_ = op_;
-        if (authBuilder_ == null) {
-          result.auth_ = auth_;
+        result.sessionAuth_ = sessionAuth_;
+        result.itemIdN_ = itemIdN_;
+        result.itemId_ = itemId_;
+        result.itemAuth_ = itemAuth_;
+        result.iProps_ = internalGetIProps();
+        result.iProps_.makeImmutable();
+        if (aPropsBuilder_ == null) {
+          if (((bitField0_ & 0x00000002) != 0)) {
+            aProps_ = java.util.Collections.unmodifiableList(aProps_);
+            bitField0_ = (bitField0_ & ~0x00000002);
+          }
+          result.aProps_ = aProps_;
         } else {
-          result.auth_ = authBuilder_.build();
+          result.aProps_ = aPropsBuilder_.build();
         }
-        result.class__ = class__;
-        if (objectIdBuilder_ == null) {
-          result.objectId_ = objectId_;
+        if (positionsBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) != 0)) {
+            positions_ = java.util.Collections.unmodifiableList(positions_);
+            bitField0_ = (bitField0_ & ~0x00000004);
+          }
+          result.positions_ = positions_;
         } else {
-          result.objectId_ = objectIdBuilder_.build();
+          result.positions_ = positionsBuilder_.build();
         }
-        if (instanceIdBuilder_ == null) {
-          result.instanceId_ = instanceId_;
-        } else {
-          result.instanceId_ = instanceIdBuilder_.build();
-        }
-        if (posBuilder_ == null) {
-          result.pos_ = pos_;
-        } else {
-          result.pos_ = posBuilder_.build();
-        }
-        if (assetInfoBuilder_ == null) {
-          result.assetInfo_ = assetInfo_;
-        } else {
-          result.assetInfo_ = assetInfoBuilder_.build();
-        }
-        if (aabbBuilder_ == null) {
-          result.aabb_ = aabb_;
-        } else {
-          result.aabb_ = aabbBuilder_.build();
-        }
-        result.filter_ = filter_;
-        result.properties_ = internalGetProperties();
-        result.properties_.makeImmutable();
-        result.opParameters_ = internalGetOpParameters();
-        result.opParameters_.makeImmutable();
-        if (exceptionBuilder_ == null) {
-          result.exception_ = exception_;
-        } else {
-          result.exception_ = exceptionBuilder_.build();
-        }
-        if (responseBuilder_ == null) {
-          result.response_ = response_;
-        } else {
-          result.response_ = responseBuilder_.build();
-        }
+        result.exception_ = exception_;
+        result.exceptionHints_ = internalGetExceptionHints();
+        result.exceptionHints_.makeImmutable();
         onBuilt();
         return result;
       }
@@ -2351,44 +5467,112 @@ public final class BasilMessageOuterClass {
 
       public Builder mergeFrom(BasilMessage.BasilMessageOuterClass.BasilMessage other) {
         if (other == BasilMessage.BasilMessageOuterClass.BasilMessage.getDefaultInstance()) return this;
+        if (other.getResponseCode() != 0) {
+          setResponseCode(other.getResponseCode());
+        }
+        if (!other.getResponseKey().isEmpty()) {
+          responseKey_ = other.responseKey_;
+          onChanged();
+        }
+        if (other.getStreamId() != 0) {
+          setStreamId(other.getStreamId());
+        }
+        if (other.getProtocolVersion() != 0) {
+          setProtocolVersion(other.getProtocolVersion());
+        }
+        if (other.getChangeSeq() != 0L) {
+          setChangeSeq(other.getChangeSeq());
+        }
+        if (other.getChangeTime() != 0L) {
+          setChangeTime(other.getChangeTime());
+        }
+        if (other.getQueueTime() != 0) {
+          setQueueTime(other.getQueueTime());
+        }
+        if (other.getSendTime() != 0) {
+          setSendTime(other.getSendTime());
+        }
+        if (other.getTransportClass() != 0) {
+          setTransportClass(other.getTransportClass());
+        }
         if (other.getOp() != 0) {
           setOp(other.getOp());
         }
-        if (other.hasAuth()) {
-          mergeAuth(other.getAuth());
-        }
-        if (other.class__ != 0) {
-          setClass_Value(other.getClass_Value());
-        }
-        if (other.hasObjectId()) {
-          mergeObjectId(other.getObjectId());
-        }
-        if (other.hasInstanceId()) {
-          mergeInstanceId(other.getInstanceId());
-        }
-        if (other.hasPos()) {
-          mergePos(other.getPos());
-        }
-        if (other.hasAssetInfo()) {
-          mergeAssetInfo(other.getAssetInfo());
-        }
-        if (other.hasAabb()) {
-          mergeAabb(other.getAabb());
-        }
-        if (!other.getFilter().isEmpty()) {
-          filter_ = other.filter_;
+        if (!other.getSessionAuth().isEmpty()) {
+          sessionAuth_ = other.sessionAuth_;
           onChanged();
         }
-        internalGetMutableProperties().mergeFrom(
-            other.internalGetProperties());
-        internalGetMutableOpParameters().mergeFrom(
-            other.internalGetOpParameters());
-        if (other.hasException()) {
-          mergeException(other.getException());
+        if (other.getItemIdN() != 0) {
+          setItemIdN(other.getItemIdN());
         }
-        if (other.hasResponse()) {
-          mergeResponse(other.getResponse());
+        if (!other.getItemId().isEmpty()) {
+          itemId_ = other.itemId_;
+          onChanged();
         }
+        if (!other.getItemAuth().isEmpty()) {
+          itemAuth_ = other.itemAuth_;
+          onChanged();
+        }
+        internalGetMutableIProps().mergeFrom(
+            other.internalGetIProps());
+        if (aPropsBuilder_ == null) {
+          if (!other.aProps_.isEmpty()) {
+            if (aProps_.isEmpty()) {
+              aProps_ = other.aProps_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+            } else {
+              ensureAPropsIsMutable();
+              aProps_.addAll(other.aProps_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.aProps_.isEmpty()) {
+            if (aPropsBuilder_.isEmpty()) {
+              aPropsBuilder_.dispose();
+              aPropsBuilder_ = null;
+              aProps_ = other.aProps_;
+              bitField0_ = (bitField0_ & ~0x00000002);
+              aPropsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getAPropsFieldBuilder() : null;
+            } else {
+              aPropsBuilder_.addAllMessages(other.aProps_);
+            }
+          }
+        }
+        if (positionsBuilder_ == null) {
+          if (!other.positions_.isEmpty()) {
+            if (positions_.isEmpty()) {
+              positions_ = other.positions_;
+              bitField0_ = (bitField0_ & ~0x00000004);
+            } else {
+              ensurePositionsIsMutable();
+              positions_.addAll(other.positions_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.positions_.isEmpty()) {
+            if (positionsBuilder_.isEmpty()) {
+              positionsBuilder_.dispose();
+              positionsBuilder_ = null;
+              positions_ = other.positions_;
+              bitField0_ = (bitField0_ & ~0x00000004);
+              positionsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getPositionsFieldBuilder() : null;
+            } else {
+              positionsBuilder_.addAllMessages(other.positions_);
+            }
+          }
+        }
+        if (!other.getException().isEmpty()) {
+          exception_ = other.exception_;
+          onChanged();
+        }
+        internalGetMutableExceptionHints().mergeFrom(
+            other.internalGetExceptionHints());
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
         return this;
@@ -2419,23 +5603,416 @@ public final class BasilMessageOuterClass {
       }
       private int bitField0_;
 
+      private int responseCode_ ;
+      /**
+       * <pre>
+       * header for tracking and response (RPC) linkage
+       * </pre>
+       *
+       * <code>uint32 ResponseCode = 1;</code>
+       */
+      public int getResponseCode() {
+        return responseCode_;
+      }
+      /**
+       * <pre>
+       * header for tracking and response (RPC) linkage
+       * </pre>
+       *
+       * <code>uint32 ResponseCode = 1;</code>
+       */
+      public Builder setResponseCode(int value) {
+        
+        responseCode_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * header for tracking and response (RPC) linkage
+       * </pre>
+       *
+       * <code>uint32 ResponseCode = 1;</code>
+       */
+      public Builder clearResponseCode() {
+        
+        responseCode_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object responseKey_ = "";
+      /**
+       * <pre>
+       * optional key to verify response
+       * </pre>
+       *
+       * <code>string ResponseKey = 20;</code>
+       */
+      public java.lang.String getResponseKey() {
+        java.lang.Object ref = responseKey_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          responseKey_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * optional key to verify response
+       * </pre>
+       *
+       * <code>string ResponseKey = 20;</code>
+       */
+      public com.google.protobuf.ByteString
+          getResponseKeyBytes() {
+        java.lang.Object ref = responseKey_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          responseKey_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * optional key to verify response
+       * </pre>
+       *
+       * <code>string ResponseKey = 20;</code>
+       */
+      public Builder setResponseKey(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        responseKey_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * optional key to verify response
+       * </pre>
+       *
+       * <code>string ResponseKey = 20;</code>
+       */
+      public Builder clearResponseKey() {
+        
+        responseKey_ = getDefaultInstance().getResponseKey();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * optional key to verify response
+       * </pre>
+       *
+       * <code>string ResponseKey = 20;</code>
+       */
+      public Builder setResponseKeyBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        responseKey_ = value;
+        onChanged();
+        return this;
+      }
+
+      private int streamId_ ;
+      /**
+       * <pre>
+       * if there are multiple streams in the connection
+       * </pre>
+       *
+       * <code>uint32 StreamId = 3;</code>
+       */
+      public int getStreamId() {
+        return streamId_;
+      }
+      /**
+       * <pre>
+       * if there are multiple streams in the connection
+       * </pre>
+       *
+       * <code>uint32 StreamId = 3;</code>
+       */
+      public Builder setStreamId(int value) {
+        
+        streamId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * if there are multiple streams in the connection
+       * </pre>
+       *
+       * <code>uint32 StreamId = 3;</code>
+       */
+      public Builder clearStreamId() {
+        
+        streamId_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int protocolVersion_ ;
+      /**
+       * <pre>
+       * versioning info
+       * </pre>
+       *
+       * <code>uint32 ProtocolVersion = 4;</code>
+       */
+      public int getProtocolVersion() {
+        return protocolVersion_;
+      }
+      /**
+       * <pre>
+       * versioning info
+       * </pre>
+       *
+       * <code>uint32 ProtocolVersion = 4;</code>
+       */
+      public Builder setProtocolVersion(int value) {
+        
+        protocolVersion_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * versioning info
+       * </pre>
+       *
+       * <code>uint32 ProtocolVersion = 4;</code>
+       */
+      public Builder clearProtocolVersion() {
+        
+        protocolVersion_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private long changeSeq_ ;
+      /**
+       * <pre>
+       * Change ordering
+       * </pre>
+       *
+       * <code>uint64 ChangeSeq = 30;</code>
+       */
+      public long getChangeSeq() {
+        return changeSeq_;
+      }
+      /**
+       * <pre>
+       * Change ordering
+       * </pre>
+       *
+       * <code>uint64 ChangeSeq = 30;</code>
+       */
+      public Builder setChangeSeq(long value) {
+        
+        changeSeq_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Change ordering
+       * </pre>
+       *
+       * <code>uint64 ChangeSeq = 30;</code>
+       */
+      public Builder clearChangeSeq() {
+        
+        changeSeq_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private long changeTime_ ;
+      /**
+       * <pre>
+       * time code for change
+       * </pre>
+       *
+       * <code>uint64 ChangeTime = 31;</code>
+       */
+      public long getChangeTime() {
+        return changeTime_;
+      }
+      /**
+       * <pre>
+       * time code for change
+       * </pre>
+       *
+       * <code>uint64 ChangeTime = 31;</code>
+       */
+      public Builder setChangeTime(long value) {
+        
+        changeTime_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * time code for change
+       * </pre>
+       *
+       * <code>uint64 ChangeTime = 31;</code>
+       */
+      public Builder clearChangeTime() {
+        
+        changeTime_ = 0L;
+        onChanged();
+        return this;
+      }
+
+      private int queueTime_ ;
+      /**
+       * <pre>
+       * Preformance/metrics
+       * </pre>
+       *
+       * <code>uint32 QueueTime = 40;</code>
+       */
+      public int getQueueTime() {
+        return queueTime_;
+      }
+      /**
+       * <pre>
+       * Preformance/metrics
+       * </pre>
+       *
+       * <code>uint32 QueueTime = 40;</code>
+       */
+      public Builder setQueueTime(int value) {
+        
+        queueTime_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Preformance/metrics
+       * </pre>
+       *
+       * <code>uint32 QueueTime = 40;</code>
+       */
+      public Builder clearQueueTime() {
+        
+        queueTime_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int sendTime_ ;
+      /**
+       * <pre>
+       * when request was sent
+       * </pre>
+       *
+       * <code>uint32 SendTime = 41;</code>
+       */
+      public int getSendTime() {
+        return sendTime_;
+      }
+      /**
+       * <pre>
+       * when request was sent
+       * </pre>
+       *
+       * <code>uint32 SendTime = 41;</code>
+       */
+      public Builder setSendTime(int value) {
+        
+        sendTime_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * when request was sent
+       * </pre>
+       *
+       * <code>uint32 SendTime = 41;</code>
+       */
+      public Builder clearSendTime() {
+        
+        sendTime_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int transportClass_ ;
+      /**
+       * <pre>
+       * prioritization
+       * </pre>
+       *
+       * <code>uint32 TransportClass = 42;</code>
+       */
+      public int getTransportClass() {
+        return transportClass_;
+      }
+      /**
+       * <pre>
+       * prioritization
+       * </pre>
+       *
+       * <code>uint32 TransportClass = 42;</code>
+       */
+      public Builder setTransportClass(int value) {
+        
+        transportClass_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * prioritization
+       * </pre>
+       *
+       * <code>uint32 TransportClass = 42;</code>
+       */
+      public Builder clearTransportClass() {
+        
+        transportClass_ = 0;
+        onChanged();
+        return this;
+      }
+
       private int op_ ;
       /**
        * <pre>
-       * operation to perform
+       * Operation and operation parameters
        * </pre>
        *
-       * <code>int32 op = 1;</code>
+       * <code>uint32 Op = 5;</code>
        */
       public int getOp() {
         return op_;
       }
       /**
        * <pre>
-       * operation to perform
+       * Operation and operation parameters
        * </pre>
        *
-       * <code>int32 op = 1;</code>
+       * <code>uint32 Op = 5;</code>
        */
       public Builder setOp(int value) {
         
@@ -2445,10 +6022,10 @@ public final class BasilMessageOuterClass {
       }
       /**
        * <pre>
-       * operation to perform
+       * Operation and operation parameters
        * </pre>
        *
-       * <code>int32 op = 1;</code>
+       * <code>uint32 Op = 5;</code>
        */
       public Builder clearOp() {
         
@@ -2457,1131 +6034,420 @@ public final class BasilMessageOuterClass {
         return this;
       }
 
-      private BasilType.BasilTypes.AccessAuthorization auth_;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          BasilType.BasilTypes.AccessAuthorization, BasilType.BasilTypes.AccessAuthorization.Builder, BasilType.BasilTypes.AccessAuthorizationOrBuilder> authBuilder_;
+      private java.lang.Object sessionAuth_ = "";
       /**
        * <pre>
-       * authorization for op
+       * authorization to make request
        * </pre>
        *
-       * <code>.BasilType.AccessAuthorization auth = 2;</code>
+       * <code>string SessionAuth = 6;</code>
        */
-      public boolean hasAuth() {
-        return authBuilder_ != null || auth_ != null;
-      }
-      /**
-       * <pre>
-       * authorization for op
-       * </pre>
-       *
-       * <code>.BasilType.AccessAuthorization auth = 2;</code>
-       */
-      public BasilType.BasilTypes.AccessAuthorization getAuth() {
-        if (authBuilder_ == null) {
-          return auth_ == null ? BasilType.BasilTypes.AccessAuthorization.getDefaultInstance() : auth_;
-        } else {
-          return authBuilder_.getMessage();
-        }
-      }
-      /**
-       * <pre>
-       * authorization for op
-       * </pre>
-       *
-       * <code>.BasilType.AccessAuthorization auth = 2;</code>
-       */
-      public Builder setAuth(BasilType.BasilTypes.AccessAuthorization value) {
-        if (authBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          auth_ = value;
-          onChanged();
-        } else {
-          authBuilder_.setMessage(value);
-        }
-
-        return this;
-      }
-      /**
-       * <pre>
-       * authorization for op
-       * </pre>
-       *
-       * <code>.BasilType.AccessAuthorization auth = 2;</code>
-       */
-      public Builder setAuth(
-          BasilType.BasilTypes.AccessAuthorization.Builder builderForValue) {
-        if (authBuilder_ == null) {
-          auth_ = builderForValue.build();
-          onChanged();
-        } else {
-          authBuilder_.setMessage(builderForValue.build());
-        }
-
-        return this;
-      }
-      /**
-       * <pre>
-       * authorization for op
-       * </pre>
-       *
-       * <code>.BasilType.AccessAuthorization auth = 2;</code>
-       */
-      public Builder mergeAuth(BasilType.BasilTypes.AccessAuthorization value) {
-        if (authBuilder_ == null) {
-          if (auth_ != null) {
-            auth_ =
-              BasilType.BasilTypes.AccessAuthorization.newBuilder(auth_).mergeFrom(value).buildPartial();
-          } else {
-            auth_ = value;
-          }
-          onChanged();
-        } else {
-          authBuilder_.mergeFrom(value);
-        }
-
-        return this;
-      }
-      /**
-       * <pre>
-       * authorization for op
-       * </pre>
-       *
-       * <code>.BasilType.AccessAuthorization auth = 2;</code>
-       */
-      public Builder clearAuth() {
-        if (authBuilder_ == null) {
-          auth_ = null;
-          onChanged();
-        } else {
-          auth_ = null;
-          authBuilder_ = null;
-        }
-
-        return this;
-      }
-      /**
-       * <pre>
-       * authorization for op
-       * </pre>
-       *
-       * <code>.BasilType.AccessAuthorization auth = 2;</code>
-       */
-      public BasilType.BasilTypes.AccessAuthorization.Builder getAuthBuilder() {
-        
-        onChanged();
-        return getAuthFieldBuilder().getBuilder();
-      }
-      /**
-       * <pre>
-       * authorization for op
-       * </pre>
-       *
-       * <code>.BasilType.AccessAuthorization auth = 2;</code>
-       */
-      public BasilType.BasilTypes.AccessAuthorizationOrBuilder getAuthOrBuilder() {
-        if (authBuilder_ != null) {
-          return authBuilder_.getMessageOrBuilder();
-        } else {
-          return auth_ == null ?
-              BasilType.BasilTypes.AccessAuthorization.getDefaultInstance() : auth_;
-        }
-      }
-      /**
-       * <pre>
-       * authorization for op
-       * </pre>
-       *
-       * <code>.BasilType.AccessAuthorization auth = 2;</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          BasilType.BasilTypes.AccessAuthorization, BasilType.BasilTypes.AccessAuthorization.Builder, BasilType.BasilTypes.AccessAuthorizationOrBuilder> 
-          getAuthFieldBuilder() {
-        if (authBuilder_ == null) {
-          authBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              BasilType.BasilTypes.AccessAuthorization, BasilType.BasilTypes.AccessAuthorization.Builder, BasilType.BasilTypes.AccessAuthorizationOrBuilder>(
-                  getAuth(),
-                  getParentForChildren(),
-                  isClean());
-          auth_ = null;
-        }
-        return authBuilder_;
-      }
-
-      private int class__ = 0;
-      /**
-       * <pre>
-       * priority class of messsage
-       * </pre>
-       *
-       * <code>.BasilMessage.TransportClass class = 14;</code>
-       */
-      public int getClass_Value() {
-        return class__;
-      }
-      /**
-       * <pre>
-       * priority class of messsage
-       * </pre>
-       *
-       * <code>.BasilMessage.TransportClass class = 14;</code>
-       */
-      public Builder setClass_Value(int value) {
-        class__ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * priority class of messsage
-       * </pre>
-       *
-       * <code>.BasilMessage.TransportClass class = 14;</code>
-       */
-      public BasilMessage.BasilMessageOuterClass.TransportClass getClass_() {
-        @SuppressWarnings("deprecation")
-        BasilMessage.BasilMessageOuterClass.TransportClass result = BasilMessage.BasilMessageOuterClass.TransportClass.valueOf(class__);
-        return result == null ? BasilMessage.BasilMessageOuterClass.TransportClass.UNRECOGNIZED : result;
-      }
-      /**
-       * <pre>
-       * priority class of messsage
-       * </pre>
-       *
-       * <code>.BasilMessage.TransportClass class = 14;</code>
-       */
-      public Builder setClass_(BasilMessage.BasilMessageOuterClass.TransportClass value) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        
-        class__ = value.getNumber();
-        onChanged();
-        return this;
-      }
-      /**
-       * <pre>
-       * priority class of messsage
-       * </pre>
-       *
-       * <code>.BasilMessage.TransportClass class = 14;</code>
-       */
-      public Builder clearClass_() {
-        
-        class__ = 0;
-        onChanged();
-        return this;
-      }
-
-      private BasilType.BasilTypes.ObjectIdentifier objectId_;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          BasilType.BasilTypes.ObjectIdentifier, BasilType.BasilTypes.ObjectIdentifier.Builder, BasilType.BasilTypes.ObjectIdentifierOrBuilder> objectIdBuilder_;
-      /**
-       * <pre>
-       * if op needs object reference
-       * </pre>
-       *
-       * <code>.BasilType.ObjectIdentifier objectId = 3;</code>
-       */
-      public boolean hasObjectId() {
-        return objectIdBuilder_ != null || objectId_ != null;
-      }
-      /**
-       * <pre>
-       * if op needs object reference
-       * </pre>
-       *
-       * <code>.BasilType.ObjectIdentifier objectId = 3;</code>
-       */
-      public BasilType.BasilTypes.ObjectIdentifier getObjectId() {
-        if (objectIdBuilder_ == null) {
-          return objectId_ == null ? BasilType.BasilTypes.ObjectIdentifier.getDefaultInstance() : objectId_;
-        } else {
-          return objectIdBuilder_.getMessage();
-        }
-      }
-      /**
-       * <pre>
-       * if op needs object reference
-       * </pre>
-       *
-       * <code>.BasilType.ObjectIdentifier objectId = 3;</code>
-       */
-      public Builder setObjectId(BasilType.BasilTypes.ObjectIdentifier value) {
-        if (objectIdBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          objectId_ = value;
-          onChanged();
-        } else {
-          objectIdBuilder_.setMessage(value);
-        }
-
-        return this;
-      }
-      /**
-       * <pre>
-       * if op needs object reference
-       * </pre>
-       *
-       * <code>.BasilType.ObjectIdentifier objectId = 3;</code>
-       */
-      public Builder setObjectId(
-          BasilType.BasilTypes.ObjectIdentifier.Builder builderForValue) {
-        if (objectIdBuilder_ == null) {
-          objectId_ = builderForValue.build();
-          onChanged();
-        } else {
-          objectIdBuilder_.setMessage(builderForValue.build());
-        }
-
-        return this;
-      }
-      /**
-       * <pre>
-       * if op needs object reference
-       * </pre>
-       *
-       * <code>.BasilType.ObjectIdentifier objectId = 3;</code>
-       */
-      public Builder mergeObjectId(BasilType.BasilTypes.ObjectIdentifier value) {
-        if (objectIdBuilder_ == null) {
-          if (objectId_ != null) {
-            objectId_ =
-              BasilType.BasilTypes.ObjectIdentifier.newBuilder(objectId_).mergeFrom(value).buildPartial();
-          } else {
-            objectId_ = value;
-          }
-          onChanged();
-        } else {
-          objectIdBuilder_.mergeFrom(value);
-        }
-
-        return this;
-      }
-      /**
-       * <pre>
-       * if op needs object reference
-       * </pre>
-       *
-       * <code>.BasilType.ObjectIdentifier objectId = 3;</code>
-       */
-      public Builder clearObjectId() {
-        if (objectIdBuilder_ == null) {
-          objectId_ = null;
-          onChanged();
-        } else {
-          objectId_ = null;
-          objectIdBuilder_ = null;
-        }
-
-        return this;
-      }
-      /**
-       * <pre>
-       * if op needs object reference
-       * </pre>
-       *
-       * <code>.BasilType.ObjectIdentifier objectId = 3;</code>
-       */
-      public BasilType.BasilTypes.ObjectIdentifier.Builder getObjectIdBuilder() {
-        
-        onChanged();
-        return getObjectIdFieldBuilder().getBuilder();
-      }
-      /**
-       * <pre>
-       * if op needs object reference
-       * </pre>
-       *
-       * <code>.BasilType.ObjectIdentifier objectId = 3;</code>
-       */
-      public BasilType.BasilTypes.ObjectIdentifierOrBuilder getObjectIdOrBuilder() {
-        if (objectIdBuilder_ != null) {
-          return objectIdBuilder_.getMessageOrBuilder();
-        } else {
-          return objectId_ == null ?
-              BasilType.BasilTypes.ObjectIdentifier.getDefaultInstance() : objectId_;
-        }
-      }
-      /**
-       * <pre>
-       * if op needs object reference
-       * </pre>
-       *
-       * <code>.BasilType.ObjectIdentifier objectId = 3;</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          BasilType.BasilTypes.ObjectIdentifier, BasilType.BasilTypes.ObjectIdentifier.Builder, BasilType.BasilTypes.ObjectIdentifierOrBuilder> 
-          getObjectIdFieldBuilder() {
-        if (objectIdBuilder_ == null) {
-          objectIdBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              BasilType.BasilTypes.ObjectIdentifier, BasilType.BasilTypes.ObjectIdentifier.Builder, BasilType.BasilTypes.ObjectIdentifierOrBuilder>(
-                  getObjectId(),
-                  getParentForChildren(),
-                  isClean());
-          objectId_ = null;
-        }
-        return objectIdBuilder_;
-      }
-
-      private BasilType.BasilTypes.InstanceIdentifier instanceId_;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          BasilType.BasilTypes.InstanceIdentifier, BasilType.BasilTypes.InstanceIdentifier.Builder, BasilType.BasilTypes.InstanceIdentifierOrBuilder> instanceIdBuilder_;
-      /**
-       * <pre>
-       * if of needs instance reference
-       * </pre>
-       *
-       * <code>.BasilType.InstanceIdentifier instanceId = 4;</code>
-       */
-      public boolean hasInstanceId() {
-        return instanceIdBuilder_ != null || instanceId_ != null;
-      }
-      /**
-       * <pre>
-       * if of needs instance reference
-       * </pre>
-       *
-       * <code>.BasilType.InstanceIdentifier instanceId = 4;</code>
-       */
-      public BasilType.BasilTypes.InstanceIdentifier getInstanceId() {
-        if (instanceIdBuilder_ == null) {
-          return instanceId_ == null ? BasilType.BasilTypes.InstanceIdentifier.getDefaultInstance() : instanceId_;
-        } else {
-          return instanceIdBuilder_.getMessage();
-        }
-      }
-      /**
-       * <pre>
-       * if of needs instance reference
-       * </pre>
-       *
-       * <code>.BasilType.InstanceIdentifier instanceId = 4;</code>
-       */
-      public Builder setInstanceId(BasilType.BasilTypes.InstanceIdentifier value) {
-        if (instanceIdBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          instanceId_ = value;
-          onChanged();
-        } else {
-          instanceIdBuilder_.setMessage(value);
-        }
-
-        return this;
-      }
-      /**
-       * <pre>
-       * if of needs instance reference
-       * </pre>
-       *
-       * <code>.BasilType.InstanceIdentifier instanceId = 4;</code>
-       */
-      public Builder setInstanceId(
-          BasilType.BasilTypes.InstanceIdentifier.Builder builderForValue) {
-        if (instanceIdBuilder_ == null) {
-          instanceId_ = builderForValue.build();
-          onChanged();
-        } else {
-          instanceIdBuilder_.setMessage(builderForValue.build());
-        }
-
-        return this;
-      }
-      /**
-       * <pre>
-       * if of needs instance reference
-       * </pre>
-       *
-       * <code>.BasilType.InstanceIdentifier instanceId = 4;</code>
-       */
-      public Builder mergeInstanceId(BasilType.BasilTypes.InstanceIdentifier value) {
-        if (instanceIdBuilder_ == null) {
-          if (instanceId_ != null) {
-            instanceId_ =
-              BasilType.BasilTypes.InstanceIdentifier.newBuilder(instanceId_).mergeFrom(value).buildPartial();
-          } else {
-            instanceId_ = value;
-          }
-          onChanged();
-        } else {
-          instanceIdBuilder_.mergeFrom(value);
-        }
-
-        return this;
-      }
-      /**
-       * <pre>
-       * if of needs instance reference
-       * </pre>
-       *
-       * <code>.BasilType.InstanceIdentifier instanceId = 4;</code>
-       */
-      public Builder clearInstanceId() {
-        if (instanceIdBuilder_ == null) {
-          instanceId_ = null;
-          onChanged();
-        } else {
-          instanceId_ = null;
-          instanceIdBuilder_ = null;
-        }
-
-        return this;
-      }
-      /**
-       * <pre>
-       * if of needs instance reference
-       * </pre>
-       *
-       * <code>.BasilType.InstanceIdentifier instanceId = 4;</code>
-       */
-      public BasilType.BasilTypes.InstanceIdentifier.Builder getInstanceIdBuilder() {
-        
-        onChanged();
-        return getInstanceIdFieldBuilder().getBuilder();
-      }
-      /**
-       * <pre>
-       * if of needs instance reference
-       * </pre>
-       *
-       * <code>.BasilType.InstanceIdentifier instanceId = 4;</code>
-       */
-      public BasilType.BasilTypes.InstanceIdentifierOrBuilder getInstanceIdOrBuilder() {
-        if (instanceIdBuilder_ != null) {
-          return instanceIdBuilder_.getMessageOrBuilder();
-        } else {
-          return instanceId_ == null ?
-              BasilType.BasilTypes.InstanceIdentifier.getDefaultInstance() : instanceId_;
-        }
-      }
-      /**
-       * <pre>
-       * if of needs instance reference
-       * </pre>
-       *
-       * <code>.BasilType.InstanceIdentifier instanceId = 4;</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          BasilType.BasilTypes.InstanceIdentifier, BasilType.BasilTypes.InstanceIdentifier.Builder, BasilType.BasilTypes.InstanceIdentifierOrBuilder> 
-          getInstanceIdFieldBuilder() {
-        if (instanceIdBuilder_ == null) {
-          instanceIdBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              BasilType.BasilTypes.InstanceIdentifier, BasilType.BasilTypes.InstanceIdentifier.Builder, BasilType.BasilTypes.InstanceIdentifierOrBuilder>(
-                  getInstanceId(),
-                  getParentForChildren(),
-                  isClean());
-          instanceId_ = null;
-        }
-        return instanceIdBuilder_;
-      }
-
-      private BasilType.BasilTypes.InstancePositionInfo pos_;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          BasilType.BasilTypes.InstancePositionInfo, BasilType.BasilTypes.InstancePositionInfo.Builder, BasilType.BasilTypes.InstancePositionInfoOrBuilder> posBuilder_;
-      /**
-       * <pre>
-       * if op needs a position spec
-       * </pre>
-       *
-       * <code>.BasilType.InstancePositionInfo pos = 5;</code>
-       */
-      public boolean hasPos() {
-        return posBuilder_ != null || pos_ != null;
-      }
-      /**
-       * <pre>
-       * if op needs a position spec
-       * </pre>
-       *
-       * <code>.BasilType.InstancePositionInfo pos = 5;</code>
-       */
-      public BasilType.BasilTypes.InstancePositionInfo getPos() {
-        if (posBuilder_ == null) {
-          return pos_ == null ? BasilType.BasilTypes.InstancePositionInfo.getDefaultInstance() : pos_;
-        } else {
-          return posBuilder_.getMessage();
-        }
-      }
-      /**
-       * <pre>
-       * if op needs a position spec
-       * </pre>
-       *
-       * <code>.BasilType.InstancePositionInfo pos = 5;</code>
-       */
-      public Builder setPos(BasilType.BasilTypes.InstancePositionInfo value) {
-        if (posBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          pos_ = value;
-          onChanged();
-        } else {
-          posBuilder_.setMessage(value);
-        }
-
-        return this;
-      }
-      /**
-       * <pre>
-       * if op needs a position spec
-       * </pre>
-       *
-       * <code>.BasilType.InstancePositionInfo pos = 5;</code>
-       */
-      public Builder setPos(
-          BasilType.BasilTypes.InstancePositionInfo.Builder builderForValue) {
-        if (posBuilder_ == null) {
-          pos_ = builderForValue.build();
-          onChanged();
-        } else {
-          posBuilder_.setMessage(builderForValue.build());
-        }
-
-        return this;
-      }
-      /**
-       * <pre>
-       * if op needs a position spec
-       * </pre>
-       *
-       * <code>.BasilType.InstancePositionInfo pos = 5;</code>
-       */
-      public Builder mergePos(BasilType.BasilTypes.InstancePositionInfo value) {
-        if (posBuilder_ == null) {
-          if (pos_ != null) {
-            pos_ =
-              BasilType.BasilTypes.InstancePositionInfo.newBuilder(pos_).mergeFrom(value).buildPartial();
-          } else {
-            pos_ = value;
-          }
-          onChanged();
-        } else {
-          posBuilder_.mergeFrom(value);
-        }
-
-        return this;
-      }
-      /**
-       * <pre>
-       * if op needs a position spec
-       * </pre>
-       *
-       * <code>.BasilType.InstancePositionInfo pos = 5;</code>
-       */
-      public Builder clearPos() {
-        if (posBuilder_ == null) {
-          pos_ = null;
-          onChanged();
-        } else {
-          pos_ = null;
-          posBuilder_ = null;
-        }
-
-        return this;
-      }
-      /**
-       * <pre>
-       * if op needs a position spec
-       * </pre>
-       *
-       * <code>.BasilType.InstancePositionInfo pos = 5;</code>
-       */
-      public BasilType.BasilTypes.InstancePositionInfo.Builder getPosBuilder() {
-        
-        onChanged();
-        return getPosFieldBuilder().getBuilder();
-      }
-      /**
-       * <pre>
-       * if op needs a position spec
-       * </pre>
-       *
-       * <code>.BasilType.InstancePositionInfo pos = 5;</code>
-       */
-      public BasilType.BasilTypes.InstancePositionInfoOrBuilder getPosOrBuilder() {
-        if (posBuilder_ != null) {
-          return posBuilder_.getMessageOrBuilder();
-        } else {
-          return pos_ == null ?
-              BasilType.BasilTypes.InstancePositionInfo.getDefaultInstance() : pos_;
-        }
-      }
-      /**
-       * <pre>
-       * if op needs a position spec
-       * </pre>
-       *
-       * <code>.BasilType.InstancePositionInfo pos = 5;</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          BasilType.BasilTypes.InstancePositionInfo, BasilType.BasilTypes.InstancePositionInfo.Builder, BasilType.BasilTypes.InstancePositionInfoOrBuilder> 
-          getPosFieldBuilder() {
-        if (posBuilder_ == null) {
-          posBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              BasilType.BasilTypes.InstancePositionInfo, BasilType.BasilTypes.InstancePositionInfo.Builder, BasilType.BasilTypes.InstancePositionInfoOrBuilder>(
-                  getPos(),
-                  getParentForChildren(),
-                  isClean());
-          pos_ = null;
-        }
-        return posBuilder_;
-      }
-
-      private BasilType.BasilTypes.AssetInformation assetInfo_;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          BasilType.BasilTypes.AssetInformation, BasilType.BasilTypes.AssetInformation.Builder, BasilType.BasilTypes.AssetInformationOrBuilder> assetInfoBuilder_;
-      /**
-       * <pre>
-       * if op needs asset info
-       * </pre>
-       *
-       * <code>.BasilType.AssetInformation assetInfo = 6;</code>
-       */
-      public boolean hasAssetInfo() {
-        return assetInfoBuilder_ != null || assetInfo_ != null;
-      }
-      /**
-       * <pre>
-       * if op needs asset info
-       * </pre>
-       *
-       * <code>.BasilType.AssetInformation assetInfo = 6;</code>
-       */
-      public BasilType.BasilTypes.AssetInformation getAssetInfo() {
-        if (assetInfoBuilder_ == null) {
-          return assetInfo_ == null ? BasilType.BasilTypes.AssetInformation.getDefaultInstance() : assetInfo_;
-        } else {
-          return assetInfoBuilder_.getMessage();
-        }
-      }
-      /**
-       * <pre>
-       * if op needs asset info
-       * </pre>
-       *
-       * <code>.BasilType.AssetInformation assetInfo = 6;</code>
-       */
-      public Builder setAssetInfo(BasilType.BasilTypes.AssetInformation value) {
-        if (assetInfoBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          assetInfo_ = value;
-          onChanged();
-        } else {
-          assetInfoBuilder_.setMessage(value);
-        }
-
-        return this;
-      }
-      /**
-       * <pre>
-       * if op needs asset info
-       * </pre>
-       *
-       * <code>.BasilType.AssetInformation assetInfo = 6;</code>
-       */
-      public Builder setAssetInfo(
-          BasilType.BasilTypes.AssetInformation.Builder builderForValue) {
-        if (assetInfoBuilder_ == null) {
-          assetInfo_ = builderForValue.build();
-          onChanged();
-        } else {
-          assetInfoBuilder_.setMessage(builderForValue.build());
-        }
-
-        return this;
-      }
-      /**
-       * <pre>
-       * if op needs asset info
-       * </pre>
-       *
-       * <code>.BasilType.AssetInformation assetInfo = 6;</code>
-       */
-      public Builder mergeAssetInfo(BasilType.BasilTypes.AssetInformation value) {
-        if (assetInfoBuilder_ == null) {
-          if (assetInfo_ != null) {
-            assetInfo_ =
-              BasilType.BasilTypes.AssetInformation.newBuilder(assetInfo_).mergeFrom(value).buildPartial();
-          } else {
-            assetInfo_ = value;
-          }
-          onChanged();
-        } else {
-          assetInfoBuilder_.mergeFrom(value);
-        }
-
-        return this;
-      }
-      /**
-       * <pre>
-       * if op needs asset info
-       * </pre>
-       *
-       * <code>.BasilType.AssetInformation assetInfo = 6;</code>
-       */
-      public Builder clearAssetInfo() {
-        if (assetInfoBuilder_ == null) {
-          assetInfo_ = null;
-          onChanged();
-        } else {
-          assetInfo_ = null;
-          assetInfoBuilder_ = null;
-        }
-
-        return this;
-      }
-      /**
-       * <pre>
-       * if op needs asset info
-       * </pre>
-       *
-       * <code>.BasilType.AssetInformation assetInfo = 6;</code>
-       */
-      public BasilType.BasilTypes.AssetInformation.Builder getAssetInfoBuilder() {
-        
-        onChanged();
-        return getAssetInfoFieldBuilder().getBuilder();
-      }
-      /**
-       * <pre>
-       * if op needs asset info
-       * </pre>
-       *
-       * <code>.BasilType.AssetInformation assetInfo = 6;</code>
-       */
-      public BasilType.BasilTypes.AssetInformationOrBuilder getAssetInfoOrBuilder() {
-        if (assetInfoBuilder_ != null) {
-          return assetInfoBuilder_.getMessageOrBuilder();
-        } else {
-          return assetInfo_ == null ?
-              BasilType.BasilTypes.AssetInformation.getDefaultInstance() : assetInfo_;
-        }
-      }
-      /**
-       * <pre>
-       * if op needs asset info
-       * </pre>
-       *
-       * <code>.BasilType.AssetInformation assetInfo = 6;</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          BasilType.BasilTypes.AssetInformation, BasilType.BasilTypes.AssetInformation.Builder, BasilType.BasilTypes.AssetInformationOrBuilder> 
-          getAssetInfoFieldBuilder() {
-        if (assetInfoBuilder_ == null) {
-          assetInfoBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              BasilType.BasilTypes.AssetInformation, BasilType.BasilTypes.AssetInformation.Builder, BasilType.BasilTypes.AssetInformationOrBuilder>(
-                  getAssetInfo(),
-                  getParentForChildren(),
-                  isClean());
-          assetInfo_ = null;
-        }
-        return assetInfoBuilder_;
-      }
-
-      private BasilType.BasilTypes.AaBoundingBox aabb_;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          BasilType.BasilTypes.AaBoundingBox, BasilType.BasilTypes.AaBoundingBox.Builder, BasilType.BasilTypes.AaBoundingBoxOrBuilder> aabbBuilder_;
-      /**
-       * <code>.BasilType.AaBoundingBox aabb = 7;</code>
-       */
-      public boolean hasAabb() {
-        return aabbBuilder_ != null || aabb_ != null;
-      }
-      /**
-       * <code>.BasilType.AaBoundingBox aabb = 7;</code>
-       */
-      public BasilType.BasilTypes.AaBoundingBox getAabb() {
-        if (aabbBuilder_ == null) {
-          return aabb_ == null ? BasilType.BasilTypes.AaBoundingBox.getDefaultInstance() : aabb_;
-        } else {
-          return aabbBuilder_.getMessage();
-        }
-      }
-      /**
-       * <code>.BasilType.AaBoundingBox aabb = 7;</code>
-       */
-      public Builder setAabb(BasilType.BasilTypes.AaBoundingBox value) {
-        if (aabbBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          aabb_ = value;
-          onChanged();
-        } else {
-          aabbBuilder_.setMessage(value);
-        }
-
-        return this;
-      }
-      /**
-       * <code>.BasilType.AaBoundingBox aabb = 7;</code>
-       */
-      public Builder setAabb(
-          BasilType.BasilTypes.AaBoundingBox.Builder builderForValue) {
-        if (aabbBuilder_ == null) {
-          aabb_ = builderForValue.build();
-          onChanged();
-        } else {
-          aabbBuilder_.setMessage(builderForValue.build());
-        }
-
-        return this;
-      }
-      /**
-       * <code>.BasilType.AaBoundingBox aabb = 7;</code>
-       */
-      public Builder mergeAabb(BasilType.BasilTypes.AaBoundingBox value) {
-        if (aabbBuilder_ == null) {
-          if (aabb_ != null) {
-            aabb_ =
-              BasilType.BasilTypes.AaBoundingBox.newBuilder(aabb_).mergeFrom(value).buildPartial();
-          } else {
-            aabb_ = value;
-          }
-          onChanged();
-        } else {
-          aabbBuilder_.mergeFrom(value);
-        }
-
-        return this;
-      }
-      /**
-       * <code>.BasilType.AaBoundingBox aabb = 7;</code>
-       */
-      public Builder clearAabb() {
-        if (aabbBuilder_ == null) {
-          aabb_ = null;
-          onChanged();
-        } else {
-          aabb_ = null;
-          aabbBuilder_ = null;
-        }
-
-        return this;
-      }
-      /**
-       * <code>.BasilType.AaBoundingBox aabb = 7;</code>
-       */
-      public BasilType.BasilTypes.AaBoundingBox.Builder getAabbBuilder() {
-        
-        onChanged();
-        return getAabbFieldBuilder().getBuilder();
-      }
-      /**
-       * <code>.BasilType.AaBoundingBox aabb = 7;</code>
-       */
-      public BasilType.BasilTypes.AaBoundingBoxOrBuilder getAabbOrBuilder() {
-        if (aabbBuilder_ != null) {
-          return aabbBuilder_.getMessageOrBuilder();
-        } else {
-          return aabb_ == null ?
-              BasilType.BasilTypes.AaBoundingBox.getDefaultInstance() : aabb_;
-        }
-      }
-      /**
-       * <code>.BasilType.AaBoundingBox aabb = 7;</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          BasilType.BasilTypes.AaBoundingBox, BasilType.BasilTypes.AaBoundingBox.Builder, BasilType.BasilTypes.AaBoundingBoxOrBuilder> 
-          getAabbFieldBuilder() {
-        if (aabbBuilder_ == null) {
-          aabbBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              BasilType.BasilTypes.AaBoundingBox, BasilType.BasilTypes.AaBoundingBox.Builder, BasilType.BasilTypes.AaBoundingBoxOrBuilder>(
-                  getAabb(),
-                  getParentForChildren(),
-                  isClean());
-          aabb_ = null;
-        }
-        return aabbBuilder_;
-      }
-
-      private java.lang.Object filter_ = "";
-      /**
-       * <code>string filter = 8;</code>
-       */
-      public java.lang.String getFilter() {
-        java.lang.Object ref = filter_;
+      public java.lang.String getSessionAuth() {
+        java.lang.Object ref = sessionAuth_;
         if (!(ref instanceof java.lang.String)) {
           com.google.protobuf.ByteString bs =
               (com.google.protobuf.ByteString) ref;
           java.lang.String s = bs.toStringUtf8();
-          filter_ = s;
+          sessionAuth_ = s;
           return s;
         } else {
           return (java.lang.String) ref;
         }
       }
       /**
-       * <code>string filter = 8;</code>
+       * <pre>
+       * authorization to make request
+       * </pre>
+       *
+       * <code>string SessionAuth = 6;</code>
        */
       public com.google.protobuf.ByteString
-          getFilterBytes() {
-        java.lang.Object ref = filter_;
+          getSessionAuthBytes() {
+        java.lang.Object ref = sessionAuth_;
         if (ref instanceof String) {
           com.google.protobuf.ByteString b = 
               com.google.protobuf.ByteString.copyFromUtf8(
                   (java.lang.String) ref);
-          filter_ = b;
+          sessionAuth_ = b;
           return b;
         } else {
           return (com.google.protobuf.ByteString) ref;
         }
       }
       /**
-       * <code>string filter = 8;</code>
+       * <pre>
+       * authorization to make request
+       * </pre>
+       *
+       * <code>string SessionAuth = 6;</code>
        */
-      public Builder setFilter(
+      public Builder setSessionAuth(
           java.lang.String value) {
         if (value == null) {
     throw new NullPointerException();
   }
   
-        filter_ = value;
+        sessionAuth_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>string filter = 8;</code>
+       * <pre>
+       * authorization to make request
+       * </pre>
+       *
+       * <code>string SessionAuth = 6;</code>
        */
-      public Builder clearFilter() {
+      public Builder clearSessionAuth() {
         
-        filter_ = getDefaultInstance().getFilter();
+        sessionAuth_ = getDefaultInstance().getSessionAuth();
         onChanged();
         return this;
       }
       /**
-       * <code>string filter = 8;</code>
+       * <pre>
+       * authorization to make request
+       * </pre>
+       *
+       * <code>string SessionAuth = 6;</code>
        */
-      public Builder setFilterBytes(
+      public Builder setSessionAuthBytes(
           com.google.protobuf.ByteString value) {
         if (value == null) {
     throw new NullPointerException();
   }
   checkByteStringIsUtf8(value);
         
-        filter_ = value;
+        sessionAuth_ = value;
+        onChanged();
+        return this;
+      }
+
+      private int itemIdN_ ;
+      /**
+       * <pre>
+       * item being operated on (by session assigned number)
+       * </pre>
+       *
+       * <code>uint32 ItemIdN = 7;</code>
+       */
+      public int getItemIdN() {
+        return itemIdN_;
+      }
+      /**
+       * <pre>
+       * item being operated on (by session assigned number)
+       * </pre>
+       *
+       * <code>uint32 ItemIdN = 7;</code>
+       */
+      public Builder setItemIdN(int value) {
+        
+        itemIdN_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * item being operated on (by session assigned number)
+       * </pre>
+       *
+       * <code>uint32 ItemIdN = 7;</code>
+       */
+      public Builder clearItemIdN() {
+        
+        itemIdN_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object itemId_ = "";
+      /**
+       * <pre>
+       * item being operated on
+       * </pre>
+       *
+       * <code>string ItemId = 8;</code>
+       */
+      public java.lang.String getItemId() {
+        java.lang.Object ref = itemId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          itemId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * item being operated on
+       * </pre>
+       *
+       * <code>string ItemId = 8;</code>
+       */
+      public com.google.protobuf.ByteString
+          getItemIdBytes() {
+        java.lang.Object ref = itemId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          itemId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * item being operated on
+       * </pre>
+       *
+       * <code>string ItemId = 8;</code>
+       */
+      public Builder setItemId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        itemId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * item being operated on
+       * </pre>
+       *
+       * <code>string ItemId = 8;</code>
+       */
+      public Builder clearItemId() {
+        
+        itemId_ = getDefaultInstance().getItemId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * item being operated on
+       * </pre>
+       *
+       * <code>string ItemId = 8;</code>
+       */
+      public Builder setItemIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        itemId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object itemAuth_ = "";
+      /**
+       * <pre>
+       * per item authorization
+       * </pre>
+       *
+       * <code>string ItemAuth = 21;</code>
+       */
+      public java.lang.String getItemAuth() {
+        java.lang.Object ref = itemAuth_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          itemAuth_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * per item authorization
+       * </pre>
+       *
+       * <code>string ItemAuth = 21;</code>
+       */
+      public com.google.protobuf.ByteString
+          getItemAuthBytes() {
+        java.lang.Object ref = itemAuth_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          itemAuth_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * per item authorization
+       * </pre>
+       *
+       * <code>string ItemAuth = 21;</code>
+       */
+      public Builder setItemAuth(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        itemAuth_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * per item authorization
+       * </pre>
+       *
+       * <code>string ItemAuth = 21;</code>
+       */
+      public Builder clearItemAuth() {
+        
+        itemAuth_ = getDefaultInstance().getItemAuth();
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * per item authorization
+       * </pre>
+       *
+       * <code>string ItemAuth = 21;</code>
+       */
+      public Builder setItemAuthBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        itemAuth_ = value;
         onChanged();
         return this;
       }
 
       private com.google.protobuf.MapField<
-          java.lang.String, java.lang.String> properties_;
+          java.lang.String, java.lang.String> iProps_;
       private com.google.protobuf.MapField<java.lang.String, java.lang.String>
-      internalGetProperties() {
-        if (properties_ == null) {
+      internalGetIProps() {
+        if (iProps_ == null) {
           return com.google.protobuf.MapField.emptyMapField(
-              PropertiesDefaultEntryHolder.defaultEntry);
+              IPropsDefaultEntryHolder.defaultEntry);
         }
-        return properties_;
+        return iProps_;
       }
       private com.google.protobuf.MapField<java.lang.String, java.lang.String>
-      internalGetMutableProperties() {
+      internalGetMutableIProps() {
         onChanged();;
-        if (properties_ == null) {
-          properties_ = com.google.protobuf.MapField.newMapField(
-              PropertiesDefaultEntryHolder.defaultEntry);
+        if (iProps_ == null) {
+          iProps_ = com.google.protobuf.MapField.newMapField(
+              IPropsDefaultEntryHolder.defaultEntry);
         }
-        if (!properties_.isMutable()) {
-          properties_ = properties_.copy();
+        if (!iProps_.isMutable()) {
+          iProps_ = iProps_.copy();
         }
-        return properties_;
+        return iProps_;
       }
 
-      public int getPropertiesCount() {
-        return internalGetProperties().getMap().size();
+      public int getIPropsCount() {
+        return internalGetIProps().getMap().size();
       }
       /**
        * <pre>
-       * if op needs or returns property set
+       * properties to update on item
        * </pre>
        *
-       * <code>map&lt;string, string&gt; properties = 9;</code>
+       * <code>map&lt;string, string&gt; IProps = 9;</code>
        */
 
-      public boolean containsProperties(
+      public boolean containsIProps(
           java.lang.String key) {
         if (key == null) { throw new java.lang.NullPointerException(); }
-        return internalGetProperties().getMap().containsKey(key);
+        return internalGetIProps().getMap().containsKey(key);
       }
       /**
-       * Use {@link #getPropertiesMap()} instead.
+       * Use {@link #getIPropsMap()} instead.
        */
       @java.lang.Deprecated
-      public java.util.Map<java.lang.String, java.lang.String> getProperties() {
-        return getPropertiesMap();
+      public java.util.Map<java.lang.String, java.lang.String> getIProps() {
+        return getIPropsMap();
       }
       /**
        * <pre>
-       * if op needs or returns property set
+       * properties to update on item
        * </pre>
        *
-       * <code>map&lt;string, string&gt; properties = 9;</code>
+       * <code>map&lt;string, string&gt; IProps = 9;</code>
        */
 
-      public java.util.Map<java.lang.String, java.lang.String> getPropertiesMap() {
-        return internalGetProperties().getMap();
+      public java.util.Map<java.lang.String, java.lang.String> getIPropsMap() {
+        return internalGetIProps().getMap();
       }
       /**
        * <pre>
-       * if op needs or returns property set
+       * properties to update on item
        * </pre>
        *
-       * <code>map&lt;string, string&gt; properties = 9;</code>
+       * <code>map&lt;string, string&gt; IProps = 9;</code>
        */
 
-      public java.lang.String getPropertiesOrDefault(
+      public java.lang.String getIPropsOrDefault(
           java.lang.String key,
           java.lang.String defaultValue) {
         if (key == null) { throw new java.lang.NullPointerException(); }
         java.util.Map<java.lang.String, java.lang.String> map =
-            internalGetProperties().getMap();
+            internalGetIProps().getMap();
         return map.containsKey(key) ? map.get(key) : defaultValue;
       }
       /**
        * <pre>
-       * if op needs or returns property set
+       * properties to update on item
        * </pre>
        *
-       * <code>map&lt;string, string&gt; properties = 9;</code>
+       * <code>map&lt;string, string&gt; IProps = 9;</code>
        */
 
-      public java.lang.String getPropertiesOrThrow(
+      public java.lang.String getIPropsOrThrow(
           java.lang.String key) {
         if (key == null) { throw new java.lang.NullPointerException(); }
         java.util.Map<java.lang.String, java.lang.String> map =
-            internalGetProperties().getMap();
+            internalGetIProps().getMap();
         if (!map.containsKey(key)) {
           throw new java.lang.IllegalArgumentException();
         }
         return map.get(key);
       }
 
-      public Builder clearProperties() {
-        internalGetMutableProperties().getMutableMap()
+      public Builder clearIProps() {
+        internalGetMutableIProps().getMutableMap()
             .clear();
         return this;
       }
       /**
        * <pre>
-       * if op needs or returns property set
+       * properties to update on item
        * </pre>
        *
-       * <code>map&lt;string, string&gt; properties = 9;</code>
+       * <code>map&lt;string, string&gt; IProps = 9;</code>
        */
 
-      public Builder removeProperties(
+      public Builder removeIProps(
           java.lang.String key) {
         if (key == null) { throw new java.lang.NullPointerException(); }
-        internalGetMutableProperties().getMutableMap()
+        internalGetMutableIProps().getMutableMap()
             .remove(key);
         return this;
       }
@@ -3590,495 +6456,902 @@ public final class BasilMessageOuterClass {
        */
       @java.lang.Deprecated
       public java.util.Map<java.lang.String, java.lang.String>
-      getMutableProperties() {
-        return internalGetMutableProperties().getMutableMap();
+      getMutableIProps() {
+        return internalGetMutableIProps().getMutableMap();
       }
       /**
        * <pre>
-       * if op needs or returns property set
+       * properties to update on item
        * </pre>
        *
-       * <code>map&lt;string, string&gt; properties = 9;</code>
+       * <code>map&lt;string, string&gt; IProps = 9;</code>
        */
-      public Builder putProperties(
+      public Builder putIProps(
           java.lang.String key,
           java.lang.String value) {
         if (key == null) { throw new java.lang.NullPointerException(); }
         if (value == null) { throw new java.lang.NullPointerException(); }
-        internalGetMutableProperties().getMutableMap()
+        internalGetMutableIProps().getMutableMap()
             .put(key, value);
         return this;
       }
       /**
        * <pre>
-       * if op needs or returns property set
+       * properties to update on item
        * </pre>
        *
-       * <code>map&lt;string, string&gt; properties = 9;</code>
+       * <code>map&lt;string, string&gt; IProps = 9;</code>
        */
 
-      public Builder putAllProperties(
+      public Builder putAllIProps(
           java.util.Map<java.lang.String, java.lang.String> values) {
-        internalGetMutableProperties().getMutableMap()
+        internalGetMutableIProps().getMutableMap()
             .putAll(values);
         return this;
       }
 
-      private com.google.protobuf.MapField<
-          java.lang.String, java.lang.String> opParameters_;
-      private com.google.protobuf.MapField<java.lang.String, java.lang.String>
-      internalGetOpParameters() {
-        if (opParameters_ == null) {
-          return com.google.protobuf.MapField.emptyMapField(
-              OpParametersDefaultEntryHolder.defaultEntry);
-        }
-        return opParameters_;
-      }
-      private com.google.protobuf.MapField<java.lang.String, java.lang.String>
-      internalGetMutableOpParameters() {
-        onChanged();;
-        if (opParameters_ == null) {
-          opParameters_ = com.google.protobuf.MapField.newMapField(
-              OpParametersDefaultEntryHolder.defaultEntry);
-        }
-        if (!opParameters_.isMutable()) {
-          opParameters_ = opParameters_.copy();
-        }
-        return opParameters_;
+      private java.util.List<BasilMessage.BasilMessageOuterClass.ParamBlock> aProps_ =
+        java.util.Collections.emptyList();
+      private void ensureAPropsIsMutable() {
+        if (!((bitField0_ & 0x00000002) != 0)) {
+          aProps_ = new java.util.ArrayList<BasilMessage.BasilMessageOuterClass.ParamBlock>(aProps_);
+          bitField0_ |= 0x00000002;
+         }
       }
 
-      public int getOpParametersCount() {
-        return internalGetOpParameters().getMap().size();
-      }
-      /**
-       * <pre>
-       * other parameters needed by op
-       * </pre>
-       *
-       * <code>map&lt;string, string&gt; opParameters = 10;</code>
-       */
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          BasilMessage.BasilMessageOuterClass.ParamBlock, BasilMessage.BasilMessageOuterClass.ParamBlock.Builder, BasilMessage.BasilMessageOuterClass.ParamBlockOrBuilder> aPropsBuilder_;
 
-      public boolean containsOpParameters(
-          java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
-        return internalGetOpParameters().getMap().containsKey(key);
-      }
-      /**
-       * Use {@link #getOpParametersMap()} instead.
-       */
-      @java.lang.Deprecated
-      public java.util.Map<java.lang.String, java.lang.String> getOpParameters() {
-        return getOpParametersMap();
-      }
       /**
        * <pre>
-       * other parameters needed by op
+       * Abilities and their properties
        * </pre>
        *
-       * <code>map&lt;string, string&gt; opParameters = 10;</code>
+       * <code>repeated .BasilMessage.ParamBlock AProps = 10;</code>
        */
-
-      public java.util.Map<java.lang.String, java.lang.String> getOpParametersMap() {
-        return internalGetOpParameters().getMap();
-      }
-      /**
-       * <pre>
-       * other parameters needed by op
-       * </pre>
-       *
-       * <code>map&lt;string, string&gt; opParameters = 10;</code>
-       */
-
-      public java.lang.String getOpParametersOrDefault(
-          java.lang.String key,
-          java.lang.String defaultValue) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
-        java.util.Map<java.lang.String, java.lang.String> map =
-            internalGetOpParameters().getMap();
-        return map.containsKey(key) ? map.get(key) : defaultValue;
-      }
-      /**
-       * <pre>
-       * other parameters needed by op
-       * </pre>
-       *
-       * <code>map&lt;string, string&gt; opParameters = 10;</code>
-       */
-
-      public java.lang.String getOpParametersOrThrow(
-          java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
-        java.util.Map<java.lang.String, java.lang.String> map =
-            internalGetOpParameters().getMap();
-        if (!map.containsKey(key)) {
-          throw new java.lang.IllegalArgumentException();
-        }
-        return map.get(key);
-      }
-
-      public Builder clearOpParameters() {
-        internalGetMutableOpParameters().getMutableMap()
-            .clear();
-        return this;
-      }
-      /**
-       * <pre>
-       * other parameters needed by op
-       * </pre>
-       *
-       * <code>map&lt;string, string&gt; opParameters = 10;</code>
-       */
-
-      public Builder removeOpParameters(
-          java.lang.String key) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
-        internalGetMutableOpParameters().getMutableMap()
-            .remove(key);
-        return this;
-      }
-      /**
-       * Use alternate mutation accessors instead.
-       */
-      @java.lang.Deprecated
-      public java.util.Map<java.lang.String, java.lang.String>
-      getMutableOpParameters() {
-        return internalGetMutableOpParameters().getMutableMap();
-      }
-      /**
-       * <pre>
-       * other parameters needed by op
-       * </pre>
-       *
-       * <code>map&lt;string, string&gt; opParameters = 10;</code>
-       */
-      public Builder putOpParameters(
-          java.lang.String key,
-          java.lang.String value) {
-        if (key == null) { throw new java.lang.NullPointerException(); }
-        if (value == null) { throw new java.lang.NullPointerException(); }
-        internalGetMutableOpParameters().getMutableMap()
-            .put(key, value);
-        return this;
-      }
-      /**
-       * <pre>
-       * other parameters needed by op
-       * </pre>
-       *
-       * <code>map&lt;string, string&gt; opParameters = 10;</code>
-       */
-
-      public Builder putAllOpParameters(
-          java.util.Map<java.lang.String, java.lang.String> values) {
-        internalGetMutableOpParameters().getMutableMap()
-            .putAll(values);
-        return this;
-      }
-
-      private BasilType.BasilTypes.BasilException exception_;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          BasilType.BasilTypes.BasilException, BasilType.BasilTypes.BasilException.Builder, BasilType.BasilTypes.BasilExceptionOrBuilder> exceptionBuilder_;
-      /**
-       * <pre>
-       * if op is returning an error
-       * </pre>
-       *
-       * <code>.BasilType.BasilException exception = 11;</code>
-       */
-      public boolean hasException() {
-        return exceptionBuilder_ != null || exception_ != null;
-      }
-      /**
-       * <pre>
-       * if op is returning an error
-       * </pre>
-       *
-       * <code>.BasilType.BasilException exception = 11;</code>
-       */
-      public BasilType.BasilTypes.BasilException getException() {
-        if (exceptionBuilder_ == null) {
-          return exception_ == null ? BasilType.BasilTypes.BasilException.getDefaultInstance() : exception_;
+      public java.util.List<BasilMessage.BasilMessageOuterClass.ParamBlock> getAPropsList() {
+        if (aPropsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(aProps_);
         } else {
-          return exceptionBuilder_.getMessage();
+          return aPropsBuilder_.getMessageList();
         }
       }
       /**
        * <pre>
-       * if op is returning an error
+       * Abilities and their properties
        * </pre>
        *
-       * <code>.BasilType.BasilException exception = 11;</code>
+       * <code>repeated .BasilMessage.ParamBlock AProps = 10;</code>
        */
-      public Builder setException(BasilType.BasilTypes.BasilException value) {
-        if (exceptionBuilder_ == null) {
+      public int getAPropsCount() {
+        if (aPropsBuilder_ == null) {
+          return aProps_.size();
+        } else {
+          return aPropsBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * Abilities and their properties
+       * </pre>
+       *
+       * <code>repeated .BasilMessage.ParamBlock AProps = 10;</code>
+       */
+      public BasilMessage.BasilMessageOuterClass.ParamBlock getAProps(int index) {
+        if (aPropsBuilder_ == null) {
+          return aProps_.get(index);
+        } else {
+          return aPropsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * Abilities and their properties
+       * </pre>
+       *
+       * <code>repeated .BasilMessage.ParamBlock AProps = 10;</code>
+       */
+      public Builder setAProps(
+          int index, BasilMessage.BasilMessageOuterClass.ParamBlock value) {
+        if (aPropsBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
           }
-          exception_ = value;
+          ensureAPropsIsMutable();
+          aProps_.set(index, value);
           onChanged();
         } else {
-          exceptionBuilder_.setMessage(value);
+          aPropsBuilder_.setMessage(index, value);
         }
-
         return this;
       }
       /**
        * <pre>
-       * if op is returning an error
+       * Abilities and their properties
        * </pre>
        *
-       * <code>.BasilType.BasilException exception = 11;</code>
+       * <code>repeated .BasilMessage.ParamBlock AProps = 10;</code>
+       */
+      public Builder setAProps(
+          int index, BasilMessage.BasilMessageOuterClass.ParamBlock.Builder builderForValue) {
+        if (aPropsBuilder_ == null) {
+          ensureAPropsIsMutable();
+          aProps_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          aPropsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Abilities and their properties
+       * </pre>
+       *
+       * <code>repeated .BasilMessage.ParamBlock AProps = 10;</code>
+       */
+      public Builder addAProps(BasilMessage.BasilMessageOuterClass.ParamBlock value) {
+        if (aPropsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureAPropsIsMutable();
+          aProps_.add(value);
+          onChanged();
+        } else {
+          aPropsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Abilities and their properties
+       * </pre>
+       *
+       * <code>repeated .BasilMessage.ParamBlock AProps = 10;</code>
+       */
+      public Builder addAProps(
+          int index, BasilMessage.BasilMessageOuterClass.ParamBlock value) {
+        if (aPropsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureAPropsIsMutable();
+          aProps_.add(index, value);
+          onChanged();
+        } else {
+          aPropsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Abilities and their properties
+       * </pre>
+       *
+       * <code>repeated .BasilMessage.ParamBlock AProps = 10;</code>
+       */
+      public Builder addAProps(
+          BasilMessage.BasilMessageOuterClass.ParamBlock.Builder builderForValue) {
+        if (aPropsBuilder_ == null) {
+          ensureAPropsIsMutable();
+          aProps_.add(builderForValue.build());
+          onChanged();
+        } else {
+          aPropsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Abilities and their properties
+       * </pre>
+       *
+       * <code>repeated .BasilMessage.ParamBlock AProps = 10;</code>
+       */
+      public Builder addAProps(
+          int index, BasilMessage.BasilMessageOuterClass.ParamBlock.Builder builderForValue) {
+        if (aPropsBuilder_ == null) {
+          ensureAPropsIsMutable();
+          aProps_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          aPropsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Abilities and their properties
+       * </pre>
+       *
+       * <code>repeated .BasilMessage.ParamBlock AProps = 10;</code>
+       */
+      public Builder addAllAProps(
+          java.lang.Iterable<? extends BasilMessage.BasilMessageOuterClass.ParamBlock> values) {
+        if (aPropsBuilder_ == null) {
+          ensureAPropsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, aProps_);
+          onChanged();
+        } else {
+          aPropsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Abilities and their properties
+       * </pre>
+       *
+       * <code>repeated .BasilMessage.ParamBlock AProps = 10;</code>
+       */
+      public Builder clearAProps() {
+        if (aPropsBuilder_ == null) {
+          aProps_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000002);
+          onChanged();
+        } else {
+          aPropsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Abilities and their properties
+       * </pre>
+       *
+       * <code>repeated .BasilMessage.ParamBlock AProps = 10;</code>
+       */
+      public Builder removeAProps(int index) {
+        if (aPropsBuilder_ == null) {
+          ensureAPropsIsMutable();
+          aProps_.remove(index);
+          onChanged();
+        } else {
+          aPropsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Abilities and their properties
+       * </pre>
+       *
+       * <code>repeated .BasilMessage.ParamBlock AProps = 10;</code>
+       */
+      public BasilMessage.BasilMessageOuterClass.ParamBlock.Builder getAPropsBuilder(
+          int index) {
+        return getAPropsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * Abilities and their properties
+       * </pre>
+       *
+       * <code>repeated .BasilMessage.ParamBlock AProps = 10;</code>
+       */
+      public BasilMessage.BasilMessageOuterClass.ParamBlockOrBuilder getAPropsOrBuilder(
+          int index) {
+        if (aPropsBuilder_ == null) {
+          return aProps_.get(index);  } else {
+          return aPropsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * Abilities and their properties
+       * </pre>
+       *
+       * <code>repeated .BasilMessage.ParamBlock AProps = 10;</code>
+       */
+      public java.util.List<? extends BasilMessage.BasilMessageOuterClass.ParamBlockOrBuilder> 
+           getAPropsOrBuilderList() {
+        if (aPropsBuilder_ != null) {
+          return aPropsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(aProps_);
+        }
+      }
+      /**
+       * <pre>
+       * Abilities and their properties
+       * </pre>
+       *
+       * <code>repeated .BasilMessage.ParamBlock AProps = 10;</code>
+       */
+      public BasilMessage.BasilMessageOuterClass.ParamBlock.Builder addAPropsBuilder() {
+        return getAPropsFieldBuilder().addBuilder(
+            BasilMessage.BasilMessageOuterClass.ParamBlock.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * Abilities and their properties
+       * </pre>
+       *
+       * <code>repeated .BasilMessage.ParamBlock AProps = 10;</code>
+       */
+      public BasilMessage.BasilMessageOuterClass.ParamBlock.Builder addAPropsBuilder(
+          int index) {
+        return getAPropsFieldBuilder().addBuilder(
+            index, BasilMessage.BasilMessageOuterClass.ParamBlock.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * Abilities and their properties
+       * </pre>
+       *
+       * <code>repeated .BasilMessage.ParamBlock AProps = 10;</code>
+       */
+      public java.util.List<BasilMessage.BasilMessageOuterClass.ParamBlock.Builder> 
+           getAPropsBuilderList() {
+        return getAPropsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          BasilMessage.BasilMessageOuterClass.ParamBlock, BasilMessage.BasilMessageOuterClass.ParamBlock.Builder, BasilMessage.BasilMessageOuterClass.ParamBlockOrBuilder> 
+          getAPropsFieldBuilder() {
+        if (aPropsBuilder_ == null) {
+          aPropsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              BasilMessage.BasilMessageOuterClass.ParamBlock, BasilMessage.BasilMessageOuterClass.ParamBlock.Builder, BasilMessage.BasilMessageOuterClass.ParamBlockOrBuilder>(
+                  aProps_,
+                  ((bitField0_ & 0x00000002) != 0),
+                  getParentForChildren(),
+                  isClean());
+          aProps_ = null;
+        }
+        return aPropsBuilder_;
+      }
+
+      private java.util.List<BasilMessage.BasilMessageOuterClass.PositionBlock> positions_ =
+        java.util.Collections.emptyList();
+      private void ensurePositionsIsMutable() {
+        if (!((bitField0_ & 0x00000004) != 0)) {
+          positions_ = new java.util.ArrayList<BasilMessage.BasilMessageOuterClass.PositionBlock>(positions_);
+          bitField0_ |= 0x00000004;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          BasilMessage.BasilMessageOuterClass.PositionBlock, BasilMessage.BasilMessageOuterClass.PositionBlock.Builder, BasilMessage.BasilMessageOuterClass.PositionBlockOrBuilder> positionsBuilder_;
+
+      /**
+       * <pre>
+       * Some messages are just pos updates
+       * </pre>
+       *
+       * <code>repeated .BasilMessage.PositionBlock Positions = 11;</code>
+       */
+      public java.util.List<BasilMessage.BasilMessageOuterClass.PositionBlock> getPositionsList() {
+        if (positionsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(positions_);
+        } else {
+          return positionsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * Some messages are just pos updates
+       * </pre>
+       *
+       * <code>repeated .BasilMessage.PositionBlock Positions = 11;</code>
+       */
+      public int getPositionsCount() {
+        if (positionsBuilder_ == null) {
+          return positions_.size();
+        } else {
+          return positionsBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * Some messages are just pos updates
+       * </pre>
+       *
+       * <code>repeated .BasilMessage.PositionBlock Positions = 11;</code>
+       */
+      public BasilMessage.BasilMessageOuterClass.PositionBlock getPositions(int index) {
+        if (positionsBuilder_ == null) {
+          return positions_.get(index);
+        } else {
+          return positionsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * Some messages are just pos updates
+       * </pre>
+       *
+       * <code>repeated .BasilMessage.PositionBlock Positions = 11;</code>
+       */
+      public Builder setPositions(
+          int index, BasilMessage.BasilMessageOuterClass.PositionBlock value) {
+        if (positionsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensurePositionsIsMutable();
+          positions_.set(index, value);
+          onChanged();
+        } else {
+          positionsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Some messages are just pos updates
+       * </pre>
+       *
+       * <code>repeated .BasilMessage.PositionBlock Positions = 11;</code>
+       */
+      public Builder setPositions(
+          int index, BasilMessage.BasilMessageOuterClass.PositionBlock.Builder builderForValue) {
+        if (positionsBuilder_ == null) {
+          ensurePositionsIsMutable();
+          positions_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          positionsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Some messages are just pos updates
+       * </pre>
+       *
+       * <code>repeated .BasilMessage.PositionBlock Positions = 11;</code>
+       */
+      public Builder addPositions(BasilMessage.BasilMessageOuterClass.PositionBlock value) {
+        if (positionsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensurePositionsIsMutable();
+          positions_.add(value);
+          onChanged();
+        } else {
+          positionsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Some messages are just pos updates
+       * </pre>
+       *
+       * <code>repeated .BasilMessage.PositionBlock Positions = 11;</code>
+       */
+      public Builder addPositions(
+          int index, BasilMessage.BasilMessageOuterClass.PositionBlock value) {
+        if (positionsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensurePositionsIsMutable();
+          positions_.add(index, value);
+          onChanged();
+        } else {
+          positionsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Some messages are just pos updates
+       * </pre>
+       *
+       * <code>repeated .BasilMessage.PositionBlock Positions = 11;</code>
+       */
+      public Builder addPositions(
+          BasilMessage.BasilMessageOuterClass.PositionBlock.Builder builderForValue) {
+        if (positionsBuilder_ == null) {
+          ensurePositionsIsMutable();
+          positions_.add(builderForValue.build());
+          onChanged();
+        } else {
+          positionsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Some messages are just pos updates
+       * </pre>
+       *
+       * <code>repeated .BasilMessage.PositionBlock Positions = 11;</code>
+       */
+      public Builder addPositions(
+          int index, BasilMessage.BasilMessageOuterClass.PositionBlock.Builder builderForValue) {
+        if (positionsBuilder_ == null) {
+          ensurePositionsIsMutable();
+          positions_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          positionsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Some messages are just pos updates
+       * </pre>
+       *
+       * <code>repeated .BasilMessage.PositionBlock Positions = 11;</code>
+       */
+      public Builder addAllPositions(
+          java.lang.Iterable<? extends BasilMessage.BasilMessageOuterClass.PositionBlock> values) {
+        if (positionsBuilder_ == null) {
+          ensurePositionsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, positions_);
+          onChanged();
+        } else {
+          positionsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Some messages are just pos updates
+       * </pre>
+       *
+       * <code>repeated .BasilMessage.PositionBlock Positions = 11;</code>
+       */
+      public Builder clearPositions() {
+        if (positionsBuilder_ == null) {
+          positions_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000004);
+          onChanged();
+        } else {
+          positionsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Some messages are just pos updates
+       * </pre>
+       *
+       * <code>repeated .BasilMessage.PositionBlock Positions = 11;</code>
+       */
+      public Builder removePositions(int index) {
+        if (positionsBuilder_ == null) {
+          ensurePositionsIsMutable();
+          positions_.remove(index);
+          onChanged();
+        } else {
+          positionsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * Some messages are just pos updates
+       * </pre>
+       *
+       * <code>repeated .BasilMessage.PositionBlock Positions = 11;</code>
+       */
+      public BasilMessage.BasilMessageOuterClass.PositionBlock.Builder getPositionsBuilder(
+          int index) {
+        return getPositionsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * Some messages are just pos updates
+       * </pre>
+       *
+       * <code>repeated .BasilMessage.PositionBlock Positions = 11;</code>
+       */
+      public BasilMessage.BasilMessageOuterClass.PositionBlockOrBuilder getPositionsOrBuilder(
+          int index) {
+        if (positionsBuilder_ == null) {
+          return positions_.get(index);  } else {
+          return positionsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * Some messages are just pos updates
+       * </pre>
+       *
+       * <code>repeated .BasilMessage.PositionBlock Positions = 11;</code>
+       */
+      public java.util.List<? extends BasilMessage.BasilMessageOuterClass.PositionBlockOrBuilder> 
+           getPositionsOrBuilderList() {
+        if (positionsBuilder_ != null) {
+          return positionsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(positions_);
+        }
+      }
+      /**
+       * <pre>
+       * Some messages are just pos updates
+       * </pre>
+       *
+       * <code>repeated .BasilMessage.PositionBlock Positions = 11;</code>
+       */
+      public BasilMessage.BasilMessageOuterClass.PositionBlock.Builder addPositionsBuilder() {
+        return getPositionsFieldBuilder().addBuilder(
+            BasilMessage.BasilMessageOuterClass.PositionBlock.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * Some messages are just pos updates
+       * </pre>
+       *
+       * <code>repeated .BasilMessage.PositionBlock Positions = 11;</code>
+       */
+      public BasilMessage.BasilMessageOuterClass.PositionBlock.Builder addPositionsBuilder(
+          int index) {
+        return getPositionsFieldBuilder().addBuilder(
+            index, BasilMessage.BasilMessageOuterClass.PositionBlock.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * Some messages are just pos updates
+       * </pre>
+       *
+       * <code>repeated .BasilMessage.PositionBlock Positions = 11;</code>
+       */
+      public java.util.List<BasilMessage.BasilMessageOuterClass.PositionBlock.Builder> 
+           getPositionsBuilderList() {
+        return getPositionsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          BasilMessage.BasilMessageOuterClass.PositionBlock, BasilMessage.BasilMessageOuterClass.PositionBlock.Builder, BasilMessage.BasilMessageOuterClass.PositionBlockOrBuilder> 
+          getPositionsFieldBuilder() {
+        if (positionsBuilder_ == null) {
+          positionsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              BasilMessage.BasilMessageOuterClass.PositionBlock, BasilMessage.BasilMessageOuterClass.PositionBlock.Builder, BasilMessage.BasilMessageOuterClass.PositionBlockOrBuilder>(
+                  positions_,
+                  ((bitField0_ & 0x00000004) != 0),
+                  getParentForChildren(),
+                  isClean());
+          positions_ = null;
+        }
+        return positionsBuilder_;
+      }
+
+      private java.lang.Object exception_ = "";
+      /**
+       * <pre>
+       * Responses can report errors
+       * </pre>
+       *
+       * <code>string Exception = 12;</code>
+       */
+      public java.lang.String getException() {
+        java.lang.Object ref = exception_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          exception_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Responses can report errors
+       * </pre>
+       *
+       * <code>string Exception = 12;</code>
+       */
+      public com.google.protobuf.ByteString
+          getExceptionBytes() {
+        java.lang.Object ref = exception_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          exception_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * Responses can report errors
+       * </pre>
+       *
+       * <code>string Exception = 12;</code>
        */
       public Builder setException(
-          BasilType.BasilTypes.BasilException.Builder builderForValue) {
-        if (exceptionBuilder_ == null) {
-          exception_ = builderForValue.build();
-          onChanged();
-        } else {
-          exceptionBuilder_.setMessage(builderForValue.build());
-        }
-
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        exception_ = value;
+        onChanged();
         return this;
       }
       /**
        * <pre>
-       * if op is returning an error
+       * Responses can report errors
        * </pre>
        *
-       * <code>.BasilType.BasilException exception = 11;</code>
-       */
-      public Builder mergeException(BasilType.BasilTypes.BasilException value) {
-        if (exceptionBuilder_ == null) {
-          if (exception_ != null) {
-            exception_ =
-              BasilType.BasilTypes.BasilException.newBuilder(exception_).mergeFrom(value).buildPartial();
-          } else {
-            exception_ = value;
-          }
-          onChanged();
-        } else {
-          exceptionBuilder_.mergeFrom(value);
-        }
-
-        return this;
-      }
-      /**
-       * <pre>
-       * if op is returning an error
-       * </pre>
-       *
-       * <code>.BasilType.BasilException exception = 11;</code>
+       * <code>string Exception = 12;</code>
        */
       public Builder clearException() {
-        if (exceptionBuilder_ == null) {
-          exception_ = null;
-          onChanged();
-        } else {
-          exception_ = null;
-          exceptionBuilder_ = null;
-        }
-
-        return this;
-      }
-      /**
-       * <pre>
-       * if op is returning an error
-       * </pre>
-       *
-       * <code>.BasilType.BasilException exception = 11;</code>
-       */
-      public BasilType.BasilTypes.BasilException.Builder getExceptionBuilder() {
         
+        exception_ = getDefaultInstance().getException();
         onChanged();
-        return getExceptionFieldBuilder().getBuilder();
-      }
-      /**
-       * <pre>
-       * if op is returning an error
-       * </pre>
-       *
-       * <code>.BasilType.BasilException exception = 11;</code>
-       */
-      public BasilType.BasilTypes.BasilExceptionOrBuilder getExceptionOrBuilder() {
-        if (exceptionBuilder_ != null) {
-          return exceptionBuilder_.getMessageOrBuilder();
-        } else {
-          return exception_ == null ?
-              BasilType.BasilTypes.BasilException.getDefaultInstance() : exception_;
-        }
-      }
-      /**
-       * <pre>
-       * if op is returning an error
-       * </pre>
-       *
-       * <code>.BasilType.BasilException exception = 11;</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          BasilType.BasilTypes.BasilException, BasilType.BasilTypes.BasilException.Builder, BasilType.BasilTypes.BasilExceptionOrBuilder> 
-          getExceptionFieldBuilder() {
-        if (exceptionBuilder_ == null) {
-          exceptionBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              BasilType.BasilTypes.BasilException, BasilType.BasilTypes.BasilException.Builder, BasilType.BasilTypes.BasilExceptionOrBuilder>(
-                  getException(),
-                  getParentForChildren(),
-                  isClean());
-          exception_ = null;
-        }
-        return exceptionBuilder_;
-      }
-
-      private BasilType.BasilTypes.BResponseRequest response_;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          BasilType.BasilTypes.BResponseRequest, BasilType.BasilTypes.BResponseRequest.Builder, BasilType.BasilTypes.BResponseRequestOrBuilder> responseBuilder_;
-      /**
-       * <pre>
-       * transport RPC information
-       * </pre>
-       *
-       * <code>.BasilType.BResponseRequest response = 13;</code>
-       */
-      public boolean hasResponse() {
-        return responseBuilder_ != null || response_ != null;
-      }
-      /**
-       * <pre>
-       * transport RPC information
-       * </pre>
-       *
-       * <code>.BasilType.BResponseRequest response = 13;</code>
-       */
-      public BasilType.BasilTypes.BResponseRequest getResponse() {
-        if (responseBuilder_ == null) {
-          return response_ == null ? BasilType.BasilTypes.BResponseRequest.getDefaultInstance() : response_;
-        } else {
-          return responseBuilder_.getMessage();
-        }
-      }
-      /**
-       * <pre>
-       * transport RPC information
-       * </pre>
-       *
-       * <code>.BasilType.BResponseRequest response = 13;</code>
-       */
-      public Builder setResponse(BasilType.BasilTypes.BResponseRequest value) {
-        if (responseBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          response_ = value;
-          onChanged();
-        } else {
-          responseBuilder_.setMessage(value);
-        }
-
         return this;
       }
       /**
        * <pre>
-       * transport RPC information
+       * Responses can report errors
        * </pre>
        *
-       * <code>.BasilType.BResponseRequest response = 13;</code>
+       * <code>string Exception = 12;</code>
        */
-      public Builder setResponse(
-          BasilType.BasilTypes.BResponseRequest.Builder builderForValue) {
-        if (responseBuilder_ == null) {
-          response_ = builderForValue.build();
-          onChanged();
-        } else {
-          responseBuilder_.setMessage(builderForValue.build());
-        }
-
-        return this;
-      }
-      /**
-       * <pre>
-       * transport RPC information
-       * </pre>
-       *
-       * <code>.BasilType.BResponseRequest response = 13;</code>
-       */
-      public Builder mergeResponse(BasilType.BasilTypes.BResponseRequest value) {
-        if (responseBuilder_ == null) {
-          if (response_ != null) {
-            response_ =
-              BasilType.BasilTypes.BResponseRequest.newBuilder(response_).mergeFrom(value).buildPartial();
-          } else {
-            response_ = value;
-          }
-          onChanged();
-        } else {
-          responseBuilder_.mergeFrom(value);
-        }
-
-        return this;
-      }
-      /**
-       * <pre>
-       * transport RPC information
-       * </pre>
-       *
-       * <code>.BasilType.BResponseRequest response = 13;</code>
-       */
-      public Builder clearResponse() {
-        if (responseBuilder_ == null) {
-          response_ = null;
-          onChanged();
-        } else {
-          response_ = null;
-          responseBuilder_ = null;
-        }
-
-        return this;
-      }
-      /**
-       * <pre>
-       * transport RPC information
-       * </pre>
-       *
-       * <code>.BasilType.BResponseRequest response = 13;</code>
-       */
-      public BasilType.BasilTypes.BResponseRequest.Builder getResponseBuilder() {
+      public Builder setExceptionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
         
+        exception_ = value;
         onChanged();
-        return getResponseFieldBuilder().getBuilder();
+        return this;
+      }
+
+      private com.google.protobuf.MapField<
+          java.lang.String, java.lang.String> exceptionHints_;
+      private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+      internalGetExceptionHints() {
+        if (exceptionHints_ == null) {
+          return com.google.protobuf.MapField.emptyMapField(
+              ExceptionHintsDefaultEntryHolder.defaultEntry);
+        }
+        return exceptionHints_;
+      }
+      private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+      internalGetMutableExceptionHints() {
+        onChanged();;
+        if (exceptionHints_ == null) {
+          exceptionHints_ = com.google.protobuf.MapField.newMapField(
+              ExceptionHintsDefaultEntryHolder.defaultEntry);
+        }
+        if (!exceptionHints_.isMutable()) {
+          exceptionHints_ = exceptionHints_.copy();
+        }
+        return exceptionHints_;
+      }
+
+      public int getExceptionHintsCount() {
+        return internalGetExceptionHints().getMap().size();
       }
       /**
        * <pre>
-       * transport RPC information
+       * more information about the error
        * </pre>
        *
-       * <code>.BasilType.BResponseRequest response = 13;</code>
+       * <code>map&lt;string, string&gt; ExceptionHints = 22;</code>
        */
-      public BasilType.BasilTypes.BResponseRequestOrBuilder getResponseOrBuilder() {
-        if (responseBuilder_ != null) {
-          return responseBuilder_.getMessageOrBuilder();
-        } else {
-          return response_ == null ?
-              BasilType.BasilTypes.BResponseRequest.getDefaultInstance() : response_;
-        }
+
+      public boolean containsExceptionHints(
+          java.lang.String key) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        return internalGetExceptionHints().getMap().containsKey(key);
+      }
+      /**
+       * Use {@link #getExceptionHintsMap()} instead.
+       */
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.String, java.lang.String> getExceptionHints() {
+        return getExceptionHintsMap();
       }
       /**
        * <pre>
-       * transport RPC information
+       * more information about the error
        * </pre>
        *
-       * <code>.BasilType.BResponseRequest response = 13;</code>
+       * <code>map&lt;string, string&gt; ExceptionHints = 22;</code>
        */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          BasilType.BasilTypes.BResponseRequest, BasilType.BasilTypes.BResponseRequest.Builder, BasilType.BasilTypes.BResponseRequestOrBuilder> 
-          getResponseFieldBuilder() {
-        if (responseBuilder_ == null) {
-          responseBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              BasilType.BasilTypes.BResponseRequest, BasilType.BasilTypes.BResponseRequest.Builder, BasilType.BasilTypes.BResponseRequestOrBuilder>(
-                  getResponse(),
-                  getParentForChildren(),
-                  isClean());
-          response_ = null;
+
+      public java.util.Map<java.lang.String, java.lang.String> getExceptionHintsMap() {
+        return internalGetExceptionHints().getMap();
+      }
+      /**
+       * <pre>
+       * more information about the error
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; ExceptionHints = 22;</code>
+       */
+
+      public java.lang.String getExceptionHintsOrDefault(
+          java.lang.String key,
+          java.lang.String defaultValue) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        java.util.Map<java.lang.String, java.lang.String> map =
+            internalGetExceptionHints().getMap();
+        return map.containsKey(key) ? map.get(key) : defaultValue;
+      }
+      /**
+       * <pre>
+       * more information about the error
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; ExceptionHints = 22;</code>
+       */
+
+      public java.lang.String getExceptionHintsOrThrow(
+          java.lang.String key) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        java.util.Map<java.lang.String, java.lang.String> map =
+            internalGetExceptionHints().getMap();
+        if (!map.containsKey(key)) {
+          throw new java.lang.IllegalArgumentException();
         }
-        return responseBuilder_;
+        return map.get(key);
+      }
+
+      public Builder clearExceptionHints() {
+        internalGetMutableExceptionHints().getMutableMap()
+            .clear();
+        return this;
+      }
+      /**
+       * <pre>
+       * more information about the error
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; ExceptionHints = 22;</code>
+       */
+
+      public Builder removeExceptionHints(
+          java.lang.String key) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        internalGetMutableExceptionHints().getMutableMap()
+            .remove(key);
+        return this;
+      }
+      /**
+       * Use alternate mutation accessors instead.
+       */
+      @java.lang.Deprecated
+      public java.util.Map<java.lang.String, java.lang.String>
+      getMutableExceptionHints() {
+        return internalGetMutableExceptionHints().getMutableMap();
+      }
+      /**
+       * <pre>
+       * more information about the error
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; ExceptionHints = 22;</code>
+       */
+      public Builder putExceptionHints(
+          java.lang.String key,
+          java.lang.String value) {
+        if (key == null) { throw new java.lang.NullPointerException(); }
+        if (value == null) { throw new java.lang.NullPointerException(); }
+        internalGetMutableExceptionHints().getMutableMap()
+            .put(key, value);
+        return this;
+      }
+      /**
+       * <pre>
+       * more information about the error
+       * </pre>
+       *
+       * <code>map&lt;string, string&gt; ExceptionHints = 22;</code>
+       */
+
+      public Builder putAllExceptionHints(
+          java.util.Map<java.lang.String, java.lang.String> values) {
+        internalGetMutableExceptionHints().getMutableMap()
+            .putAll(values);
+        return this;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -4134,20 +7407,35 @@ public final class BasilMessageOuterClass {
   }
 
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_BasilMessage_PositionBlock_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_BasilMessage_PositionBlock_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_BasilMessage_ParamBlock_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_BasilMessage_ParamBlock_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_BasilMessage_ParamBlock_PropsEntry_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_BasilMessage_ParamBlock_PropsEntry_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_BasilMessage_BasilMessage_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_BasilMessage_BasilMessage_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_BasilMessage_BasilMessage_PropertiesEntry_descriptor;
+    internal_static_BasilMessage_BasilMessage_IPropsEntry_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_BasilMessage_BasilMessage_PropertiesEntry_fieldAccessorTable;
+      internal_static_BasilMessage_BasilMessage_IPropsEntry_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_BasilMessage_BasilMessage_OpParametersEntry_descriptor;
+    internal_static_BasilMessage_BasilMessage_ExceptionHintsEntry_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_BasilMessage_BasilMessage_OpParametersEntry_fieldAccessorTable;
+      internal_static_BasilMessage_BasilMessage_ExceptionHintsEntry_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -4157,59 +7445,50 @@ public final class BasilMessageOuterClass {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\022BasilMessage.proto\022\014BasilMessage\032\020Basi" +
-      "lTypes.proto\"\266\005\n\014BasilMessage\022\n\n\002op\030\001 \001(" +
-      "\005\022,\n\004auth\030\002 \001(\0132\036.BasilType.AccessAuthor" +
-      "ization\022+\n\005class\030\016 \001(\0162\034.BasilMessage.Tr" +
-      "ansportClass\022-\n\010objectId\030\003 \001(\0132\033.BasilTy" +
-      "pe.ObjectIdentifier\0221\n\ninstanceId\030\004 \001(\0132" +
-      "\035.BasilType.InstanceIdentifier\022,\n\003pos\030\005 " +
-      "\001(\0132\037.BasilType.InstancePositionInfo\022.\n\t" +
-      "assetInfo\030\006 \001(\0132\033.BasilType.AssetInforma" +
-      "tion\022&\n\004aabb\030\007 \001(\0132\030.BasilType.AaBoundin" +
-      "gBox\022\016\n\006filter\030\010 \001(\t\022>\n\nproperties\030\t \003(\013" +
-      "2*.BasilMessage.BasilMessage.PropertiesE" +
-      "ntry\022B\n\014opParameters\030\n \003(\0132,.BasilMessag" +
-      "e.BasilMessage.OpParametersEntry\022,\n\texce" +
-      "ption\030\013 \001(\0132\031.BasilType.BasilException\022-" +
-      "\n\010response\030\r \001(\0132\033.BasilType.BResponseRe" +
-      "quest\0321\n\017PropertiesEntry\022\013\n\003key\030\001 \001(\t\022\r\n" +
-      "\005value\030\002 \001(\t:\0028\001\0323\n\021OpParametersEntry\022\013\n" +
-      "\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001*_\n\016Transpo" +
-      "rtClass\022\013\n\007Default\020\000\022\020\n\014HighPriority\020\n\022\017" +
-      "\n\013MedPriority\020\024\022\017\n\013LowPriority\020\036\022\014\n\010Best" +
-      "Case\020(*\277\t\n\017BasilMessageOps\022\016\n\nUnknownReq" +
-      "\020\000\022!\n\034IdentifyDisplayableObjectReq\020\201 \022\"\n" +
-      "\035IdentifyDisplayableObjectResp\020\202 \022\037\n\032For" +
-      "getDisplayableObjectReq\020\203 \022 \n\033ForgetDisp" +
-      "layableObjectResp\020\204 \022\034\n\027CreateObjectInst" +
-      "anceReq\020\205 \022\035\n\030CreateObjectInstanceResp\020\206" +
-      " \022\034\n\027DeleteObjectInstanceReq\020\207 \022\035\n\030Delet" +
-      "eObjectInstanceResp\020\210 \022\034\n\027UpdateObjectPr" +
-      "opertyReq\020\211 \022\035\n\030UpdateObjectPropertyResp" +
-      "\020\212 \022\036\n\031UpdateInstancePropertyReq\020\213 \022\037\n\032U" +
-      "pdateInstancePropertyResp\020\214 \022\036\n\031UpdateIn" +
-      "stancePositionReq\020\215 \022\037\n\032UpdateInstancePo" +
-      "sitionResp\020\216 \022\037\n\032RequestObjectProperties" +
-      "Req\020\217 \022 \n\033RequestObjectPropertiesResp\020\220 " +
-      "\022!\n\034RequestInstancePropertiesReq\020\221 \022\"\n\035R" +
-      "equestInstancePropertiesResp\020\222 \022\024\n\017Close" +
-      "SessionReq\020\223 \022\025\n\020CloseSessionResp\020\224 \022\026\n\021" +
-      "MakeConnectionReq\020\225 \022\027\n\022MakeConnectionRe" +
-      "sp\020\226 \022\022\n\rAliveCheckReq\020\201@\022\023\n\016AliveCheckR" +
-      "esp\020\202@\022\023\n\016OpenSessionReq\020\201`\022\024\n\017OpenSessi" +
-      "onResp\020\202`\022\022\n\rCameraViewReq\020\203`\022\023\n\016CameraV" +
-      "iewResp\020\204`\022\026\n\020RegisterTopicReq\020\201\200\001\022\027\n\021Re" +
-      "gisterTopicResp\020\202\200\001\022\030\n\022DeregisterTopicRe" +
-      "q\020\203\200\001\022\031\n\023DeregisterTopicResp\020\204\200\001\022\022\n\014Subs" +
-      "cribeReq\020\205\200\001\022\023\n\rSubscribeResp\020\206\200\001\022\024\n\016Uns" +
-      "ubscribeReq\020\207\200\001\022\025\n\017UnsubscribeResp\020\210\200\001\022\022" +
-      "\n\014SendEventReq\020\211\200\001\022\023\n\rSendEventResp\020\220\200\001\022" +
-      "\016\n\010EventReq\020\221\200\001\022\017\n\tEventResp\020\222\200\001\022\031\n\023Subs" +
-      "criptionMadeReq\020\223\200\001\022\032\n\024SubscriptionMadeR" +
-      "esp\020\224\200\001\022\032\n\024SubscriptionClearReq\020\225\200\001\022\033\n\025S" +
-      "ubscriptionClearResp\020\226\200\001B&\252\002#org.herbal3" +
-      "d.basil.protocol.Messageb\006proto3"
+      "\n\022BasilMessage.proto\022\014BasilMessage\"\345\001\n\rP" +
+      "ositionBlock\022\013\n\003Pos\030\001 \003(\001\022\013\n\003Rot\030\002 \003(\001\022)" +
+      "\n\006PosRef\030\003 \001(\0162\031.BasilMessage.CoordSyste" +
+      "m\022,\n\006RotRef\030\004 \001(\0162\034.BasilMessage.Rotatio" +
+      "nSystem\022\013\n\003Vel\030\005 \003(\001\022\014\n\004Path\030\006 \003(\001\022\017\n\007It" +
+      "emIdN\030\n \001(\r\022\016\n\006ItemId\030\013 \001(\t\022\023\n\013SessionAu" +
+      "th\030\014 \001(\t\022\020\n\010ItemAuth\030\r \001(\t\"\177\n\nParamBlock" +
+      "\022\017\n\007Ability\030\001 \001(\t\0222\n\005Props\030\002 \003(\0132#.Basil" +
+      "Message.ParamBlock.PropsEntry\032,\n\nPropsEn" +
+      "try\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"\357\004\n\014" +
+      "BasilMessage\022\024\n\014ResponseCode\030\001 \001(\r\022\023\n\013Re" +
+      "sponseKey\030\024 \001(\t\022\020\n\010StreamId\030\003 \001(\r\022\027\n\017Pro" +
+      "tocolVersion\030\004 \001(\r\022\021\n\tChangeSeq\030\036 \001(\004\022\022\n" +
+      "\nChangeTime\030\037 \001(\004\022\021\n\tQueueTime\030( \001(\r\022\020\n\010" +
+      "SendTime\030) \001(\r\022\026\n\016TransportClass\030* \001(\r\022\n" +
+      "\n\002Op\030\005 \001(\r\022\023\n\013SessionAuth\030\006 \001(\t\022\017\n\007ItemI" +
+      "dN\030\007 \001(\r\022\016\n\006ItemId\030\010 \001(\t\022\020\n\010ItemAuth\030\025 \001" +
+      "(\t\0226\n\006IProps\030\t \003(\0132&.BasilMessage.BasilM" +
+      "essage.IPropsEntry\022(\n\006AProps\030\n \003(\0132\030.Bas" +
+      "ilMessage.ParamBlock\022.\n\tPositions\030\013 \003(\0132" +
+      "\033.BasilMessage.PositionBlock\022\021\n\tExceptio" +
+      "n\030\014 \001(\t\022F\n\016ExceptionHints\030\026 \003(\0132..BasilM" +
+      "essage.BasilMessage.ExceptionHintsEntry\032" +
+      "-\n\013IPropsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001" +
+      "(\t:\0028\001\0325\n\023ExceptionHintsEntry\022\013\n\003key\030\001 \001" +
+      "(\t\022\r\n\005value\030\002 \001(\t:\0028\001*\335\003\n\017BasilMessageOp" +
+      "s\022\016\n\nUnknownReq\020\000\022\021\n\rCreateItemReq\020e\022\022\n\016" +
+      "CreateItemResp\020f\022\021\n\rDeleteItemReq\020g\022\022\n\016D" +
+      "eleteItemResp\020h\022\021\n\rAddAbilityReq\020i\022\022\n\016Ad" +
+      "dAbilityResp\020j\022\024\n\020RemoveAbilityReq\020k\022\025\n\021" +
+      "RemoveAbilityResp\020l\022\030\n\024RequestProperties" +
+      "Req\020m\022\031\n\025RequestPropertiesResp\020n\022\027\n\023Upda" +
+      "tePropertiesReq\020o\022\030\n\024UpdatePropertiesRes" +
+      "p\020p\022\023\n\016OpenSessionReq\020\311\001\022\024\n\017OpenSessionR" +
+      "esp\020\312\001\022\024\n\017CloseSessionReq\020\313\001\022\025\n\020CloseSes" +
+      "sionResp\020\314\001\022\026\n\021MakeConnectionReq\020\315\001\022\027\n\022M" +
+      "akeConnectionResp\020\316\001\022\022\n\rAliveCheckReq\020\255\002" +
+      "\022\023\n\016AliveCheckResp\020\256\002*r\n\013CoordSystem\022\t\n\005" +
+      "WGS86\020\000\022\n\n\006CAMERA\020\001\022\r\n\tCAMERAABS\020\002\022\013\n\007VI" +
+      "RTUAL\020\003\022\010\n\004MOON\020\004\022\010\n\004MARS\020\005\022\010\n\004REL1\020\006\022\010\n" +
+      "\004REL2\020\007\022\010\n\004REL3\020\010*?\n\016RotationSystem\022\n\n\006W" +
+      "ORLDR\020\000\022\n\n\006LOCALR\020\001\022\010\n\004FORR\020\002\022\013\n\007CAMERAR" +
+      "\020\003B&\252\002#org.herbal3d.basil.protocol.Messa" +
+      "geb\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -4222,27 +7501,43 @@ public final class BasilMessageOuterClass {
     com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          BasilType.BasilTypes.getDescriptor(),
         }, assigner);
-    internal_static_BasilMessage_BasilMessage_descriptor =
+    internal_static_BasilMessage_PositionBlock_descriptor =
       getDescriptor().getMessageTypes().get(0);
+    internal_static_BasilMessage_PositionBlock_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_BasilMessage_PositionBlock_descriptor,
+        new java.lang.String[] { "Pos", "Rot", "PosRef", "RotRef", "Vel", "Path", "ItemIdN", "ItemId", "SessionAuth", "ItemAuth", });
+    internal_static_BasilMessage_ParamBlock_descriptor =
+      getDescriptor().getMessageTypes().get(1);
+    internal_static_BasilMessage_ParamBlock_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_BasilMessage_ParamBlock_descriptor,
+        new java.lang.String[] { "Ability", "Props", });
+    internal_static_BasilMessage_ParamBlock_PropsEntry_descriptor =
+      internal_static_BasilMessage_ParamBlock_descriptor.getNestedTypes().get(0);
+    internal_static_BasilMessage_ParamBlock_PropsEntry_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_BasilMessage_ParamBlock_PropsEntry_descriptor,
+        new java.lang.String[] { "Key", "Value", });
+    internal_static_BasilMessage_BasilMessage_descriptor =
+      getDescriptor().getMessageTypes().get(2);
     internal_static_BasilMessage_BasilMessage_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_BasilMessage_BasilMessage_descriptor,
-        new java.lang.String[] { "Op", "Auth", "Class_", "ObjectId", "InstanceId", "Pos", "AssetInfo", "Aabb", "Filter", "Properties", "OpParameters", "Exception", "Response", });
-    internal_static_BasilMessage_BasilMessage_PropertiesEntry_descriptor =
+        new java.lang.String[] { "ResponseCode", "ResponseKey", "StreamId", "ProtocolVersion", "ChangeSeq", "ChangeTime", "QueueTime", "SendTime", "TransportClass", "Op", "SessionAuth", "ItemIdN", "ItemId", "ItemAuth", "IProps", "AProps", "Positions", "Exception", "ExceptionHints", });
+    internal_static_BasilMessage_BasilMessage_IPropsEntry_descriptor =
       internal_static_BasilMessage_BasilMessage_descriptor.getNestedTypes().get(0);
-    internal_static_BasilMessage_BasilMessage_PropertiesEntry_fieldAccessorTable = new
+    internal_static_BasilMessage_BasilMessage_IPropsEntry_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_BasilMessage_BasilMessage_PropertiesEntry_descriptor,
+        internal_static_BasilMessage_BasilMessage_IPropsEntry_descriptor,
         new java.lang.String[] { "Key", "Value", });
-    internal_static_BasilMessage_BasilMessage_OpParametersEntry_descriptor =
+    internal_static_BasilMessage_BasilMessage_ExceptionHintsEntry_descriptor =
       internal_static_BasilMessage_BasilMessage_descriptor.getNestedTypes().get(1);
-    internal_static_BasilMessage_BasilMessage_OpParametersEntry_fieldAccessorTable = new
+    internal_static_BasilMessage_BasilMessage_ExceptionHintsEntry_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_BasilMessage_BasilMessage_OpParametersEntry_descriptor,
+        internal_static_BasilMessage_BasilMessage_ExceptionHintsEntry_descriptor,
         new java.lang.String[] { "Key", "Value", });
-    BasilType.BasilTypes.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

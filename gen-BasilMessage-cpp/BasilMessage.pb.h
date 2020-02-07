@@ -42,7 +42,6 @@ class AnyMetadata;
 }  // namespace internal
 }  // namespace protobuf
 }  // namespace google
-#include "BasilTypes.pb.h"
 // @@protoc_insertion_point(includes)
 #include <google/protobuf/port_def.inc>
 #define PROTOBUF_INTERNAL_EXPORT_BasilMessage_2eproto
@@ -53,7 +52,7 @@ struct TableStruct_BasilMessage_2eproto {
     PROTOBUF_SECTION_VARIABLE(protodesc_cold);
   static const ::google::protobuf::internal::AuxillaryParseTableField aux[]
     PROTOBUF_SECTION_VARIABLE(protodesc_cold);
-  static const ::google::protobuf::internal::ParseTable schema[3]
+  static const ::google::protobuf::internal::ParseTable schema[6]
     PROTOBUF_SECTION_VARIABLE(protodesc_cold);
   static const ::google::protobuf::internal::FieldMetadata field_metadata[];
   static const ::google::protobuf::internal::SerializationTable serialization_table[];
@@ -64,98 +63,62 @@ namespace BasilMessage {
 class BasilMessage;
 class BasilMessageDefaultTypeInternal;
 extern BasilMessageDefaultTypeInternal _BasilMessage_default_instance_;
-class BasilMessage_OpParametersEntry_DoNotUse;
-class BasilMessage_OpParametersEntry_DoNotUseDefaultTypeInternal;
-extern BasilMessage_OpParametersEntry_DoNotUseDefaultTypeInternal _BasilMessage_OpParametersEntry_DoNotUse_default_instance_;
-class BasilMessage_PropertiesEntry_DoNotUse;
-class BasilMessage_PropertiesEntry_DoNotUseDefaultTypeInternal;
-extern BasilMessage_PropertiesEntry_DoNotUseDefaultTypeInternal _BasilMessage_PropertiesEntry_DoNotUse_default_instance_;
+class BasilMessage_ExceptionHintsEntry_DoNotUse;
+class BasilMessage_ExceptionHintsEntry_DoNotUseDefaultTypeInternal;
+extern BasilMessage_ExceptionHintsEntry_DoNotUseDefaultTypeInternal _BasilMessage_ExceptionHintsEntry_DoNotUse_default_instance_;
+class BasilMessage_IPropsEntry_DoNotUse;
+class BasilMessage_IPropsEntry_DoNotUseDefaultTypeInternal;
+extern BasilMessage_IPropsEntry_DoNotUseDefaultTypeInternal _BasilMessage_IPropsEntry_DoNotUse_default_instance_;
+class ParamBlock;
+class ParamBlockDefaultTypeInternal;
+extern ParamBlockDefaultTypeInternal _ParamBlock_default_instance_;
+class ParamBlock_PropsEntry_DoNotUse;
+class ParamBlock_PropsEntry_DoNotUseDefaultTypeInternal;
+extern ParamBlock_PropsEntry_DoNotUseDefaultTypeInternal _ParamBlock_PropsEntry_DoNotUse_default_instance_;
+class PositionBlock;
+class PositionBlockDefaultTypeInternal;
+extern PositionBlockDefaultTypeInternal _PositionBlock_default_instance_;
 }  // namespace BasilMessage
 namespace google {
 namespace protobuf {
 template<> ::BasilMessage::BasilMessage* Arena::CreateMaybeMessage<::BasilMessage::BasilMessage>(Arena*);
-template<> ::BasilMessage::BasilMessage_OpParametersEntry_DoNotUse* Arena::CreateMaybeMessage<::BasilMessage::BasilMessage_OpParametersEntry_DoNotUse>(Arena*);
-template<> ::BasilMessage::BasilMessage_PropertiesEntry_DoNotUse* Arena::CreateMaybeMessage<::BasilMessage::BasilMessage_PropertiesEntry_DoNotUse>(Arena*);
+template<> ::BasilMessage::BasilMessage_ExceptionHintsEntry_DoNotUse* Arena::CreateMaybeMessage<::BasilMessage::BasilMessage_ExceptionHintsEntry_DoNotUse>(Arena*);
+template<> ::BasilMessage::BasilMessage_IPropsEntry_DoNotUse* Arena::CreateMaybeMessage<::BasilMessage::BasilMessage_IPropsEntry_DoNotUse>(Arena*);
+template<> ::BasilMessage::ParamBlock* Arena::CreateMaybeMessage<::BasilMessage::ParamBlock>(Arena*);
+template<> ::BasilMessage::ParamBlock_PropsEntry_DoNotUse* Arena::CreateMaybeMessage<::BasilMessage::ParamBlock_PropsEntry_DoNotUse>(Arena*);
+template<> ::BasilMessage::PositionBlock* Arena::CreateMaybeMessage<::BasilMessage::PositionBlock>(Arena*);
 }  // namespace protobuf
 }  // namespace google
 namespace BasilMessage {
 
-enum TransportClass {
-  Default = 0,
-  HighPriority = 10,
-  MedPriority = 20,
-  LowPriority = 30,
-  BestCase = 40,
-  TransportClass_INT_MIN_SENTINEL_DO_NOT_USE_ = std::numeric_limits<::google::protobuf::int32>::min(),
-  TransportClass_INT_MAX_SENTINEL_DO_NOT_USE_ = std::numeric_limits<::google::protobuf::int32>::max()
-};
-bool TransportClass_IsValid(int value);
-constexpr TransportClass TransportClass_MIN = Default;
-constexpr TransportClass TransportClass_MAX = BestCase;
-constexpr int TransportClass_ARRAYSIZE = TransportClass_MAX + 1;
-
-const ::google::protobuf::EnumDescriptor* TransportClass_descriptor();
-inline const ::std::string& TransportClass_Name(TransportClass value) {
-  return ::google::protobuf::internal::NameOfEnum(
-    TransportClass_descriptor(), value);
-}
-inline bool TransportClass_Parse(
-    const ::std::string& name, TransportClass* value) {
-  return ::google::protobuf::internal::ParseNamedEnum<TransportClass>(
-    TransportClass_descriptor(), name, value);
-}
 enum BasilMessageOps {
   UnknownReq = 0,
-  IdentifyDisplayableObjectReq = 4097,
-  IdentifyDisplayableObjectResp = 4098,
-  ForgetDisplayableObjectReq = 4099,
-  ForgetDisplayableObjectResp = 4100,
-  CreateObjectInstanceReq = 4101,
-  CreateObjectInstanceResp = 4102,
-  DeleteObjectInstanceReq = 4103,
-  DeleteObjectInstanceResp = 4104,
-  UpdateObjectPropertyReq = 4105,
-  UpdateObjectPropertyResp = 4106,
-  UpdateInstancePropertyReq = 4107,
-  UpdateInstancePropertyResp = 4108,
-  UpdateInstancePositionReq = 4109,
-  UpdateInstancePositionResp = 4110,
-  RequestObjectPropertiesReq = 4111,
-  RequestObjectPropertiesResp = 4112,
-  RequestInstancePropertiesReq = 4113,
-  RequestInstancePropertiesResp = 4114,
-  CloseSessionReq = 4115,
-  CloseSessionResp = 4116,
-  MakeConnectionReq = 4117,
-  MakeConnectionResp = 4118,
-  AliveCheckReq = 8193,
-  AliveCheckResp = 8194,
-  OpenSessionReq = 12289,
-  OpenSessionResp = 12290,
-  CameraViewReq = 12291,
-  CameraViewResp = 12292,
-  RegisterTopicReq = 16385,
-  RegisterTopicResp = 16386,
-  DeregisterTopicReq = 16387,
-  DeregisterTopicResp = 16388,
-  SubscribeReq = 16389,
-  SubscribeResp = 16390,
-  UnsubscribeReq = 16391,
-  UnsubscribeResp = 16392,
-  SendEventReq = 16393,
-  SendEventResp = 16400,
-  EventReq = 16401,
-  EventResp = 16402,
-  SubscriptionMadeReq = 16403,
-  SubscriptionMadeResp = 16404,
-  SubscriptionClearReq = 16405,
-  SubscriptionClearResp = 16406,
+  CreateItemReq = 101,
+  CreateItemResp = 102,
+  DeleteItemReq = 103,
+  DeleteItemResp = 104,
+  AddAbilityReq = 105,
+  AddAbilityResp = 106,
+  RemoveAbilityReq = 107,
+  RemoveAbilityResp = 108,
+  RequestPropertiesReq = 109,
+  RequestPropertiesResp = 110,
+  UpdatePropertiesReq = 111,
+  UpdatePropertiesResp = 112,
+  OpenSessionReq = 201,
+  OpenSessionResp = 202,
+  CloseSessionReq = 203,
+  CloseSessionResp = 204,
+  MakeConnectionReq = 205,
+  MakeConnectionResp = 206,
+  AliveCheckReq = 301,
+  AliveCheckResp = 302,
   BasilMessageOps_INT_MIN_SENTINEL_DO_NOT_USE_ = std::numeric_limits<::google::protobuf::int32>::min(),
   BasilMessageOps_INT_MAX_SENTINEL_DO_NOT_USE_ = std::numeric_limits<::google::protobuf::int32>::max()
 };
 bool BasilMessageOps_IsValid(int value);
 constexpr BasilMessageOps BasilMessageOps_MIN = UnknownReq;
-constexpr BasilMessageOps BasilMessageOps_MAX = SubscriptionClearResp;
+constexpr BasilMessageOps BasilMessageOps_MAX = AliveCheckResp;
 constexpr int BasilMessageOps_ARRAYSIZE = BasilMessageOps_MAX + 1;
 
 const ::google::protobuf::EnumDescriptor* BasilMessageOps_descriptor();
@@ -168,44 +131,485 @@ inline bool BasilMessageOps_Parse(
   return ::google::protobuf::internal::ParseNamedEnum<BasilMessageOps>(
     BasilMessageOps_descriptor(), name, value);
 }
+enum CoordSystem {
+  WGS86 = 0,
+  CAMERA = 1,
+  CAMERAABS = 2,
+  VIRTUAL = 3,
+  MOON = 4,
+  MARS = 5,
+  REL1 = 6,
+  REL2 = 7,
+  REL3 = 8,
+  CoordSystem_INT_MIN_SENTINEL_DO_NOT_USE_ = std::numeric_limits<::google::protobuf::int32>::min(),
+  CoordSystem_INT_MAX_SENTINEL_DO_NOT_USE_ = std::numeric_limits<::google::protobuf::int32>::max()
+};
+bool CoordSystem_IsValid(int value);
+constexpr CoordSystem CoordSystem_MIN = WGS86;
+constexpr CoordSystem CoordSystem_MAX = REL3;
+constexpr int CoordSystem_ARRAYSIZE = CoordSystem_MAX + 1;
+
+const ::google::protobuf::EnumDescriptor* CoordSystem_descriptor();
+inline const ::std::string& CoordSystem_Name(CoordSystem value) {
+  return ::google::protobuf::internal::NameOfEnum(
+    CoordSystem_descriptor(), value);
+}
+inline bool CoordSystem_Parse(
+    const ::std::string& name, CoordSystem* value) {
+  return ::google::protobuf::internal::ParseNamedEnum<CoordSystem>(
+    CoordSystem_descriptor(), name, value);
+}
+enum RotationSystem {
+  WORLDR = 0,
+  LOCALR = 1,
+  FORR = 2,
+  CAMERAR = 3,
+  RotationSystem_INT_MIN_SENTINEL_DO_NOT_USE_ = std::numeric_limits<::google::protobuf::int32>::min(),
+  RotationSystem_INT_MAX_SENTINEL_DO_NOT_USE_ = std::numeric_limits<::google::protobuf::int32>::max()
+};
+bool RotationSystem_IsValid(int value);
+constexpr RotationSystem RotationSystem_MIN = WORLDR;
+constexpr RotationSystem RotationSystem_MAX = CAMERAR;
+constexpr int RotationSystem_ARRAYSIZE = RotationSystem_MAX + 1;
+
+const ::google::protobuf::EnumDescriptor* RotationSystem_descriptor();
+inline const ::std::string& RotationSystem_Name(RotationSystem value) {
+  return ::google::protobuf::internal::NameOfEnum(
+    RotationSystem_descriptor(), value);
+}
+inline bool RotationSystem_Parse(
+    const ::std::string& name, RotationSystem* value) {
+  return ::google::protobuf::internal::ParseNamedEnum<RotationSystem>(
+    RotationSystem_descriptor(), name, value);
+}
 // ===================================================================
 
-class BasilMessage_PropertiesEntry_DoNotUse : public ::google::protobuf::internal::MapEntry<BasilMessage_PropertiesEntry_DoNotUse, 
+class PositionBlock final :
+    public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:BasilMessage.PositionBlock) */ {
+ public:
+  PositionBlock();
+  virtual ~PositionBlock();
+
+  PositionBlock(const PositionBlock& from);
+
+  inline PositionBlock& operator=(const PositionBlock& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  #if LANG_CXX11
+  PositionBlock(PositionBlock&& from) noexcept
+    : PositionBlock() {
+    *this = ::std::move(from);
+  }
+
+  inline PositionBlock& operator=(PositionBlock&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+  #endif
+  static const ::google::protobuf::Descriptor* descriptor() {
+    return default_instance().GetDescriptor();
+  }
+  static const PositionBlock& default_instance();
+
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const PositionBlock* internal_default_instance() {
+    return reinterpret_cast<const PositionBlock*>(
+               &_PositionBlock_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    0;
+
+  void Swap(PositionBlock* other);
+  friend void swap(PositionBlock& a, PositionBlock& b) {
+    a.Swap(&b);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline PositionBlock* New() const final {
+    return CreateMaybeMessage<PositionBlock>(nullptr);
+  }
+
+  PositionBlock* New(::google::protobuf::Arena* arena) const final {
+    return CreateMaybeMessage<PositionBlock>(arena);
+  }
+  void CopyFrom(const ::google::protobuf::Message& from) final;
+  void MergeFrom(const ::google::protobuf::Message& from) final;
+  void CopyFrom(const PositionBlock& from);
+  void MergeFrom(const PositionBlock& from);
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  #if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+  const char* _InternalParse(const char* ptr, ::google::protobuf::internal::ParseContext* ctx) final;
+  #else
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) final;
+  #endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const final;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      ::google::protobuf::uint8* target) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  inline void SharedCtor();
+  inline void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(PositionBlock* other);
+  friend class ::google::protobuf::internal::AnyMetadata;
+  static ::google::protobuf::StringPiece FullMessageName() {
+    return "BasilMessage.PositionBlock";
+  }
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return nullptr;
+  }
+  inline void* MaybeArenaPtr() const {
+    return nullptr;
+  }
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  // repeated double Pos = 1;
+  int pos_size() const;
+  void clear_pos();
+  static const int kPosFieldNumber = 1;
+  double pos(int index) const;
+  void set_pos(int index, double value);
+  void add_pos(double value);
+  const ::google::protobuf::RepeatedField< double >&
+      pos() const;
+  ::google::protobuf::RepeatedField< double >*
+      mutable_pos();
+
+  // repeated double Rot = 2;
+  int rot_size() const;
+  void clear_rot();
+  static const int kRotFieldNumber = 2;
+  double rot(int index) const;
+  void set_rot(int index, double value);
+  void add_rot(double value);
+  const ::google::protobuf::RepeatedField< double >&
+      rot() const;
+  ::google::protobuf::RepeatedField< double >*
+      mutable_rot();
+
+  // repeated double Vel = 5;
+  int vel_size() const;
+  void clear_vel();
+  static const int kVelFieldNumber = 5;
+  double vel(int index) const;
+  void set_vel(int index, double value);
+  void add_vel(double value);
+  const ::google::protobuf::RepeatedField< double >&
+      vel() const;
+  ::google::protobuf::RepeatedField< double >*
+      mutable_vel();
+
+  // repeated double Path = 6;
+  int path_size() const;
+  void clear_path();
+  static const int kPathFieldNumber = 6;
+  double path(int index) const;
+  void set_path(int index, double value);
+  void add_path(double value);
+  const ::google::protobuf::RepeatedField< double >&
+      path() const;
+  ::google::protobuf::RepeatedField< double >*
+      mutable_path();
+
+  // string ItemId = 11;
+  void clear_itemid();
+  static const int kItemIdFieldNumber = 11;
+  const ::std::string& itemid() const;
+  void set_itemid(const ::std::string& value);
+  #if LANG_CXX11
+  void set_itemid(::std::string&& value);
+  #endif
+  void set_itemid(const char* value);
+  void set_itemid(const char* value, size_t size);
+  ::std::string* mutable_itemid();
+  ::std::string* release_itemid();
+  void set_allocated_itemid(::std::string* itemid);
+
+  // string SessionAuth = 12;
+  void clear_sessionauth();
+  static const int kSessionAuthFieldNumber = 12;
+  const ::std::string& sessionauth() const;
+  void set_sessionauth(const ::std::string& value);
+  #if LANG_CXX11
+  void set_sessionauth(::std::string&& value);
+  #endif
+  void set_sessionauth(const char* value);
+  void set_sessionauth(const char* value, size_t size);
+  ::std::string* mutable_sessionauth();
+  ::std::string* release_sessionauth();
+  void set_allocated_sessionauth(::std::string* sessionauth);
+
+  // string ItemAuth = 13;
+  void clear_itemauth();
+  static const int kItemAuthFieldNumber = 13;
+  const ::std::string& itemauth() const;
+  void set_itemauth(const ::std::string& value);
+  #if LANG_CXX11
+  void set_itemauth(::std::string&& value);
+  #endif
+  void set_itemauth(const char* value);
+  void set_itemauth(const char* value, size_t size);
+  ::std::string* mutable_itemauth();
+  ::std::string* release_itemauth();
+  void set_allocated_itemauth(::std::string* itemauth);
+
+  // .BasilMessage.CoordSystem PosRef = 3;
+  void clear_posref();
+  static const int kPosRefFieldNumber = 3;
+  ::BasilMessage::CoordSystem posref() const;
+  void set_posref(::BasilMessage::CoordSystem value);
+
+  // .BasilMessage.RotationSystem RotRef = 4;
+  void clear_rotref();
+  static const int kRotRefFieldNumber = 4;
+  ::BasilMessage::RotationSystem rotref() const;
+  void set_rotref(::BasilMessage::RotationSystem value);
+
+  // uint32 ItemIdN = 10;
+  void clear_itemidn();
+  static const int kItemIdNFieldNumber = 10;
+  ::google::protobuf::uint32 itemidn() const;
+  void set_itemidn(::google::protobuf::uint32 value);
+
+  // @@protoc_insertion_point(class_scope:BasilMessage.PositionBlock)
+ private:
+  class HasBitSetters;
+
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  ::google::protobuf::RepeatedField< double > pos_;
+  mutable std::atomic<int> _pos_cached_byte_size_;
+  ::google::protobuf::RepeatedField< double > rot_;
+  mutable std::atomic<int> _rot_cached_byte_size_;
+  ::google::protobuf::RepeatedField< double > vel_;
+  mutable std::atomic<int> _vel_cached_byte_size_;
+  ::google::protobuf::RepeatedField< double > path_;
+  mutable std::atomic<int> _path_cached_byte_size_;
+  ::google::protobuf::internal::ArenaStringPtr itemid_;
+  ::google::protobuf::internal::ArenaStringPtr sessionauth_;
+  ::google::protobuf::internal::ArenaStringPtr itemauth_;
+  int posref_;
+  int rotref_;
+  ::google::protobuf::uint32 itemidn_;
+  mutable ::google::protobuf::internal::CachedSize _cached_size_;
+  friend struct ::TableStruct_BasilMessage_2eproto;
+};
+// -------------------------------------------------------------------
+
+class ParamBlock_PropsEntry_DoNotUse : public ::google::protobuf::internal::MapEntry<ParamBlock_PropsEntry_DoNotUse, 
     ::std::string, ::std::string,
     ::google::protobuf::internal::WireFormatLite::TYPE_STRING,
     ::google::protobuf::internal::WireFormatLite::TYPE_STRING,
     0 > {
 public:
-  typedef ::google::protobuf::internal::MapEntry<BasilMessage_PropertiesEntry_DoNotUse, 
+  typedef ::google::protobuf::internal::MapEntry<ParamBlock_PropsEntry_DoNotUse, 
     ::std::string, ::std::string,
     ::google::protobuf::internal::WireFormatLite::TYPE_STRING,
     ::google::protobuf::internal::WireFormatLite::TYPE_STRING,
     0 > SuperType;
-  BasilMessage_PropertiesEntry_DoNotUse();
-  BasilMessage_PropertiesEntry_DoNotUse(::google::protobuf::Arena* arena);
-  void MergeFrom(const BasilMessage_PropertiesEntry_DoNotUse& other);
-  static const BasilMessage_PropertiesEntry_DoNotUse* internal_default_instance() { return reinterpret_cast<const BasilMessage_PropertiesEntry_DoNotUse*>(&_BasilMessage_PropertiesEntry_DoNotUse_default_instance_); }
+  ParamBlock_PropsEntry_DoNotUse();
+  ParamBlock_PropsEntry_DoNotUse(::google::protobuf::Arena* arena);
+  void MergeFrom(const ParamBlock_PropsEntry_DoNotUse& other);
+  static const ParamBlock_PropsEntry_DoNotUse* internal_default_instance() { return reinterpret_cast<const ParamBlock_PropsEntry_DoNotUse*>(&_ParamBlock_PropsEntry_DoNotUse_default_instance_); }
   void MergeFrom(const ::google::protobuf::Message& other) final;
   ::google::protobuf::Metadata GetMetadata() const;
 };
 
 // -------------------------------------------------------------------
 
-class BasilMessage_OpParametersEntry_DoNotUse : public ::google::protobuf::internal::MapEntry<BasilMessage_OpParametersEntry_DoNotUse, 
+class ParamBlock final :
+    public ::google::protobuf::Message /* @@protoc_insertion_point(class_definition:BasilMessage.ParamBlock) */ {
+ public:
+  ParamBlock();
+  virtual ~ParamBlock();
+
+  ParamBlock(const ParamBlock& from);
+
+  inline ParamBlock& operator=(const ParamBlock& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  #if LANG_CXX11
+  ParamBlock(ParamBlock&& from) noexcept
+    : ParamBlock() {
+    *this = ::std::move(from);
+  }
+
+  inline ParamBlock& operator=(ParamBlock&& from) noexcept {
+    if (GetArenaNoVirtual() == from.GetArenaNoVirtual()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+  #endif
+  static const ::google::protobuf::Descriptor* descriptor() {
+    return default_instance().GetDescriptor();
+  }
+  static const ParamBlock& default_instance();
+
+  static void InitAsDefaultInstance();  // FOR INTERNAL USE ONLY
+  static inline const ParamBlock* internal_default_instance() {
+    return reinterpret_cast<const ParamBlock*>(
+               &_ParamBlock_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    2;
+
+  void Swap(ParamBlock* other);
+  friend void swap(ParamBlock& a, ParamBlock& b) {
+    a.Swap(&b);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline ParamBlock* New() const final {
+    return CreateMaybeMessage<ParamBlock>(nullptr);
+  }
+
+  ParamBlock* New(::google::protobuf::Arena* arena) const final {
+    return CreateMaybeMessage<ParamBlock>(arena);
+  }
+  void CopyFrom(const ::google::protobuf::Message& from) final;
+  void MergeFrom(const ::google::protobuf::Message& from) final;
+  void CopyFrom(const ParamBlock& from);
+  void MergeFrom(const ParamBlock& from);
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  #if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+  const char* _InternalParse(const char* ptr, ::google::protobuf::internal::ParseContext* ctx) final;
+  #else
+  bool MergePartialFromCodedStream(
+      ::google::protobuf::io::CodedInputStream* input) final;
+  #endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+  void SerializeWithCachedSizes(
+      ::google::protobuf::io::CodedOutputStream* output) const final;
+  ::google::protobuf::uint8* InternalSerializeWithCachedSizesToArray(
+      ::google::protobuf::uint8* target) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  inline void SharedCtor();
+  inline void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(ParamBlock* other);
+  friend class ::google::protobuf::internal::AnyMetadata;
+  static ::google::protobuf::StringPiece FullMessageName() {
+    return "BasilMessage.ParamBlock";
+  }
+  private:
+  inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
+    return nullptr;
+  }
+  inline void* MaybeArenaPtr() const {
+    return nullptr;
+  }
+  public:
+
+  ::google::protobuf::Metadata GetMetadata() const final;
+
+  // nested types ----------------------------------------------------
+
+
+  // accessors -------------------------------------------------------
+
+  // map<string, string> Props = 2;
+  int props_size() const;
+  void clear_props();
+  static const int kPropsFieldNumber = 2;
+  const ::google::protobuf::Map< ::std::string, ::std::string >&
+      props() const;
+  ::google::protobuf::Map< ::std::string, ::std::string >*
+      mutable_props();
+
+  // string Ability = 1;
+  void clear_ability();
+  static const int kAbilityFieldNumber = 1;
+  const ::std::string& ability() const;
+  void set_ability(const ::std::string& value);
+  #if LANG_CXX11
+  void set_ability(::std::string&& value);
+  #endif
+  void set_ability(const char* value);
+  void set_ability(const char* value, size_t size);
+  ::std::string* mutable_ability();
+  ::std::string* release_ability();
+  void set_allocated_ability(::std::string* ability);
+
+  // @@protoc_insertion_point(class_scope:BasilMessage.ParamBlock)
+ private:
+  class HasBitSetters;
+
+  ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  ::google::protobuf::internal::MapField<
+      ParamBlock_PropsEntry_DoNotUse,
+      ::std::string, ::std::string,
+      ::google::protobuf::internal::WireFormatLite::TYPE_STRING,
+      ::google::protobuf::internal::WireFormatLite::TYPE_STRING,
+      0 > props_;
+  ::google::protobuf::internal::ArenaStringPtr ability_;
+  mutable ::google::protobuf::internal::CachedSize _cached_size_;
+  friend struct ::TableStruct_BasilMessage_2eproto;
+};
+// -------------------------------------------------------------------
+
+class BasilMessage_IPropsEntry_DoNotUse : public ::google::protobuf::internal::MapEntry<BasilMessage_IPropsEntry_DoNotUse, 
     ::std::string, ::std::string,
     ::google::protobuf::internal::WireFormatLite::TYPE_STRING,
     ::google::protobuf::internal::WireFormatLite::TYPE_STRING,
     0 > {
 public:
-  typedef ::google::protobuf::internal::MapEntry<BasilMessage_OpParametersEntry_DoNotUse, 
+  typedef ::google::protobuf::internal::MapEntry<BasilMessage_IPropsEntry_DoNotUse, 
     ::std::string, ::std::string,
     ::google::protobuf::internal::WireFormatLite::TYPE_STRING,
     ::google::protobuf::internal::WireFormatLite::TYPE_STRING,
     0 > SuperType;
-  BasilMessage_OpParametersEntry_DoNotUse();
-  BasilMessage_OpParametersEntry_DoNotUse(::google::protobuf::Arena* arena);
-  void MergeFrom(const BasilMessage_OpParametersEntry_DoNotUse& other);
-  static const BasilMessage_OpParametersEntry_DoNotUse* internal_default_instance() { return reinterpret_cast<const BasilMessage_OpParametersEntry_DoNotUse*>(&_BasilMessage_OpParametersEntry_DoNotUse_default_instance_); }
+  BasilMessage_IPropsEntry_DoNotUse();
+  BasilMessage_IPropsEntry_DoNotUse(::google::protobuf::Arena* arena);
+  void MergeFrom(const BasilMessage_IPropsEntry_DoNotUse& other);
+  static const BasilMessage_IPropsEntry_DoNotUse* internal_default_instance() { return reinterpret_cast<const BasilMessage_IPropsEntry_DoNotUse*>(&_BasilMessage_IPropsEntry_DoNotUse_default_instance_); }
+  void MergeFrom(const ::google::protobuf::Message& other) final;
+  ::google::protobuf::Metadata GetMetadata() const;
+};
+
+// -------------------------------------------------------------------
+
+class BasilMessage_ExceptionHintsEntry_DoNotUse : public ::google::protobuf::internal::MapEntry<BasilMessage_ExceptionHintsEntry_DoNotUse, 
+    ::std::string, ::std::string,
+    ::google::protobuf::internal::WireFormatLite::TYPE_STRING,
+    ::google::protobuf::internal::WireFormatLite::TYPE_STRING,
+    0 > {
+public:
+  typedef ::google::protobuf::internal::MapEntry<BasilMessage_ExceptionHintsEntry_DoNotUse, 
+    ::std::string, ::std::string,
+    ::google::protobuf::internal::WireFormatLite::TYPE_STRING,
+    ::google::protobuf::internal::WireFormatLite::TYPE_STRING,
+    0 > SuperType;
+  BasilMessage_ExceptionHintsEntry_DoNotUse();
+  BasilMessage_ExceptionHintsEntry_DoNotUse(::google::protobuf::Arena* arena);
+  void MergeFrom(const BasilMessage_ExceptionHintsEntry_DoNotUse& other);
+  static const BasilMessage_ExceptionHintsEntry_DoNotUse* internal_default_instance() { return reinterpret_cast<const BasilMessage_ExceptionHintsEntry_DoNotUse*>(&_BasilMessage_ExceptionHintsEntry_DoNotUse_default_instance_); }
   void MergeFrom(const ::google::protobuf::Message& other) final;
   ::google::protobuf::Metadata GetMetadata() const;
 };
@@ -250,7 +654,7 @@ class BasilMessage final :
                &_BasilMessage_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    2;
+    5;
 
   void Swap(BasilMessage* other);
   friend void swap(BasilMessage& a, BasilMessage& b) {
@@ -311,121 +715,177 @@ class BasilMessage final :
 
   // accessors -------------------------------------------------------
 
-  // map<string, string> properties = 9;
-  int properties_size() const;
-  void clear_properties();
-  static const int kPropertiesFieldNumber = 9;
+  // map<string, string> IProps = 9;
+  int iprops_size() const;
+  void clear_iprops();
+  static const int kIPropsFieldNumber = 9;
   const ::google::protobuf::Map< ::std::string, ::std::string >&
-      properties() const;
+      iprops() const;
   ::google::protobuf::Map< ::std::string, ::std::string >*
-      mutable_properties();
+      mutable_iprops();
 
-  // map<string, string> opParameters = 10;
-  int opparameters_size() const;
-  void clear_opparameters();
-  static const int kOpParametersFieldNumber = 10;
+  // repeated .BasilMessage.ParamBlock AProps = 10;
+  int aprops_size() const;
+  void clear_aprops();
+  static const int kAPropsFieldNumber = 10;
+  ::BasilMessage::ParamBlock* mutable_aprops(int index);
+  ::google::protobuf::RepeatedPtrField< ::BasilMessage::ParamBlock >*
+      mutable_aprops();
+  const ::BasilMessage::ParamBlock& aprops(int index) const;
+  ::BasilMessage::ParamBlock* add_aprops();
+  const ::google::protobuf::RepeatedPtrField< ::BasilMessage::ParamBlock >&
+      aprops() const;
+
+  // repeated .BasilMessage.PositionBlock Positions = 11;
+  int positions_size() const;
+  void clear_positions();
+  static const int kPositionsFieldNumber = 11;
+  ::BasilMessage::PositionBlock* mutable_positions(int index);
+  ::google::protobuf::RepeatedPtrField< ::BasilMessage::PositionBlock >*
+      mutable_positions();
+  const ::BasilMessage::PositionBlock& positions(int index) const;
+  ::BasilMessage::PositionBlock* add_positions();
+  const ::google::protobuf::RepeatedPtrField< ::BasilMessage::PositionBlock >&
+      positions() const;
+
+  // map<string, string> ExceptionHints = 22;
+  int exceptionhints_size() const;
+  void clear_exceptionhints();
+  static const int kExceptionHintsFieldNumber = 22;
   const ::google::protobuf::Map< ::std::string, ::std::string >&
-      opparameters() const;
+      exceptionhints() const;
   ::google::protobuf::Map< ::std::string, ::std::string >*
-      mutable_opparameters();
+      mutable_exceptionhints();
 
-  // string filter = 8;
-  void clear_filter();
-  static const int kFilterFieldNumber = 8;
-  const ::std::string& filter() const;
-  void set_filter(const ::std::string& value);
+  // string SessionAuth = 6;
+  void clear_sessionauth();
+  static const int kSessionAuthFieldNumber = 6;
+  const ::std::string& sessionauth() const;
+  void set_sessionauth(const ::std::string& value);
   #if LANG_CXX11
-  void set_filter(::std::string&& value);
+  void set_sessionauth(::std::string&& value);
   #endif
-  void set_filter(const char* value);
-  void set_filter(const char* value, size_t size);
-  ::std::string* mutable_filter();
-  ::std::string* release_filter();
-  void set_allocated_filter(::std::string* filter);
+  void set_sessionauth(const char* value);
+  void set_sessionauth(const char* value, size_t size);
+  ::std::string* mutable_sessionauth();
+  ::std::string* release_sessionauth();
+  void set_allocated_sessionauth(::std::string* sessionauth);
 
-  // .BasilType.AccessAuthorization auth = 2;
-  bool has_auth() const;
-  void clear_auth();
-  static const int kAuthFieldNumber = 2;
-  const ::BasilType::AccessAuthorization& auth() const;
-  ::BasilType::AccessAuthorization* release_auth();
-  ::BasilType::AccessAuthorization* mutable_auth();
-  void set_allocated_auth(::BasilType::AccessAuthorization* auth);
+  // string ItemId = 8;
+  void clear_itemid();
+  static const int kItemIdFieldNumber = 8;
+  const ::std::string& itemid() const;
+  void set_itemid(const ::std::string& value);
+  #if LANG_CXX11
+  void set_itemid(::std::string&& value);
+  #endif
+  void set_itemid(const char* value);
+  void set_itemid(const char* value, size_t size);
+  ::std::string* mutable_itemid();
+  ::std::string* release_itemid();
+  void set_allocated_itemid(::std::string* itemid);
 
-  // .BasilType.ObjectIdentifier objectId = 3;
-  bool has_objectid() const;
-  void clear_objectid();
-  static const int kObjectIdFieldNumber = 3;
-  const ::BasilType::ObjectIdentifier& objectid() const;
-  ::BasilType::ObjectIdentifier* release_objectid();
-  ::BasilType::ObjectIdentifier* mutable_objectid();
-  void set_allocated_objectid(::BasilType::ObjectIdentifier* objectid);
-
-  // .BasilType.InstanceIdentifier instanceId = 4;
-  bool has_instanceid() const;
-  void clear_instanceid();
-  static const int kInstanceIdFieldNumber = 4;
-  const ::BasilType::InstanceIdentifier& instanceid() const;
-  ::BasilType::InstanceIdentifier* release_instanceid();
-  ::BasilType::InstanceIdentifier* mutable_instanceid();
-  void set_allocated_instanceid(::BasilType::InstanceIdentifier* instanceid);
-
-  // .BasilType.InstancePositionInfo pos = 5;
-  bool has_pos() const;
-  void clear_pos();
-  static const int kPosFieldNumber = 5;
-  const ::BasilType::InstancePositionInfo& pos() const;
-  ::BasilType::InstancePositionInfo* release_pos();
-  ::BasilType::InstancePositionInfo* mutable_pos();
-  void set_allocated_pos(::BasilType::InstancePositionInfo* pos);
-
-  // .BasilType.AssetInformation assetInfo = 6;
-  bool has_assetinfo() const;
-  void clear_assetinfo();
-  static const int kAssetInfoFieldNumber = 6;
-  const ::BasilType::AssetInformation& assetinfo() const;
-  ::BasilType::AssetInformation* release_assetinfo();
-  ::BasilType::AssetInformation* mutable_assetinfo();
-  void set_allocated_assetinfo(::BasilType::AssetInformation* assetinfo);
-
-  // .BasilType.AaBoundingBox aabb = 7;
-  bool has_aabb() const;
-  void clear_aabb();
-  static const int kAabbFieldNumber = 7;
-  const ::BasilType::AaBoundingBox& aabb() const;
-  ::BasilType::AaBoundingBox* release_aabb();
-  ::BasilType::AaBoundingBox* mutable_aabb();
-  void set_allocated_aabb(::BasilType::AaBoundingBox* aabb);
-
-  // .BasilType.BasilException exception = 11;
-  bool has_exception() const;
+  // string Exception = 12;
   void clear_exception();
-  static const int kExceptionFieldNumber = 11;
-  const ::BasilType::BasilException& exception() const;
-  ::BasilType::BasilException* release_exception();
-  ::BasilType::BasilException* mutable_exception();
-  void set_allocated_exception(::BasilType::BasilException* exception);
+  static const int kExceptionFieldNumber = 12;
+  const ::std::string& exception() const;
+  void set_exception(const ::std::string& value);
+  #if LANG_CXX11
+  void set_exception(::std::string&& value);
+  #endif
+  void set_exception(const char* value);
+  void set_exception(const char* value, size_t size);
+  ::std::string* mutable_exception();
+  ::std::string* release_exception();
+  void set_allocated_exception(::std::string* exception);
 
-  // .BasilType.BResponseRequest response = 13;
-  bool has_response() const;
-  void clear_response();
-  static const int kResponseFieldNumber = 13;
-  const ::BasilType::BResponseRequest& response() const;
-  ::BasilType::BResponseRequest* release_response();
-  ::BasilType::BResponseRequest* mutable_response();
-  void set_allocated_response(::BasilType::BResponseRequest* response);
+  // string ResponseKey = 20;
+  void clear_responsekey();
+  static const int kResponseKeyFieldNumber = 20;
+  const ::std::string& responsekey() const;
+  void set_responsekey(const ::std::string& value);
+  #if LANG_CXX11
+  void set_responsekey(::std::string&& value);
+  #endif
+  void set_responsekey(const char* value);
+  void set_responsekey(const char* value, size_t size);
+  ::std::string* mutable_responsekey();
+  ::std::string* release_responsekey();
+  void set_allocated_responsekey(::std::string* responsekey);
 
-  // int32 op = 1;
+  // string ItemAuth = 21;
+  void clear_itemauth();
+  static const int kItemAuthFieldNumber = 21;
+  const ::std::string& itemauth() const;
+  void set_itemauth(const ::std::string& value);
+  #if LANG_CXX11
+  void set_itemauth(::std::string&& value);
+  #endif
+  void set_itemauth(const char* value);
+  void set_itemauth(const char* value, size_t size);
+  ::std::string* mutable_itemauth();
+  ::std::string* release_itemauth();
+  void set_allocated_itemauth(::std::string* itemauth);
+
+  // uint32 ResponseCode = 1;
+  void clear_responsecode();
+  static const int kResponseCodeFieldNumber = 1;
+  ::google::protobuf::uint32 responsecode() const;
+  void set_responsecode(::google::protobuf::uint32 value);
+
+  // uint32 StreamId = 3;
+  void clear_streamid();
+  static const int kStreamIdFieldNumber = 3;
+  ::google::protobuf::uint32 streamid() const;
+  void set_streamid(::google::protobuf::uint32 value);
+
+  // uint32 ProtocolVersion = 4;
+  void clear_protocolversion();
+  static const int kProtocolVersionFieldNumber = 4;
+  ::google::protobuf::uint32 protocolversion() const;
+  void set_protocolversion(::google::protobuf::uint32 value);
+
+  // uint32 Op = 5;
   void clear_op();
-  static const int kOpFieldNumber = 1;
-  ::google::protobuf::int32 op() const;
-  void set_op(::google::protobuf::int32 value);
+  static const int kOpFieldNumber = 5;
+  ::google::protobuf::uint32 op() const;
+  void set_op(::google::protobuf::uint32 value);
 
-  // .BasilMessage.TransportClass class = 14;
-  void clear_class_();
-  static const int kClassFieldNumber = 14;
-  ::BasilMessage::TransportClass class_() const;
-  void set_class_(::BasilMessage::TransportClass value);
+  // uint32 ItemIdN = 7;
+  void clear_itemidn();
+  static const int kItemIdNFieldNumber = 7;
+  ::google::protobuf::uint32 itemidn() const;
+  void set_itemidn(::google::protobuf::uint32 value);
+
+  // uint32 QueueTime = 40;
+  void clear_queuetime();
+  static const int kQueueTimeFieldNumber = 40;
+  ::google::protobuf::uint32 queuetime() const;
+  void set_queuetime(::google::protobuf::uint32 value);
+
+  // uint64 ChangeSeq = 30;
+  void clear_changeseq();
+  static const int kChangeSeqFieldNumber = 30;
+  ::google::protobuf::uint64 changeseq() const;
+  void set_changeseq(::google::protobuf::uint64 value);
+
+  // uint64 ChangeTime = 31;
+  void clear_changetime();
+  static const int kChangeTimeFieldNumber = 31;
+  ::google::protobuf::uint64 changetime() const;
+  void set_changetime(::google::protobuf::uint64 value);
+
+  // uint32 SendTime = 41;
+  void clear_sendtime();
+  static const int kSendTimeFieldNumber = 41;
+  ::google::protobuf::uint32 sendtime() const;
+  void set_sendtime(::google::protobuf::uint32 value);
+
+  // uint32 TransportClass = 42;
+  void clear_transportclass();
+  static const int kTransportClassFieldNumber = 42;
+  ::google::protobuf::uint32 transportclass() const;
+  void set_transportclass(::google::protobuf::uint32 value);
 
   // @@protoc_insertion_point(class_scope:BasilMessage.BasilMessage)
  private:
@@ -433,28 +893,34 @@ class BasilMessage final :
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
   ::google::protobuf::internal::MapField<
-      BasilMessage_PropertiesEntry_DoNotUse,
+      BasilMessage_IPropsEntry_DoNotUse,
       ::std::string, ::std::string,
       ::google::protobuf::internal::WireFormatLite::TYPE_STRING,
       ::google::protobuf::internal::WireFormatLite::TYPE_STRING,
-      0 > properties_;
+      0 > iprops_;
+  ::google::protobuf::RepeatedPtrField< ::BasilMessage::ParamBlock > aprops_;
+  ::google::protobuf::RepeatedPtrField< ::BasilMessage::PositionBlock > positions_;
   ::google::protobuf::internal::MapField<
-      BasilMessage_OpParametersEntry_DoNotUse,
+      BasilMessage_ExceptionHintsEntry_DoNotUse,
       ::std::string, ::std::string,
       ::google::protobuf::internal::WireFormatLite::TYPE_STRING,
       ::google::protobuf::internal::WireFormatLite::TYPE_STRING,
-      0 > opparameters_;
-  ::google::protobuf::internal::ArenaStringPtr filter_;
-  ::BasilType::AccessAuthorization* auth_;
-  ::BasilType::ObjectIdentifier* objectid_;
-  ::BasilType::InstanceIdentifier* instanceid_;
-  ::BasilType::InstancePositionInfo* pos_;
-  ::BasilType::AssetInformation* assetinfo_;
-  ::BasilType::AaBoundingBox* aabb_;
-  ::BasilType::BasilException* exception_;
-  ::BasilType::BResponseRequest* response_;
-  ::google::protobuf::int32 op_;
-  int class__;
+      0 > exceptionhints_;
+  ::google::protobuf::internal::ArenaStringPtr sessionauth_;
+  ::google::protobuf::internal::ArenaStringPtr itemid_;
+  ::google::protobuf::internal::ArenaStringPtr exception_;
+  ::google::protobuf::internal::ArenaStringPtr responsekey_;
+  ::google::protobuf::internal::ArenaStringPtr itemauth_;
+  ::google::protobuf::uint32 responsecode_;
+  ::google::protobuf::uint32 streamid_;
+  ::google::protobuf::uint32 protocolversion_;
+  ::google::protobuf::uint32 op_;
+  ::google::protobuf::uint32 itemidn_;
+  ::google::protobuf::uint32 queuetime_;
+  ::google::protobuf::uint64 changeseq_;
+  ::google::protobuf::uint64 changetime_;
+  ::google::protobuf::uint32 sendtime_;
+  ::google::protobuf::uint32 transportclass_;
   mutable ::google::protobuf::internal::CachedSize _cached_size_;
   friend struct ::TableStruct_BasilMessage_2eproto;
 };
@@ -467,492 +933,924 @@ class BasilMessage final :
   #pragma GCC diagnostic push
   #pragma GCC diagnostic ignored "-Wstrict-aliasing"
 #endif  // __GNUC__
+// PositionBlock
+
+// repeated double Pos = 1;
+inline int PositionBlock::pos_size() const {
+  return pos_.size();
+}
+inline void PositionBlock::clear_pos() {
+  pos_.Clear();
+}
+inline double PositionBlock::pos(int index) const {
+  // @@protoc_insertion_point(field_get:BasilMessage.PositionBlock.Pos)
+  return pos_.Get(index);
+}
+inline void PositionBlock::set_pos(int index, double value) {
+  pos_.Set(index, value);
+  // @@protoc_insertion_point(field_set:BasilMessage.PositionBlock.Pos)
+}
+inline void PositionBlock::add_pos(double value) {
+  pos_.Add(value);
+  // @@protoc_insertion_point(field_add:BasilMessage.PositionBlock.Pos)
+}
+inline const ::google::protobuf::RepeatedField< double >&
+PositionBlock::pos() const {
+  // @@protoc_insertion_point(field_list:BasilMessage.PositionBlock.Pos)
+  return pos_;
+}
+inline ::google::protobuf::RepeatedField< double >*
+PositionBlock::mutable_pos() {
+  // @@protoc_insertion_point(field_mutable_list:BasilMessage.PositionBlock.Pos)
+  return &pos_;
+}
+
+// repeated double Rot = 2;
+inline int PositionBlock::rot_size() const {
+  return rot_.size();
+}
+inline void PositionBlock::clear_rot() {
+  rot_.Clear();
+}
+inline double PositionBlock::rot(int index) const {
+  // @@protoc_insertion_point(field_get:BasilMessage.PositionBlock.Rot)
+  return rot_.Get(index);
+}
+inline void PositionBlock::set_rot(int index, double value) {
+  rot_.Set(index, value);
+  // @@protoc_insertion_point(field_set:BasilMessage.PositionBlock.Rot)
+}
+inline void PositionBlock::add_rot(double value) {
+  rot_.Add(value);
+  // @@protoc_insertion_point(field_add:BasilMessage.PositionBlock.Rot)
+}
+inline const ::google::protobuf::RepeatedField< double >&
+PositionBlock::rot() const {
+  // @@protoc_insertion_point(field_list:BasilMessage.PositionBlock.Rot)
+  return rot_;
+}
+inline ::google::protobuf::RepeatedField< double >*
+PositionBlock::mutable_rot() {
+  // @@protoc_insertion_point(field_mutable_list:BasilMessage.PositionBlock.Rot)
+  return &rot_;
+}
+
+// .BasilMessage.CoordSystem PosRef = 3;
+inline void PositionBlock::clear_posref() {
+  posref_ = 0;
+}
+inline ::BasilMessage::CoordSystem PositionBlock::posref() const {
+  // @@protoc_insertion_point(field_get:BasilMessage.PositionBlock.PosRef)
+  return static_cast< ::BasilMessage::CoordSystem >(posref_);
+}
+inline void PositionBlock::set_posref(::BasilMessage::CoordSystem value) {
+  
+  posref_ = value;
+  // @@protoc_insertion_point(field_set:BasilMessage.PositionBlock.PosRef)
+}
+
+// .BasilMessage.RotationSystem RotRef = 4;
+inline void PositionBlock::clear_rotref() {
+  rotref_ = 0;
+}
+inline ::BasilMessage::RotationSystem PositionBlock::rotref() const {
+  // @@protoc_insertion_point(field_get:BasilMessage.PositionBlock.RotRef)
+  return static_cast< ::BasilMessage::RotationSystem >(rotref_);
+}
+inline void PositionBlock::set_rotref(::BasilMessage::RotationSystem value) {
+  
+  rotref_ = value;
+  // @@protoc_insertion_point(field_set:BasilMessage.PositionBlock.RotRef)
+}
+
+// repeated double Vel = 5;
+inline int PositionBlock::vel_size() const {
+  return vel_.size();
+}
+inline void PositionBlock::clear_vel() {
+  vel_.Clear();
+}
+inline double PositionBlock::vel(int index) const {
+  // @@protoc_insertion_point(field_get:BasilMessage.PositionBlock.Vel)
+  return vel_.Get(index);
+}
+inline void PositionBlock::set_vel(int index, double value) {
+  vel_.Set(index, value);
+  // @@protoc_insertion_point(field_set:BasilMessage.PositionBlock.Vel)
+}
+inline void PositionBlock::add_vel(double value) {
+  vel_.Add(value);
+  // @@protoc_insertion_point(field_add:BasilMessage.PositionBlock.Vel)
+}
+inline const ::google::protobuf::RepeatedField< double >&
+PositionBlock::vel() const {
+  // @@protoc_insertion_point(field_list:BasilMessage.PositionBlock.Vel)
+  return vel_;
+}
+inline ::google::protobuf::RepeatedField< double >*
+PositionBlock::mutable_vel() {
+  // @@protoc_insertion_point(field_mutable_list:BasilMessage.PositionBlock.Vel)
+  return &vel_;
+}
+
+// repeated double Path = 6;
+inline int PositionBlock::path_size() const {
+  return path_.size();
+}
+inline void PositionBlock::clear_path() {
+  path_.Clear();
+}
+inline double PositionBlock::path(int index) const {
+  // @@protoc_insertion_point(field_get:BasilMessage.PositionBlock.Path)
+  return path_.Get(index);
+}
+inline void PositionBlock::set_path(int index, double value) {
+  path_.Set(index, value);
+  // @@protoc_insertion_point(field_set:BasilMessage.PositionBlock.Path)
+}
+inline void PositionBlock::add_path(double value) {
+  path_.Add(value);
+  // @@protoc_insertion_point(field_add:BasilMessage.PositionBlock.Path)
+}
+inline const ::google::protobuf::RepeatedField< double >&
+PositionBlock::path() const {
+  // @@protoc_insertion_point(field_list:BasilMessage.PositionBlock.Path)
+  return path_;
+}
+inline ::google::protobuf::RepeatedField< double >*
+PositionBlock::mutable_path() {
+  // @@protoc_insertion_point(field_mutable_list:BasilMessage.PositionBlock.Path)
+  return &path_;
+}
+
+// uint32 ItemIdN = 10;
+inline void PositionBlock::clear_itemidn() {
+  itemidn_ = 0u;
+}
+inline ::google::protobuf::uint32 PositionBlock::itemidn() const {
+  // @@protoc_insertion_point(field_get:BasilMessage.PositionBlock.ItemIdN)
+  return itemidn_;
+}
+inline void PositionBlock::set_itemidn(::google::protobuf::uint32 value) {
+  
+  itemidn_ = value;
+  // @@protoc_insertion_point(field_set:BasilMessage.PositionBlock.ItemIdN)
+}
+
+// string ItemId = 11;
+inline void PositionBlock::clear_itemid() {
+  itemid_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline const ::std::string& PositionBlock::itemid() const {
+  // @@protoc_insertion_point(field_get:BasilMessage.PositionBlock.ItemId)
+  return itemid_.GetNoArena();
+}
+inline void PositionBlock::set_itemid(const ::std::string& value) {
+  
+  itemid_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:BasilMessage.PositionBlock.ItemId)
+}
+#if LANG_CXX11
+inline void PositionBlock::set_itemid(::std::string&& value) {
+  
+  itemid_.SetNoArena(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:BasilMessage.PositionBlock.ItemId)
+}
+#endif
+inline void PositionBlock::set_itemid(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  itemid_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:BasilMessage.PositionBlock.ItemId)
+}
+inline void PositionBlock::set_itemid(const char* value, size_t size) {
+  
+  itemid_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:BasilMessage.PositionBlock.ItemId)
+}
+inline ::std::string* PositionBlock::mutable_itemid() {
+  
+  // @@protoc_insertion_point(field_mutable:BasilMessage.PositionBlock.ItemId)
+  return itemid_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* PositionBlock::release_itemid() {
+  // @@protoc_insertion_point(field_release:BasilMessage.PositionBlock.ItemId)
+  
+  return itemid_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void PositionBlock::set_allocated_itemid(::std::string* itemid) {
+  if (itemid != nullptr) {
+    
+  } else {
+    
+  }
+  itemid_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), itemid);
+  // @@protoc_insertion_point(field_set_allocated:BasilMessage.PositionBlock.ItemId)
+}
+
+// string SessionAuth = 12;
+inline void PositionBlock::clear_sessionauth() {
+  sessionauth_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline const ::std::string& PositionBlock::sessionauth() const {
+  // @@protoc_insertion_point(field_get:BasilMessage.PositionBlock.SessionAuth)
+  return sessionauth_.GetNoArena();
+}
+inline void PositionBlock::set_sessionauth(const ::std::string& value) {
+  
+  sessionauth_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:BasilMessage.PositionBlock.SessionAuth)
+}
+#if LANG_CXX11
+inline void PositionBlock::set_sessionauth(::std::string&& value) {
+  
+  sessionauth_.SetNoArena(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:BasilMessage.PositionBlock.SessionAuth)
+}
+#endif
+inline void PositionBlock::set_sessionauth(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  sessionauth_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:BasilMessage.PositionBlock.SessionAuth)
+}
+inline void PositionBlock::set_sessionauth(const char* value, size_t size) {
+  
+  sessionauth_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:BasilMessage.PositionBlock.SessionAuth)
+}
+inline ::std::string* PositionBlock::mutable_sessionauth() {
+  
+  // @@protoc_insertion_point(field_mutable:BasilMessage.PositionBlock.SessionAuth)
+  return sessionauth_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* PositionBlock::release_sessionauth() {
+  // @@protoc_insertion_point(field_release:BasilMessage.PositionBlock.SessionAuth)
+  
+  return sessionauth_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void PositionBlock::set_allocated_sessionauth(::std::string* sessionauth) {
+  if (sessionauth != nullptr) {
+    
+  } else {
+    
+  }
+  sessionauth_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), sessionauth);
+  // @@protoc_insertion_point(field_set_allocated:BasilMessage.PositionBlock.SessionAuth)
+}
+
+// string ItemAuth = 13;
+inline void PositionBlock::clear_itemauth() {
+  itemauth_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline const ::std::string& PositionBlock::itemauth() const {
+  // @@protoc_insertion_point(field_get:BasilMessage.PositionBlock.ItemAuth)
+  return itemauth_.GetNoArena();
+}
+inline void PositionBlock::set_itemauth(const ::std::string& value) {
+  
+  itemauth_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:BasilMessage.PositionBlock.ItemAuth)
+}
+#if LANG_CXX11
+inline void PositionBlock::set_itemauth(::std::string&& value) {
+  
+  itemauth_.SetNoArena(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:BasilMessage.PositionBlock.ItemAuth)
+}
+#endif
+inline void PositionBlock::set_itemauth(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  itemauth_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:BasilMessage.PositionBlock.ItemAuth)
+}
+inline void PositionBlock::set_itemauth(const char* value, size_t size) {
+  
+  itemauth_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:BasilMessage.PositionBlock.ItemAuth)
+}
+inline ::std::string* PositionBlock::mutable_itemauth() {
+  
+  // @@protoc_insertion_point(field_mutable:BasilMessage.PositionBlock.ItemAuth)
+  return itemauth_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* PositionBlock::release_itemauth() {
+  // @@protoc_insertion_point(field_release:BasilMessage.PositionBlock.ItemAuth)
+  
+  return itemauth_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void PositionBlock::set_allocated_itemauth(::std::string* itemauth) {
+  if (itemauth != nullptr) {
+    
+  } else {
+    
+  }
+  itemauth_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), itemauth);
+  // @@protoc_insertion_point(field_set_allocated:BasilMessage.PositionBlock.ItemAuth)
+}
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// ParamBlock
+
+// string Ability = 1;
+inline void ParamBlock::clear_ability() {
+  ability_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline const ::std::string& ParamBlock::ability() const {
+  // @@protoc_insertion_point(field_get:BasilMessage.ParamBlock.Ability)
+  return ability_.GetNoArena();
+}
+inline void ParamBlock::set_ability(const ::std::string& value) {
+  
+  ability_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:BasilMessage.ParamBlock.Ability)
+}
+#if LANG_CXX11
+inline void ParamBlock::set_ability(::std::string&& value) {
+  
+  ability_.SetNoArena(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:BasilMessage.ParamBlock.Ability)
+}
+#endif
+inline void ParamBlock::set_ability(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  ability_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:BasilMessage.ParamBlock.Ability)
+}
+inline void ParamBlock::set_ability(const char* value, size_t size) {
+  
+  ability_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:BasilMessage.ParamBlock.Ability)
+}
+inline ::std::string* ParamBlock::mutable_ability() {
+  
+  // @@protoc_insertion_point(field_mutable:BasilMessage.ParamBlock.Ability)
+  return ability_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* ParamBlock::release_ability() {
+  // @@protoc_insertion_point(field_release:BasilMessage.ParamBlock.Ability)
+  
+  return ability_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void ParamBlock::set_allocated_ability(::std::string* ability) {
+  if (ability != nullptr) {
+    
+  } else {
+    
+  }
+  ability_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ability);
+  // @@protoc_insertion_point(field_set_allocated:BasilMessage.ParamBlock.Ability)
+}
+
+// map<string, string> Props = 2;
+inline int ParamBlock::props_size() const {
+  return props_.size();
+}
+inline void ParamBlock::clear_props() {
+  props_.Clear();
+}
+inline const ::google::protobuf::Map< ::std::string, ::std::string >&
+ParamBlock::props() const {
+  // @@protoc_insertion_point(field_map:BasilMessage.ParamBlock.Props)
+  return props_.GetMap();
+}
+inline ::google::protobuf::Map< ::std::string, ::std::string >*
+ParamBlock::mutable_props() {
+  // @@protoc_insertion_point(field_mutable_map:BasilMessage.ParamBlock.Props)
+  return props_.MutableMap();
+}
+
+// -------------------------------------------------------------------
+
 // -------------------------------------------------------------------
 
 // -------------------------------------------------------------------
 
 // BasilMessage
 
-// int32 op = 1;
-inline void BasilMessage::clear_op() {
-  op_ = 0;
+// uint32 ResponseCode = 1;
+inline void BasilMessage::clear_responsecode() {
+  responsecode_ = 0u;
 }
-inline ::google::protobuf::int32 BasilMessage::op() const {
-  // @@protoc_insertion_point(field_get:BasilMessage.BasilMessage.op)
-  return op_;
+inline ::google::protobuf::uint32 BasilMessage::responsecode() const {
+  // @@protoc_insertion_point(field_get:BasilMessage.BasilMessage.ResponseCode)
+  return responsecode_;
 }
-inline void BasilMessage::set_op(::google::protobuf::int32 value) {
+inline void BasilMessage::set_responsecode(::google::protobuf::uint32 value) {
   
-  op_ = value;
-  // @@protoc_insertion_point(field_set:BasilMessage.BasilMessage.op)
+  responsecode_ = value;
+  // @@protoc_insertion_point(field_set:BasilMessage.BasilMessage.ResponseCode)
 }
 
-// .BasilType.AccessAuthorization auth = 2;
-inline bool BasilMessage::has_auth() const {
-  return this != internal_default_instance() && auth_ != nullptr;
+// string ResponseKey = 20;
+inline void BasilMessage::clear_responsekey() {
+  responsekey_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
-inline const ::BasilType::AccessAuthorization& BasilMessage::auth() const {
-  const ::BasilType::AccessAuthorization* p = auth_;
-  // @@protoc_insertion_point(field_get:BasilMessage.BasilMessage.auth)
-  return p != nullptr ? *p : *reinterpret_cast<const ::BasilType::AccessAuthorization*>(
-      &::BasilType::_AccessAuthorization_default_instance_);
+inline const ::std::string& BasilMessage::responsekey() const {
+  // @@protoc_insertion_point(field_get:BasilMessage.BasilMessage.ResponseKey)
+  return responsekey_.GetNoArena();
 }
-inline ::BasilType::AccessAuthorization* BasilMessage::release_auth() {
-  // @@protoc_insertion_point(field_release:BasilMessage.BasilMessage.auth)
+inline void BasilMessage::set_responsekey(const ::std::string& value) {
   
-  ::BasilType::AccessAuthorization* temp = auth_;
-  auth_ = nullptr;
-  return temp;
-}
-inline ::BasilType::AccessAuthorization* BasilMessage::mutable_auth() {
-  
-  if (auth_ == nullptr) {
-    auto* p = CreateMaybeMessage<::BasilType::AccessAuthorization>(GetArenaNoVirtual());
-    auth_ = p;
-  }
-  // @@protoc_insertion_point(field_mutable:BasilMessage.BasilMessage.auth)
-  return auth_;
-}
-inline void BasilMessage::set_allocated_auth(::BasilType::AccessAuthorization* auth) {
-  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
-  if (message_arena == nullptr) {
-    delete reinterpret_cast< ::google::protobuf::MessageLite*>(auth_);
-  }
-  if (auth) {
-    ::google::protobuf::Arena* submessage_arena = nullptr;
-    if (message_arena != submessage_arena) {
-      auth = ::google::protobuf::internal::GetOwnedMessage(
-          message_arena, auth, submessage_arena);
-    }
-    
-  } else {
-    
-  }
-  auth_ = auth;
-  // @@protoc_insertion_point(field_set_allocated:BasilMessage.BasilMessage.auth)
-}
-
-// .BasilMessage.TransportClass class = 14;
-inline void BasilMessage::clear_class_() {
-  class__ = 0;
-}
-inline ::BasilMessage::TransportClass BasilMessage::class_() const {
-  // @@protoc_insertion_point(field_get:BasilMessage.BasilMessage.class)
-  return static_cast< ::BasilMessage::TransportClass >(class__);
-}
-inline void BasilMessage::set_class_(::BasilMessage::TransportClass value) {
-  
-  class__ = value;
-  // @@protoc_insertion_point(field_set:BasilMessage.BasilMessage.class)
-}
-
-// .BasilType.ObjectIdentifier objectId = 3;
-inline bool BasilMessage::has_objectid() const {
-  return this != internal_default_instance() && objectid_ != nullptr;
-}
-inline const ::BasilType::ObjectIdentifier& BasilMessage::objectid() const {
-  const ::BasilType::ObjectIdentifier* p = objectid_;
-  // @@protoc_insertion_point(field_get:BasilMessage.BasilMessage.objectId)
-  return p != nullptr ? *p : *reinterpret_cast<const ::BasilType::ObjectIdentifier*>(
-      &::BasilType::_ObjectIdentifier_default_instance_);
-}
-inline ::BasilType::ObjectIdentifier* BasilMessage::release_objectid() {
-  // @@protoc_insertion_point(field_release:BasilMessage.BasilMessage.objectId)
-  
-  ::BasilType::ObjectIdentifier* temp = objectid_;
-  objectid_ = nullptr;
-  return temp;
-}
-inline ::BasilType::ObjectIdentifier* BasilMessage::mutable_objectid() {
-  
-  if (objectid_ == nullptr) {
-    auto* p = CreateMaybeMessage<::BasilType::ObjectIdentifier>(GetArenaNoVirtual());
-    objectid_ = p;
-  }
-  // @@protoc_insertion_point(field_mutable:BasilMessage.BasilMessage.objectId)
-  return objectid_;
-}
-inline void BasilMessage::set_allocated_objectid(::BasilType::ObjectIdentifier* objectid) {
-  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
-  if (message_arena == nullptr) {
-    delete reinterpret_cast< ::google::protobuf::MessageLite*>(objectid_);
-  }
-  if (objectid) {
-    ::google::protobuf::Arena* submessage_arena = nullptr;
-    if (message_arena != submessage_arena) {
-      objectid = ::google::protobuf::internal::GetOwnedMessage(
-          message_arena, objectid, submessage_arena);
-    }
-    
-  } else {
-    
-  }
-  objectid_ = objectid;
-  // @@protoc_insertion_point(field_set_allocated:BasilMessage.BasilMessage.objectId)
-}
-
-// .BasilType.InstanceIdentifier instanceId = 4;
-inline bool BasilMessage::has_instanceid() const {
-  return this != internal_default_instance() && instanceid_ != nullptr;
-}
-inline const ::BasilType::InstanceIdentifier& BasilMessage::instanceid() const {
-  const ::BasilType::InstanceIdentifier* p = instanceid_;
-  // @@protoc_insertion_point(field_get:BasilMessage.BasilMessage.instanceId)
-  return p != nullptr ? *p : *reinterpret_cast<const ::BasilType::InstanceIdentifier*>(
-      &::BasilType::_InstanceIdentifier_default_instance_);
-}
-inline ::BasilType::InstanceIdentifier* BasilMessage::release_instanceid() {
-  // @@protoc_insertion_point(field_release:BasilMessage.BasilMessage.instanceId)
-  
-  ::BasilType::InstanceIdentifier* temp = instanceid_;
-  instanceid_ = nullptr;
-  return temp;
-}
-inline ::BasilType::InstanceIdentifier* BasilMessage::mutable_instanceid() {
-  
-  if (instanceid_ == nullptr) {
-    auto* p = CreateMaybeMessage<::BasilType::InstanceIdentifier>(GetArenaNoVirtual());
-    instanceid_ = p;
-  }
-  // @@protoc_insertion_point(field_mutable:BasilMessage.BasilMessage.instanceId)
-  return instanceid_;
-}
-inline void BasilMessage::set_allocated_instanceid(::BasilType::InstanceIdentifier* instanceid) {
-  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
-  if (message_arena == nullptr) {
-    delete reinterpret_cast< ::google::protobuf::MessageLite*>(instanceid_);
-  }
-  if (instanceid) {
-    ::google::protobuf::Arena* submessage_arena = nullptr;
-    if (message_arena != submessage_arena) {
-      instanceid = ::google::protobuf::internal::GetOwnedMessage(
-          message_arena, instanceid, submessage_arena);
-    }
-    
-  } else {
-    
-  }
-  instanceid_ = instanceid;
-  // @@protoc_insertion_point(field_set_allocated:BasilMessage.BasilMessage.instanceId)
-}
-
-// .BasilType.InstancePositionInfo pos = 5;
-inline bool BasilMessage::has_pos() const {
-  return this != internal_default_instance() && pos_ != nullptr;
-}
-inline const ::BasilType::InstancePositionInfo& BasilMessage::pos() const {
-  const ::BasilType::InstancePositionInfo* p = pos_;
-  // @@protoc_insertion_point(field_get:BasilMessage.BasilMessage.pos)
-  return p != nullptr ? *p : *reinterpret_cast<const ::BasilType::InstancePositionInfo*>(
-      &::BasilType::_InstancePositionInfo_default_instance_);
-}
-inline ::BasilType::InstancePositionInfo* BasilMessage::release_pos() {
-  // @@protoc_insertion_point(field_release:BasilMessage.BasilMessage.pos)
-  
-  ::BasilType::InstancePositionInfo* temp = pos_;
-  pos_ = nullptr;
-  return temp;
-}
-inline ::BasilType::InstancePositionInfo* BasilMessage::mutable_pos() {
-  
-  if (pos_ == nullptr) {
-    auto* p = CreateMaybeMessage<::BasilType::InstancePositionInfo>(GetArenaNoVirtual());
-    pos_ = p;
-  }
-  // @@protoc_insertion_point(field_mutable:BasilMessage.BasilMessage.pos)
-  return pos_;
-}
-inline void BasilMessage::set_allocated_pos(::BasilType::InstancePositionInfo* pos) {
-  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
-  if (message_arena == nullptr) {
-    delete reinterpret_cast< ::google::protobuf::MessageLite*>(pos_);
-  }
-  if (pos) {
-    ::google::protobuf::Arena* submessage_arena = nullptr;
-    if (message_arena != submessage_arena) {
-      pos = ::google::protobuf::internal::GetOwnedMessage(
-          message_arena, pos, submessage_arena);
-    }
-    
-  } else {
-    
-  }
-  pos_ = pos;
-  // @@protoc_insertion_point(field_set_allocated:BasilMessage.BasilMessage.pos)
-}
-
-// .BasilType.AssetInformation assetInfo = 6;
-inline bool BasilMessage::has_assetinfo() const {
-  return this != internal_default_instance() && assetinfo_ != nullptr;
-}
-inline const ::BasilType::AssetInformation& BasilMessage::assetinfo() const {
-  const ::BasilType::AssetInformation* p = assetinfo_;
-  // @@protoc_insertion_point(field_get:BasilMessage.BasilMessage.assetInfo)
-  return p != nullptr ? *p : *reinterpret_cast<const ::BasilType::AssetInformation*>(
-      &::BasilType::_AssetInformation_default_instance_);
-}
-inline ::BasilType::AssetInformation* BasilMessage::release_assetinfo() {
-  // @@protoc_insertion_point(field_release:BasilMessage.BasilMessage.assetInfo)
-  
-  ::BasilType::AssetInformation* temp = assetinfo_;
-  assetinfo_ = nullptr;
-  return temp;
-}
-inline ::BasilType::AssetInformation* BasilMessage::mutable_assetinfo() {
-  
-  if (assetinfo_ == nullptr) {
-    auto* p = CreateMaybeMessage<::BasilType::AssetInformation>(GetArenaNoVirtual());
-    assetinfo_ = p;
-  }
-  // @@protoc_insertion_point(field_mutable:BasilMessage.BasilMessage.assetInfo)
-  return assetinfo_;
-}
-inline void BasilMessage::set_allocated_assetinfo(::BasilType::AssetInformation* assetinfo) {
-  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
-  if (message_arena == nullptr) {
-    delete reinterpret_cast< ::google::protobuf::MessageLite*>(assetinfo_);
-  }
-  if (assetinfo) {
-    ::google::protobuf::Arena* submessage_arena = nullptr;
-    if (message_arena != submessage_arena) {
-      assetinfo = ::google::protobuf::internal::GetOwnedMessage(
-          message_arena, assetinfo, submessage_arena);
-    }
-    
-  } else {
-    
-  }
-  assetinfo_ = assetinfo;
-  // @@protoc_insertion_point(field_set_allocated:BasilMessage.BasilMessage.assetInfo)
-}
-
-// .BasilType.AaBoundingBox aabb = 7;
-inline bool BasilMessage::has_aabb() const {
-  return this != internal_default_instance() && aabb_ != nullptr;
-}
-inline const ::BasilType::AaBoundingBox& BasilMessage::aabb() const {
-  const ::BasilType::AaBoundingBox* p = aabb_;
-  // @@protoc_insertion_point(field_get:BasilMessage.BasilMessage.aabb)
-  return p != nullptr ? *p : *reinterpret_cast<const ::BasilType::AaBoundingBox*>(
-      &::BasilType::_AaBoundingBox_default_instance_);
-}
-inline ::BasilType::AaBoundingBox* BasilMessage::release_aabb() {
-  // @@protoc_insertion_point(field_release:BasilMessage.BasilMessage.aabb)
-  
-  ::BasilType::AaBoundingBox* temp = aabb_;
-  aabb_ = nullptr;
-  return temp;
-}
-inline ::BasilType::AaBoundingBox* BasilMessage::mutable_aabb() {
-  
-  if (aabb_ == nullptr) {
-    auto* p = CreateMaybeMessage<::BasilType::AaBoundingBox>(GetArenaNoVirtual());
-    aabb_ = p;
-  }
-  // @@protoc_insertion_point(field_mutable:BasilMessage.BasilMessage.aabb)
-  return aabb_;
-}
-inline void BasilMessage::set_allocated_aabb(::BasilType::AaBoundingBox* aabb) {
-  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
-  if (message_arena == nullptr) {
-    delete reinterpret_cast< ::google::protobuf::MessageLite*>(aabb_);
-  }
-  if (aabb) {
-    ::google::protobuf::Arena* submessage_arena = nullptr;
-    if (message_arena != submessage_arena) {
-      aabb = ::google::protobuf::internal::GetOwnedMessage(
-          message_arena, aabb, submessage_arena);
-    }
-    
-  } else {
-    
-  }
-  aabb_ = aabb;
-  // @@protoc_insertion_point(field_set_allocated:BasilMessage.BasilMessage.aabb)
-}
-
-// string filter = 8;
-inline void BasilMessage::clear_filter() {
-  filter_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-}
-inline const ::std::string& BasilMessage::filter() const {
-  // @@protoc_insertion_point(field_get:BasilMessage.BasilMessage.filter)
-  return filter_.GetNoArena();
-}
-inline void BasilMessage::set_filter(const ::std::string& value) {
-  
-  filter_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
-  // @@protoc_insertion_point(field_set:BasilMessage.BasilMessage.filter)
+  responsekey_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:BasilMessage.BasilMessage.ResponseKey)
 }
 #if LANG_CXX11
-inline void BasilMessage::set_filter(::std::string&& value) {
+inline void BasilMessage::set_responsekey(::std::string&& value) {
   
-  filter_.SetNoArena(
+  responsekey_.SetNoArena(
     &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
-  // @@protoc_insertion_point(field_set_rvalue:BasilMessage.BasilMessage.filter)
+  // @@protoc_insertion_point(field_set_rvalue:BasilMessage.BasilMessage.ResponseKey)
 }
 #endif
-inline void BasilMessage::set_filter(const char* value) {
+inline void BasilMessage::set_responsekey(const char* value) {
   GOOGLE_DCHECK(value != nullptr);
   
-  filter_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
-  // @@protoc_insertion_point(field_set_char:BasilMessage.BasilMessage.filter)
+  responsekey_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:BasilMessage.BasilMessage.ResponseKey)
 }
-inline void BasilMessage::set_filter(const char* value, size_t size) {
+inline void BasilMessage::set_responsekey(const char* value, size_t size) {
   
-  filter_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+  responsekey_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
       ::std::string(reinterpret_cast<const char*>(value), size));
-  // @@protoc_insertion_point(field_set_pointer:BasilMessage.BasilMessage.filter)
+  // @@protoc_insertion_point(field_set_pointer:BasilMessage.BasilMessage.ResponseKey)
 }
-inline ::std::string* BasilMessage::mutable_filter() {
+inline ::std::string* BasilMessage::mutable_responsekey() {
   
-  // @@protoc_insertion_point(field_mutable:BasilMessage.BasilMessage.filter)
-  return filter_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  // @@protoc_insertion_point(field_mutable:BasilMessage.BasilMessage.ResponseKey)
+  return responsekey_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
-inline ::std::string* BasilMessage::release_filter() {
-  // @@protoc_insertion_point(field_release:BasilMessage.BasilMessage.filter)
+inline ::std::string* BasilMessage::release_responsekey() {
+  // @@protoc_insertion_point(field_release:BasilMessage.BasilMessage.ResponseKey)
   
-  return filter_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  return responsekey_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
-inline void BasilMessage::set_allocated_filter(::std::string* filter) {
-  if (filter != nullptr) {
+inline void BasilMessage::set_allocated_responsekey(::std::string* responsekey) {
+  if (responsekey != nullptr) {
     
   } else {
     
   }
-  filter_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), filter);
-  // @@protoc_insertion_point(field_set_allocated:BasilMessage.BasilMessage.filter)
+  responsekey_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), responsekey);
+  // @@protoc_insertion_point(field_set_allocated:BasilMessage.BasilMessage.ResponseKey)
 }
 
-// map<string, string> properties = 9;
-inline int BasilMessage::properties_size() const {
-  return properties_.size();
+// uint32 StreamId = 3;
+inline void BasilMessage::clear_streamid() {
+  streamid_ = 0u;
 }
-inline void BasilMessage::clear_properties() {
-  properties_.Clear();
+inline ::google::protobuf::uint32 BasilMessage::streamid() const {
+  // @@protoc_insertion_point(field_get:BasilMessage.BasilMessage.StreamId)
+  return streamid_;
+}
+inline void BasilMessage::set_streamid(::google::protobuf::uint32 value) {
+  
+  streamid_ = value;
+  // @@protoc_insertion_point(field_set:BasilMessage.BasilMessage.StreamId)
+}
+
+// uint32 ProtocolVersion = 4;
+inline void BasilMessage::clear_protocolversion() {
+  protocolversion_ = 0u;
+}
+inline ::google::protobuf::uint32 BasilMessage::protocolversion() const {
+  // @@protoc_insertion_point(field_get:BasilMessage.BasilMessage.ProtocolVersion)
+  return protocolversion_;
+}
+inline void BasilMessage::set_protocolversion(::google::protobuf::uint32 value) {
+  
+  protocolversion_ = value;
+  // @@protoc_insertion_point(field_set:BasilMessage.BasilMessage.ProtocolVersion)
+}
+
+// uint64 ChangeSeq = 30;
+inline void BasilMessage::clear_changeseq() {
+  changeseq_ = PROTOBUF_ULONGLONG(0);
+}
+inline ::google::protobuf::uint64 BasilMessage::changeseq() const {
+  // @@protoc_insertion_point(field_get:BasilMessage.BasilMessage.ChangeSeq)
+  return changeseq_;
+}
+inline void BasilMessage::set_changeseq(::google::protobuf::uint64 value) {
+  
+  changeseq_ = value;
+  // @@protoc_insertion_point(field_set:BasilMessage.BasilMessage.ChangeSeq)
+}
+
+// uint64 ChangeTime = 31;
+inline void BasilMessage::clear_changetime() {
+  changetime_ = PROTOBUF_ULONGLONG(0);
+}
+inline ::google::protobuf::uint64 BasilMessage::changetime() const {
+  // @@protoc_insertion_point(field_get:BasilMessage.BasilMessage.ChangeTime)
+  return changetime_;
+}
+inline void BasilMessage::set_changetime(::google::protobuf::uint64 value) {
+  
+  changetime_ = value;
+  // @@protoc_insertion_point(field_set:BasilMessage.BasilMessage.ChangeTime)
+}
+
+// uint32 QueueTime = 40;
+inline void BasilMessage::clear_queuetime() {
+  queuetime_ = 0u;
+}
+inline ::google::protobuf::uint32 BasilMessage::queuetime() const {
+  // @@protoc_insertion_point(field_get:BasilMessage.BasilMessage.QueueTime)
+  return queuetime_;
+}
+inline void BasilMessage::set_queuetime(::google::protobuf::uint32 value) {
+  
+  queuetime_ = value;
+  // @@protoc_insertion_point(field_set:BasilMessage.BasilMessage.QueueTime)
+}
+
+// uint32 SendTime = 41;
+inline void BasilMessage::clear_sendtime() {
+  sendtime_ = 0u;
+}
+inline ::google::protobuf::uint32 BasilMessage::sendtime() const {
+  // @@protoc_insertion_point(field_get:BasilMessage.BasilMessage.SendTime)
+  return sendtime_;
+}
+inline void BasilMessage::set_sendtime(::google::protobuf::uint32 value) {
+  
+  sendtime_ = value;
+  // @@protoc_insertion_point(field_set:BasilMessage.BasilMessage.SendTime)
+}
+
+// uint32 TransportClass = 42;
+inline void BasilMessage::clear_transportclass() {
+  transportclass_ = 0u;
+}
+inline ::google::protobuf::uint32 BasilMessage::transportclass() const {
+  // @@protoc_insertion_point(field_get:BasilMessage.BasilMessage.TransportClass)
+  return transportclass_;
+}
+inline void BasilMessage::set_transportclass(::google::protobuf::uint32 value) {
+  
+  transportclass_ = value;
+  // @@protoc_insertion_point(field_set:BasilMessage.BasilMessage.TransportClass)
+}
+
+// uint32 Op = 5;
+inline void BasilMessage::clear_op() {
+  op_ = 0u;
+}
+inline ::google::protobuf::uint32 BasilMessage::op() const {
+  // @@protoc_insertion_point(field_get:BasilMessage.BasilMessage.Op)
+  return op_;
+}
+inline void BasilMessage::set_op(::google::protobuf::uint32 value) {
+  
+  op_ = value;
+  // @@protoc_insertion_point(field_set:BasilMessage.BasilMessage.Op)
+}
+
+// string SessionAuth = 6;
+inline void BasilMessage::clear_sessionauth() {
+  sessionauth_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline const ::std::string& BasilMessage::sessionauth() const {
+  // @@protoc_insertion_point(field_get:BasilMessage.BasilMessage.SessionAuth)
+  return sessionauth_.GetNoArena();
+}
+inline void BasilMessage::set_sessionauth(const ::std::string& value) {
+  
+  sessionauth_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:BasilMessage.BasilMessage.SessionAuth)
+}
+#if LANG_CXX11
+inline void BasilMessage::set_sessionauth(::std::string&& value) {
+  
+  sessionauth_.SetNoArena(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:BasilMessage.BasilMessage.SessionAuth)
+}
+#endif
+inline void BasilMessage::set_sessionauth(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  sessionauth_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:BasilMessage.BasilMessage.SessionAuth)
+}
+inline void BasilMessage::set_sessionauth(const char* value, size_t size) {
+  
+  sessionauth_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:BasilMessage.BasilMessage.SessionAuth)
+}
+inline ::std::string* BasilMessage::mutable_sessionauth() {
+  
+  // @@protoc_insertion_point(field_mutable:BasilMessage.BasilMessage.SessionAuth)
+  return sessionauth_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* BasilMessage::release_sessionauth() {
+  // @@protoc_insertion_point(field_release:BasilMessage.BasilMessage.SessionAuth)
+  
+  return sessionauth_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void BasilMessage::set_allocated_sessionauth(::std::string* sessionauth) {
+  if (sessionauth != nullptr) {
+    
+  } else {
+    
+  }
+  sessionauth_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), sessionauth);
+  // @@protoc_insertion_point(field_set_allocated:BasilMessage.BasilMessage.SessionAuth)
+}
+
+// uint32 ItemIdN = 7;
+inline void BasilMessage::clear_itemidn() {
+  itemidn_ = 0u;
+}
+inline ::google::protobuf::uint32 BasilMessage::itemidn() const {
+  // @@protoc_insertion_point(field_get:BasilMessage.BasilMessage.ItemIdN)
+  return itemidn_;
+}
+inline void BasilMessage::set_itemidn(::google::protobuf::uint32 value) {
+  
+  itemidn_ = value;
+  // @@protoc_insertion_point(field_set:BasilMessage.BasilMessage.ItemIdN)
+}
+
+// string ItemId = 8;
+inline void BasilMessage::clear_itemid() {
+  itemid_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline const ::std::string& BasilMessage::itemid() const {
+  // @@protoc_insertion_point(field_get:BasilMessage.BasilMessage.ItemId)
+  return itemid_.GetNoArena();
+}
+inline void BasilMessage::set_itemid(const ::std::string& value) {
+  
+  itemid_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:BasilMessage.BasilMessage.ItemId)
+}
+#if LANG_CXX11
+inline void BasilMessage::set_itemid(::std::string&& value) {
+  
+  itemid_.SetNoArena(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:BasilMessage.BasilMessage.ItemId)
+}
+#endif
+inline void BasilMessage::set_itemid(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  itemid_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:BasilMessage.BasilMessage.ItemId)
+}
+inline void BasilMessage::set_itemid(const char* value, size_t size) {
+  
+  itemid_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:BasilMessage.BasilMessage.ItemId)
+}
+inline ::std::string* BasilMessage::mutable_itemid() {
+  
+  // @@protoc_insertion_point(field_mutable:BasilMessage.BasilMessage.ItemId)
+  return itemid_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* BasilMessage::release_itemid() {
+  // @@protoc_insertion_point(field_release:BasilMessage.BasilMessage.ItemId)
+  
+  return itemid_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void BasilMessage::set_allocated_itemid(::std::string* itemid) {
+  if (itemid != nullptr) {
+    
+  } else {
+    
+  }
+  itemid_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), itemid);
+  // @@protoc_insertion_point(field_set_allocated:BasilMessage.BasilMessage.ItemId)
+}
+
+// string ItemAuth = 21;
+inline void BasilMessage::clear_itemauth() {
+  itemauth_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline const ::std::string& BasilMessage::itemauth() const {
+  // @@protoc_insertion_point(field_get:BasilMessage.BasilMessage.ItemAuth)
+  return itemauth_.GetNoArena();
+}
+inline void BasilMessage::set_itemauth(const ::std::string& value) {
+  
+  itemauth_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:BasilMessage.BasilMessage.ItemAuth)
+}
+#if LANG_CXX11
+inline void BasilMessage::set_itemauth(::std::string&& value) {
+  
+  itemauth_.SetNoArena(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:BasilMessage.BasilMessage.ItemAuth)
+}
+#endif
+inline void BasilMessage::set_itemauth(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  itemauth_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:BasilMessage.BasilMessage.ItemAuth)
+}
+inline void BasilMessage::set_itemauth(const char* value, size_t size) {
+  
+  itemauth_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:BasilMessage.BasilMessage.ItemAuth)
+}
+inline ::std::string* BasilMessage::mutable_itemauth() {
+  
+  // @@protoc_insertion_point(field_mutable:BasilMessage.BasilMessage.ItemAuth)
+  return itemauth_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* BasilMessage::release_itemauth() {
+  // @@protoc_insertion_point(field_release:BasilMessage.BasilMessage.ItemAuth)
+  
+  return itemauth_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void BasilMessage::set_allocated_itemauth(::std::string* itemauth) {
+  if (itemauth != nullptr) {
+    
+  } else {
+    
+  }
+  itemauth_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), itemauth);
+  // @@protoc_insertion_point(field_set_allocated:BasilMessage.BasilMessage.ItemAuth)
+}
+
+// map<string, string> IProps = 9;
+inline int BasilMessage::iprops_size() const {
+  return iprops_.size();
+}
+inline void BasilMessage::clear_iprops() {
+  iprops_.Clear();
 }
 inline const ::google::protobuf::Map< ::std::string, ::std::string >&
-BasilMessage::properties() const {
-  // @@protoc_insertion_point(field_map:BasilMessage.BasilMessage.properties)
-  return properties_.GetMap();
+BasilMessage::iprops() const {
+  // @@protoc_insertion_point(field_map:BasilMessage.BasilMessage.IProps)
+  return iprops_.GetMap();
 }
 inline ::google::protobuf::Map< ::std::string, ::std::string >*
-BasilMessage::mutable_properties() {
-  // @@protoc_insertion_point(field_mutable_map:BasilMessage.BasilMessage.properties)
-  return properties_.MutableMap();
+BasilMessage::mutable_iprops() {
+  // @@protoc_insertion_point(field_mutable_map:BasilMessage.BasilMessage.IProps)
+  return iprops_.MutableMap();
 }
 
-// map<string, string> opParameters = 10;
-inline int BasilMessage::opparameters_size() const {
-  return opparameters_.size();
+// repeated .BasilMessage.ParamBlock AProps = 10;
+inline int BasilMessage::aprops_size() const {
+  return aprops_.size();
 }
-inline void BasilMessage::clear_opparameters() {
-  opparameters_.Clear();
+inline void BasilMessage::clear_aprops() {
+  aprops_.Clear();
+}
+inline ::BasilMessage::ParamBlock* BasilMessage::mutable_aprops(int index) {
+  // @@protoc_insertion_point(field_mutable:BasilMessage.BasilMessage.AProps)
+  return aprops_.Mutable(index);
+}
+inline ::google::protobuf::RepeatedPtrField< ::BasilMessage::ParamBlock >*
+BasilMessage::mutable_aprops() {
+  // @@protoc_insertion_point(field_mutable_list:BasilMessage.BasilMessage.AProps)
+  return &aprops_;
+}
+inline const ::BasilMessage::ParamBlock& BasilMessage::aprops(int index) const {
+  // @@protoc_insertion_point(field_get:BasilMessage.BasilMessage.AProps)
+  return aprops_.Get(index);
+}
+inline ::BasilMessage::ParamBlock* BasilMessage::add_aprops() {
+  // @@protoc_insertion_point(field_add:BasilMessage.BasilMessage.AProps)
+  return aprops_.Add();
+}
+inline const ::google::protobuf::RepeatedPtrField< ::BasilMessage::ParamBlock >&
+BasilMessage::aprops() const {
+  // @@protoc_insertion_point(field_list:BasilMessage.BasilMessage.AProps)
+  return aprops_;
+}
+
+// repeated .BasilMessage.PositionBlock Positions = 11;
+inline int BasilMessage::positions_size() const {
+  return positions_.size();
+}
+inline void BasilMessage::clear_positions() {
+  positions_.Clear();
+}
+inline ::BasilMessage::PositionBlock* BasilMessage::mutable_positions(int index) {
+  // @@protoc_insertion_point(field_mutable:BasilMessage.BasilMessage.Positions)
+  return positions_.Mutable(index);
+}
+inline ::google::protobuf::RepeatedPtrField< ::BasilMessage::PositionBlock >*
+BasilMessage::mutable_positions() {
+  // @@protoc_insertion_point(field_mutable_list:BasilMessage.BasilMessage.Positions)
+  return &positions_;
+}
+inline const ::BasilMessage::PositionBlock& BasilMessage::positions(int index) const {
+  // @@protoc_insertion_point(field_get:BasilMessage.BasilMessage.Positions)
+  return positions_.Get(index);
+}
+inline ::BasilMessage::PositionBlock* BasilMessage::add_positions() {
+  // @@protoc_insertion_point(field_add:BasilMessage.BasilMessage.Positions)
+  return positions_.Add();
+}
+inline const ::google::protobuf::RepeatedPtrField< ::BasilMessage::PositionBlock >&
+BasilMessage::positions() const {
+  // @@protoc_insertion_point(field_list:BasilMessage.BasilMessage.Positions)
+  return positions_;
+}
+
+// string Exception = 12;
+inline void BasilMessage::clear_exception() {
+  exception_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline const ::std::string& BasilMessage::exception() const {
+  // @@protoc_insertion_point(field_get:BasilMessage.BasilMessage.Exception)
+  return exception_.GetNoArena();
+}
+inline void BasilMessage::set_exception(const ::std::string& value) {
+  
+  exception_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  // @@protoc_insertion_point(field_set:BasilMessage.BasilMessage.Exception)
+}
+#if LANG_CXX11
+inline void BasilMessage::set_exception(::std::string&& value) {
+  
+  exception_.SetNoArena(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
+  // @@protoc_insertion_point(field_set_rvalue:BasilMessage.BasilMessage.Exception)
+}
+#endif
+inline void BasilMessage::set_exception(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  exception_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  // @@protoc_insertion_point(field_set_char:BasilMessage.BasilMessage.Exception)
+}
+inline void BasilMessage::set_exception(const char* value, size_t size) {
+  
+  exception_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      ::std::string(reinterpret_cast<const char*>(value), size));
+  // @@protoc_insertion_point(field_set_pointer:BasilMessage.BasilMessage.Exception)
+}
+inline ::std::string* BasilMessage::mutable_exception() {
+  
+  // @@protoc_insertion_point(field_mutable:BasilMessage.BasilMessage.Exception)
+  return exception_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline ::std::string* BasilMessage::release_exception() {
+  // @@protoc_insertion_point(field_release:BasilMessage.BasilMessage.Exception)
+  
+  return exception_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+inline void BasilMessage::set_allocated_exception(::std::string* exception) {
+  if (exception != nullptr) {
+    
+  } else {
+    
+  }
+  exception_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), exception);
+  // @@protoc_insertion_point(field_set_allocated:BasilMessage.BasilMessage.Exception)
+}
+
+// map<string, string> ExceptionHints = 22;
+inline int BasilMessage::exceptionhints_size() const {
+  return exceptionhints_.size();
+}
+inline void BasilMessage::clear_exceptionhints() {
+  exceptionhints_.Clear();
 }
 inline const ::google::protobuf::Map< ::std::string, ::std::string >&
-BasilMessage::opparameters() const {
-  // @@protoc_insertion_point(field_map:BasilMessage.BasilMessage.opParameters)
-  return opparameters_.GetMap();
+BasilMessage::exceptionhints() const {
+  // @@protoc_insertion_point(field_map:BasilMessage.BasilMessage.ExceptionHints)
+  return exceptionhints_.GetMap();
 }
 inline ::google::protobuf::Map< ::std::string, ::std::string >*
-BasilMessage::mutable_opparameters() {
-  // @@protoc_insertion_point(field_mutable_map:BasilMessage.BasilMessage.opParameters)
-  return opparameters_.MutableMap();
-}
-
-// .BasilType.BasilException exception = 11;
-inline bool BasilMessage::has_exception() const {
-  return this != internal_default_instance() && exception_ != nullptr;
-}
-inline const ::BasilType::BasilException& BasilMessage::exception() const {
-  const ::BasilType::BasilException* p = exception_;
-  // @@protoc_insertion_point(field_get:BasilMessage.BasilMessage.exception)
-  return p != nullptr ? *p : *reinterpret_cast<const ::BasilType::BasilException*>(
-      &::BasilType::_BasilException_default_instance_);
-}
-inline ::BasilType::BasilException* BasilMessage::release_exception() {
-  // @@protoc_insertion_point(field_release:BasilMessage.BasilMessage.exception)
-  
-  ::BasilType::BasilException* temp = exception_;
-  exception_ = nullptr;
-  return temp;
-}
-inline ::BasilType::BasilException* BasilMessage::mutable_exception() {
-  
-  if (exception_ == nullptr) {
-    auto* p = CreateMaybeMessage<::BasilType::BasilException>(GetArenaNoVirtual());
-    exception_ = p;
-  }
-  // @@protoc_insertion_point(field_mutable:BasilMessage.BasilMessage.exception)
-  return exception_;
-}
-inline void BasilMessage::set_allocated_exception(::BasilType::BasilException* exception) {
-  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
-  if (message_arena == nullptr) {
-    delete reinterpret_cast< ::google::protobuf::MessageLite*>(exception_);
-  }
-  if (exception) {
-    ::google::protobuf::Arena* submessage_arena = nullptr;
-    if (message_arena != submessage_arena) {
-      exception = ::google::protobuf::internal::GetOwnedMessage(
-          message_arena, exception, submessage_arena);
-    }
-    
-  } else {
-    
-  }
-  exception_ = exception;
-  // @@protoc_insertion_point(field_set_allocated:BasilMessage.BasilMessage.exception)
-}
-
-// .BasilType.BResponseRequest response = 13;
-inline bool BasilMessage::has_response() const {
-  return this != internal_default_instance() && response_ != nullptr;
-}
-inline const ::BasilType::BResponseRequest& BasilMessage::response() const {
-  const ::BasilType::BResponseRequest* p = response_;
-  // @@protoc_insertion_point(field_get:BasilMessage.BasilMessage.response)
-  return p != nullptr ? *p : *reinterpret_cast<const ::BasilType::BResponseRequest*>(
-      &::BasilType::_BResponseRequest_default_instance_);
-}
-inline ::BasilType::BResponseRequest* BasilMessage::release_response() {
-  // @@protoc_insertion_point(field_release:BasilMessage.BasilMessage.response)
-  
-  ::BasilType::BResponseRequest* temp = response_;
-  response_ = nullptr;
-  return temp;
-}
-inline ::BasilType::BResponseRequest* BasilMessage::mutable_response() {
-  
-  if (response_ == nullptr) {
-    auto* p = CreateMaybeMessage<::BasilType::BResponseRequest>(GetArenaNoVirtual());
-    response_ = p;
-  }
-  // @@protoc_insertion_point(field_mutable:BasilMessage.BasilMessage.response)
-  return response_;
-}
-inline void BasilMessage::set_allocated_response(::BasilType::BResponseRequest* response) {
-  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
-  if (message_arena == nullptr) {
-    delete reinterpret_cast< ::google::protobuf::MessageLite*>(response_);
-  }
-  if (response) {
-    ::google::protobuf::Arena* submessage_arena = nullptr;
-    if (message_arena != submessage_arena) {
-      response = ::google::protobuf::internal::GetOwnedMessage(
-          message_arena, response, submessage_arena);
-    }
-    
-  } else {
-    
-  }
-  response_ = response;
-  // @@protoc_insertion_point(field_set_allocated:BasilMessage.BasilMessage.response)
+BasilMessage::mutable_exceptionhints() {
+  // @@protoc_insertion_point(field_mutable_map:BasilMessage.BasilMessage.ExceptionHints)
+  return exceptionhints_.MutableMap();
 }
 
 #ifdef __GNUC__
   #pragma GCC diagnostic pop
 #endif  // __GNUC__
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
 // -------------------------------------------------------------------
 
 // -------------------------------------------------------------------
@@ -965,15 +1863,20 @@ inline void BasilMessage::set_allocated_response(::BasilType::BResponseRequest* 
 namespace google {
 namespace protobuf {
 
-template <> struct is_proto_enum< ::BasilMessage::TransportClass> : ::std::true_type {};
-template <>
-inline const EnumDescriptor* GetEnumDescriptor< ::BasilMessage::TransportClass>() {
-  return ::BasilMessage::TransportClass_descriptor();
-}
 template <> struct is_proto_enum< ::BasilMessage::BasilMessageOps> : ::std::true_type {};
 template <>
 inline const EnumDescriptor* GetEnumDescriptor< ::BasilMessage::BasilMessageOps>() {
   return ::BasilMessage::BasilMessageOps_descriptor();
+}
+template <> struct is_proto_enum< ::BasilMessage::CoordSystem> : ::std::true_type {};
+template <>
+inline const EnumDescriptor* GetEnumDescriptor< ::BasilMessage::CoordSystem>() {
+  return ::BasilMessage::CoordSystem_descriptor();
+}
+template <> struct is_proto_enum< ::BasilMessage::RotationSystem> : ::std::true_type {};
+template <>
+inline const EnumDescriptor* GetEnumDescriptor< ::BasilMessage::RotationSystem>() {
+  return ::BasilMessage::RotationSystem_descriptor();
 }
 
 }  // namespace protobuf

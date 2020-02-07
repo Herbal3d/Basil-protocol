@@ -16,55 +16,104 @@
 // @@protoc_insertion_point(includes)
 #include <google/protobuf/port_def.inc>
 
-extern PROTOBUF_INTERNAL_EXPORT_BasilMessage_2eproto ::google::protobuf::internal::SCCInfo<0> scc_info_BasilMessage_OpParametersEntry_DoNotUse_BasilMessage_2eproto;
-extern PROTOBUF_INTERNAL_EXPORT_BasilMessage_2eproto ::google::protobuf::internal::SCCInfo<0> scc_info_BasilMessage_PropertiesEntry_DoNotUse_BasilMessage_2eproto;
-extern PROTOBUF_INTERNAL_EXPORT_BasilTypes_2eproto ::google::protobuf::internal::SCCInfo<0> scc_info_BResponseRequest_BasilTypes_2eproto;
-extern PROTOBUF_INTERNAL_EXPORT_BasilTypes_2eproto ::google::protobuf::internal::SCCInfo<0> scc_info_InstanceIdentifier_BasilTypes_2eproto;
-extern PROTOBUF_INTERNAL_EXPORT_BasilTypes_2eproto ::google::protobuf::internal::SCCInfo<0> scc_info_ObjectIdentifier_BasilTypes_2eproto;
-extern PROTOBUF_INTERNAL_EXPORT_BasilTypes_2eproto ::google::protobuf::internal::SCCInfo<1> scc_info_AaBoundingBox_BasilTypes_2eproto;
-extern PROTOBUF_INTERNAL_EXPORT_BasilTypes_2eproto ::google::protobuf::internal::SCCInfo<1> scc_info_AccessAuthorization_BasilTypes_2eproto;
-extern PROTOBUF_INTERNAL_EXPORT_BasilTypes_2eproto ::google::protobuf::internal::SCCInfo<1> scc_info_BasilException_BasilTypes_2eproto;
-extern PROTOBUF_INTERNAL_EXPORT_BasilTypes_2eproto ::google::protobuf::internal::SCCInfo<2> scc_info_AssetInformation_BasilTypes_2eproto;
-extern PROTOBUF_INTERNAL_EXPORT_BasilTypes_2eproto ::google::protobuf::internal::SCCInfo<4> scc_info_InstancePositionInfo_BasilTypes_2eproto;
+extern PROTOBUF_INTERNAL_EXPORT_BasilMessage_2eproto ::google::protobuf::internal::SCCInfo<0> scc_info_BasilMessage_ExceptionHintsEntry_DoNotUse_BasilMessage_2eproto;
+extern PROTOBUF_INTERNAL_EXPORT_BasilMessage_2eproto ::google::protobuf::internal::SCCInfo<0> scc_info_BasilMessage_IPropsEntry_DoNotUse_BasilMessage_2eproto;
+extern PROTOBUF_INTERNAL_EXPORT_BasilMessage_2eproto ::google::protobuf::internal::SCCInfo<0> scc_info_ParamBlock_PropsEntry_DoNotUse_BasilMessage_2eproto;
+extern PROTOBUF_INTERNAL_EXPORT_BasilMessage_2eproto ::google::protobuf::internal::SCCInfo<0> scc_info_PositionBlock_BasilMessage_2eproto;
+extern PROTOBUF_INTERNAL_EXPORT_BasilMessage_2eproto ::google::protobuf::internal::SCCInfo<1> scc_info_ParamBlock_BasilMessage_2eproto;
 namespace BasilMessage {
-class BasilMessage_PropertiesEntry_DoNotUseDefaultTypeInternal {
+class PositionBlockDefaultTypeInternal {
  public:
-  ::google::protobuf::internal::ExplicitlyConstructed<BasilMessage_PropertiesEntry_DoNotUse> _instance;
-} _BasilMessage_PropertiesEntry_DoNotUse_default_instance_;
-class BasilMessage_OpParametersEntry_DoNotUseDefaultTypeInternal {
+  ::google::protobuf::internal::ExplicitlyConstructed<PositionBlock> _instance;
+} _PositionBlock_default_instance_;
+class ParamBlock_PropsEntry_DoNotUseDefaultTypeInternal {
  public:
-  ::google::protobuf::internal::ExplicitlyConstructed<BasilMessage_OpParametersEntry_DoNotUse> _instance;
-} _BasilMessage_OpParametersEntry_DoNotUse_default_instance_;
+  ::google::protobuf::internal::ExplicitlyConstructed<ParamBlock_PropsEntry_DoNotUse> _instance;
+} _ParamBlock_PropsEntry_DoNotUse_default_instance_;
+class ParamBlockDefaultTypeInternal {
+ public:
+  ::google::protobuf::internal::ExplicitlyConstructed<ParamBlock> _instance;
+} _ParamBlock_default_instance_;
+class BasilMessage_IPropsEntry_DoNotUseDefaultTypeInternal {
+ public:
+  ::google::protobuf::internal::ExplicitlyConstructed<BasilMessage_IPropsEntry_DoNotUse> _instance;
+} _BasilMessage_IPropsEntry_DoNotUse_default_instance_;
+class BasilMessage_ExceptionHintsEntry_DoNotUseDefaultTypeInternal {
+ public:
+  ::google::protobuf::internal::ExplicitlyConstructed<BasilMessage_ExceptionHintsEntry_DoNotUse> _instance;
+} _BasilMessage_ExceptionHintsEntry_DoNotUse_default_instance_;
 class BasilMessageDefaultTypeInternal {
  public:
   ::google::protobuf::internal::ExplicitlyConstructed<BasilMessage> _instance;
 } _BasilMessage_default_instance_;
 }  // namespace BasilMessage
-static void InitDefaultsBasilMessage_PropertiesEntry_DoNotUse_BasilMessage_2eproto() {
+static void InitDefaultsPositionBlock_BasilMessage_2eproto() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
   {
-    void* ptr = &::BasilMessage::_BasilMessage_PropertiesEntry_DoNotUse_default_instance_;
-    new (ptr) ::BasilMessage::BasilMessage_PropertiesEntry_DoNotUse();
+    void* ptr = &::BasilMessage::_PositionBlock_default_instance_;
+    new (ptr) ::BasilMessage::PositionBlock();
+    ::google::protobuf::internal::OnShutdownDestroyMessage(ptr);
   }
-  ::BasilMessage::BasilMessage_PropertiesEntry_DoNotUse::InitAsDefaultInstance();
+  ::BasilMessage::PositionBlock::InitAsDefaultInstance();
 }
 
-::google::protobuf::internal::SCCInfo<0> scc_info_BasilMessage_PropertiesEntry_DoNotUse_BasilMessage_2eproto =
-    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 0, InitDefaultsBasilMessage_PropertiesEntry_DoNotUse_BasilMessage_2eproto}, {}};
+::google::protobuf::internal::SCCInfo<0> scc_info_PositionBlock_BasilMessage_2eproto =
+    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 0, InitDefaultsPositionBlock_BasilMessage_2eproto}, {}};
 
-static void InitDefaultsBasilMessage_OpParametersEntry_DoNotUse_BasilMessage_2eproto() {
+static void InitDefaultsParamBlock_PropsEntry_DoNotUse_BasilMessage_2eproto() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
   {
-    void* ptr = &::BasilMessage::_BasilMessage_OpParametersEntry_DoNotUse_default_instance_;
-    new (ptr) ::BasilMessage::BasilMessage_OpParametersEntry_DoNotUse();
+    void* ptr = &::BasilMessage::_ParamBlock_PropsEntry_DoNotUse_default_instance_;
+    new (ptr) ::BasilMessage::ParamBlock_PropsEntry_DoNotUse();
   }
-  ::BasilMessage::BasilMessage_OpParametersEntry_DoNotUse::InitAsDefaultInstance();
+  ::BasilMessage::ParamBlock_PropsEntry_DoNotUse::InitAsDefaultInstance();
 }
 
-::google::protobuf::internal::SCCInfo<0> scc_info_BasilMessage_OpParametersEntry_DoNotUse_BasilMessage_2eproto =
-    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 0, InitDefaultsBasilMessage_OpParametersEntry_DoNotUse_BasilMessage_2eproto}, {}};
+::google::protobuf::internal::SCCInfo<0> scc_info_ParamBlock_PropsEntry_DoNotUse_BasilMessage_2eproto =
+    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 0, InitDefaultsParamBlock_PropsEntry_DoNotUse_BasilMessage_2eproto}, {}};
+
+static void InitDefaultsParamBlock_BasilMessage_2eproto() {
+  GOOGLE_PROTOBUF_VERIFY_VERSION;
+
+  {
+    void* ptr = &::BasilMessage::_ParamBlock_default_instance_;
+    new (ptr) ::BasilMessage::ParamBlock();
+    ::google::protobuf::internal::OnShutdownDestroyMessage(ptr);
+  }
+  ::BasilMessage::ParamBlock::InitAsDefaultInstance();
+}
+
+::google::protobuf::internal::SCCInfo<1> scc_info_ParamBlock_BasilMessage_2eproto =
+    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 1, InitDefaultsParamBlock_BasilMessage_2eproto}, {
+      &scc_info_ParamBlock_PropsEntry_DoNotUse_BasilMessage_2eproto.base,}};
+
+static void InitDefaultsBasilMessage_IPropsEntry_DoNotUse_BasilMessage_2eproto() {
+  GOOGLE_PROTOBUF_VERIFY_VERSION;
+
+  {
+    void* ptr = &::BasilMessage::_BasilMessage_IPropsEntry_DoNotUse_default_instance_;
+    new (ptr) ::BasilMessage::BasilMessage_IPropsEntry_DoNotUse();
+  }
+  ::BasilMessage::BasilMessage_IPropsEntry_DoNotUse::InitAsDefaultInstance();
+}
+
+::google::protobuf::internal::SCCInfo<0> scc_info_BasilMessage_IPropsEntry_DoNotUse_BasilMessage_2eproto =
+    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 0, InitDefaultsBasilMessage_IPropsEntry_DoNotUse_BasilMessage_2eproto}, {}};
+
+static void InitDefaultsBasilMessage_ExceptionHintsEntry_DoNotUse_BasilMessage_2eproto() {
+  GOOGLE_PROTOBUF_VERIFY_VERSION;
+
+  {
+    void* ptr = &::BasilMessage::_BasilMessage_ExceptionHintsEntry_DoNotUse_default_instance_;
+    new (ptr) ::BasilMessage::BasilMessage_ExceptionHintsEntry_DoNotUse();
+  }
+  ::BasilMessage::BasilMessage_ExceptionHintsEntry_DoNotUse::InitAsDefaultInstance();
+}
+
+::google::protobuf::internal::SCCInfo<0> scc_info_BasilMessage_ExceptionHintsEntry_DoNotUse_BasilMessage_2eproto =
+    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 0, InitDefaultsBasilMessage_ExceptionHintsEntry_DoNotUse_BasilMessage_2eproto}, {}};
 
 static void InitDefaultsBasilMessage_BasilMessage_2eproto() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
@@ -77,46 +126,74 @@ static void InitDefaultsBasilMessage_BasilMessage_2eproto() {
   ::BasilMessage::BasilMessage::InitAsDefaultInstance();
 }
 
-::google::protobuf::internal::SCCInfo<10> scc_info_BasilMessage_BasilMessage_2eproto =
-    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 10, InitDefaultsBasilMessage_BasilMessage_2eproto}, {
-      &scc_info_AccessAuthorization_BasilTypes_2eproto.base,
-      &scc_info_ObjectIdentifier_BasilTypes_2eproto.base,
-      &scc_info_InstanceIdentifier_BasilTypes_2eproto.base,
-      &scc_info_InstancePositionInfo_BasilTypes_2eproto.base,
-      &scc_info_AssetInformation_BasilTypes_2eproto.base,
-      &scc_info_AaBoundingBox_BasilTypes_2eproto.base,
-      &scc_info_BasilMessage_PropertiesEntry_DoNotUse_BasilMessage_2eproto.base,
-      &scc_info_BasilMessage_OpParametersEntry_DoNotUse_BasilMessage_2eproto.base,
-      &scc_info_BasilException_BasilTypes_2eproto.base,
-      &scc_info_BResponseRequest_BasilTypes_2eproto.base,}};
+::google::protobuf::internal::SCCInfo<4> scc_info_BasilMessage_BasilMessage_2eproto =
+    {{ATOMIC_VAR_INIT(::google::protobuf::internal::SCCInfoBase::kUninitialized), 4, InitDefaultsBasilMessage_BasilMessage_2eproto}, {
+      &scc_info_BasilMessage_IPropsEntry_DoNotUse_BasilMessage_2eproto.base,
+      &scc_info_ParamBlock_BasilMessage_2eproto.base,
+      &scc_info_PositionBlock_BasilMessage_2eproto.base,
+      &scc_info_BasilMessage_ExceptionHintsEntry_DoNotUse_BasilMessage_2eproto.base,}};
 
 void InitDefaults_BasilMessage_2eproto() {
-  ::google::protobuf::internal::InitSCC(&scc_info_BasilMessage_PropertiesEntry_DoNotUse_BasilMessage_2eproto.base);
-  ::google::protobuf::internal::InitSCC(&scc_info_BasilMessage_OpParametersEntry_DoNotUse_BasilMessage_2eproto.base);
+  ::google::protobuf::internal::InitSCC(&scc_info_PositionBlock_BasilMessage_2eproto.base);
+  ::google::protobuf::internal::InitSCC(&scc_info_ParamBlock_PropsEntry_DoNotUse_BasilMessage_2eproto.base);
+  ::google::protobuf::internal::InitSCC(&scc_info_ParamBlock_BasilMessage_2eproto.base);
+  ::google::protobuf::internal::InitSCC(&scc_info_BasilMessage_IPropsEntry_DoNotUse_BasilMessage_2eproto.base);
+  ::google::protobuf::internal::InitSCC(&scc_info_BasilMessage_ExceptionHintsEntry_DoNotUse_BasilMessage_2eproto.base);
   ::google::protobuf::internal::InitSCC(&scc_info_BasilMessage_BasilMessage_2eproto.base);
 }
 
-static ::google::protobuf::Metadata file_level_metadata_BasilMessage_2eproto[3];
-static const ::google::protobuf::EnumDescriptor* file_level_enum_descriptors_BasilMessage_2eproto[2];
+static ::google::protobuf::Metadata file_level_metadata_BasilMessage_2eproto[6];
+static const ::google::protobuf::EnumDescriptor* file_level_enum_descriptors_BasilMessage_2eproto[3];
 static constexpr ::google::protobuf::ServiceDescriptor const** file_level_service_descriptors_BasilMessage_2eproto = nullptr;
 
 const ::google::protobuf::uint32 TableStruct_BasilMessage_2eproto::offsets[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
-  PROTOBUF_FIELD_OFFSET(::BasilMessage::BasilMessage_PropertiesEntry_DoNotUse, _has_bits_),
-  PROTOBUF_FIELD_OFFSET(::BasilMessage::BasilMessage_PropertiesEntry_DoNotUse, _internal_metadata_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::BasilMessage::PositionBlock, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::BasilMessage::BasilMessage_PropertiesEntry_DoNotUse, key_),
-  PROTOBUF_FIELD_OFFSET(::BasilMessage::BasilMessage_PropertiesEntry_DoNotUse, value_),
+  PROTOBUF_FIELD_OFFSET(::BasilMessage::PositionBlock, pos_),
+  PROTOBUF_FIELD_OFFSET(::BasilMessage::PositionBlock, rot_),
+  PROTOBUF_FIELD_OFFSET(::BasilMessage::PositionBlock, posref_),
+  PROTOBUF_FIELD_OFFSET(::BasilMessage::PositionBlock, rotref_),
+  PROTOBUF_FIELD_OFFSET(::BasilMessage::PositionBlock, vel_),
+  PROTOBUF_FIELD_OFFSET(::BasilMessage::PositionBlock, path_),
+  PROTOBUF_FIELD_OFFSET(::BasilMessage::PositionBlock, itemidn_),
+  PROTOBUF_FIELD_OFFSET(::BasilMessage::PositionBlock, itemid_),
+  PROTOBUF_FIELD_OFFSET(::BasilMessage::PositionBlock, sessionauth_),
+  PROTOBUF_FIELD_OFFSET(::BasilMessage::PositionBlock, itemauth_),
+  PROTOBUF_FIELD_OFFSET(::BasilMessage::ParamBlock_PropsEntry_DoNotUse, _has_bits_),
+  PROTOBUF_FIELD_OFFSET(::BasilMessage::ParamBlock_PropsEntry_DoNotUse, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  PROTOBUF_FIELD_OFFSET(::BasilMessage::ParamBlock_PropsEntry_DoNotUse, key_),
+  PROTOBUF_FIELD_OFFSET(::BasilMessage::ParamBlock_PropsEntry_DoNotUse, value_),
   0,
   1,
-  PROTOBUF_FIELD_OFFSET(::BasilMessage::BasilMessage_OpParametersEntry_DoNotUse, _has_bits_),
-  PROTOBUF_FIELD_OFFSET(::BasilMessage::BasilMessage_OpParametersEntry_DoNotUse, _internal_metadata_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::BasilMessage::ParamBlock, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::BasilMessage::BasilMessage_OpParametersEntry_DoNotUse, key_),
-  PROTOBUF_FIELD_OFFSET(::BasilMessage::BasilMessage_OpParametersEntry_DoNotUse, value_),
+  PROTOBUF_FIELD_OFFSET(::BasilMessage::ParamBlock, ability_),
+  PROTOBUF_FIELD_OFFSET(::BasilMessage::ParamBlock, props_),
+  PROTOBUF_FIELD_OFFSET(::BasilMessage::BasilMessage_IPropsEntry_DoNotUse, _has_bits_),
+  PROTOBUF_FIELD_OFFSET(::BasilMessage::BasilMessage_IPropsEntry_DoNotUse, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  PROTOBUF_FIELD_OFFSET(::BasilMessage::BasilMessage_IPropsEntry_DoNotUse, key_),
+  PROTOBUF_FIELD_OFFSET(::BasilMessage::BasilMessage_IPropsEntry_DoNotUse, value_),
+  0,
+  1,
+  PROTOBUF_FIELD_OFFSET(::BasilMessage::BasilMessage_ExceptionHintsEntry_DoNotUse, _has_bits_),
+  PROTOBUF_FIELD_OFFSET(::BasilMessage::BasilMessage_ExceptionHintsEntry_DoNotUse, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  PROTOBUF_FIELD_OFFSET(::BasilMessage::BasilMessage_ExceptionHintsEntry_DoNotUse, key_),
+  PROTOBUF_FIELD_OFFSET(::BasilMessage::BasilMessage_ExceptionHintsEntry_DoNotUse, value_),
   0,
   1,
   ~0u,  // no _has_bits_
@@ -124,178 +201,176 @@ const ::google::protobuf::uint32 TableStruct_BasilMessage_2eproto::offsets[] PRO
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
+  PROTOBUF_FIELD_OFFSET(::BasilMessage::BasilMessage, responsecode_),
+  PROTOBUF_FIELD_OFFSET(::BasilMessage::BasilMessage, responsekey_),
+  PROTOBUF_FIELD_OFFSET(::BasilMessage::BasilMessage, streamid_),
+  PROTOBUF_FIELD_OFFSET(::BasilMessage::BasilMessage, protocolversion_),
+  PROTOBUF_FIELD_OFFSET(::BasilMessage::BasilMessage, changeseq_),
+  PROTOBUF_FIELD_OFFSET(::BasilMessage::BasilMessage, changetime_),
+  PROTOBUF_FIELD_OFFSET(::BasilMessage::BasilMessage, queuetime_),
+  PROTOBUF_FIELD_OFFSET(::BasilMessage::BasilMessage, sendtime_),
+  PROTOBUF_FIELD_OFFSET(::BasilMessage::BasilMessage, transportclass_),
   PROTOBUF_FIELD_OFFSET(::BasilMessage::BasilMessage, op_),
-  PROTOBUF_FIELD_OFFSET(::BasilMessage::BasilMessage, auth_),
-  PROTOBUF_FIELD_OFFSET(::BasilMessage::BasilMessage, class__),
-  PROTOBUF_FIELD_OFFSET(::BasilMessage::BasilMessage, objectid_),
-  PROTOBUF_FIELD_OFFSET(::BasilMessage::BasilMessage, instanceid_),
-  PROTOBUF_FIELD_OFFSET(::BasilMessage::BasilMessage, pos_),
-  PROTOBUF_FIELD_OFFSET(::BasilMessage::BasilMessage, assetinfo_),
-  PROTOBUF_FIELD_OFFSET(::BasilMessage::BasilMessage, aabb_),
-  PROTOBUF_FIELD_OFFSET(::BasilMessage::BasilMessage, filter_),
-  PROTOBUF_FIELD_OFFSET(::BasilMessage::BasilMessage, properties_),
-  PROTOBUF_FIELD_OFFSET(::BasilMessage::BasilMessage, opparameters_),
+  PROTOBUF_FIELD_OFFSET(::BasilMessage::BasilMessage, sessionauth_),
+  PROTOBUF_FIELD_OFFSET(::BasilMessage::BasilMessage, itemidn_),
+  PROTOBUF_FIELD_OFFSET(::BasilMessage::BasilMessage, itemid_),
+  PROTOBUF_FIELD_OFFSET(::BasilMessage::BasilMessage, itemauth_),
+  PROTOBUF_FIELD_OFFSET(::BasilMessage::BasilMessage, iprops_),
+  PROTOBUF_FIELD_OFFSET(::BasilMessage::BasilMessage, aprops_),
+  PROTOBUF_FIELD_OFFSET(::BasilMessage::BasilMessage, positions_),
   PROTOBUF_FIELD_OFFSET(::BasilMessage::BasilMessage, exception_),
-  PROTOBUF_FIELD_OFFSET(::BasilMessage::BasilMessage, response_),
+  PROTOBUF_FIELD_OFFSET(::BasilMessage::BasilMessage, exceptionhints_),
 };
 static const ::google::protobuf::internal::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
-  { 0, 7, sizeof(::BasilMessage::BasilMessage_PropertiesEntry_DoNotUse)},
-  { 9, 16, sizeof(::BasilMessage::BasilMessage_OpParametersEntry_DoNotUse)},
-  { 18, -1, sizeof(::BasilMessage::BasilMessage)},
+  { 0, -1, sizeof(::BasilMessage::PositionBlock)},
+  { 15, 22, sizeof(::BasilMessage::ParamBlock_PropsEntry_DoNotUse)},
+  { 24, -1, sizeof(::BasilMessage::ParamBlock)},
+  { 31, 38, sizeof(::BasilMessage::BasilMessage_IPropsEntry_DoNotUse)},
+  { 40, 47, sizeof(::BasilMessage::BasilMessage_ExceptionHintsEntry_DoNotUse)},
+  { 49, -1, sizeof(::BasilMessage::BasilMessage)},
 };
 
 static ::google::protobuf::Message const * const file_default_instances[] = {
-  reinterpret_cast<const ::google::protobuf::Message*>(&::BasilMessage::_BasilMessage_PropertiesEntry_DoNotUse_default_instance_),
-  reinterpret_cast<const ::google::protobuf::Message*>(&::BasilMessage::_BasilMessage_OpParametersEntry_DoNotUse_default_instance_),
+  reinterpret_cast<const ::google::protobuf::Message*>(&::BasilMessage::_PositionBlock_default_instance_),
+  reinterpret_cast<const ::google::protobuf::Message*>(&::BasilMessage::_ParamBlock_PropsEntry_DoNotUse_default_instance_),
+  reinterpret_cast<const ::google::protobuf::Message*>(&::BasilMessage::_ParamBlock_default_instance_),
+  reinterpret_cast<const ::google::protobuf::Message*>(&::BasilMessage::_BasilMessage_IPropsEntry_DoNotUse_default_instance_),
+  reinterpret_cast<const ::google::protobuf::Message*>(&::BasilMessage::_BasilMessage_ExceptionHintsEntry_DoNotUse_default_instance_),
   reinterpret_cast<const ::google::protobuf::Message*>(&::BasilMessage::_BasilMessage_default_instance_),
 };
 
 static ::google::protobuf::internal::AssignDescriptorsTable assign_descriptors_table_BasilMessage_2eproto = {
   {}, AddDescriptors_BasilMessage_2eproto, "BasilMessage.proto", schemas,
   file_default_instances, TableStruct_BasilMessage_2eproto::offsets,
-  file_level_metadata_BasilMessage_2eproto, 3, file_level_enum_descriptors_BasilMessage_2eproto, file_level_service_descriptors_BasilMessage_2eproto,
+  file_level_metadata_BasilMessage_2eproto, 6, file_level_enum_descriptors_BasilMessage_2eproto, file_level_service_descriptors_BasilMessage_2eproto,
 };
 
 const char descriptor_table_protodef_BasilMessage_2eproto[] =
-  "\n\022BasilMessage.proto\022\014BasilMessage\032\020Basi"
-  "lTypes.proto\"\266\005\n\014BasilMessage\022\n\n\002op\030\001 \001("
-  "\005\022,\n\004auth\030\002 \001(\0132\036.BasilType.AccessAuthor"
-  "ization\022+\n\005class\030\016 \001(\0162\034.BasilMessage.Tr"
-  "ansportClass\022-\n\010objectId\030\003 \001(\0132\033.BasilTy"
-  "pe.ObjectIdentifier\0221\n\ninstanceId\030\004 \001(\0132"
-  "\035.BasilType.InstanceIdentifier\022,\n\003pos\030\005 "
-  "\001(\0132\037.BasilType.InstancePositionInfo\022.\n\t"
-  "assetInfo\030\006 \001(\0132\033.BasilType.AssetInforma"
-  "tion\022&\n\004aabb\030\007 \001(\0132\030.BasilType.AaBoundin"
-  "gBox\022\016\n\006filter\030\010 \001(\t\022>\n\nproperties\030\t \003(\013"
-  "2*.BasilMessage.BasilMessage.PropertiesE"
-  "ntry\022B\n\014opParameters\030\n \003(\0132,.BasilMessag"
-  "e.BasilMessage.OpParametersEntry\022,\n\texce"
-  "ption\030\013 \001(\0132\031.BasilType.BasilException\022-"
-  "\n\010response\030\r \001(\0132\033.BasilType.BResponseRe"
-  "quest\0321\n\017PropertiesEntry\022\013\n\003key\030\001 \001(\t\022\r\n"
-  "\005value\030\002 \001(\t:\0028\001\0323\n\021OpParametersEntry\022\013\n"
-  "\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001*_\n\016Transpo"
-  "rtClass\022\013\n\007Default\020\000\022\020\n\014HighPriority\020\n\022\017"
-  "\n\013MedPriority\020\024\022\017\n\013LowPriority\020\036\022\014\n\010Best"
-  "Case\020(*\277\t\n\017BasilMessageOps\022\016\n\nUnknownReq"
-  "\020\000\022!\n\034IdentifyDisplayableObjectReq\020\201 \022\"\n"
-  "\035IdentifyDisplayableObjectResp\020\202 \022\037\n\032For"
-  "getDisplayableObjectReq\020\203 \022 \n\033ForgetDisp"
-  "layableObjectResp\020\204 \022\034\n\027CreateObjectInst"
-  "anceReq\020\205 \022\035\n\030CreateObjectInstanceResp\020\206"
-  " \022\034\n\027DeleteObjectInstanceReq\020\207 \022\035\n\030Delet"
-  "eObjectInstanceResp\020\210 \022\034\n\027UpdateObjectPr"
-  "opertyReq\020\211 \022\035\n\030UpdateObjectPropertyResp"
-  "\020\212 \022\036\n\031UpdateInstancePropertyReq\020\213 \022\037\n\032U"
-  "pdateInstancePropertyResp\020\214 \022\036\n\031UpdateIn"
-  "stancePositionReq\020\215 \022\037\n\032UpdateInstancePo"
-  "sitionResp\020\216 \022\037\n\032RequestObjectProperties"
-  "Req\020\217 \022 \n\033RequestObjectPropertiesResp\020\220 "
-  "\022!\n\034RequestInstancePropertiesReq\020\221 \022\"\n\035R"
-  "equestInstancePropertiesResp\020\222 \022\024\n\017Close"
-  "SessionReq\020\223 \022\025\n\020CloseSessionResp\020\224 \022\026\n\021"
-  "MakeConnectionReq\020\225 \022\027\n\022MakeConnectionRe"
-  "sp\020\226 \022\022\n\rAliveCheckReq\020\201@\022\023\n\016AliveCheckR"
-  "esp\020\202@\022\023\n\016OpenSessionReq\020\201`\022\024\n\017OpenSessi"
-  "onResp\020\202`\022\022\n\rCameraViewReq\020\203`\022\023\n\016CameraV"
-  "iewResp\020\204`\022\026\n\020RegisterTopicReq\020\201\200\001\022\027\n\021Re"
-  "gisterTopicResp\020\202\200\001\022\030\n\022DeregisterTopicRe"
-  "q\020\203\200\001\022\031\n\023DeregisterTopicResp\020\204\200\001\022\022\n\014Subs"
-  "cribeReq\020\205\200\001\022\023\n\rSubscribeResp\020\206\200\001\022\024\n\016Uns"
-  "ubscribeReq\020\207\200\001\022\025\n\017UnsubscribeResp\020\210\200\001\022\022"
-  "\n\014SendEventReq\020\211\200\001\022\023\n\rSendEventResp\020\220\200\001\022"
-  "\016\n\010EventReq\020\221\200\001\022\017\n\tEventResp\020\222\200\001\022\031\n\023Subs"
-  "criptionMadeReq\020\223\200\001\022\032\n\024SubscriptionMadeR"
-  "esp\020\224\200\001\022\032\n\024SubscriptionClearReq\020\225\200\001\022\033\n\025S"
-  "ubscriptionClearResp\020\226\200\001B&\252\002#org.herbal3"
-  "d.basil.protocol.Messageb\006proto3"
+  "\n\022BasilMessage.proto\022\014BasilMessage\"\345\001\n\rP"
+  "ositionBlock\022\013\n\003Pos\030\001 \003(\001\022\013\n\003Rot\030\002 \003(\001\022)"
+  "\n\006PosRef\030\003 \001(\0162\031.BasilMessage.CoordSyste"
+  "m\022,\n\006RotRef\030\004 \001(\0162\034.BasilMessage.Rotatio"
+  "nSystem\022\013\n\003Vel\030\005 \003(\001\022\014\n\004Path\030\006 \003(\001\022\017\n\007It"
+  "emIdN\030\n \001(\r\022\016\n\006ItemId\030\013 \001(\t\022\023\n\013SessionAu"
+  "th\030\014 \001(\t\022\020\n\010ItemAuth\030\r \001(\t\"\177\n\nParamBlock"
+  "\022\017\n\007Ability\030\001 \001(\t\0222\n\005Props\030\002 \003(\0132#.Basil"
+  "Message.ParamBlock.PropsEntry\032,\n\nPropsEn"
+  "try\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"\357\004\n\014"
+  "BasilMessage\022\024\n\014ResponseCode\030\001 \001(\r\022\023\n\013Re"
+  "sponseKey\030\024 \001(\t\022\020\n\010StreamId\030\003 \001(\r\022\027\n\017Pro"
+  "tocolVersion\030\004 \001(\r\022\021\n\tChangeSeq\030\036 \001(\004\022\022\n"
+  "\nChangeTime\030\037 \001(\004\022\021\n\tQueueTime\030( \001(\r\022\020\n\010"
+  "SendTime\030) \001(\r\022\026\n\016TransportClass\030* \001(\r\022\n"
+  "\n\002Op\030\005 \001(\r\022\023\n\013SessionAuth\030\006 \001(\t\022\017\n\007ItemI"
+  "dN\030\007 \001(\r\022\016\n\006ItemId\030\010 \001(\t\022\020\n\010ItemAuth\030\025 \001"
+  "(\t\0226\n\006IProps\030\t \003(\0132&.BasilMessage.BasilM"
+  "essage.IPropsEntry\022(\n\006AProps\030\n \003(\0132\030.Bas"
+  "ilMessage.ParamBlock\022.\n\tPositions\030\013 \003(\0132"
+  "\033.BasilMessage.PositionBlock\022\021\n\tExceptio"
+  "n\030\014 \001(\t\022F\n\016ExceptionHints\030\026 \003(\0132..BasilM"
+  "essage.BasilMessage.ExceptionHintsEntry\032"
+  "-\n\013IPropsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001"
+  "(\t:\0028\001\0325\n\023ExceptionHintsEntry\022\013\n\003key\030\001 \001"
+  "(\t\022\r\n\005value\030\002 \001(\t:\0028\001*\335\003\n\017BasilMessageOp"
+  "s\022\016\n\nUnknownReq\020\000\022\021\n\rCreateItemReq\020e\022\022\n\016"
+  "CreateItemResp\020f\022\021\n\rDeleteItemReq\020g\022\022\n\016D"
+  "eleteItemResp\020h\022\021\n\rAddAbilityReq\020i\022\022\n\016Ad"
+  "dAbilityResp\020j\022\024\n\020RemoveAbilityReq\020k\022\025\n\021"
+  "RemoveAbilityResp\020l\022\030\n\024RequestProperties"
+  "Req\020m\022\031\n\025RequestPropertiesResp\020n\022\027\n\023Upda"
+  "tePropertiesReq\020o\022\030\n\024UpdatePropertiesRes"
+  "p\020p\022\023\n\016OpenSessionReq\020\311\001\022\024\n\017OpenSessionR"
+  "esp\020\312\001\022\024\n\017CloseSessionReq\020\313\001\022\025\n\020CloseSes"
+  "sionResp\020\314\001\022\026\n\021MakeConnectionReq\020\315\001\022\027\n\022M"
+  "akeConnectionResp\020\316\001\022\022\n\rAliveCheckReq\020\255\002"
+  "\022\023\n\016AliveCheckResp\020\256\002*r\n\013CoordSystem\022\t\n\005"
+  "WGS86\020\000\022\n\n\006CAMERA\020\001\022\r\n\tCAMERAABS\020\002\022\013\n\007VI"
+  "RTUAL\020\003\022\010\n\004MOON\020\004\022\010\n\004MARS\020\005\022\010\n\004REL1\020\006\022\010\n"
+  "\004REL2\020\007\022\010\n\004REL3\020\010*\?\n\016RotationSystem\022\n\n\006W"
+  "ORLDR\020\000\022\n\n\006LOCALR\020\001\022\010\n\004FORR\020\002\022\013\n\007CAMERAR"
+  "\020\003B&\252\002#org.herbal3d.basil.protocol.Messa"
+  "geb\006proto3"
   ;
 static ::google::protobuf::internal::DescriptorTable descriptor_table_BasilMessage_2eproto = {
   false, InitDefaults_BasilMessage_2eproto, 
   descriptor_table_protodef_BasilMessage_2eproto,
-  "BasilMessage.proto", &assign_descriptors_table_BasilMessage_2eproto, 2112,
+  "BasilMessage.proto", &assign_descriptors_table_BasilMessage_2eproto, 1730,
 };
 
 void AddDescriptors_BasilMessage_2eproto() {
   static constexpr ::google::protobuf::internal::InitFunc deps[1] =
   {
-    ::AddDescriptors_BasilTypes_2eproto,
   };
- ::google::protobuf::internal::AddDescriptors(&descriptor_table_BasilMessage_2eproto, deps, 1);
+ ::google::protobuf::internal::AddDescriptors(&descriptor_table_BasilMessage_2eproto, deps, 0);
 }
 
 // Force running AddDescriptors() at dynamic initialization time.
 static bool dynamic_init_dummy_BasilMessage_2eproto = []() { AddDescriptors_BasilMessage_2eproto(); return true; }();
 namespace BasilMessage {
-const ::google::protobuf::EnumDescriptor* TransportClass_descriptor() {
+const ::google::protobuf::EnumDescriptor* BasilMessageOps_descriptor() {
   ::google::protobuf::internal::AssignDescriptors(&assign_descriptors_table_BasilMessage_2eproto);
   return file_level_enum_descriptors_BasilMessage_2eproto[0];
 }
-bool TransportClass_IsValid(int value) {
+bool BasilMessageOps_IsValid(int value) {
   switch (value) {
     case 0:
-    case 10:
-    case 20:
-    case 30:
-    case 40:
+    case 101:
+    case 102:
+    case 103:
+    case 104:
+    case 105:
+    case 106:
+    case 107:
+    case 108:
+    case 109:
+    case 110:
+    case 111:
+    case 112:
+    case 201:
+    case 202:
+    case 203:
+    case 204:
+    case 205:
+    case 206:
+    case 301:
+    case 302:
       return true;
     default:
       return false;
   }
 }
 
-const ::google::protobuf::EnumDescriptor* BasilMessageOps_descriptor() {
+const ::google::protobuf::EnumDescriptor* CoordSystem_descriptor() {
   ::google::protobuf::internal::AssignDescriptors(&assign_descriptors_table_BasilMessage_2eproto);
   return file_level_enum_descriptors_BasilMessage_2eproto[1];
 }
-bool BasilMessageOps_IsValid(int value) {
+bool CoordSystem_IsValid(int value) {
   switch (value) {
     case 0:
-    case 4097:
-    case 4098:
-    case 4099:
-    case 4100:
-    case 4101:
-    case 4102:
-    case 4103:
-    case 4104:
-    case 4105:
-    case 4106:
-    case 4107:
-    case 4108:
-    case 4109:
-    case 4110:
-    case 4111:
-    case 4112:
-    case 4113:
-    case 4114:
-    case 4115:
-    case 4116:
-    case 4117:
-    case 4118:
-    case 8193:
-    case 8194:
-    case 12289:
-    case 12290:
-    case 12291:
-    case 12292:
-    case 16385:
-    case 16386:
-    case 16387:
-    case 16388:
-    case 16389:
-    case 16390:
-    case 16391:
-    case 16392:
-    case 16393:
-    case 16400:
-    case 16401:
-    case 16402:
-    case 16403:
-    case 16404:
-    case 16405:
-    case 16406:
+    case 1:
+    case 2:
+    case 3:
+    case 4:
+    case 5:
+    case 6:
+    case 7:
+    case 8:
+      return true;
+    default:
+      return false;
+  }
+}
+
+const ::google::protobuf::EnumDescriptor* RotationSystem_descriptor() {
+  ::google::protobuf::internal::AssignDescriptors(&assign_descriptors_table_BasilMessage_2eproto);
+  return file_level_enum_descriptors_BasilMessage_2eproto[2];
+}
+bool RotationSystem_IsValid(int value) {
+  switch (value) {
+    case 0:
+    case 1:
+    case 2:
+    case 3:
       return true;
     default:
       return false;
@@ -305,17 +380,848 @@ bool BasilMessageOps_IsValid(int value) {
 
 // ===================================================================
 
-BasilMessage_PropertiesEntry_DoNotUse::BasilMessage_PropertiesEntry_DoNotUse() {}
-BasilMessage_PropertiesEntry_DoNotUse::BasilMessage_PropertiesEntry_DoNotUse(::google::protobuf::Arena* arena)
+void PositionBlock::InitAsDefaultInstance() {
+}
+class PositionBlock::HasBitSetters {
+ public:
+};
+
+#if !defined(_MSC_VER) || _MSC_VER >= 1900
+const int PositionBlock::kPosFieldNumber;
+const int PositionBlock::kRotFieldNumber;
+const int PositionBlock::kPosRefFieldNumber;
+const int PositionBlock::kRotRefFieldNumber;
+const int PositionBlock::kVelFieldNumber;
+const int PositionBlock::kPathFieldNumber;
+const int PositionBlock::kItemIdNFieldNumber;
+const int PositionBlock::kItemIdFieldNumber;
+const int PositionBlock::kSessionAuthFieldNumber;
+const int PositionBlock::kItemAuthFieldNumber;
+#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
+
+PositionBlock::PositionBlock()
+  : ::google::protobuf::Message(), _internal_metadata_(nullptr) {
+  SharedCtor();
+  // @@protoc_insertion_point(constructor:BasilMessage.PositionBlock)
+}
+PositionBlock::PositionBlock(const PositionBlock& from)
+  : ::google::protobuf::Message(),
+      _internal_metadata_(nullptr),
+      pos_(from.pos_),
+      rot_(from.rot_),
+      vel_(from.vel_),
+      path_(from.path_) {
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  itemid_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  if (from.itemid().size() > 0) {
+    itemid_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.itemid_);
+  }
+  sessionauth_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  if (from.sessionauth().size() > 0) {
+    sessionauth_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.sessionauth_);
+  }
+  itemauth_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  if (from.itemauth().size() > 0) {
+    itemauth_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.itemauth_);
+  }
+  ::memcpy(&posref_, &from.posref_,
+    static_cast<size_t>(reinterpret_cast<char*>(&itemidn_) -
+    reinterpret_cast<char*>(&posref_)) + sizeof(itemidn_));
+  // @@protoc_insertion_point(copy_constructor:BasilMessage.PositionBlock)
+}
+
+void PositionBlock::SharedCtor() {
+  ::google::protobuf::internal::InitSCC(
+      &scc_info_PositionBlock_BasilMessage_2eproto.base);
+  itemid_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  sessionauth_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  itemauth_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  ::memset(&posref_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&itemidn_) -
+      reinterpret_cast<char*>(&posref_)) + sizeof(itemidn_));
+}
+
+PositionBlock::~PositionBlock() {
+  // @@protoc_insertion_point(destructor:BasilMessage.PositionBlock)
+  SharedDtor();
+}
+
+void PositionBlock::SharedDtor() {
+  itemid_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  sessionauth_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  itemauth_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+
+void PositionBlock::SetCachedSize(int size) const {
+  _cached_size_.Set(size);
+}
+const PositionBlock& PositionBlock::default_instance() {
+  ::google::protobuf::internal::InitSCC(&::scc_info_PositionBlock_BasilMessage_2eproto.base);
+  return *internal_default_instance();
+}
+
+
+void PositionBlock::Clear() {
+// @@protoc_insertion_point(message_clear_start:BasilMessage.PositionBlock)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  pos_.Clear();
+  rot_.Clear();
+  vel_.Clear();
+  path_.Clear();
+  itemid_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  sessionauth_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  itemauth_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  ::memset(&posref_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&itemidn_) -
+      reinterpret_cast<char*>(&posref_)) + sizeof(itemidn_));
+  _internal_metadata_.Clear();
+}
+
+#if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+const char* PositionBlock::_InternalParse(const char* ptr, ::google::protobuf::internal::ParseContext* ctx) {
+  while (!ctx->Done(&ptr)) {
+    ::google::protobuf::uint32 tag;
+    ptr = ::google::protobuf::internal::ReadTag(ptr, &tag);
+    GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+    switch (tag >> 3) {
+      // repeated double Pos = 1;
+      case 1: {
+        if (static_cast<::google::protobuf::uint8>(tag) == 10) {
+          ptr = ::google::protobuf::internal::PackedDoubleParser(mutable_pos(), ptr, ctx);
+          GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+          break;
+        } else if (static_cast<::google::protobuf::uint8>(tag) != 9) goto handle_unusual;
+        do {
+          add_pos(::google::protobuf::internal::UnalignedLoad<double>(ptr));
+          ptr += sizeof(double);
+          if (ctx->Done(&ptr)) return ptr;
+        } while ((::google::protobuf::internal::UnalignedLoad<::google::protobuf::uint64>(ptr) & 255) == 9 && (ptr += 1));
+        break;
+      }
+      // repeated double Rot = 2;
+      case 2: {
+        if (static_cast<::google::protobuf::uint8>(tag) == 18) {
+          ptr = ::google::protobuf::internal::PackedDoubleParser(mutable_rot(), ptr, ctx);
+          GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+          break;
+        } else if (static_cast<::google::protobuf::uint8>(tag) != 17) goto handle_unusual;
+        do {
+          add_rot(::google::protobuf::internal::UnalignedLoad<double>(ptr));
+          ptr += sizeof(double);
+          if (ctx->Done(&ptr)) return ptr;
+        } while ((::google::protobuf::internal::UnalignedLoad<::google::protobuf::uint64>(ptr) & 255) == 17 && (ptr += 1));
+        break;
+      }
+      // .BasilMessage.CoordSystem PosRef = 3;
+      case 3: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 24) goto handle_unusual;
+        ::google::protobuf::uint64 val = ::google::protobuf::internal::ReadVarint(&ptr);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        set_posref(static_cast<::BasilMessage::CoordSystem>(val));
+        break;
+      }
+      // .BasilMessage.RotationSystem RotRef = 4;
+      case 4: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 32) goto handle_unusual;
+        ::google::protobuf::uint64 val = ::google::protobuf::internal::ReadVarint(&ptr);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        set_rotref(static_cast<::BasilMessage::RotationSystem>(val));
+        break;
+      }
+      // repeated double Vel = 5;
+      case 5: {
+        if (static_cast<::google::protobuf::uint8>(tag) == 42) {
+          ptr = ::google::protobuf::internal::PackedDoubleParser(mutable_vel(), ptr, ctx);
+          GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+          break;
+        } else if (static_cast<::google::protobuf::uint8>(tag) != 41) goto handle_unusual;
+        do {
+          add_vel(::google::protobuf::internal::UnalignedLoad<double>(ptr));
+          ptr += sizeof(double);
+          if (ctx->Done(&ptr)) return ptr;
+        } while ((::google::protobuf::internal::UnalignedLoad<::google::protobuf::uint64>(ptr) & 255) == 41 && (ptr += 1));
+        break;
+      }
+      // repeated double Path = 6;
+      case 6: {
+        if (static_cast<::google::protobuf::uint8>(tag) == 50) {
+          ptr = ::google::protobuf::internal::PackedDoubleParser(mutable_path(), ptr, ctx);
+          GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+          break;
+        } else if (static_cast<::google::protobuf::uint8>(tag) != 49) goto handle_unusual;
+        do {
+          add_path(::google::protobuf::internal::UnalignedLoad<double>(ptr));
+          ptr += sizeof(double);
+          if (ctx->Done(&ptr)) return ptr;
+        } while ((::google::protobuf::internal::UnalignedLoad<::google::protobuf::uint64>(ptr) & 255) == 49 && (ptr += 1));
+        break;
+      }
+      // uint32 ItemIdN = 10;
+      case 10: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 80) goto handle_unusual;
+        set_itemidn(::google::protobuf::internal::ReadVarint(&ptr));
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        break;
+      }
+      // string ItemId = 11;
+      case 11: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 90) goto handle_unusual;
+        ptr = ::google::protobuf::internal::InlineGreedyStringParserUTF8(mutable_itemid(), ptr, ctx, "BasilMessage.PositionBlock.ItemId");
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        break;
+      }
+      // string SessionAuth = 12;
+      case 12: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 98) goto handle_unusual;
+        ptr = ::google::protobuf::internal::InlineGreedyStringParserUTF8(mutable_sessionauth(), ptr, ctx, "BasilMessage.PositionBlock.SessionAuth");
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        break;
+      }
+      // string ItemAuth = 13;
+      case 13: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 106) goto handle_unusual;
+        ptr = ::google::protobuf::internal::InlineGreedyStringParserUTF8(mutable_itemauth(), ptr, ctx, "BasilMessage.PositionBlock.ItemAuth");
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        break;
+      }
+      default: {
+      handle_unusual:
+        if ((tag & 7) == 4 || tag == 0) {
+          ctx->SetLastTag(tag);
+          return ptr;
+        }
+        ptr = UnknownFieldParse(tag,
+          _internal_metadata_.mutable_unknown_fields(), ptr, ctx);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr != nullptr);
+        break;
+      }
+    }  // switch
+  }  // while
+  return ptr;
+}
+#else  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+bool PositionBlock::MergePartialFromCodedStream(
+    ::google::protobuf::io::CodedInputStream* input) {
+#define DO_(EXPRESSION) if (!PROTOBUF_PREDICT_TRUE(EXPRESSION)) goto failure
+  ::google::protobuf::uint32 tag;
+  // @@protoc_insertion_point(parse_start:BasilMessage.PositionBlock)
+  for (;;) {
+    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
+    tag = p.first;
+    if (!p.second) goto handle_unusual;
+    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
+      // repeated double Pos = 1;
+      case 1: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (10 & 0xFF)) {
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPackedPrimitive<
+                   double, ::google::protobuf::internal::WireFormatLite::TYPE_DOUBLE>(
+                 input, this->mutable_pos())));
+        } else if (static_cast< ::google::protobuf::uint8>(tag) == (9 & 0xFF)) {
+          DO_((::google::protobuf::internal::WireFormatLite::ReadRepeatedPrimitiveNoInline<
+                   double, ::google::protobuf::internal::WireFormatLite::TYPE_DOUBLE>(
+                 1, 10u, input, this->mutable_pos())));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // repeated double Rot = 2;
+      case 2: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (18 & 0xFF)) {
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPackedPrimitive<
+                   double, ::google::protobuf::internal::WireFormatLite::TYPE_DOUBLE>(
+                 input, this->mutable_rot())));
+        } else if (static_cast< ::google::protobuf::uint8>(tag) == (17 & 0xFF)) {
+          DO_((::google::protobuf::internal::WireFormatLite::ReadRepeatedPrimitiveNoInline<
+                   double, ::google::protobuf::internal::WireFormatLite::TYPE_DOUBLE>(
+                 1, 18u, input, this->mutable_rot())));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // .BasilMessage.CoordSystem PosRef = 3;
+      case 3: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (24 & 0xFF)) {
+          int value = 0;
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   int, ::google::protobuf::internal::WireFormatLite::TYPE_ENUM>(
+                 input, &value)));
+          set_posref(static_cast< ::BasilMessage::CoordSystem >(value));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // .BasilMessage.RotationSystem RotRef = 4;
+      case 4: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (32 & 0xFF)) {
+          int value = 0;
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   int, ::google::protobuf::internal::WireFormatLite::TYPE_ENUM>(
+                 input, &value)));
+          set_rotref(static_cast< ::BasilMessage::RotationSystem >(value));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // repeated double Vel = 5;
+      case 5: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (42 & 0xFF)) {
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPackedPrimitive<
+                   double, ::google::protobuf::internal::WireFormatLite::TYPE_DOUBLE>(
+                 input, this->mutable_vel())));
+        } else if (static_cast< ::google::protobuf::uint8>(tag) == (41 & 0xFF)) {
+          DO_((::google::protobuf::internal::WireFormatLite::ReadRepeatedPrimitiveNoInline<
+                   double, ::google::protobuf::internal::WireFormatLite::TYPE_DOUBLE>(
+                 1, 42u, input, this->mutable_vel())));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // repeated double Path = 6;
+      case 6: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (50 & 0xFF)) {
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPackedPrimitive<
+                   double, ::google::protobuf::internal::WireFormatLite::TYPE_DOUBLE>(
+                 input, this->mutable_path())));
+        } else if (static_cast< ::google::protobuf::uint8>(tag) == (49 & 0xFF)) {
+          DO_((::google::protobuf::internal::WireFormatLite::ReadRepeatedPrimitiveNoInline<
+                   double, ::google::protobuf::internal::WireFormatLite::TYPE_DOUBLE>(
+                 1, 50u, input, this->mutable_path())));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // uint32 ItemIdN = 10;
+      case 10: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (80 & 0xFF)) {
+
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   ::google::protobuf::uint32, ::google::protobuf::internal::WireFormatLite::TYPE_UINT32>(
+                 input, &itemidn_)));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // string ItemId = 11;
+      case 11: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (90 & 0xFF)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
+                input, this->mutable_itemid()));
+          DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+            this->itemid().data(), static_cast<int>(this->itemid().length()),
+            ::google::protobuf::internal::WireFormatLite::PARSE,
+            "BasilMessage.PositionBlock.ItemId"));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // string SessionAuth = 12;
+      case 12: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (98 & 0xFF)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
+                input, this->mutable_sessionauth()));
+          DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+            this->sessionauth().data(), static_cast<int>(this->sessionauth().length()),
+            ::google::protobuf::internal::WireFormatLite::PARSE,
+            "BasilMessage.PositionBlock.SessionAuth"));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // string ItemAuth = 13;
+      case 13: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (106 & 0xFF)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
+                input, this->mutable_itemauth()));
+          DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+            this->itemauth().data(), static_cast<int>(this->itemauth().length()),
+            ::google::protobuf::internal::WireFormatLite::PARSE,
+            "BasilMessage.PositionBlock.ItemAuth"));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      default: {
+      handle_unusual:
+        if (tag == 0) {
+          goto success;
+        }
+        DO_(::google::protobuf::internal::WireFormat::SkipField(
+              input, tag, _internal_metadata_.mutable_unknown_fields()));
+        break;
+      }
+    }
+  }
+success:
+  // @@protoc_insertion_point(parse_success:BasilMessage.PositionBlock)
+  return true;
+failure:
+  // @@protoc_insertion_point(parse_failure:BasilMessage.PositionBlock)
+  return false;
+#undef DO_
+}
+#endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+
+void PositionBlock::SerializeWithCachedSizes(
+    ::google::protobuf::io::CodedOutputStream* output) const {
+  // @@protoc_insertion_point(serialize_start:BasilMessage.PositionBlock)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // repeated double Pos = 1;
+  if (this->pos_size() > 0) {
+    ::google::protobuf::internal::WireFormatLite::WriteTag(1, ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED, output);
+    output->WriteVarint32(_pos_cached_byte_size_.load(
+        std::memory_order_relaxed));
+    ::google::protobuf::internal::WireFormatLite::WriteDoubleArray(
+      this->pos().data(), this->pos_size(), output);
+  }
+
+  // repeated double Rot = 2;
+  if (this->rot_size() > 0) {
+    ::google::protobuf::internal::WireFormatLite::WriteTag(2, ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED, output);
+    output->WriteVarint32(_rot_cached_byte_size_.load(
+        std::memory_order_relaxed));
+    ::google::protobuf::internal::WireFormatLite::WriteDoubleArray(
+      this->rot().data(), this->rot_size(), output);
+  }
+
+  // .BasilMessage.CoordSystem PosRef = 3;
+  if (this->posref() != 0) {
+    ::google::protobuf::internal::WireFormatLite::WriteEnum(
+      3, this->posref(), output);
+  }
+
+  // .BasilMessage.RotationSystem RotRef = 4;
+  if (this->rotref() != 0) {
+    ::google::protobuf::internal::WireFormatLite::WriteEnum(
+      4, this->rotref(), output);
+  }
+
+  // repeated double Vel = 5;
+  if (this->vel_size() > 0) {
+    ::google::protobuf::internal::WireFormatLite::WriteTag(5, ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED, output);
+    output->WriteVarint32(_vel_cached_byte_size_.load(
+        std::memory_order_relaxed));
+    ::google::protobuf::internal::WireFormatLite::WriteDoubleArray(
+      this->vel().data(), this->vel_size(), output);
+  }
+
+  // repeated double Path = 6;
+  if (this->path_size() > 0) {
+    ::google::protobuf::internal::WireFormatLite::WriteTag(6, ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED, output);
+    output->WriteVarint32(_path_cached_byte_size_.load(
+        std::memory_order_relaxed));
+    ::google::protobuf::internal::WireFormatLite::WriteDoubleArray(
+      this->path().data(), this->path_size(), output);
+  }
+
+  // uint32 ItemIdN = 10;
+  if (this->itemidn() != 0) {
+    ::google::protobuf::internal::WireFormatLite::WriteUInt32(10, this->itemidn(), output);
+  }
+
+  // string ItemId = 11;
+  if (this->itemid().size() > 0) {
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+      this->itemid().data(), static_cast<int>(this->itemid().length()),
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+      "BasilMessage.PositionBlock.ItemId");
+    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
+      11, this->itemid(), output);
+  }
+
+  // string SessionAuth = 12;
+  if (this->sessionauth().size() > 0) {
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+      this->sessionauth().data(), static_cast<int>(this->sessionauth().length()),
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+      "BasilMessage.PositionBlock.SessionAuth");
+    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
+      12, this->sessionauth(), output);
+  }
+
+  // string ItemAuth = 13;
+  if (this->itemauth().size() > 0) {
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+      this->itemauth().data(), static_cast<int>(this->itemauth().length()),
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+      "BasilMessage.PositionBlock.ItemAuth");
+    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
+      13, this->itemauth(), output);
+  }
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
+        _internal_metadata_.unknown_fields(), output);
+  }
+  // @@protoc_insertion_point(serialize_end:BasilMessage.PositionBlock)
+}
+
+::google::protobuf::uint8* PositionBlock::InternalSerializeWithCachedSizesToArray(
+    ::google::protobuf::uint8* target) const {
+  // @@protoc_insertion_point(serialize_to_array_start:BasilMessage.PositionBlock)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // repeated double Pos = 1;
+  if (this->pos_size() > 0) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteTagToArray(
+      1,
+      ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED,
+      target);
+    target = ::google::protobuf::io::CodedOutputStream::WriteVarint32ToArray(
+        _pos_cached_byte_size_.load(std::memory_order_relaxed),
+         target);
+    target = ::google::protobuf::internal::WireFormatLite::
+      WriteDoubleNoTagToArray(this->pos_, target);
+  }
+
+  // repeated double Rot = 2;
+  if (this->rot_size() > 0) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteTagToArray(
+      2,
+      ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED,
+      target);
+    target = ::google::protobuf::io::CodedOutputStream::WriteVarint32ToArray(
+        _rot_cached_byte_size_.load(std::memory_order_relaxed),
+         target);
+    target = ::google::protobuf::internal::WireFormatLite::
+      WriteDoubleNoTagToArray(this->rot_, target);
+  }
+
+  // .BasilMessage.CoordSystem PosRef = 3;
+  if (this->posref() != 0) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteEnumToArray(
+      3, this->posref(), target);
+  }
+
+  // .BasilMessage.RotationSystem RotRef = 4;
+  if (this->rotref() != 0) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteEnumToArray(
+      4, this->rotref(), target);
+  }
+
+  // repeated double Vel = 5;
+  if (this->vel_size() > 0) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteTagToArray(
+      5,
+      ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED,
+      target);
+    target = ::google::protobuf::io::CodedOutputStream::WriteVarint32ToArray(
+        _vel_cached_byte_size_.load(std::memory_order_relaxed),
+         target);
+    target = ::google::protobuf::internal::WireFormatLite::
+      WriteDoubleNoTagToArray(this->vel_, target);
+  }
+
+  // repeated double Path = 6;
+  if (this->path_size() > 0) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteTagToArray(
+      6,
+      ::google::protobuf::internal::WireFormatLite::WIRETYPE_LENGTH_DELIMITED,
+      target);
+    target = ::google::protobuf::io::CodedOutputStream::WriteVarint32ToArray(
+        _path_cached_byte_size_.load(std::memory_order_relaxed),
+         target);
+    target = ::google::protobuf::internal::WireFormatLite::
+      WriteDoubleNoTagToArray(this->path_, target);
+  }
+
+  // uint32 ItemIdN = 10;
+  if (this->itemidn() != 0) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(10, this->itemidn(), target);
+  }
+
+  // string ItemId = 11;
+  if (this->itemid().size() > 0) {
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+      this->itemid().data(), static_cast<int>(this->itemid().length()),
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+      "BasilMessage.PositionBlock.ItemId");
+    target =
+      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
+        11, this->itemid(), target);
+  }
+
+  // string SessionAuth = 12;
+  if (this->sessionauth().size() > 0) {
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+      this->sessionauth().data(), static_cast<int>(this->sessionauth().length()),
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+      "BasilMessage.PositionBlock.SessionAuth");
+    target =
+      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
+        12, this->sessionauth(), target);
+  }
+
+  // string ItemAuth = 13;
+  if (this->itemauth().size() > 0) {
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+      this->itemauth().data(), static_cast<int>(this->itemauth().length()),
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+      "BasilMessage.PositionBlock.ItemAuth");
+    target =
+      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
+        13, this->itemauth(), target);
+  }
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields(), target);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:BasilMessage.PositionBlock)
+  return target;
+}
+
+size_t PositionBlock::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:BasilMessage.PositionBlock)
+  size_t total_size = 0;
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    total_size +=
+      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
+        _internal_metadata_.unknown_fields());
+  }
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  // repeated double Pos = 1;
+  {
+    unsigned int count = static_cast<unsigned int>(this->pos_size());
+    size_t data_size = 8UL * count;
+    if (data_size > 0) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::Int32Size(
+            static_cast<::google::protobuf::int32>(data_size));
+    }
+    int cached_size = ::google::protobuf::internal::ToCachedSize(data_size);
+    _pos_cached_byte_size_.store(cached_size,
+                                    std::memory_order_relaxed);
+    total_size += data_size;
+  }
+
+  // repeated double Rot = 2;
+  {
+    unsigned int count = static_cast<unsigned int>(this->rot_size());
+    size_t data_size = 8UL * count;
+    if (data_size > 0) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::Int32Size(
+            static_cast<::google::protobuf::int32>(data_size));
+    }
+    int cached_size = ::google::protobuf::internal::ToCachedSize(data_size);
+    _rot_cached_byte_size_.store(cached_size,
+                                    std::memory_order_relaxed);
+    total_size += data_size;
+  }
+
+  // repeated double Vel = 5;
+  {
+    unsigned int count = static_cast<unsigned int>(this->vel_size());
+    size_t data_size = 8UL * count;
+    if (data_size > 0) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::Int32Size(
+            static_cast<::google::protobuf::int32>(data_size));
+    }
+    int cached_size = ::google::protobuf::internal::ToCachedSize(data_size);
+    _vel_cached_byte_size_.store(cached_size,
+                                    std::memory_order_relaxed);
+    total_size += data_size;
+  }
+
+  // repeated double Path = 6;
+  {
+    unsigned int count = static_cast<unsigned int>(this->path_size());
+    size_t data_size = 8UL * count;
+    if (data_size > 0) {
+      total_size += 1 +
+        ::google::protobuf::internal::WireFormatLite::Int32Size(
+            static_cast<::google::protobuf::int32>(data_size));
+    }
+    int cached_size = ::google::protobuf::internal::ToCachedSize(data_size);
+    _path_cached_byte_size_.store(cached_size,
+                                    std::memory_order_relaxed);
+    total_size += data_size;
+  }
+
+  // string ItemId = 11;
+  if (this->itemid().size() > 0) {
+    total_size += 1 +
+      ::google::protobuf::internal::WireFormatLite::StringSize(
+        this->itemid());
+  }
+
+  // string SessionAuth = 12;
+  if (this->sessionauth().size() > 0) {
+    total_size += 1 +
+      ::google::protobuf::internal::WireFormatLite::StringSize(
+        this->sessionauth());
+  }
+
+  // string ItemAuth = 13;
+  if (this->itemauth().size() > 0) {
+    total_size += 1 +
+      ::google::protobuf::internal::WireFormatLite::StringSize(
+        this->itemauth());
+  }
+
+  // .BasilMessage.CoordSystem PosRef = 3;
+  if (this->posref() != 0) {
+    total_size += 1 +
+      ::google::protobuf::internal::WireFormatLite::EnumSize(this->posref());
+  }
+
+  // .BasilMessage.RotationSystem RotRef = 4;
+  if (this->rotref() != 0) {
+    total_size += 1 +
+      ::google::protobuf::internal::WireFormatLite::EnumSize(this->rotref());
+  }
+
+  // uint32 ItemIdN = 10;
+  if (this->itemidn() != 0) {
+    total_size += 1 +
+      ::google::protobuf::internal::WireFormatLite::UInt32Size(
+        this->itemidn());
+  }
+
+  int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
+}
+
+void PositionBlock::MergeFrom(const ::google::protobuf::Message& from) {
+// @@protoc_insertion_point(generalized_merge_from_start:BasilMessage.PositionBlock)
+  GOOGLE_DCHECK_NE(&from, this);
+  const PositionBlock* source =
+      ::google::protobuf::DynamicCastToGenerated<PositionBlock>(
+          &from);
+  if (source == nullptr) {
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:BasilMessage.PositionBlock)
+    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
+  } else {
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:BasilMessage.PositionBlock)
+    MergeFrom(*source);
+  }
+}
+
+void PositionBlock::MergeFrom(const PositionBlock& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:BasilMessage.PositionBlock)
+  GOOGLE_DCHECK_NE(&from, this);
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  pos_.MergeFrom(from.pos_);
+  rot_.MergeFrom(from.rot_);
+  vel_.MergeFrom(from.vel_);
+  path_.MergeFrom(from.path_);
+  if (from.itemid().size() > 0) {
+
+    itemid_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.itemid_);
+  }
+  if (from.sessionauth().size() > 0) {
+
+    sessionauth_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.sessionauth_);
+  }
+  if (from.itemauth().size() > 0) {
+
+    itemauth_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.itemauth_);
+  }
+  if (from.posref() != 0) {
+    set_posref(from.posref());
+  }
+  if (from.rotref() != 0) {
+    set_rotref(from.rotref());
+  }
+  if (from.itemidn() != 0) {
+    set_itemidn(from.itemidn());
+  }
+}
+
+void PositionBlock::CopyFrom(const ::google::protobuf::Message& from) {
+// @@protoc_insertion_point(generalized_copy_from_start:BasilMessage.PositionBlock)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+void PositionBlock::CopyFrom(const PositionBlock& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:BasilMessage.PositionBlock)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool PositionBlock::IsInitialized() const {
+  return true;
+}
+
+void PositionBlock::Swap(PositionBlock* other) {
+  if (other == this) return;
+  InternalSwap(other);
+}
+void PositionBlock::InternalSwap(PositionBlock* other) {
+  using std::swap;
+  _internal_metadata_.Swap(&other->_internal_metadata_);
+  pos_.InternalSwap(&other->pos_);
+  rot_.InternalSwap(&other->rot_);
+  vel_.InternalSwap(&other->vel_);
+  path_.InternalSwap(&other->path_);
+  itemid_.Swap(&other->itemid_, &::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+    GetArenaNoVirtual());
+  sessionauth_.Swap(&other->sessionauth_, &::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+    GetArenaNoVirtual());
+  itemauth_.Swap(&other->itemauth_, &::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+    GetArenaNoVirtual());
+  swap(posref_, other->posref_);
+  swap(rotref_, other->rotref_);
+  swap(itemidn_, other->itemidn_);
+}
+
+::google::protobuf::Metadata PositionBlock::GetMetadata() const {
+  ::google::protobuf::internal::AssignDescriptors(&::assign_descriptors_table_BasilMessage_2eproto);
+  return ::file_level_metadata_BasilMessage_2eproto[kIndexInFileMessages];
+}
+
+
+// ===================================================================
+
+ParamBlock_PropsEntry_DoNotUse::ParamBlock_PropsEntry_DoNotUse() {}
+ParamBlock_PropsEntry_DoNotUse::ParamBlock_PropsEntry_DoNotUse(::google::protobuf::Arena* arena)
     : SuperType(arena) {}
-void BasilMessage_PropertiesEntry_DoNotUse::MergeFrom(const BasilMessage_PropertiesEntry_DoNotUse& other) {
+void ParamBlock_PropsEntry_DoNotUse::MergeFrom(const ParamBlock_PropsEntry_DoNotUse& other) {
   MergeFromInternal(other);
 }
-::google::protobuf::Metadata BasilMessage_PropertiesEntry_DoNotUse::GetMetadata() const {
+::google::protobuf::Metadata ParamBlock_PropsEntry_DoNotUse::GetMetadata() const {
   ::google::protobuf::internal::AssignDescriptors(&::assign_descriptors_table_BasilMessage_2eproto);
-  return ::file_level_metadata_BasilMessage_2eproto[0];
+  return ::file_level_metadata_BasilMessage_2eproto[1];
 }
-void BasilMessage_PropertiesEntry_DoNotUse::MergeFrom(
+void ParamBlock_PropsEntry_DoNotUse::MergeFrom(
     const ::google::protobuf::Message& other) {
   ::google::protobuf::Message::MergeFrom(other);
 }
@@ -323,17 +1229,455 @@ void BasilMessage_PropertiesEntry_DoNotUse::MergeFrom(
 
 // ===================================================================
 
-BasilMessage_OpParametersEntry_DoNotUse::BasilMessage_OpParametersEntry_DoNotUse() {}
-BasilMessage_OpParametersEntry_DoNotUse::BasilMessage_OpParametersEntry_DoNotUse(::google::protobuf::Arena* arena)
+void ParamBlock::InitAsDefaultInstance() {
+}
+class ParamBlock::HasBitSetters {
+ public:
+};
+
+#if !defined(_MSC_VER) || _MSC_VER >= 1900
+const int ParamBlock::kAbilityFieldNumber;
+const int ParamBlock::kPropsFieldNumber;
+#endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
+
+ParamBlock::ParamBlock()
+  : ::google::protobuf::Message(), _internal_metadata_(nullptr) {
+  SharedCtor();
+  // @@protoc_insertion_point(constructor:BasilMessage.ParamBlock)
+}
+ParamBlock::ParamBlock(const ParamBlock& from)
+  : ::google::protobuf::Message(),
+      _internal_metadata_(nullptr) {
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  props_.MergeFrom(from.props_);
+  ability_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  if (from.ability().size() > 0) {
+    ability_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.ability_);
+  }
+  // @@protoc_insertion_point(copy_constructor:BasilMessage.ParamBlock)
+}
+
+void ParamBlock::SharedCtor() {
+  ::google::protobuf::internal::InitSCC(
+      &scc_info_ParamBlock_BasilMessage_2eproto.base);
+  ability_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+
+ParamBlock::~ParamBlock() {
+  // @@protoc_insertion_point(destructor:BasilMessage.ParamBlock)
+  SharedDtor();
+}
+
+void ParamBlock::SharedDtor() {
+  ability_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+}
+
+void ParamBlock::SetCachedSize(int size) const {
+  _cached_size_.Set(size);
+}
+const ParamBlock& ParamBlock::default_instance() {
+  ::google::protobuf::internal::InitSCC(&::scc_info_ParamBlock_BasilMessage_2eproto.base);
+  return *internal_default_instance();
+}
+
+
+void ParamBlock::Clear() {
+// @@protoc_insertion_point(message_clear_start:BasilMessage.ParamBlock)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  props_.Clear();
+  ability_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  _internal_metadata_.Clear();
+}
+
+#if GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+const char* ParamBlock::_InternalParse(const char* ptr, ::google::protobuf::internal::ParseContext* ctx) {
+  while (!ctx->Done(&ptr)) {
+    ::google::protobuf::uint32 tag;
+    ptr = ::google::protobuf::internal::ReadTag(ptr, &tag);
+    GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+    switch (tag >> 3) {
+      // string Ability = 1;
+      case 1: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 10) goto handle_unusual;
+        ptr = ::google::protobuf::internal::InlineGreedyStringParserUTF8(mutable_ability(), ptr, ctx, "BasilMessage.ParamBlock.Ability");
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        break;
+      }
+      // map<string, string> Props = 2;
+      case 2: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 18) goto handle_unusual;
+        do {
+          ptr = ctx->ParseMessage(&props_, ptr);
+          GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+          if (ctx->Done(&ptr)) return ptr;
+        } while ((::google::protobuf::internal::UnalignedLoad<::google::protobuf::uint64>(ptr) & 255) == 18 && (ptr += 1));
+        break;
+      }
+      default: {
+      handle_unusual:
+        if ((tag & 7) == 4 || tag == 0) {
+          ctx->SetLastTag(tag);
+          return ptr;
+        }
+        ptr = UnknownFieldParse(tag,
+          _internal_metadata_.mutable_unknown_fields(), ptr, ctx);
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr != nullptr);
+        break;
+      }
+    }  // switch
+  }  // while
+  return ptr;
+}
+#else  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+bool ParamBlock::MergePartialFromCodedStream(
+    ::google::protobuf::io::CodedInputStream* input) {
+#define DO_(EXPRESSION) if (!PROTOBUF_PREDICT_TRUE(EXPRESSION)) goto failure
+  ::google::protobuf::uint32 tag;
+  // @@protoc_insertion_point(parse_start:BasilMessage.ParamBlock)
+  for (;;) {
+    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
+    tag = p.first;
+    if (!p.second) goto handle_unusual;
+    switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
+      // string Ability = 1;
+      case 1: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (10 & 0xFF)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
+                input, this->mutable_ability()));
+          DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+            this->ability().data(), static_cast<int>(this->ability().length()),
+            ::google::protobuf::internal::WireFormatLite::PARSE,
+            "BasilMessage.ParamBlock.Ability"));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // map<string, string> Props = 2;
+      case 2: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (18 & 0xFF)) {
+          ParamBlock_PropsEntry_DoNotUse::Parser< ::google::protobuf::internal::MapField<
+              ParamBlock_PropsEntry_DoNotUse,
+              ::std::string, ::std::string,
+              ::google::protobuf::internal::WireFormatLite::TYPE_STRING,
+              ::google::protobuf::internal::WireFormatLite::TYPE_STRING,
+              0 >,
+            ::google::protobuf::Map< ::std::string, ::std::string > > parser(&props_);
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
+              input, &parser));
+          DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+            parser.key().data(), static_cast<int>(parser.key().length()),
+            ::google::protobuf::internal::WireFormatLite::PARSE,
+            "BasilMessage.ParamBlock.PropsEntry.key"));
+          DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+            parser.value().data(), static_cast<int>(parser.value().length()),
+            ::google::protobuf::internal::WireFormatLite::PARSE,
+            "BasilMessage.ParamBlock.PropsEntry.value"));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      default: {
+      handle_unusual:
+        if (tag == 0) {
+          goto success;
+        }
+        DO_(::google::protobuf::internal::WireFormat::SkipField(
+              input, tag, _internal_metadata_.mutable_unknown_fields()));
+        break;
+      }
+    }
+  }
+success:
+  // @@protoc_insertion_point(parse_success:BasilMessage.ParamBlock)
+  return true;
+failure:
+  // @@protoc_insertion_point(parse_failure:BasilMessage.ParamBlock)
+  return false;
+#undef DO_
+}
+#endif  // GOOGLE_PROTOBUF_ENABLE_EXPERIMENTAL_PARSER
+
+void ParamBlock::SerializeWithCachedSizes(
+    ::google::protobuf::io::CodedOutputStream* output) const {
+  // @@protoc_insertion_point(serialize_start:BasilMessage.ParamBlock)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // string Ability = 1;
+  if (this->ability().size() > 0) {
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+      this->ability().data(), static_cast<int>(this->ability().length()),
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+      "BasilMessage.ParamBlock.Ability");
+    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
+      1, this->ability(), output);
+  }
+
+  // map<string, string> Props = 2;
+  if (!this->props().empty()) {
+    typedef ::google::protobuf::Map< ::std::string, ::std::string >::const_pointer
+        ConstPtr;
+    typedef ConstPtr SortItem;
+    typedef ::google::protobuf::internal::CompareByDerefFirst<SortItem> Less;
+    struct Utf8Check {
+      static void Check(ConstPtr p) {
+        ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+          p->first.data(), static_cast<int>(p->first.length()),
+          ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+          "BasilMessage.ParamBlock.PropsEntry.key");
+        ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+          p->second.data(), static_cast<int>(p->second.length()),
+          ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+          "BasilMessage.ParamBlock.PropsEntry.value");
+      }
+    };
+
+    if (output->IsSerializationDeterministic() &&
+        this->props().size() > 1) {
+      ::std::unique_ptr<SortItem[]> items(
+          new SortItem[this->props().size()]);
+      typedef ::google::protobuf::Map< ::std::string, ::std::string >::size_type size_type;
+      size_type n = 0;
+      for (::google::protobuf::Map< ::std::string, ::std::string >::const_iterator
+          it = this->props().begin();
+          it != this->props().end(); ++it, ++n) {
+        items[static_cast<ptrdiff_t>(n)] = SortItem(&*it);
+      }
+      ::std::sort(&items[0], &items[static_cast<ptrdiff_t>(n)], Less());
+      for (size_type i = 0; i < n; i++) {
+        ParamBlock_PropsEntry_DoNotUse::MapEntryWrapper entry(nullptr, items[static_cast<ptrdiff_t>(i)]->first, items[static_cast<ptrdiff_t>(i)]->second);
+        ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(2, entry, output);
+        Utf8Check::Check(&(*items[static_cast<ptrdiff_t>(i)]));
+      }
+    } else {
+      for (::google::protobuf::Map< ::std::string, ::std::string >::const_iterator
+          it = this->props().begin();
+          it != this->props().end(); ++it) {
+        ParamBlock_PropsEntry_DoNotUse::MapEntryWrapper entry(nullptr, it->first, it->second);
+        ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(2, entry, output);
+        Utf8Check::Check(&(*it));
+      }
+    }
+  }
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
+        _internal_metadata_.unknown_fields(), output);
+  }
+  // @@protoc_insertion_point(serialize_end:BasilMessage.ParamBlock)
+}
+
+::google::protobuf::uint8* ParamBlock::InternalSerializeWithCachedSizesToArray(
+    ::google::protobuf::uint8* target) const {
+  // @@protoc_insertion_point(serialize_to_array_start:BasilMessage.ParamBlock)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // string Ability = 1;
+  if (this->ability().size() > 0) {
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+      this->ability().data(), static_cast<int>(this->ability().length()),
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+      "BasilMessage.ParamBlock.Ability");
+    target =
+      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
+        1, this->ability(), target);
+  }
+
+  // map<string, string> Props = 2;
+  if (!this->props().empty()) {
+    typedef ::google::protobuf::Map< ::std::string, ::std::string >::const_pointer
+        ConstPtr;
+    typedef ConstPtr SortItem;
+    typedef ::google::protobuf::internal::CompareByDerefFirst<SortItem> Less;
+    struct Utf8Check {
+      static void Check(ConstPtr p) {
+        ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+          p->first.data(), static_cast<int>(p->first.length()),
+          ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+          "BasilMessage.ParamBlock.PropsEntry.key");
+        ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+          p->second.data(), static_cast<int>(p->second.length()),
+          ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+          "BasilMessage.ParamBlock.PropsEntry.value");
+      }
+    };
+
+    if (false &&
+        this->props().size() > 1) {
+      ::std::unique_ptr<SortItem[]> items(
+          new SortItem[this->props().size()]);
+      typedef ::google::protobuf::Map< ::std::string, ::std::string >::size_type size_type;
+      size_type n = 0;
+      for (::google::protobuf::Map< ::std::string, ::std::string >::const_iterator
+          it = this->props().begin();
+          it != this->props().end(); ++it, ++n) {
+        items[static_cast<ptrdiff_t>(n)] = SortItem(&*it);
+      }
+      ::std::sort(&items[0], &items[static_cast<ptrdiff_t>(n)], Less());
+      for (size_type i = 0; i < n; i++) {
+        ParamBlock_PropsEntry_DoNotUse::MapEntryWrapper entry(nullptr, items[static_cast<ptrdiff_t>(i)]->first, items[static_cast<ptrdiff_t>(i)]->second);
+        target = ::google::protobuf::internal::WireFormatLite::InternalWriteMessageNoVirtualToArray(2, entry, target);
+        Utf8Check::Check(&(*items[static_cast<ptrdiff_t>(i)]));
+      }
+    } else {
+      for (::google::protobuf::Map< ::std::string, ::std::string >::const_iterator
+          it = this->props().begin();
+          it != this->props().end(); ++it) {
+        ParamBlock_PropsEntry_DoNotUse::MapEntryWrapper entry(nullptr, it->first, it->second);
+        target = ::google::protobuf::internal::WireFormatLite::InternalWriteMessageNoVirtualToArray(2, entry, target);
+        Utf8Check::Check(&(*it));
+      }
+    }
+  }
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields(), target);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:BasilMessage.ParamBlock)
+  return target;
+}
+
+size_t ParamBlock::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:BasilMessage.ParamBlock)
+  size_t total_size = 0;
+
+  if (_internal_metadata_.have_unknown_fields()) {
+    total_size +=
+      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
+        _internal_metadata_.unknown_fields());
+  }
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  // map<string, string> Props = 2;
+  total_size += 1 *
+      ::google::protobuf::internal::FromIntSize(this->props_size());
+  for (::google::protobuf::Map< ::std::string, ::std::string >::const_iterator
+      it = this->props().begin();
+      it != this->props().end(); ++it) {
+    ParamBlock_PropsEntry_DoNotUse::MapEntryWrapper entry(nullptr, it->first, it->second);
+    total_size += ::google::protobuf::internal::WireFormatLite::
+        MessageSizeNoVirtual(entry);
+  }
+
+  // string Ability = 1;
+  if (this->ability().size() > 0) {
+    total_size += 1 +
+      ::google::protobuf::internal::WireFormatLite::StringSize(
+        this->ability());
+  }
+
+  int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
+}
+
+void ParamBlock::MergeFrom(const ::google::protobuf::Message& from) {
+// @@protoc_insertion_point(generalized_merge_from_start:BasilMessage.ParamBlock)
+  GOOGLE_DCHECK_NE(&from, this);
+  const ParamBlock* source =
+      ::google::protobuf::DynamicCastToGenerated<ParamBlock>(
+          &from);
+  if (source == nullptr) {
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:BasilMessage.ParamBlock)
+    ::google::protobuf::internal::ReflectionOps::Merge(from, this);
+  } else {
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:BasilMessage.ParamBlock)
+    MergeFrom(*source);
+  }
+}
+
+void ParamBlock::MergeFrom(const ParamBlock& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:BasilMessage.ParamBlock)
+  GOOGLE_DCHECK_NE(&from, this);
+  _internal_metadata_.MergeFrom(from._internal_metadata_);
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  props_.MergeFrom(from.props_);
+  if (from.ability().size() > 0) {
+
+    ability_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.ability_);
+  }
+}
+
+void ParamBlock::CopyFrom(const ::google::protobuf::Message& from) {
+// @@protoc_insertion_point(generalized_copy_from_start:BasilMessage.ParamBlock)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+void ParamBlock::CopyFrom(const ParamBlock& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:BasilMessage.ParamBlock)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool ParamBlock::IsInitialized() const {
+  return true;
+}
+
+void ParamBlock::Swap(ParamBlock* other) {
+  if (other == this) return;
+  InternalSwap(other);
+}
+void ParamBlock::InternalSwap(ParamBlock* other) {
+  using std::swap;
+  _internal_metadata_.Swap(&other->_internal_metadata_);
+  props_.Swap(&other->props_);
+  ability_.Swap(&other->ability_, &::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+    GetArenaNoVirtual());
+}
+
+::google::protobuf::Metadata ParamBlock::GetMetadata() const {
+  ::google::protobuf::internal::AssignDescriptors(&::assign_descriptors_table_BasilMessage_2eproto);
+  return ::file_level_metadata_BasilMessage_2eproto[kIndexInFileMessages];
+}
+
+
+// ===================================================================
+
+BasilMessage_IPropsEntry_DoNotUse::BasilMessage_IPropsEntry_DoNotUse() {}
+BasilMessage_IPropsEntry_DoNotUse::BasilMessage_IPropsEntry_DoNotUse(::google::protobuf::Arena* arena)
     : SuperType(arena) {}
-void BasilMessage_OpParametersEntry_DoNotUse::MergeFrom(const BasilMessage_OpParametersEntry_DoNotUse& other) {
+void BasilMessage_IPropsEntry_DoNotUse::MergeFrom(const BasilMessage_IPropsEntry_DoNotUse& other) {
   MergeFromInternal(other);
 }
-::google::protobuf::Metadata BasilMessage_OpParametersEntry_DoNotUse::GetMetadata() const {
+::google::protobuf::Metadata BasilMessage_IPropsEntry_DoNotUse::GetMetadata() const {
   ::google::protobuf::internal::AssignDescriptors(&::assign_descriptors_table_BasilMessage_2eproto);
-  return ::file_level_metadata_BasilMessage_2eproto[1];
+  return ::file_level_metadata_BasilMessage_2eproto[3];
 }
-void BasilMessage_OpParametersEntry_DoNotUse::MergeFrom(
+void BasilMessage_IPropsEntry_DoNotUse::MergeFrom(
+    const ::google::protobuf::Message& other) {
+  ::google::protobuf::Message::MergeFrom(other);
+}
+
+
+// ===================================================================
+
+BasilMessage_ExceptionHintsEntry_DoNotUse::BasilMessage_ExceptionHintsEntry_DoNotUse() {}
+BasilMessage_ExceptionHintsEntry_DoNotUse::BasilMessage_ExceptionHintsEntry_DoNotUse(::google::protobuf::Arena* arena)
+    : SuperType(arena) {}
+void BasilMessage_ExceptionHintsEntry_DoNotUse::MergeFrom(const BasilMessage_ExceptionHintsEntry_DoNotUse& other) {
+  MergeFromInternal(other);
+}
+::google::protobuf::Metadata BasilMessage_ExceptionHintsEntry_DoNotUse::GetMetadata() const {
+  ::google::protobuf::internal::AssignDescriptors(&::assign_descriptors_table_BasilMessage_2eproto);
+  return ::file_level_metadata_BasilMessage_2eproto[4];
+}
+void BasilMessage_ExceptionHintsEntry_DoNotUse::MergeFrom(
     const ::google::protobuf::Message& other) {
   ::google::protobuf::Message::MergeFrom(other);
 }
@@ -342,129 +1686,31 @@ void BasilMessage_OpParametersEntry_DoNotUse::MergeFrom(
 // ===================================================================
 
 void BasilMessage::InitAsDefaultInstance() {
-  ::BasilMessage::_BasilMessage_default_instance_._instance.get_mutable()->auth_ = const_cast< ::BasilType::AccessAuthorization*>(
-      ::BasilType::AccessAuthorization::internal_default_instance());
-  ::BasilMessage::_BasilMessage_default_instance_._instance.get_mutable()->objectid_ = const_cast< ::BasilType::ObjectIdentifier*>(
-      ::BasilType::ObjectIdentifier::internal_default_instance());
-  ::BasilMessage::_BasilMessage_default_instance_._instance.get_mutable()->instanceid_ = const_cast< ::BasilType::InstanceIdentifier*>(
-      ::BasilType::InstanceIdentifier::internal_default_instance());
-  ::BasilMessage::_BasilMessage_default_instance_._instance.get_mutable()->pos_ = const_cast< ::BasilType::InstancePositionInfo*>(
-      ::BasilType::InstancePositionInfo::internal_default_instance());
-  ::BasilMessage::_BasilMessage_default_instance_._instance.get_mutable()->assetinfo_ = const_cast< ::BasilType::AssetInformation*>(
-      ::BasilType::AssetInformation::internal_default_instance());
-  ::BasilMessage::_BasilMessage_default_instance_._instance.get_mutable()->aabb_ = const_cast< ::BasilType::AaBoundingBox*>(
-      ::BasilType::AaBoundingBox::internal_default_instance());
-  ::BasilMessage::_BasilMessage_default_instance_._instance.get_mutable()->exception_ = const_cast< ::BasilType::BasilException*>(
-      ::BasilType::BasilException::internal_default_instance());
-  ::BasilMessage::_BasilMessage_default_instance_._instance.get_mutable()->response_ = const_cast< ::BasilType::BResponseRequest*>(
-      ::BasilType::BResponseRequest::internal_default_instance());
 }
 class BasilMessage::HasBitSetters {
  public:
-  static const ::BasilType::AccessAuthorization& auth(const BasilMessage* msg);
-  static const ::BasilType::ObjectIdentifier& objectid(const BasilMessage* msg);
-  static const ::BasilType::InstanceIdentifier& instanceid(const BasilMessage* msg);
-  static const ::BasilType::InstancePositionInfo& pos(const BasilMessage* msg);
-  static const ::BasilType::AssetInformation& assetinfo(const BasilMessage* msg);
-  static const ::BasilType::AaBoundingBox& aabb(const BasilMessage* msg);
-  static const ::BasilType::BasilException& exception(const BasilMessage* msg);
-  static const ::BasilType::BResponseRequest& response(const BasilMessage* msg);
 };
 
-const ::BasilType::AccessAuthorization&
-BasilMessage::HasBitSetters::auth(const BasilMessage* msg) {
-  return *msg->auth_;
-}
-const ::BasilType::ObjectIdentifier&
-BasilMessage::HasBitSetters::objectid(const BasilMessage* msg) {
-  return *msg->objectid_;
-}
-const ::BasilType::InstanceIdentifier&
-BasilMessage::HasBitSetters::instanceid(const BasilMessage* msg) {
-  return *msg->instanceid_;
-}
-const ::BasilType::InstancePositionInfo&
-BasilMessage::HasBitSetters::pos(const BasilMessage* msg) {
-  return *msg->pos_;
-}
-const ::BasilType::AssetInformation&
-BasilMessage::HasBitSetters::assetinfo(const BasilMessage* msg) {
-  return *msg->assetinfo_;
-}
-const ::BasilType::AaBoundingBox&
-BasilMessage::HasBitSetters::aabb(const BasilMessage* msg) {
-  return *msg->aabb_;
-}
-const ::BasilType::BasilException&
-BasilMessage::HasBitSetters::exception(const BasilMessage* msg) {
-  return *msg->exception_;
-}
-const ::BasilType::BResponseRequest&
-BasilMessage::HasBitSetters::response(const BasilMessage* msg) {
-  return *msg->response_;
-}
-void BasilMessage::clear_auth() {
-  if (GetArenaNoVirtual() == nullptr && auth_ != nullptr) {
-    delete auth_;
-  }
-  auth_ = nullptr;
-}
-void BasilMessage::clear_objectid() {
-  if (GetArenaNoVirtual() == nullptr && objectid_ != nullptr) {
-    delete objectid_;
-  }
-  objectid_ = nullptr;
-}
-void BasilMessage::clear_instanceid() {
-  if (GetArenaNoVirtual() == nullptr && instanceid_ != nullptr) {
-    delete instanceid_;
-  }
-  instanceid_ = nullptr;
-}
-void BasilMessage::clear_pos() {
-  if (GetArenaNoVirtual() == nullptr && pos_ != nullptr) {
-    delete pos_;
-  }
-  pos_ = nullptr;
-}
-void BasilMessage::clear_assetinfo() {
-  if (GetArenaNoVirtual() == nullptr && assetinfo_ != nullptr) {
-    delete assetinfo_;
-  }
-  assetinfo_ = nullptr;
-}
-void BasilMessage::clear_aabb() {
-  if (GetArenaNoVirtual() == nullptr && aabb_ != nullptr) {
-    delete aabb_;
-  }
-  aabb_ = nullptr;
-}
-void BasilMessage::clear_exception() {
-  if (GetArenaNoVirtual() == nullptr && exception_ != nullptr) {
-    delete exception_;
-  }
-  exception_ = nullptr;
-}
-void BasilMessage::clear_response() {
-  if (GetArenaNoVirtual() == nullptr && response_ != nullptr) {
-    delete response_;
-  }
-  response_ = nullptr;
-}
 #if !defined(_MSC_VER) || _MSC_VER >= 1900
+const int BasilMessage::kResponseCodeFieldNumber;
+const int BasilMessage::kResponseKeyFieldNumber;
+const int BasilMessage::kStreamIdFieldNumber;
+const int BasilMessage::kProtocolVersionFieldNumber;
+const int BasilMessage::kChangeSeqFieldNumber;
+const int BasilMessage::kChangeTimeFieldNumber;
+const int BasilMessage::kQueueTimeFieldNumber;
+const int BasilMessage::kSendTimeFieldNumber;
+const int BasilMessage::kTransportClassFieldNumber;
 const int BasilMessage::kOpFieldNumber;
-const int BasilMessage::kAuthFieldNumber;
-const int BasilMessage::kClassFieldNumber;
-const int BasilMessage::kObjectIdFieldNumber;
-const int BasilMessage::kInstanceIdFieldNumber;
-const int BasilMessage::kPosFieldNumber;
-const int BasilMessage::kAssetInfoFieldNumber;
-const int BasilMessage::kAabbFieldNumber;
-const int BasilMessage::kFilterFieldNumber;
-const int BasilMessage::kPropertiesFieldNumber;
-const int BasilMessage::kOpParametersFieldNumber;
+const int BasilMessage::kSessionAuthFieldNumber;
+const int BasilMessage::kItemIdNFieldNumber;
+const int BasilMessage::kItemIdFieldNumber;
+const int BasilMessage::kItemAuthFieldNumber;
+const int BasilMessage::kIPropsFieldNumber;
+const int BasilMessage::kAPropsFieldNumber;
+const int BasilMessage::kPositionsFieldNumber;
 const int BasilMessage::kExceptionFieldNumber;
-const int BasilMessage::kResponseFieldNumber;
+const int BasilMessage::kExceptionHintsFieldNumber;
 #endif  // !defined(_MSC_VER) || _MSC_VER >= 1900
 
 BasilMessage::BasilMessage()
@@ -474,67 +1720,49 @@ BasilMessage::BasilMessage()
 }
 BasilMessage::BasilMessage(const BasilMessage& from)
   : ::google::protobuf::Message(),
-      _internal_metadata_(nullptr) {
+      _internal_metadata_(nullptr),
+      aprops_(from.aprops_),
+      positions_(from.positions_) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
-  properties_.MergeFrom(from.properties_);
-  opparameters_.MergeFrom(from.opparameters_);
-  filter_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  if (from.filter().size() > 0) {
-    filter_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.filter_);
+  iprops_.MergeFrom(from.iprops_);
+  exceptionhints_.MergeFrom(from.exceptionhints_);
+  sessionauth_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  if (from.sessionauth().size() > 0) {
+    sessionauth_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.sessionauth_);
   }
-  if (from.has_auth()) {
-    auth_ = new ::BasilType::AccessAuthorization(*from.auth_);
-  } else {
-    auth_ = nullptr;
+  itemid_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  if (from.itemid().size() > 0) {
+    itemid_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.itemid_);
   }
-  if (from.has_objectid()) {
-    objectid_ = new ::BasilType::ObjectIdentifier(*from.objectid_);
-  } else {
-    objectid_ = nullptr;
+  exception_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  if (from.exception().size() > 0) {
+    exception_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.exception_);
   }
-  if (from.has_instanceid()) {
-    instanceid_ = new ::BasilType::InstanceIdentifier(*from.instanceid_);
-  } else {
-    instanceid_ = nullptr;
+  responsekey_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  if (from.responsekey().size() > 0) {
+    responsekey_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.responsekey_);
   }
-  if (from.has_pos()) {
-    pos_ = new ::BasilType::InstancePositionInfo(*from.pos_);
-  } else {
-    pos_ = nullptr;
+  itemauth_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  if (from.itemauth().size() > 0) {
+    itemauth_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.itemauth_);
   }
-  if (from.has_assetinfo()) {
-    assetinfo_ = new ::BasilType::AssetInformation(*from.assetinfo_);
-  } else {
-    assetinfo_ = nullptr;
-  }
-  if (from.has_aabb()) {
-    aabb_ = new ::BasilType::AaBoundingBox(*from.aabb_);
-  } else {
-    aabb_ = nullptr;
-  }
-  if (from.has_exception()) {
-    exception_ = new ::BasilType::BasilException(*from.exception_);
-  } else {
-    exception_ = nullptr;
-  }
-  if (from.has_response()) {
-    response_ = new ::BasilType::BResponseRequest(*from.response_);
-  } else {
-    response_ = nullptr;
-  }
-  ::memcpy(&op_, &from.op_,
-    static_cast<size_t>(reinterpret_cast<char*>(&class__) -
-    reinterpret_cast<char*>(&op_)) + sizeof(class__));
+  ::memcpy(&responsecode_, &from.responsecode_,
+    static_cast<size_t>(reinterpret_cast<char*>(&transportclass_) -
+    reinterpret_cast<char*>(&responsecode_)) + sizeof(transportclass_));
   // @@protoc_insertion_point(copy_constructor:BasilMessage.BasilMessage)
 }
 
 void BasilMessage::SharedCtor() {
   ::google::protobuf::internal::InitSCC(
       &scc_info_BasilMessage_BasilMessage_2eproto.base);
-  filter_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  ::memset(&auth_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&class__) -
-      reinterpret_cast<char*>(&auth_)) + sizeof(class__));
+  sessionauth_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  itemid_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  exception_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  responsekey_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  itemauth_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  ::memset(&responsecode_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&transportclass_) -
+      reinterpret_cast<char*>(&responsecode_)) + sizeof(transportclass_));
 }
 
 BasilMessage::~BasilMessage() {
@@ -543,15 +1771,11 @@ BasilMessage::~BasilMessage() {
 }
 
 void BasilMessage::SharedDtor() {
-  filter_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  if (this != internal_default_instance()) delete auth_;
-  if (this != internal_default_instance()) delete objectid_;
-  if (this != internal_default_instance()) delete instanceid_;
-  if (this != internal_default_instance()) delete pos_;
-  if (this != internal_default_instance()) delete assetinfo_;
-  if (this != internal_default_instance()) delete aabb_;
-  if (this != internal_default_instance()) delete exception_;
-  if (this != internal_default_instance()) delete response_;
+  sessionauth_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  itemid_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  exception_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  responsekey_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  itemauth_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
 }
 
 void BasilMessage::SetCachedSize(int size) const {
@@ -569,44 +1793,18 @@ void BasilMessage::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  properties_.Clear();
-  opparameters_.Clear();
-  filter_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  if (GetArenaNoVirtual() == nullptr && auth_ != nullptr) {
-    delete auth_;
-  }
-  auth_ = nullptr;
-  if (GetArenaNoVirtual() == nullptr && objectid_ != nullptr) {
-    delete objectid_;
-  }
-  objectid_ = nullptr;
-  if (GetArenaNoVirtual() == nullptr && instanceid_ != nullptr) {
-    delete instanceid_;
-  }
-  instanceid_ = nullptr;
-  if (GetArenaNoVirtual() == nullptr && pos_ != nullptr) {
-    delete pos_;
-  }
-  pos_ = nullptr;
-  if (GetArenaNoVirtual() == nullptr && assetinfo_ != nullptr) {
-    delete assetinfo_;
-  }
-  assetinfo_ = nullptr;
-  if (GetArenaNoVirtual() == nullptr && aabb_ != nullptr) {
-    delete aabb_;
-  }
-  aabb_ = nullptr;
-  if (GetArenaNoVirtual() == nullptr && exception_ != nullptr) {
-    delete exception_;
-  }
-  exception_ = nullptr;
-  if (GetArenaNoVirtual() == nullptr && response_ != nullptr) {
-    delete response_;
-  }
-  response_ = nullptr;
-  ::memset(&op_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&class__) -
-      reinterpret_cast<char*>(&op_)) + sizeof(class__));
+  iprops_.Clear();
+  aprops_.Clear();
+  positions_.Clear();
+  exceptionhints_.Clear();
+  sessionauth_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  itemid_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  exception_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  responsekey_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  itemauth_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  ::memset(&responsecode_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&transportclass_) -
+      reinterpret_cast<char*>(&responsecode_)) + sizeof(transportclass_));
   _internal_metadata_.Clear();
 }
 
@@ -617,102 +1815,149 @@ const char* BasilMessage::_InternalParse(const char* ptr, ::google::protobuf::in
     ptr = ::google::protobuf::internal::ReadTag(ptr, &tag);
     GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
     switch (tag >> 3) {
-      // int32 op = 1;
+      // uint32 ResponseCode = 1;
       case 1: {
         if (static_cast<::google::protobuf::uint8>(tag) != 8) goto handle_unusual;
+        set_responsecode(::google::protobuf::internal::ReadVarint(&ptr));
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        break;
+      }
+      // uint32 StreamId = 3;
+      case 3: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 24) goto handle_unusual;
+        set_streamid(::google::protobuf::internal::ReadVarint(&ptr));
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        break;
+      }
+      // uint32 ProtocolVersion = 4;
+      case 4: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 32) goto handle_unusual;
+        set_protocolversion(::google::protobuf::internal::ReadVarint(&ptr));
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        break;
+      }
+      // uint32 Op = 5;
+      case 5: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 40) goto handle_unusual;
         set_op(::google::protobuf::internal::ReadVarint(&ptr));
         GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
         break;
       }
-      // .BasilType.AccessAuthorization auth = 2;
-      case 2: {
-        if (static_cast<::google::protobuf::uint8>(tag) != 18) goto handle_unusual;
-        ptr = ctx->ParseMessage(mutable_auth(), ptr);
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
-        break;
-      }
-      // .BasilType.ObjectIdentifier objectId = 3;
-      case 3: {
-        if (static_cast<::google::protobuf::uint8>(tag) != 26) goto handle_unusual;
-        ptr = ctx->ParseMessage(mutable_objectid(), ptr);
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
-        break;
-      }
-      // .BasilType.InstanceIdentifier instanceId = 4;
-      case 4: {
-        if (static_cast<::google::protobuf::uint8>(tag) != 34) goto handle_unusual;
-        ptr = ctx->ParseMessage(mutable_instanceid(), ptr);
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
-        break;
-      }
-      // .BasilType.InstancePositionInfo pos = 5;
-      case 5: {
-        if (static_cast<::google::protobuf::uint8>(tag) != 42) goto handle_unusual;
-        ptr = ctx->ParseMessage(mutable_pos(), ptr);
-        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
-        break;
-      }
-      // .BasilType.AssetInformation assetInfo = 6;
+      // string SessionAuth = 6;
       case 6: {
         if (static_cast<::google::protobuf::uint8>(tag) != 50) goto handle_unusual;
-        ptr = ctx->ParseMessage(mutable_assetinfo(), ptr);
+        ptr = ::google::protobuf::internal::InlineGreedyStringParserUTF8(mutable_sessionauth(), ptr, ctx, "BasilMessage.BasilMessage.SessionAuth");
         GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
         break;
       }
-      // .BasilType.AaBoundingBox aabb = 7;
+      // uint32 ItemIdN = 7;
       case 7: {
-        if (static_cast<::google::protobuf::uint8>(tag) != 58) goto handle_unusual;
-        ptr = ctx->ParseMessage(mutable_aabb(), ptr);
+        if (static_cast<::google::protobuf::uint8>(tag) != 56) goto handle_unusual;
+        set_itemidn(::google::protobuf::internal::ReadVarint(&ptr));
         GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
         break;
       }
-      // string filter = 8;
+      // string ItemId = 8;
       case 8: {
         if (static_cast<::google::protobuf::uint8>(tag) != 66) goto handle_unusual;
-        ptr = ::google::protobuf::internal::InlineGreedyStringParserUTF8(mutable_filter(), ptr, ctx, "BasilMessage.BasilMessage.filter");
+        ptr = ::google::protobuf::internal::InlineGreedyStringParserUTF8(mutable_itemid(), ptr, ctx, "BasilMessage.BasilMessage.ItemId");
         GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
         break;
       }
-      // map<string, string> properties = 9;
+      // map<string, string> IProps = 9;
       case 9: {
         if (static_cast<::google::protobuf::uint8>(tag) != 74) goto handle_unusual;
         do {
-          ptr = ctx->ParseMessage(&properties_, ptr);
+          ptr = ctx->ParseMessage(&iprops_, ptr);
           GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
           if (ctx->Done(&ptr)) return ptr;
         } while ((::google::protobuf::internal::UnalignedLoad<::google::protobuf::uint64>(ptr) & 255) == 74 && (ptr += 1));
         break;
       }
-      // map<string, string> opParameters = 10;
+      // repeated .BasilMessage.ParamBlock AProps = 10;
       case 10: {
         if (static_cast<::google::protobuf::uint8>(tag) != 82) goto handle_unusual;
         do {
-          ptr = ctx->ParseMessage(&opparameters_, ptr);
+          ptr = ctx->ParseMessage(add_aprops(), ptr);
           GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
           if (ctx->Done(&ptr)) return ptr;
         } while ((::google::protobuf::internal::UnalignedLoad<::google::protobuf::uint64>(ptr) & 255) == 82 && (ptr += 1));
         break;
       }
-      // .BasilType.BasilException exception = 11;
+      // repeated .BasilMessage.PositionBlock Positions = 11;
       case 11: {
         if (static_cast<::google::protobuf::uint8>(tag) != 90) goto handle_unusual;
-        ptr = ctx->ParseMessage(mutable_exception(), ptr);
+        do {
+          ptr = ctx->ParseMessage(add_positions(), ptr);
+          GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+          if (ctx->Done(&ptr)) return ptr;
+        } while ((::google::protobuf::internal::UnalignedLoad<::google::protobuf::uint64>(ptr) & 255) == 90 && (ptr += 1));
+        break;
+      }
+      // string Exception = 12;
+      case 12: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 98) goto handle_unusual;
+        ptr = ::google::protobuf::internal::InlineGreedyStringParserUTF8(mutable_exception(), ptr, ctx, "BasilMessage.BasilMessage.Exception");
         GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
         break;
       }
-      // .BasilType.BResponseRequest response = 13;
-      case 13: {
-        if (static_cast<::google::protobuf::uint8>(tag) != 106) goto handle_unusual;
-        ptr = ctx->ParseMessage(mutable_response(), ptr);
+      // string ResponseKey = 20;
+      case 20: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 162) goto handle_unusual;
+        ptr = ::google::protobuf::internal::InlineGreedyStringParserUTF8(mutable_responsekey(), ptr, ctx, "BasilMessage.BasilMessage.ResponseKey");
         GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
         break;
       }
-      // .BasilMessage.TransportClass class = 14;
-      case 14: {
-        if (static_cast<::google::protobuf::uint8>(tag) != 112) goto handle_unusual;
-        ::google::protobuf::uint64 val = ::google::protobuf::internal::ReadVarint(&ptr);
+      // string ItemAuth = 21;
+      case 21: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 170) goto handle_unusual;
+        ptr = ::google::protobuf::internal::InlineGreedyStringParserUTF8(mutable_itemauth(), ptr, ctx, "BasilMessage.BasilMessage.ItemAuth");
         GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
-        set_class_(static_cast<::BasilMessage::TransportClass>(val));
+        break;
+      }
+      // map<string, string> ExceptionHints = 22;
+      case 22: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 178) goto handle_unusual;
+        do {
+          ptr = ctx->ParseMessage(&exceptionhints_, ptr);
+          GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+          if (ctx->Done(&ptr)) return ptr;
+        } while ((::google::protobuf::internal::UnalignedLoad<::google::protobuf::uint64>(ptr) & 65535) == 434 && (ptr += 2));
+        break;
+      }
+      // uint64 ChangeSeq = 30;
+      case 30: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 240) goto handle_unusual;
+        set_changeseq(::google::protobuf::internal::ReadVarint(&ptr));
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        break;
+      }
+      // uint64 ChangeTime = 31;
+      case 31: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 248) goto handle_unusual;
+        set_changetime(::google::protobuf::internal::ReadVarint(&ptr));
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        break;
+      }
+      // uint32 QueueTime = 40;
+      case 40: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 64) goto handle_unusual;
+        set_queuetime(::google::protobuf::internal::ReadVarint(&ptr));
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        break;
+      }
+      // uint32 SendTime = 41;
+      case 41: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 72) goto handle_unusual;
+        set_sendtime(::google::protobuf::internal::ReadVarint(&ptr));
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
+        break;
+      }
+      // uint32 TransportClass = 42;
+      case 42: {
+        if (static_cast<::google::protobuf::uint8>(tag) != 80) goto handle_unusual;
+        set_transportclass(::google::protobuf::internal::ReadVarint(&ptr));
+        GOOGLE_PROTOBUF_PARSER_ASSERT(ptr);
         break;
       }
       default: {
@@ -737,16 +1982,55 @@ bool BasilMessage::MergePartialFromCodedStream(
   ::google::protobuf::uint32 tag;
   // @@protoc_insertion_point(parse_start:BasilMessage.BasilMessage)
   for (;;) {
-    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(127u);
+    ::std::pair<::google::protobuf::uint32, bool> p = input->ReadTagWithCutoffNoLastTag(16383u);
     tag = p.first;
     if (!p.second) goto handle_unusual;
     switch (::google::protobuf::internal::WireFormatLite::GetTagFieldNumber(tag)) {
-      // int32 op = 1;
+      // uint32 ResponseCode = 1;
       case 1: {
         if (static_cast< ::google::protobuf::uint8>(tag) == (8 & 0xFF)) {
 
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   ::google::protobuf::int32, ::google::protobuf::internal::WireFormatLite::TYPE_INT32>(
+                   ::google::protobuf::uint32, ::google::protobuf::internal::WireFormatLite::TYPE_UINT32>(
+                 input, &responsecode_)));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // uint32 StreamId = 3;
+      case 3: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (24 & 0xFF)) {
+
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   ::google::protobuf::uint32, ::google::protobuf::internal::WireFormatLite::TYPE_UINT32>(
+                 input, &streamid_)));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // uint32 ProtocolVersion = 4;
+      case 4: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (32 & 0xFF)) {
+
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   ::google::protobuf::uint32, ::google::protobuf::internal::WireFormatLite::TYPE_UINT32>(
+                 input, &protocolversion_)));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // uint32 Op = 5;
+      case 5: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (40 & 0xFF)) {
+
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   ::google::protobuf::uint32, ::google::protobuf::internal::WireFormatLite::TYPE_UINT32>(
                  input, &op_)));
         } else {
           goto handle_unusual;
@@ -754,169 +2038,227 @@ bool BasilMessage::MergePartialFromCodedStream(
         break;
       }
 
-      // .BasilType.AccessAuthorization auth = 2;
-      case 2: {
-        if (static_cast< ::google::protobuf::uint8>(tag) == (18 & 0xFF)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
-               input, mutable_auth()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // .BasilType.ObjectIdentifier objectId = 3;
-      case 3: {
-        if (static_cast< ::google::protobuf::uint8>(tag) == (26 & 0xFF)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
-               input, mutable_objectid()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // .BasilType.InstanceIdentifier instanceId = 4;
-      case 4: {
-        if (static_cast< ::google::protobuf::uint8>(tag) == (34 & 0xFF)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
-               input, mutable_instanceid()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // .BasilType.InstancePositionInfo pos = 5;
-      case 5: {
-        if (static_cast< ::google::protobuf::uint8>(tag) == (42 & 0xFF)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
-               input, mutable_pos()));
-        } else {
-          goto handle_unusual;
-        }
-        break;
-      }
-
-      // .BasilType.AssetInformation assetInfo = 6;
+      // string SessionAuth = 6;
       case 6: {
         if (static_cast< ::google::protobuf::uint8>(tag) == (50 & 0xFF)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
-               input, mutable_assetinfo()));
+          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
+                input, this->mutable_sessionauth()));
+          DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+            this->sessionauth().data(), static_cast<int>(this->sessionauth().length()),
+            ::google::protobuf::internal::WireFormatLite::PARSE,
+            "BasilMessage.BasilMessage.SessionAuth"));
         } else {
           goto handle_unusual;
         }
         break;
       }
 
-      // .BasilType.AaBoundingBox aabb = 7;
+      // uint32 ItemIdN = 7;
       case 7: {
-        if (static_cast< ::google::protobuf::uint8>(tag) == (58 & 0xFF)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
-               input, mutable_aabb()));
+        if (static_cast< ::google::protobuf::uint8>(tag) == (56 & 0xFF)) {
+
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   ::google::protobuf::uint32, ::google::protobuf::internal::WireFormatLite::TYPE_UINT32>(
+                 input, &itemidn_)));
         } else {
           goto handle_unusual;
         }
         break;
       }
 
-      // string filter = 8;
+      // string ItemId = 8;
       case 8: {
         if (static_cast< ::google::protobuf::uint8>(tag) == (66 & 0xFF)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadString(
-                input, this->mutable_filter()));
+                input, this->mutable_itemid()));
           DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-            this->filter().data(), static_cast<int>(this->filter().length()),
+            this->itemid().data(), static_cast<int>(this->itemid().length()),
             ::google::protobuf::internal::WireFormatLite::PARSE,
-            "BasilMessage.BasilMessage.filter"));
+            "BasilMessage.BasilMessage.ItemId"));
         } else {
           goto handle_unusual;
         }
         break;
       }
 
-      // map<string, string> properties = 9;
+      // map<string, string> IProps = 9;
       case 9: {
         if (static_cast< ::google::protobuf::uint8>(tag) == (74 & 0xFF)) {
-          BasilMessage_PropertiesEntry_DoNotUse::Parser< ::google::protobuf::internal::MapField<
-              BasilMessage_PropertiesEntry_DoNotUse,
+          BasilMessage_IPropsEntry_DoNotUse::Parser< ::google::protobuf::internal::MapField<
+              BasilMessage_IPropsEntry_DoNotUse,
               ::std::string, ::std::string,
               ::google::protobuf::internal::WireFormatLite::TYPE_STRING,
               ::google::protobuf::internal::WireFormatLite::TYPE_STRING,
               0 >,
-            ::google::protobuf::Map< ::std::string, ::std::string > > parser(&properties_);
+            ::google::protobuf::Map< ::std::string, ::std::string > > parser(&iprops_);
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
               input, &parser));
           DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
             parser.key().data(), static_cast<int>(parser.key().length()),
             ::google::protobuf::internal::WireFormatLite::PARSE,
-            "BasilMessage.BasilMessage.PropertiesEntry.key"));
+            "BasilMessage.BasilMessage.IPropsEntry.key"));
           DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
             parser.value().data(), static_cast<int>(parser.value().length()),
             ::google::protobuf::internal::WireFormatLite::PARSE,
-            "BasilMessage.BasilMessage.PropertiesEntry.value"));
+            "BasilMessage.BasilMessage.IPropsEntry.value"));
         } else {
           goto handle_unusual;
         }
         break;
       }
 
-      // map<string, string> opParameters = 10;
+      // repeated .BasilMessage.ParamBlock AProps = 10;
       case 10: {
         if (static_cast< ::google::protobuf::uint8>(tag) == (82 & 0xFF)) {
-          BasilMessage_OpParametersEntry_DoNotUse::Parser< ::google::protobuf::internal::MapField<
-              BasilMessage_OpParametersEntry_DoNotUse,
-              ::std::string, ::std::string,
-              ::google::protobuf::internal::WireFormatLite::TYPE_STRING,
-              ::google::protobuf::internal::WireFormatLite::TYPE_STRING,
-              0 >,
-            ::google::protobuf::Map< ::std::string, ::std::string > > parser(&opparameters_);
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
-              input, &parser));
-          DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-            parser.key().data(), static_cast<int>(parser.key().length()),
-            ::google::protobuf::internal::WireFormatLite::PARSE,
-            "BasilMessage.BasilMessage.OpParametersEntry.key"));
-          DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-            parser.value().data(), static_cast<int>(parser.value().length()),
-            ::google::protobuf::internal::WireFormatLite::PARSE,
-            "BasilMessage.BasilMessage.OpParametersEntry.value"));
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
+                input, add_aprops()));
         } else {
           goto handle_unusual;
         }
         break;
       }
 
-      // .BasilType.BasilException exception = 11;
+      // repeated .BasilMessage.PositionBlock Positions = 11;
       case 11: {
         if (static_cast< ::google::protobuf::uint8>(tag) == (90 & 0xFF)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
-               input, mutable_exception()));
+                input, add_positions()));
         } else {
           goto handle_unusual;
         }
         break;
       }
 
-      // .BasilType.BResponseRequest response = 13;
-      case 13: {
-        if (static_cast< ::google::protobuf::uint8>(tag) == (106 & 0xFF)) {
-          DO_(::google::protobuf::internal::WireFormatLite::ReadMessage(
-               input, mutable_response()));
+      // string Exception = 12;
+      case 12: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (98 & 0xFF)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
+                input, this->mutable_exception()));
+          DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+            this->exception().data(), static_cast<int>(this->exception().length()),
+            ::google::protobuf::internal::WireFormatLite::PARSE,
+            "BasilMessage.BasilMessage.Exception"));
         } else {
           goto handle_unusual;
         }
         break;
       }
 
-      // .BasilMessage.TransportClass class = 14;
-      case 14: {
-        if (static_cast< ::google::protobuf::uint8>(tag) == (112 & 0xFF)) {
-          int value = 0;
+      // string ResponseKey = 20;
+      case 20: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (162 & 0xFF)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
+                input, this->mutable_responsekey()));
+          DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+            this->responsekey().data(), static_cast<int>(this->responsekey().length()),
+            ::google::protobuf::internal::WireFormatLite::PARSE,
+            "BasilMessage.BasilMessage.ResponseKey"));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // string ItemAuth = 21;
+      case 21: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (170 & 0xFF)) {
+          DO_(::google::protobuf::internal::WireFormatLite::ReadString(
+                input, this->mutable_itemauth()));
+          DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+            this->itemauth().data(), static_cast<int>(this->itemauth().length()),
+            ::google::protobuf::internal::WireFormatLite::PARSE,
+            "BasilMessage.BasilMessage.ItemAuth"));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // map<string, string> ExceptionHints = 22;
+      case 22: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (178 & 0xFF)) {
+          BasilMessage_ExceptionHintsEntry_DoNotUse::Parser< ::google::protobuf::internal::MapField<
+              BasilMessage_ExceptionHintsEntry_DoNotUse,
+              ::std::string, ::std::string,
+              ::google::protobuf::internal::WireFormatLite::TYPE_STRING,
+              ::google::protobuf::internal::WireFormatLite::TYPE_STRING,
+              0 >,
+            ::google::protobuf::Map< ::std::string, ::std::string > > parser(&exceptionhints_);
+          DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
+              input, &parser));
+          DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+            parser.key().data(), static_cast<int>(parser.key().length()),
+            ::google::protobuf::internal::WireFormatLite::PARSE,
+            "BasilMessage.BasilMessage.ExceptionHintsEntry.key"));
+          DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+            parser.value().data(), static_cast<int>(parser.value().length()),
+            ::google::protobuf::internal::WireFormatLite::PARSE,
+            "BasilMessage.BasilMessage.ExceptionHintsEntry.value"));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // uint64 ChangeSeq = 30;
+      case 30: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (240 & 0xFF)) {
+
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
-                   int, ::google::protobuf::internal::WireFormatLite::TYPE_ENUM>(
-                 input, &value)));
-          set_class_(static_cast< ::BasilMessage::TransportClass >(value));
+                   ::google::protobuf::uint64, ::google::protobuf::internal::WireFormatLite::TYPE_UINT64>(
+                 input, &changeseq_)));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // uint64 ChangeTime = 31;
+      case 31: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (248 & 0xFF)) {
+
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   ::google::protobuf::uint64, ::google::protobuf::internal::WireFormatLite::TYPE_UINT64>(
+                 input, &changetime_)));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // uint32 QueueTime = 40;
+      case 40: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (320 & 0xFF)) {
+
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   ::google::protobuf::uint32, ::google::protobuf::internal::WireFormatLite::TYPE_UINT32>(
+                 input, &queuetime_)));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // uint32 SendTime = 41;
+      case 41: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (328 & 0xFF)) {
+
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   ::google::protobuf::uint32, ::google::protobuf::internal::WireFormatLite::TYPE_UINT32>(
+                 input, &sendtime_)));
+        } else {
+          goto handle_unusual;
+        }
+        break;
+      }
+
+      // uint32 TransportClass = 42;
+      case 42: {
+        if (static_cast< ::google::protobuf::uint8>(tag) == (336 & 0xFF)) {
+
+          DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
+                   ::google::protobuf::uint32, ::google::protobuf::internal::WireFormatLite::TYPE_UINT32>(
+                 input, &transportclass_)));
         } else {
           goto handle_unusual;
         }
@@ -950,59 +2292,53 @@ void BasilMessage::SerializeWithCachedSizes(
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // int32 op = 1;
+  // uint32 ResponseCode = 1;
+  if (this->responsecode() != 0) {
+    ::google::protobuf::internal::WireFormatLite::WriteUInt32(1, this->responsecode(), output);
+  }
+
+  // uint32 StreamId = 3;
+  if (this->streamid() != 0) {
+    ::google::protobuf::internal::WireFormatLite::WriteUInt32(3, this->streamid(), output);
+  }
+
+  // uint32 ProtocolVersion = 4;
+  if (this->protocolversion() != 0) {
+    ::google::protobuf::internal::WireFormatLite::WriteUInt32(4, this->protocolversion(), output);
+  }
+
+  // uint32 Op = 5;
   if (this->op() != 0) {
-    ::google::protobuf::internal::WireFormatLite::WriteInt32(1, this->op(), output);
+    ::google::protobuf::internal::WireFormatLite::WriteUInt32(5, this->op(), output);
   }
 
-  // .BasilType.AccessAuthorization auth = 2;
-  if (this->has_auth()) {
-    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      2, HasBitSetters::auth(this), output);
-  }
-
-  // .BasilType.ObjectIdentifier objectId = 3;
-  if (this->has_objectid()) {
-    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      3, HasBitSetters::objectid(this), output);
-  }
-
-  // .BasilType.InstanceIdentifier instanceId = 4;
-  if (this->has_instanceid()) {
-    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      4, HasBitSetters::instanceid(this), output);
-  }
-
-  // .BasilType.InstancePositionInfo pos = 5;
-  if (this->has_pos()) {
-    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      5, HasBitSetters::pos(this), output);
-  }
-
-  // .BasilType.AssetInformation assetInfo = 6;
-  if (this->has_assetinfo()) {
-    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      6, HasBitSetters::assetinfo(this), output);
-  }
-
-  // .BasilType.AaBoundingBox aabb = 7;
-  if (this->has_aabb()) {
-    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      7, HasBitSetters::aabb(this), output);
-  }
-
-  // string filter = 8;
-  if (this->filter().size() > 0) {
+  // string SessionAuth = 6;
+  if (this->sessionauth().size() > 0) {
     ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-      this->filter().data(), static_cast<int>(this->filter().length()),
+      this->sessionauth().data(), static_cast<int>(this->sessionauth().length()),
       ::google::protobuf::internal::WireFormatLite::SERIALIZE,
-      "BasilMessage.BasilMessage.filter");
+      "BasilMessage.BasilMessage.SessionAuth");
     ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
-      8, this->filter(), output);
+      6, this->sessionauth(), output);
   }
 
-  // map<string, string> properties = 9;
-  if (!this->properties().empty()) {
+  // uint32 ItemIdN = 7;
+  if (this->itemidn() != 0) {
+    ::google::protobuf::internal::WireFormatLite::WriteUInt32(7, this->itemidn(), output);
+  }
+
+  // string ItemId = 8;
+  if (this->itemid().size() > 0) {
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+      this->itemid().data(), static_cast<int>(this->itemid().length()),
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+      "BasilMessage.BasilMessage.ItemId");
+    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
+      8, this->itemid(), output);
+  }
+
+  // map<string, string> IProps = 9;
+  if (!this->iprops().empty()) {
     typedef ::google::protobuf::Map< ::std::string, ::std::string >::const_pointer
         ConstPtr;
     typedef ConstPtr SortItem;
@@ -1012,44 +2348,92 @@ void BasilMessage::SerializeWithCachedSizes(
         ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
           p->first.data(), static_cast<int>(p->first.length()),
           ::google::protobuf::internal::WireFormatLite::SERIALIZE,
-          "BasilMessage.BasilMessage.PropertiesEntry.key");
+          "BasilMessage.BasilMessage.IPropsEntry.key");
         ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
           p->second.data(), static_cast<int>(p->second.length()),
           ::google::protobuf::internal::WireFormatLite::SERIALIZE,
-          "BasilMessage.BasilMessage.PropertiesEntry.value");
+          "BasilMessage.BasilMessage.IPropsEntry.value");
       }
     };
 
     if (output->IsSerializationDeterministic() &&
-        this->properties().size() > 1) {
+        this->iprops().size() > 1) {
       ::std::unique_ptr<SortItem[]> items(
-          new SortItem[this->properties().size()]);
+          new SortItem[this->iprops().size()]);
       typedef ::google::protobuf::Map< ::std::string, ::std::string >::size_type size_type;
       size_type n = 0;
       for (::google::protobuf::Map< ::std::string, ::std::string >::const_iterator
-          it = this->properties().begin();
-          it != this->properties().end(); ++it, ++n) {
+          it = this->iprops().begin();
+          it != this->iprops().end(); ++it, ++n) {
         items[static_cast<ptrdiff_t>(n)] = SortItem(&*it);
       }
       ::std::sort(&items[0], &items[static_cast<ptrdiff_t>(n)], Less());
       for (size_type i = 0; i < n; i++) {
-        BasilMessage_PropertiesEntry_DoNotUse::MapEntryWrapper entry(nullptr, items[static_cast<ptrdiff_t>(i)]->first, items[static_cast<ptrdiff_t>(i)]->second);
+        BasilMessage_IPropsEntry_DoNotUse::MapEntryWrapper entry(nullptr, items[static_cast<ptrdiff_t>(i)]->first, items[static_cast<ptrdiff_t>(i)]->second);
         ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(9, entry, output);
         Utf8Check::Check(&(*items[static_cast<ptrdiff_t>(i)]));
       }
     } else {
       for (::google::protobuf::Map< ::std::string, ::std::string >::const_iterator
-          it = this->properties().begin();
-          it != this->properties().end(); ++it) {
-        BasilMessage_PropertiesEntry_DoNotUse::MapEntryWrapper entry(nullptr, it->first, it->second);
+          it = this->iprops().begin();
+          it != this->iprops().end(); ++it) {
+        BasilMessage_IPropsEntry_DoNotUse::MapEntryWrapper entry(nullptr, it->first, it->second);
         ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(9, entry, output);
         Utf8Check::Check(&(*it));
       }
     }
   }
 
-  // map<string, string> opParameters = 10;
-  if (!this->opparameters().empty()) {
+  // repeated .BasilMessage.ParamBlock AProps = 10;
+  for (unsigned int i = 0,
+      n = static_cast<unsigned int>(this->aprops_size()); i < n; i++) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      10,
+      this->aprops(static_cast<int>(i)),
+      output);
+  }
+
+  // repeated .BasilMessage.PositionBlock Positions = 11;
+  for (unsigned int i = 0,
+      n = static_cast<unsigned int>(this->positions_size()); i < n; i++) {
+    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
+      11,
+      this->positions(static_cast<int>(i)),
+      output);
+  }
+
+  // string Exception = 12;
+  if (this->exception().size() > 0) {
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+      this->exception().data(), static_cast<int>(this->exception().length()),
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+      "BasilMessage.BasilMessage.Exception");
+    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
+      12, this->exception(), output);
+  }
+
+  // string ResponseKey = 20;
+  if (this->responsekey().size() > 0) {
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+      this->responsekey().data(), static_cast<int>(this->responsekey().length()),
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+      "BasilMessage.BasilMessage.ResponseKey");
+    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
+      20, this->responsekey(), output);
+  }
+
+  // string ItemAuth = 21;
+  if (this->itemauth().size() > 0) {
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+      this->itemauth().data(), static_cast<int>(this->itemauth().length()),
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+      "BasilMessage.BasilMessage.ItemAuth");
+    ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
+      21, this->itemauth(), output);
+  }
+
+  // map<string, string> ExceptionHints = 22;
+  if (!this->exceptionhints().empty()) {
     typedef ::google::protobuf::Map< ::std::string, ::std::string >::const_pointer
         ConstPtr;
     typedef ConstPtr SortItem;
@@ -1059,58 +2443,65 @@ void BasilMessage::SerializeWithCachedSizes(
         ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
           p->first.data(), static_cast<int>(p->first.length()),
           ::google::protobuf::internal::WireFormatLite::SERIALIZE,
-          "BasilMessage.BasilMessage.OpParametersEntry.key");
+          "BasilMessage.BasilMessage.ExceptionHintsEntry.key");
         ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
           p->second.data(), static_cast<int>(p->second.length()),
           ::google::protobuf::internal::WireFormatLite::SERIALIZE,
-          "BasilMessage.BasilMessage.OpParametersEntry.value");
+          "BasilMessage.BasilMessage.ExceptionHintsEntry.value");
       }
     };
 
     if (output->IsSerializationDeterministic() &&
-        this->opparameters().size() > 1) {
+        this->exceptionhints().size() > 1) {
       ::std::unique_ptr<SortItem[]> items(
-          new SortItem[this->opparameters().size()]);
+          new SortItem[this->exceptionhints().size()]);
       typedef ::google::protobuf::Map< ::std::string, ::std::string >::size_type size_type;
       size_type n = 0;
       for (::google::protobuf::Map< ::std::string, ::std::string >::const_iterator
-          it = this->opparameters().begin();
-          it != this->opparameters().end(); ++it, ++n) {
+          it = this->exceptionhints().begin();
+          it != this->exceptionhints().end(); ++it, ++n) {
         items[static_cast<ptrdiff_t>(n)] = SortItem(&*it);
       }
       ::std::sort(&items[0], &items[static_cast<ptrdiff_t>(n)], Less());
       for (size_type i = 0; i < n; i++) {
-        BasilMessage_OpParametersEntry_DoNotUse::MapEntryWrapper entry(nullptr, items[static_cast<ptrdiff_t>(i)]->first, items[static_cast<ptrdiff_t>(i)]->second);
-        ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(10, entry, output);
+        BasilMessage_ExceptionHintsEntry_DoNotUse::MapEntryWrapper entry(nullptr, items[static_cast<ptrdiff_t>(i)]->first, items[static_cast<ptrdiff_t>(i)]->second);
+        ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(22, entry, output);
         Utf8Check::Check(&(*items[static_cast<ptrdiff_t>(i)]));
       }
     } else {
       for (::google::protobuf::Map< ::std::string, ::std::string >::const_iterator
-          it = this->opparameters().begin();
-          it != this->opparameters().end(); ++it) {
-        BasilMessage_OpParametersEntry_DoNotUse::MapEntryWrapper entry(nullptr, it->first, it->second);
-        ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(10, entry, output);
+          it = this->exceptionhints().begin();
+          it != this->exceptionhints().end(); ++it) {
+        BasilMessage_ExceptionHintsEntry_DoNotUse::MapEntryWrapper entry(nullptr, it->first, it->second);
+        ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(22, entry, output);
         Utf8Check::Check(&(*it));
       }
     }
   }
 
-  // .BasilType.BasilException exception = 11;
-  if (this->has_exception()) {
-    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      11, HasBitSetters::exception(this), output);
+  // uint64 ChangeSeq = 30;
+  if (this->changeseq() != 0) {
+    ::google::protobuf::internal::WireFormatLite::WriteUInt64(30, this->changeseq(), output);
   }
 
-  // .BasilType.BResponseRequest response = 13;
-  if (this->has_response()) {
-    ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      13, HasBitSetters::response(this), output);
+  // uint64 ChangeTime = 31;
+  if (this->changetime() != 0) {
+    ::google::protobuf::internal::WireFormatLite::WriteUInt64(31, this->changetime(), output);
   }
 
-  // .BasilMessage.TransportClass class = 14;
-  if (this->class_() != 0) {
-    ::google::protobuf::internal::WireFormatLite::WriteEnum(
-      14, this->class_(), output);
+  // uint32 QueueTime = 40;
+  if (this->queuetime() != 0) {
+    ::google::protobuf::internal::WireFormatLite::WriteUInt32(40, this->queuetime(), output);
+  }
+
+  // uint32 SendTime = 41;
+  if (this->sendtime() != 0) {
+    ::google::protobuf::internal::WireFormatLite::WriteUInt32(41, this->sendtime(), output);
+  }
+
+  // uint32 TransportClass = 42;
+  if (this->transportclass() != 0) {
+    ::google::protobuf::internal::WireFormatLite::WriteUInt32(42, this->transportclass(), output);
   }
 
   if (_internal_metadata_.have_unknown_fields()) {
@@ -1126,66 +2517,55 @@ void BasilMessage::SerializeWithCachedSizes(
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  // int32 op = 1;
+  // uint32 ResponseCode = 1;
+  if (this->responsecode() != 0) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(1, this->responsecode(), target);
+  }
+
+  // uint32 StreamId = 3;
+  if (this->streamid() != 0) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(3, this->streamid(), target);
+  }
+
+  // uint32 ProtocolVersion = 4;
+  if (this->protocolversion() != 0) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(4, this->protocolversion(), target);
+  }
+
+  // uint32 Op = 5;
   if (this->op() != 0) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteInt32ToArray(1, this->op(), target);
+    target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(5, this->op(), target);
   }
 
-  // .BasilType.AccessAuthorization auth = 2;
-  if (this->has_auth()) {
-    target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        2, HasBitSetters::auth(this), target);
-  }
-
-  // .BasilType.ObjectIdentifier objectId = 3;
-  if (this->has_objectid()) {
-    target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        3, HasBitSetters::objectid(this), target);
-  }
-
-  // .BasilType.InstanceIdentifier instanceId = 4;
-  if (this->has_instanceid()) {
-    target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        4, HasBitSetters::instanceid(this), target);
-  }
-
-  // .BasilType.InstancePositionInfo pos = 5;
-  if (this->has_pos()) {
-    target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        5, HasBitSetters::pos(this), target);
-  }
-
-  // .BasilType.AssetInformation assetInfo = 6;
-  if (this->has_assetinfo()) {
-    target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        6, HasBitSetters::assetinfo(this), target);
-  }
-
-  // .BasilType.AaBoundingBox aabb = 7;
-  if (this->has_aabb()) {
-    target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        7, HasBitSetters::aabb(this), target);
-  }
-
-  // string filter = 8;
-  if (this->filter().size() > 0) {
+  // string SessionAuth = 6;
+  if (this->sessionauth().size() > 0) {
     ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-      this->filter().data(), static_cast<int>(this->filter().length()),
+      this->sessionauth().data(), static_cast<int>(this->sessionauth().length()),
       ::google::protobuf::internal::WireFormatLite::SERIALIZE,
-      "BasilMessage.BasilMessage.filter");
+      "BasilMessage.BasilMessage.SessionAuth");
     target =
       ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
-        8, this->filter(), target);
+        6, this->sessionauth(), target);
   }
 
-  // map<string, string> properties = 9;
-  if (!this->properties().empty()) {
+  // uint32 ItemIdN = 7;
+  if (this->itemidn() != 0) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(7, this->itemidn(), target);
+  }
+
+  // string ItemId = 8;
+  if (this->itemid().size() > 0) {
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+      this->itemid().data(), static_cast<int>(this->itemid().length()),
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+      "BasilMessage.BasilMessage.ItemId");
+    target =
+      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
+        8, this->itemid(), target);
+  }
+
+  // map<string, string> IProps = 9;
+  if (!this->iprops().empty()) {
     typedef ::google::protobuf::Map< ::std::string, ::std::string >::const_pointer
         ConstPtr;
     typedef ConstPtr SortItem;
@@ -1195,44 +2575,93 @@ void BasilMessage::SerializeWithCachedSizes(
         ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
           p->first.data(), static_cast<int>(p->first.length()),
           ::google::protobuf::internal::WireFormatLite::SERIALIZE,
-          "BasilMessage.BasilMessage.PropertiesEntry.key");
+          "BasilMessage.BasilMessage.IPropsEntry.key");
         ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
           p->second.data(), static_cast<int>(p->second.length()),
           ::google::protobuf::internal::WireFormatLite::SERIALIZE,
-          "BasilMessage.BasilMessage.PropertiesEntry.value");
+          "BasilMessage.BasilMessage.IPropsEntry.value");
       }
     };
 
     if (false &&
-        this->properties().size() > 1) {
+        this->iprops().size() > 1) {
       ::std::unique_ptr<SortItem[]> items(
-          new SortItem[this->properties().size()]);
+          new SortItem[this->iprops().size()]);
       typedef ::google::protobuf::Map< ::std::string, ::std::string >::size_type size_type;
       size_type n = 0;
       for (::google::protobuf::Map< ::std::string, ::std::string >::const_iterator
-          it = this->properties().begin();
-          it != this->properties().end(); ++it, ++n) {
+          it = this->iprops().begin();
+          it != this->iprops().end(); ++it, ++n) {
         items[static_cast<ptrdiff_t>(n)] = SortItem(&*it);
       }
       ::std::sort(&items[0], &items[static_cast<ptrdiff_t>(n)], Less());
       for (size_type i = 0; i < n; i++) {
-        BasilMessage_PropertiesEntry_DoNotUse::MapEntryWrapper entry(nullptr, items[static_cast<ptrdiff_t>(i)]->first, items[static_cast<ptrdiff_t>(i)]->second);
+        BasilMessage_IPropsEntry_DoNotUse::MapEntryWrapper entry(nullptr, items[static_cast<ptrdiff_t>(i)]->first, items[static_cast<ptrdiff_t>(i)]->second);
         target = ::google::protobuf::internal::WireFormatLite::InternalWriteMessageNoVirtualToArray(9, entry, target);
         Utf8Check::Check(&(*items[static_cast<ptrdiff_t>(i)]));
       }
     } else {
       for (::google::protobuf::Map< ::std::string, ::std::string >::const_iterator
-          it = this->properties().begin();
-          it != this->properties().end(); ++it) {
-        BasilMessage_PropertiesEntry_DoNotUse::MapEntryWrapper entry(nullptr, it->first, it->second);
+          it = this->iprops().begin();
+          it != this->iprops().end(); ++it) {
+        BasilMessage_IPropsEntry_DoNotUse::MapEntryWrapper entry(nullptr, it->first, it->second);
         target = ::google::protobuf::internal::WireFormatLite::InternalWriteMessageNoVirtualToArray(9, entry, target);
         Utf8Check::Check(&(*it));
       }
     }
   }
 
-  // map<string, string> opParameters = 10;
-  if (!this->opparameters().empty()) {
+  // repeated .BasilMessage.ParamBlock AProps = 10;
+  for (unsigned int i = 0,
+      n = static_cast<unsigned int>(this->aprops_size()); i < n; i++) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        10, this->aprops(static_cast<int>(i)), target);
+  }
+
+  // repeated .BasilMessage.PositionBlock Positions = 11;
+  for (unsigned int i = 0,
+      n = static_cast<unsigned int>(this->positions_size()); i < n; i++) {
+    target = ::google::protobuf::internal::WireFormatLite::
+      InternalWriteMessageToArray(
+        11, this->positions(static_cast<int>(i)), target);
+  }
+
+  // string Exception = 12;
+  if (this->exception().size() > 0) {
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+      this->exception().data(), static_cast<int>(this->exception().length()),
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+      "BasilMessage.BasilMessage.Exception");
+    target =
+      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
+        12, this->exception(), target);
+  }
+
+  // string ResponseKey = 20;
+  if (this->responsekey().size() > 0) {
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+      this->responsekey().data(), static_cast<int>(this->responsekey().length()),
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+      "BasilMessage.BasilMessage.ResponseKey");
+    target =
+      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
+        20, this->responsekey(), target);
+  }
+
+  // string ItemAuth = 21;
+  if (this->itemauth().size() > 0) {
+    ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
+      this->itemauth().data(), static_cast<int>(this->itemauth().length()),
+      ::google::protobuf::internal::WireFormatLite::SERIALIZE,
+      "BasilMessage.BasilMessage.ItemAuth");
+    target =
+      ::google::protobuf::internal::WireFormatLite::WriteStringToArray(
+        21, this->itemauth(), target);
+  }
+
+  // map<string, string> ExceptionHints = 22;
+  if (!this->exceptionhints().empty()) {
     typedef ::google::protobuf::Map< ::std::string, ::std::string >::const_pointer
         ConstPtr;
     typedef ConstPtr SortItem;
@@ -1242,60 +2671,65 @@ void BasilMessage::SerializeWithCachedSizes(
         ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
           p->first.data(), static_cast<int>(p->first.length()),
           ::google::protobuf::internal::WireFormatLite::SERIALIZE,
-          "BasilMessage.BasilMessage.OpParametersEntry.key");
+          "BasilMessage.BasilMessage.ExceptionHintsEntry.key");
         ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
           p->second.data(), static_cast<int>(p->second.length()),
           ::google::protobuf::internal::WireFormatLite::SERIALIZE,
-          "BasilMessage.BasilMessage.OpParametersEntry.value");
+          "BasilMessage.BasilMessage.ExceptionHintsEntry.value");
       }
     };
 
     if (false &&
-        this->opparameters().size() > 1) {
+        this->exceptionhints().size() > 1) {
       ::std::unique_ptr<SortItem[]> items(
-          new SortItem[this->opparameters().size()]);
+          new SortItem[this->exceptionhints().size()]);
       typedef ::google::protobuf::Map< ::std::string, ::std::string >::size_type size_type;
       size_type n = 0;
       for (::google::protobuf::Map< ::std::string, ::std::string >::const_iterator
-          it = this->opparameters().begin();
-          it != this->opparameters().end(); ++it, ++n) {
+          it = this->exceptionhints().begin();
+          it != this->exceptionhints().end(); ++it, ++n) {
         items[static_cast<ptrdiff_t>(n)] = SortItem(&*it);
       }
       ::std::sort(&items[0], &items[static_cast<ptrdiff_t>(n)], Less());
       for (size_type i = 0; i < n; i++) {
-        BasilMessage_OpParametersEntry_DoNotUse::MapEntryWrapper entry(nullptr, items[static_cast<ptrdiff_t>(i)]->first, items[static_cast<ptrdiff_t>(i)]->second);
-        target = ::google::protobuf::internal::WireFormatLite::InternalWriteMessageNoVirtualToArray(10, entry, target);
+        BasilMessage_ExceptionHintsEntry_DoNotUse::MapEntryWrapper entry(nullptr, items[static_cast<ptrdiff_t>(i)]->first, items[static_cast<ptrdiff_t>(i)]->second);
+        target = ::google::protobuf::internal::WireFormatLite::InternalWriteMessageNoVirtualToArray(22, entry, target);
         Utf8Check::Check(&(*items[static_cast<ptrdiff_t>(i)]));
       }
     } else {
       for (::google::protobuf::Map< ::std::string, ::std::string >::const_iterator
-          it = this->opparameters().begin();
-          it != this->opparameters().end(); ++it) {
-        BasilMessage_OpParametersEntry_DoNotUse::MapEntryWrapper entry(nullptr, it->first, it->second);
-        target = ::google::protobuf::internal::WireFormatLite::InternalWriteMessageNoVirtualToArray(10, entry, target);
+          it = this->exceptionhints().begin();
+          it != this->exceptionhints().end(); ++it) {
+        BasilMessage_ExceptionHintsEntry_DoNotUse::MapEntryWrapper entry(nullptr, it->first, it->second);
+        target = ::google::protobuf::internal::WireFormatLite::InternalWriteMessageNoVirtualToArray(22, entry, target);
         Utf8Check::Check(&(*it));
       }
     }
   }
 
-  // .BasilType.BasilException exception = 11;
-  if (this->has_exception()) {
-    target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        11, HasBitSetters::exception(this), target);
+  // uint64 ChangeSeq = 30;
+  if (this->changeseq() != 0) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteUInt64ToArray(30, this->changeseq(), target);
   }
 
-  // .BasilType.BResponseRequest response = 13;
-  if (this->has_response()) {
-    target = ::google::protobuf::internal::WireFormatLite::
-      InternalWriteMessageToArray(
-        13, HasBitSetters::response(this), target);
+  // uint64 ChangeTime = 31;
+  if (this->changetime() != 0) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteUInt64ToArray(31, this->changetime(), target);
   }
 
-  // .BasilMessage.TransportClass class = 14;
-  if (this->class_() != 0) {
-    target = ::google::protobuf::internal::WireFormatLite::WriteEnumToArray(
-      14, this->class_(), target);
+  // uint32 QueueTime = 40;
+  if (this->queuetime() != 0) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(40, this->queuetime(), target);
+  }
+
+  // uint32 SendTime = 41;
+  if (this->sendtime() != 0) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(41, this->sendtime(), target);
+  }
+
+  // uint32 TransportClass = 42;
+  if (this->transportclass() != 0) {
+    target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(42, this->transportclass(), target);
   }
 
   if (_internal_metadata_.have_unknown_fields()) {
@@ -1319,102 +2753,153 @@ size_t BasilMessage::ByteSizeLong() const {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  // map<string, string> properties = 9;
+  // map<string, string> IProps = 9;
   total_size += 1 *
-      ::google::protobuf::internal::FromIntSize(this->properties_size());
+      ::google::protobuf::internal::FromIntSize(this->iprops_size());
   for (::google::protobuf::Map< ::std::string, ::std::string >::const_iterator
-      it = this->properties().begin();
-      it != this->properties().end(); ++it) {
-    BasilMessage_PropertiesEntry_DoNotUse::MapEntryWrapper entry(nullptr, it->first, it->second);
+      it = this->iprops().begin();
+      it != this->iprops().end(); ++it) {
+    BasilMessage_IPropsEntry_DoNotUse::MapEntryWrapper entry(nullptr, it->first, it->second);
     total_size += ::google::protobuf::internal::WireFormatLite::
         MessageSizeNoVirtual(entry);
   }
 
-  // map<string, string> opParameters = 10;
-  total_size += 1 *
-      ::google::protobuf::internal::FromIntSize(this->opparameters_size());
+  // repeated .BasilMessage.ParamBlock AProps = 10;
+  {
+    unsigned int count = static_cast<unsigned int>(this->aprops_size());
+    total_size += 1UL * count;
+    for (unsigned int i = 0; i < count; i++) {
+      total_size +=
+        ::google::protobuf::internal::WireFormatLite::MessageSize(
+          this->aprops(static_cast<int>(i)));
+    }
+  }
+
+  // repeated .BasilMessage.PositionBlock Positions = 11;
+  {
+    unsigned int count = static_cast<unsigned int>(this->positions_size());
+    total_size += 1UL * count;
+    for (unsigned int i = 0; i < count; i++) {
+      total_size +=
+        ::google::protobuf::internal::WireFormatLite::MessageSize(
+          this->positions(static_cast<int>(i)));
+    }
+  }
+
+  // map<string, string> ExceptionHints = 22;
+  total_size += 2 *
+      ::google::protobuf::internal::FromIntSize(this->exceptionhints_size());
   for (::google::protobuf::Map< ::std::string, ::std::string >::const_iterator
-      it = this->opparameters().begin();
-      it != this->opparameters().end(); ++it) {
-    BasilMessage_OpParametersEntry_DoNotUse::MapEntryWrapper entry(nullptr, it->first, it->second);
+      it = this->exceptionhints().begin();
+      it != this->exceptionhints().end(); ++it) {
+    BasilMessage_ExceptionHintsEntry_DoNotUse::MapEntryWrapper entry(nullptr, it->first, it->second);
     total_size += ::google::protobuf::internal::WireFormatLite::
         MessageSizeNoVirtual(entry);
   }
 
-  // string filter = 8;
-  if (this->filter().size() > 0) {
+  // string SessionAuth = 6;
+  if (this->sessionauth().size() > 0) {
     total_size += 1 +
       ::google::protobuf::internal::WireFormatLite::StringSize(
-        this->filter());
+        this->sessionauth());
   }
 
-  // .BasilType.AccessAuthorization auth = 2;
-  if (this->has_auth()) {
+  // string ItemId = 8;
+  if (this->itemid().size() > 0) {
     total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::MessageSize(
-        *auth_);
+      ::google::protobuf::internal::WireFormatLite::StringSize(
+        this->itemid());
   }
 
-  // .BasilType.ObjectIdentifier objectId = 3;
-  if (this->has_objectid()) {
+  // string Exception = 12;
+  if (this->exception().size() > 0) {
     total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::MessageSize(
-        *objectid_);
+      ::google::protobuf::internal::WireFormatLite::StringSize(
+        this->exception());
   }
 
-  // .BasilType.InstanceIdentifier instanceId = 4;
-  if (this->has_instanceid()) {
+  // string ResponseKey = 20;
+  if (this->responsekey().size() > 0) {
+    total_size += 2 +
+      ::google::protobuf::internal::WireFormatLite::StringSize(
+        this->responsekey());
+  }
+
+  // string ItemAuth = 21;
+  if (this->itemauth().size() > 0) {
+    total_size += 2 +
+      ::google::protobuf::internal::WireFormatLite::StringSize(
+        this->itemauth());
+  }
+
+  // uint32 ResponseCode = 1;
+  if (this->responsecode() != 0) {
     total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::MessageSize(
-        *instanceid_);
+      ::google::protobuf::internal::WireFormatLite::UInt32Size(
+        this->responsecode());
   }
 
-  // .BasilType.InstancePositionInfo pos = 5;
-  if (this->has_pos()) {
+  // uint32 StreamId = 3;
+  if (this->streamid() != 0) {
     total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::MessageSize(
-        *pos_);
+      ::google::protobuf::internal::WireFormatLite::UInt32Size(
+        this->streamid());
   }
 
-  // .BasilType.AssetInformation assetInfo = 6;
-  if (this->has_assetinfo()) {
+  // uint32 ProtocolVersion = 4;
+  if (this->protocolversion() != 0) {
     total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::MessageSize(
-        *assetinfo_);
+      ::google::protobuf::internal::WireFormatLite::UInt32Size(
+        this->protocolversion());
   }
 
-  // .BasilType.AaBoundingBox aabb = 7;
-  if (this->has_aabb()) {
-    total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::MessageSize(
-        *aabb_);
-  }
-
-  // .BasilType.BasilException exception = 11;
-  if (this->has_exception()) {
-    total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::MessageSize(
-        *exception_);
-  }
-
-  // .BasilType.BResponseRequest response = 13;
-  if (this->has_response()) {
-    total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::MessageSize(
-        *response_);
-  }
-
-  // int32 op = 1;
+  // uint32 Op = 5;
   if (this->op() != 0) {
     total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::Int32Size(
+      ::google::protobuf::internal::WireFormatLite::UInt32Size(
         this->op());
   }
 
-  // .BasilMessage.TransportClass class = 14;
-  if (this->class_() != 0) {
+  // uint32 ItemIdN = 7;
+  if (this->itemidn() != 0) {
     total_size += 1 +
-      ::google::protobuf::internal::WireFormatLite::EnumSize(this->class_());
+      ::google::protobuf::internal::WireFormatLite::UInt32Size(
+        this->itemidn());
+  }
+
+  // uint32 QueueTime = 40;
+  if (this->queuetime() != 0) {
+    total_size += 2 +
+      ::google::protobuf::internal::WireFormatLite::UInt32Size(
+        this->queuetime());
+  }
+
+  // uint64 ChangeSeq = 30;
+  if (this->changeseq() != 0) {
+    total_size += 2 +
+      ::google::protobuf::internal::WireFormatLite::UInt64Size(
+        this->changeseq());
+  }
+
+  // uint64 ChangeTime = 31;
+  if (this->changetime() != 0) {
+    total_size += 2 +
+      ::google::protobuf::internal::WireFormatLite::UInt64Size(
+        this->changetime());
+  }
+
+  // uint32 SendTime = 41;
+  if (this->sendtime() != 0) {
+    total_size += 2 +
+      ::google::protobuf::internal::WireFormatLite::UInt32Size(
+        this->sendtime());
+  }
+
+  // uint32 TransportClass = 42;
+  if (this->transportclass() != 0) {
+    total_size += 2 +
+      ::google::protobuf::internal::WireFormatLite::UInt32Size(
+        this->transportclass());
   }
 
   int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
@@ -1444,41 +2929,59 @@ void BasilMessage::MergeFrom(const BasilMessage& from) {
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  properties_.MergeFrom(from.properties_);
-  opparameters_.MergeFrom(from.opparameters_);
-  if (from.filter().size() > 0) {
+  iprops_.MergeFrom(from.iprops_);
+  aprops_.MergeFrom(from.aprops_);
+  positions_.MergeFrom(from.positions_);
+  exceptionhints_.MergeFrom(from.exceptionhints_);
+  if (from.sessionauth().size() > 0) {
 
-    filter_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.filter_);
+    sessionauth_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.sessionauth_);
   }
-  if (from.has_auth()) {
-    mutable_auth()->::BasilType::AccessAuthorization::MergeFrom(from.auth());
+  if (from.itemid().size() > 0) {
+
+    itemid_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.itemid_);
   }
-  if (from.has_objectid()) {
-    mutable_objectid()->::BasilType::ObjectIdentifier::MergeFrom(from.objectid());
+  if (from.exception().size() > 0) {
+
+    exception_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.exception_);
   }
-  if (from.has_instanceid()) {
-    mutable_instanceid()->::BasilType::InstanceIdentifier::MergeFrom(from.instanceid());
+  if (from.responsekey().size() > 0) {
+
+    responsekey_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.responsekey_);
   }
-  if (from.has_pos()) {
-    mutable_pos()->::BasilType::InstancePositionInfo::MergeFrom(from.pos());
+  if (from.itemauth().size() > 0) {
+
+    itemauth_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.itemauth_);
   }
-  if (from.has_assetinfo()) {
-    mutable_assetinfo()->::BasilType::AssetInformation::MergeFrom(from.assetinfo());
+  if (from.responsecode() != 0) {
+    set_responsecode(from.responsecode());
   }
-  if (from.has_aabb()) {
-    mutable_aabb()->::BasilType::AaBoundingBox::MergeFrom(from.aabb());
+  if (from.streamid() != 0) {
+    set_streamid(from.streamid());
   }
-  if (from.has_exception()) {
-    mutable_exception()->::BasilType::BasilException::MergeFrom(from.exception());
-  }
-  if (from.has_response()) {
-    mutable_response()->::BasilType::BResponseRequest::MergeFrom(from.response());
+  if (from.protocolversion() != 0) {
+    set_protocolversion(from.protocolversion());
   }
   if (from.op() != 0) {
     set_op(from.op());
   }
-  if (from.class_() != 0) {
-    set_class_(from.class_());
+  if (from.itemidn() != 0) {
+    set_itemidn(from.itemidn());
+  }
+  if (from.queuetime() != 0) {
+    set_queuetime(from.queuetime());
+  }
+  if (from.changeseq() != 0) {
+    set_changeseq(from.changeseq());
+  }
+  if (from.changetime() != 0) {
+    set_changetime(from.changetime());
+  }
+  if (from.sendtime() != 0) {
+    set_sendtime(from.sendtime());
+  }
+  if (from.transportclass() != 0) {
+    set_transportclass(from.transportclass());
   }
 }
 
@@ -1507,20 +3010,30 @@ void BasilMessage::Swap(BasilMessage* other) {
 void BasilMessage::InternalSwap(BasilMessage* other) {
   using std::swap;
   _internal_metadata_.Swap(&other->_internal_metadata_);
-  properties_.Swap(&other->properties_);
-  opparameters_.Swap(&other->opparameters_);
-  filter_.Swap(&other->filter_, &::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+  iprops_.Swap(&other->iprops_);
+  CastToBase(&aprops_)->InternalSwap(CastToBase(&other->aprops_));
+  CastToBase(&positions_)->InternalSwap(CastToBase(&other->positions_));
+  exceptionhints_.Swap(&other->exceptionhints_);
+  sessionauth_.Swap(&other->sessionauth_, &::google::protobuf::internal::GetEmptyStringAlreadyInited(),
     GetArenaNoVirtual());
-  swap(auth_, other->auth_);
-  swap(objectid_, other->objectid_);
-  swap(instanceid_, other->instanceid_);
-  swap(pos_, other->pos_);
-  swap(assetinfo_, other->assetinfo_);
-  swap(aabb_, other->aabb_);
-  swap(exception_, other->exception_);
-  swap(response_, other->response_);
+  itemid_.Swap(&other->itemid_, &::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+    GetArenaNoVirtual());
+  exception_.Swap(&other->exception_, &::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+    GetArenaNoVirtual());
+  responsekey_.Swap(&other->responsekey_, &::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+    GetArenaNoVirtual());
+  itemauth_.Swap(&other->itemauth_, &::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+    GetArenaNoVirtual());
+  swap(responsecode_, other->responsecode_);
+  swap(streamid_, other->streamid_);
+  swap(protocolversion_, other->protocolversion_);
   swap(op_, other->op_);
-  swap(class__, other->class__);
+  swap(itemidn_, other->itemidn_);
+  swap(queuetime_, other->queuetime_);
+  swap(changeseq_, other->changeseq_);
+  swap(changetime_, other->changetime_);
+  swap(sendtime_, other->sendtime_);
+  swap(transportclass_, other->transportclass_);
 }
 
 ::google::protobuf::Metadata BasilMessage::GetMetadata() const {
@@ -1533,11 +3046,20 @@ void BasilMessage::InternalSwap(BasilMessage* other) {
 }  // namespace BasilMessage
 namespace google {
 namespace protobuf {
-template<> PROTOBUF_NOINLINE ::BasilMessage::BasilMessage_PropertiesEntry_DoNotUse* Arena::CreateMaybeMessage< ::BasilMessage::BasilMessage_PropertiesEntry_DoNotUse >(Arena* arena) {
-  return Arena::CreateInternal< ::BasilMessage::BasilMessage_PropertiesEntry_DoNotUse >(arena);
+template<> PROTOBUF_NOINLINE ::BasilMessage::PositionBlock* Arena::CreateMaybeMessage< ::BasilMessage::PositionBlock >(Arena* arena) {
+  return Arena::CreateInternal< ::BasilMessage::PositionBlock >(arena);
 }
-template<> PROTOBUF_NOINLINE ::BasilMessage::BasilMessage_OpParametersEntry_DoNotUse* Arena::CreateMaybeMessage< ::BasilMessage::BasilMessage_OpParametersEntry_DoNotUse >(Arena* arena) {
-  return Arena::CreateInternal< ::BasilMessage::BasilMessage_OpParametersEntry_DoNotUse >(arena);
+template<> PROTOBUF_NOINLINE ::BasilMessage::ParamBlock_PropsEntry_DoNotUse* Arena::CreateMaybeMessage< ::BasilMessage::ParamBlock_PropsEntry_DoNotUse >(Arena* arena) {
+  return Arena::CreateInternal< ::BasilMessage::ParamBlock_PropsEntry_DoNotUse >(arena);
+}
+template<> PROTOBUF_NOINLINE ::BasilMessage::ParamBlock* Arena::CreateMaybeMessage< ::BasilMessage::ParamBlock >(Arena* arena) {
+  return Arena::CreateInternal< ::BasilMessage::ParamBlock >(arena);
+}
+template<> PROTOBUF_NOINLINE ::BasilMessage::BasilMessage_IPropsEntry_DoNotUse* Arena::CreateMaybeMessage< ::BasilMessage::BasilMessage_IPropsEntry_DoNotUse >(Arena* arena) {
+  return Arena::CreateInternal< ::BasilMessage::BasilMessage_IPropsEntry_DoNotUse >(arena);
+}
+template<> PROTOBUF_NOINLINE ::BasilMessage::BasilMessage_ExceptionHintsEntry_DoNotUse* Arena::CreateMaybeMessage< ::BasilMessage::BasilMessage_ExceptionHintsEntry_DoNotUse >(Arena* arena) {
+  return Arena::CreateInternal< ::BasilMessage::BasilMessage_ExceptionHintsEntry_DoNotUse >(arena);
 }
 template<> PROTOBUF_NOINLINE ::BasilMessage::BasilMessage* Arena::CreateMaybeMessage< ::BasilMessage::BasilMessage >(Arena* arena) {
   return Arena::CreateInternal< ::BasilMessage::BasilMessage >(arena);

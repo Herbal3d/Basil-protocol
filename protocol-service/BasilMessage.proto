@@ -1,0 +1,87 @@
+// Basic Basil message.
+// Each message consists of an operation and a collection of parameters.
+// Many possible parameters have protobuf defintions for compactness
+//    but any additional parameters can be added to 'opParameters'.
+syntax = "proto3";
+
+package BasilMessage;
+
+option csharp_namespace = "org.herbal3d.basil.protocol.Message";
+
+import "BasilTypes.proto";
+
+message BasilMessage {
+    int32 op                                =  1;   // operation to perform
+    BasilType.AccessAuthorization auth      =  2;   // authorization for op
+    TransportClass class                    = 14;   // priority class of messsage
+    BasilType.ObjectIdentifier objectId     =  3;   // if op needs object reference
+    BasilType.InstanceIdentifier instanceId =  4;   // if of needs instance reference
+    BasilType.InstancePositionInfo pos      =  5;   // if op needs a position spec
+    BasilType.AssetInformation assetInfo    =  6;   // if op needs asset info
+    BasilType.AaBoundingBox aabb            =  7;
+    string filter                           =  8;
+    map<string,string> properties           =  9;   // if op needs or returns property set
+    map<string,string> opParameters         = 10;   // other parameters needed by op
+    BasilType.BasilException exception      = 11;   // if op is returning an error
+    BasilType.BResponseRequest response     = 13;   // transport RPC information
+}
+
+enum TransportClass {
+    Default         =  0;
+    HighPriority    = 10;   // movement or announcements
+    MedPriority     = 20;   // significant scenery
+    LowPriority     = 30;   // scenery
+    BestCase        = 40;   // distant scenery
+}
+
+// The operation codes that go into BasilMessage.op
+enum BasilMessageOps {
+    UnknownReq                      = 0x00000;
+    IdentifyDisplayableObjectReq    = 0x01001;
+    IdentifyDisplayableObjectResp   = 0x01002;
+    ForgetDisplayableObjectReq      = 0x01003;
+    ForgetDisplayableObjectResp     = 0x01004;
+    CreateObjectInstanceReq         = 0x01005;
+    CreateObjectInstanceResp        = 0x01006;
+    DeleteObjectInstanceReq         = 0x01007;
+    DeleteObjectInstanceResp        = 0x01008;
+    UpdateObjectPropertyReq         = 0x01009;
+    UpdateObjectPropertyResp        = 0x0100a;
+    UpdateInstancePropertyReq       = 0x0100b;
+    UpdateInstancePropertyResp      = 0x0100c;
+    UpdateInstancePositionReq       = 0x0100d;
+    UpdateInstancePositionResp      = 0x0100e;
+    RequestObjectPropertiesReq      = 0x0100f;
+    RequestObjectPropertiesResp     = 0x01010;
+    RequestInstancePropertiesReq    = 0x01011;
+    RequestInstancePropertiesResp   = 0x01012;
+    CloseSessionReq                 = 0x01013;
+    CloseSessionResp                = 0x01014;
+    MakeConnectionReq               = 0x01015;
+    MakeConnectionResp              = 0x01016;
+    // AliveCheck ping/pong
+    AliveCheckReq                   = 0x02001;
+    AliveCheckResp                  = 0x02002;
+    // SpaceServer
+    OpenSessionReq                  = 0x03001;
+    OpenSessionResp                 = 0x03002;
+    CameraViewReq                   = 0x03003;
+    CameraViewResp                  = 0x03004;
+    // BrothServer
+    RegisterTopicReq                = 0x04001;
+    RegisterTopicResp               = 0x04002;
+    DeregisterTopicReq              = 0x04003;
+    DeregisterTopicResp             = 0x04004;
+    SubscribeReq                    = 0x04005;
+    SubscribeResp                   = 0x04006;
+    UnsubscribeReq                  = 0x04007;
+    UnsubscribeResp                 = 0x04008;
+    SendEventReq                    = 0x04009;
+    SendEventResp                   = 0x04010;
+    EventReq                        = 0x04011;
+    EventResp                       = 0x04012;
+    SubscriptionMadeReq             = 0x04013;
+    SubscriptionMadeResp            = 0x04014;
+    SubscriptionClearReq            = 0x04015;
+    SubscriptionClearResp           = 0x04016;
+}
